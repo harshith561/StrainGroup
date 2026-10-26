@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Showcase Cards & Responsive Icon Centering
+   ========================================================================== */
+
+/* Mobile & Tablet view adjustments for Showcase cards */
+@media (max-width: 768px) {
+  .showcase-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    border-color: rgba(0, 168, 89, 0.35) !important;
+
+    .showcase-icon {
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-top: 0 !important;
+      margin-bottom: 18px !important;
+      align-self: center !important;
+    }
+
+    .showcase-title {
+      text-align: center !important;
+      width: 100% !important;
+    }
+
+    .showcase-desc {
+      text-align: center !important;
+      width: 100% !important;
+    }
+  }
+
+  /* Target showcase-icon globally within mobile cards */
+  .showcase-icon {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+  }
+
+  /* Fashion card icons in ecosystem section */
+  .fashion-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    border-color: rgba(0, 168, 89, 0.35) !important;
+
+    .card-icon {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin: 0 auto 20px auto !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-card {
+    padding: 24px 20px !important;
+
+    .showcase-icon {
+      margin-bottom: 14px !important;
+    }
+
+    .showcase-title {
+      font-size: 18px !important;
+      margin-bottom: 10px !important;
+    }
+
+    .showcase-desc {
+      font-size: 12.5px !important;
+      line-height: 1.6 !important;
+    }
+  }
+}

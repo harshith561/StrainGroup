@@ -7,6 +7,8 @@ import '@/styles/portfolio-effects.scss';
 import '@/styles/typography-effects.scss';
 import '@/styles/scroll-effects.scss';
 import '@/styles/team.scss';
+import '@/styles/showcase.scss';
+import '@/styles/services.scss';
 import Head from 'next/head';
 
 export default function MyApp({ Component, pageProps }) {
