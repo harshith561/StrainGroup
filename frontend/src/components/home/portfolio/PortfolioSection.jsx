@@ -48,6 +48,10 @@ export default function PortfolioSection() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setRevealed(true);
+    }, 250);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -62,6 +66,7 @@ export default function PortfolioSection() {
     }
 
     return () => {
+      clearTimeout(timer);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }

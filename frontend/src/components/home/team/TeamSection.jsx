@@ -34,13 +34,18 @@ export default function TeamSection() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    // Immediate fallback to ensure visibility on mobile/tablet
+    const timer = setTimeout(() => {
+      setRevealed(true);
+    }, 250);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setRevealed(true);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -48,6 +53,7 @@ export default function TeamSection() {
     }
 
     return () => {
+      clearTimeout(timer);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }

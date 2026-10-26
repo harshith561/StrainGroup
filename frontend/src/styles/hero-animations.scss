@@ -376,7 +376,8 @@
           margin: 0 auto;
 
           .green-divider {
-            width: 100px;
+            width: 100% !important;
+            height: 6px;
             margin: 0 auto;
           }
 
@@ -433,8 +434,9 @@
         gap: 16px;
 
         .green-divider {
-          width: 70px;
+          width: 100% !important;
           height: 6px;
+          margin: 0 auto;
         }
 
         .slide-subheading {
