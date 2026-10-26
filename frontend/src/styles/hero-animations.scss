@@ -1,0 +1,465 @@
+/* ==========================================================================
+   Hero Slider - Authentic Laptop Layout & Responsive Animations
+   Exact replica of strains-groups.vercel.app
+   ========================================================================== */
+
+.hero-slider-container {
+  background-color: #000;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+
+  .slider-bg-wrapper {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .slide-bg-item {
+      opacity: 0;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(1.05);
+
+      &.active {
+        opacity: 1;
+        z-index: 2;
+        transform: scale(1);
+      }
+    }
+
+    .slider-overlay {
+      z-index: 3;
+      background: linear-gradient(90deg, #0c0c0ce6 20%, #0c0c0c66 60%, #0c0c0ccc 100%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  /* ================= Center Content Row ================= */
+  .slider-content-inner {
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 60px auto 0;
+    padding: 0 80px;
+    display: flex;
+    position: relative;
+
+    .slider-left-col {
+      flex: 1.8;
+      justify-content: flex-start;
+      align-items: center;
+      min-width: 0;
+      display: flex;
+
+      .word-container {
+        user-select: none;
+        flex-flow: row;
+        width: 100%;
+        max-width: 900px;
+        line-height: 0.85;
+        display: flex;
+
+        .letter-item {
+          color: #fff;
+          opacity: 0;
+          transform-origin: bottom;
+          font-family: var(--font-display, "Bowlby One SC", sans-serif);
+          font-size: 7.2vw;
+          font-weight: 400;
+          line-height: 0.85;
+          animation-fill-mode: forwards;
+          display: inline-block;
+          will-change: transform, opacity;
+        }
+
+        &.animation-bounce .letter-item {
+          animation-name: letterBounce;
+          animation-duration: 0.8s;
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        &.animation-stretch .letter-item {
+          animation-name: letterStretch;
+          animation-duration: 0.9s;
+          animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        &.animation-focus .letter-item {
+          animation-name: letterFocus;
+          animation-duration: 0.9s;
+          animation-timing-function: ease-out;
+        }
+
+        &.is-changing .letter-item {
+          opacity: 0;
+          animation: none !important;
+        }
+      }
+    }
+
+    .slider-right-col {
+      flex: 1;
+      justify-content: flex-end;
+      display: flex;
+
+      .slide-meta-content {
+        flex-direction: column;
+        gap: 25px;
+        max-width: 500px;
+        width: 100%;
+        transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        display: flex;
+
+        &.enter {
+          opacity: 1;
+          transform: translate(0);
+        }
+
+        &.exit {
+          opacity: 0;
+          transform: translate(30px);
+        }
+
+        .green-divider {
+          background-color: var(--accent-green, #00a859);
+          border-radius: 4px;
+          width: 100%;
+          height: 8px;
+        }
+
+        .slide-subheading {
+          letter-spacing: -1.5px;
+          text-transform: uppercase;
+          color: var(--text-primary, #ffffff);
+          font-family: var(--font-sans, "Inter Tight", sans-serif);
+          font-size: 55px;
+          font-weight: 800;
+          line-height: 1.05;
+          margin: 0;
+        }
+
+        .slide-paragraph {
+          color: var(--text-secondary, #8a8a8a);
+          font-family: var(--font-mono, "Space Mono", monospace);
+          font-size: 14px;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .explore-link {
+          color: var(--accent-green, #00a859);
+          font-family: var(--font-sans, "Inter Tight", sans-serif);
+          letter-spacing: 2px;
+          align-items: center;
+          gap: 10px;
+          margin-top: 10px;
+          font-size: 14px;
+          font-weight: 800;
+          text-decoration: none;
+          transition: color 0.3s, gap 0.3s;
+          display: inline-flex;
+
+          .arrow-icon {
+            transition: transform 0.3s;
+          }
+
+          &:hover {
+            color: var(--text-primary, #ffffff);
+            gap: 15px;
+
+            .arrow-icon {
+              transform: translate(3px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ================= Global UI Chrome ================= */
+  .slider-global-ui {
+    z-index: 15;
+    pointer-events: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 80px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    .slider-pagination {
+      color: #fff;
+      font-family: var(--font-mono, "Space Mono", monospace);
+      align-items: center;
+      gap: 6px;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      pointer-events: auto;
+
+      .current-num {
+        font-size: 32px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .divider-slash {
+        opacity: 0.3;
+        color: #ffffff;
+      }
+
+      .total-num {
+        opacity: 0.5;
+        font-size: 18px;
+        color: #ffffff;
+      }
+    }
+
+    .slider-contact {
+      transform-origin: 100%;
+      pointer-events: auto;
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      transform: translateY(-50%) rotate(90deg);
+
+      .contact-vertical-link {
+        color: #fff;
+        font-family: var(--font-mono, "Space Mono", monospace);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        opacity: 0.6;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: opacity 0.3s, color 0.3s;
+
+        &:hover {
+          opacity: 1;
+          color: var(--accent-green, #00a859);
+        }
+      }
+    }
+
+    .slider-nav-arrows {
+      pointer-events: auto;
+      gap: 15px;
+      display: flex;
+
+      .nav-arrow-btn {
+        color: #fff;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        transition: all 0.3s;
+        display: flex;
+
+        &:hover {
+          background-color: var(--accent-green, #00a859);
+          border-color: var(--accent-green, #00a859);
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+/* ================= Keyframe Animations ================= */
+@keyframes letterBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes letterStretch {
+  0% {
+    opacity: 0;
+    transform: scaleY(2) scaleX(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes letterFocus {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+/* ================= Responsive Breakpoints ================= */
+@media (width <= 1024px) {
+  .hero-slider-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0 90px 0;
+
+    .slider-content-inner {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 0 40px;
+      margin: 0 auto;
+
+      .slider-left-col {
+        order: 2;
+        justify-content: center;
+        width: 100%;
+
+        .word-container {
+          justify-content: center;
+
+          .letter-item {
+            font-size: 10vw;
+          }
+        }
+      }
+
+      .slider-right-col {
+        order: 1;
+        justify-content: center;
+        width: 100%;
+
+        .slide-meta-content {
+          text-align: center;
+          align-items: center;
+          max-width: 500px;
+          margin: 0 auto;
+
+          .green-divider {
+            width: 100px;
+            margin: 0 auto;
+          }
+
+          .slide-subheading {
+            font-size: 40px;
+            text-align: center;
+          }
+
+          .slide-paragraph {
+            text-align: center;
+          }
+
+          .explore-link {
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .slider-global-ui {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      padding: 30px 40px;
+
+      .slider-pagination {
+        justify-content: flex-start;
+      }
+
+      .slider-contact {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (width <= 480px) {
+  .hero-slider-container {
+    padding: 100px 0 80px 0;
+    min-height: 100svh;
+
+    .slider-content-inner {
+      padding: 0 20px;
+      gap: 25px;
+
+      .slider-left-col .word-container .letter-item {
+        font-size: 11vw;
+      }
+
+      .slider-right-col .slide-meta-content {
+        gap: 16px;
+
+        .green-divider {
+          width: 70px;
+          height: 6px;
+        }
+
+        .slide-subheading {
+          font-size: 32px;
+          letter-spacing: -0.5px;
+        }
+
+        .slide-paragraph {
+          font-size: 13px;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .slider-global-ui {
+      padding: 20px;
+
+      .slider-pagination .current-num {
+        font-size: 26px;
+      }
+
+      .nav-arrow-btn {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+}

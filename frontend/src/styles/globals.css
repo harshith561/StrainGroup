@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter+Tight:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Bowlby One SC", sans-serif;
+  --font-sans: "Inter Tight", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --bg-primary: #0c0c0c;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #8a8a8a;
+  --accent-green: #00a859;
+  --accent-green-hover: #008f4c;
+  --accent-grey: #6b6b6b;
+  --header-height: 80px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--accent-green);
+  color: #000000;
+}

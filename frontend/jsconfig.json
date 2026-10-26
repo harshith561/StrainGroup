@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/components/Common": ["src/components/common"],
+      "@/components/Common/*": ["src/components/common/*"],
+      "@/components/common": ["src/components/common"],
+      "@/components/common/*": ["src/components/common/*"],
+      "@/components/Home": ["src/components/home"],
+      "@/components/Home/*": ["src/components/home/*"],
+      "@/components/home": ["src/components/home"],
+      "@/components/home/*": ["src/components/home/*"],
+      "@/components/Contact": ["src/components/contact"],
+      "@/components/Contact/*": ["src/components/contact/*"],
+      "@/components/contact": ["src/components/contact"],
+      "@/components/contact/*": ["src/components/contact/*"]
+    },
+    "jsx": "preserve",
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*", "pages/**/*"]
+}

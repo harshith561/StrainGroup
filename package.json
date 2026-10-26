@@ -1,0 +1,17 @@
+{
+  "name": "strains-website",
+  "version": "1.0.0",
+  "description": "Complete replica of the Strains Group website (Next.js + React + Express + PostgreSQL)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix frontend install && npm --prefix backend install",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev": "concurrently -n \"FRONTEND,BACKEND\" -c \"cyan,green\" \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "build:frontend": "npm --prefix frontend run build",
+    "test:backend": "npm --prefix backend run test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

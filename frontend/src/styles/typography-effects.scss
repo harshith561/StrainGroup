@@ -1,0 +1,40 @@
+/* Distinctive Typography Effects and Letter Fill Animations */
+
+.char-span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal .char-span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-green {
+  color: var(--accent-green) !important;
+}
+
+.pill-button {
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
