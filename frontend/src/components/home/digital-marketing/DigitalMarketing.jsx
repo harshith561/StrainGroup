@@ -2,13 +2,12 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  Settings,
-  Leaf,
-  Sparkles,
-  Heart,
-  Shield,
-  Truck,
-  Ruler,
+  TrendingUp,
+  Video,
+  BarChart3,
+  Users,
+  Search,
+  Send,
 } from 'lucide-react';
 
 export default function DigitalMarketing() {
@@ -16,7 +15,6 @@ export default function DigitalMarketing() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // Initial check in case section is already in viewport on mount
     if (sectionRef.current) {
       const rect = sectionRef.current.getBoundingClientRect();
       if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
@@ -52,177 +50,175 @@ export default function DigitalMarketing() {
     >
       <div className="digital-marketing-inner">
         <div className="digital-marketing-header">
-          <span className="dm-tag font-mono reveal-item">Industrial Manufacturing</span>
-          <h2 className="dm-title font-sans reveal-item">Strains Stitchery Manufacturing Hub</h2>
+          <span className="dm-tag font-mono reveal-item">GROWTH & ENGAGEMENT</span>
+          <h2 className="dm-title font-sans reveal-item">DIGITAL MARKETING SERVICES</h2>
           <p className="dm-desc font-mono reveal-item">
-            Bridging scale manufacturing with sustainability to empower conscious brands.
+            Crafting organic growth strategies and performance marketing models that transform attention into revenue.
           </p>
         </div>
 
-        {/* 01 - Tirupur Production Hub */}
+        {/* 01 - Strategy & Organic Brand Building */}
         <div className="dm-block section-strategy reveal-item">
           <div className="block-meta">
             <span className="block-num font-mono reveal-item">01</span>
             <h3 className="block-heading font-sans reveal-item">
-              Tirupur Production Hub
+              Strategy & Organic Brand Building
             </h3>
             <p className="block-paragraph font-mono reveal-item">
-              Located in Tirupur, the textile capital of India, our garments manufacturing facility is equipped with modern, automated precision sewing and cutting machinery. We provide low-minimum and scale production runs to support global, new-age fashion brands.
+              We shape modern brand narratives through organic marketing strategies. By diving deep into target demographics, brand identity, and positioning, we establish strong digital footprints that organically attract and retain loyal customers.
             </p>
+            <ul className="dm-feature-list font-mono">
+              <li className="reveal-item">• Brand positioning & voice definition</li>
+              <li className="reveal-item">• Organic social media growth plans</li>
+              <li className="reveal-item">• Long-term brand loyalty mapping</li>
+            </ul>
           </div>
           <div className="block-showcase">
             <div className="showcase-card reveal-item">
-              <Settings className="showcase-icon text-green" size={32} />
-              <h4 className="showcase-title font-sans">State of the Art Factory</h4>
+              <TrendingUp className="showcase-icon text-green" size={32} />
+              <h4 className="showcase-title font-sans">Organic Marketing Ecosystems</h4>
               <p className="showcase-desc font-mono">
-                Equipped with specialized high-speed flatlock, overlock, and custom cutting tables optimized for knitwear and heavy hemp weaves.
+                Developing highly relevant content, audience research frameworks, and organic lead generation funnels that grow with compounding value.
               </p>
             </div>
           </div>
         </div>
 
-        {/* 02 - Organic & Alternative Fabrics */}
+        {/* 02 - Cinematic Video & Photo Production */}
         <div className="dm-block section-production alternate reveal-item">
           <div className="block-meta">
             <span className="block-num font-mono reveal-item">02</span>
             <h3 className="block-heading font-sans reveal-item">
-              Organic & Alternative Fabrics
+              Cinematic Video & Photo Production
             </h3>
             <p className="block-paragraph font-mono reveal-item">
-              We specialize in sourcing and processing alternative raw materials. We create garments using premium organic cotton, highly durable hemp fabrics, natural vegan silk, and premium biodegradable vegan leather.
+              Headed by Pavan (Head of Photography & Videography) and Danny (Head of Direction & Post-production), we deliver stunning, high-fidelity visual production. We create end-to-end video campaigns, product reels, and commercial shoots that captivate and convert.
             </p>
+            <ul className="dm-feature-list font-mono">
+              <li className="reveal-item">• Cinematic scriptwriting & art direction</li>
+              <li className="reveal-item">• High-resolution camera & lighting capture</li>
+              <li className="reveal-item">• Specialized visual effects & post-production</li>
+            </ul>
           </div>
           <div className="block-showcase">
             <div className="showcase-card reveal-item">
-              <Leaf className="showcase-icon text-green" size={32} />
-              <h4 className="showcase-title font-sans">Premium Hemp Shirts</h4>
+              <Video className="showcase-icon text-green" size={32} />
+              <h4 className="showcase-title font-sans">High-End Production Quality</h4>
               <p className="showcase-desc font-mono">
-                Crafting customized hemp shirts that are naturally breathable, antimicrobial, UV resistant, and require 80% less water to grow than conventional fibers.
+                From high-speed social media content to large-scale brand films, we capture every frame with cinematic details and strategic purpose.
               </p>
             </div>
           </div>
         </div>
 
-        {/* 03 - Eco-Dyeing & Circular Process */}
+        {/* 03 - Data-Driven Performance Analytics */}
         <div className="dm-block section-analytics reveal-item">
           <div className="block-meta">
             <span className="block-num font-mono reveal-item">03</span>
             <h3 className="block-heading font-sans reveal-item">
-              Eco-Dyeing & Circular Process
+              Data-Driven Performance Analytics
             </h3>
             <p className="block-paragraph font-mono reveal-item">
-              All coloring processes utilize non-toxic dyes derived from fruits, flowers, and vegetables. We operate a zero-waste loop, packaging finished garments in recycled paper sleeves with plantable seed price tags that consumers can grow at home.
+              Under Prasad's leadership, our marketing team implements cost-efficient PPC advertising models. We monitor and optimize conversion rates, average cost-per-click, and click-through rates to deliver stellar ROI.
             </p>
+            <div className="dm-stats-row">
+              <div className="dm-stat-box reveal-item">
+                <span className="stat-val text-green font-sans">4.64%</span>
+                <span className="stat-label font-mono">CTR OPTIMIZATION</span>
+              </div>
+              <div className="dm-stat-box reveal-item">
+                <span className="stat-val text-green font-sans">₹13.01</span>
+                <span className="stat-label font-mono">AVG CPC TARGET</span>
+              </div>
+            </div>
           </div>
           <div className="block-showcase">
             <div className="showcase-card reveal-item">
-              <Sparkles className="showcase-icon text-green" size={32} />
-              <h4 className="showcase-title font-sans">Natural Botanical Pigments</h4>
+              <BarChart3 className="showcase-icon text-green" size={32} />
+              <h4 className="showcase-title font-sans">Measurable Campaign Performance</h4>
               <p className="showcase-desc font-mono">
-                Natural dyeing reduces chemical waste, preserving clean groundwater channels in Tirupur while yielding beautiful earthy tones.
+                Using deep tracking systems, real-time attribution, and daily budget optimizations to minimize waste and maximize customer acquisition.
               </p>
             </div>
           </div>
         </div>
 
-        {/* 04 - Green Collar Jobs & Fair Trade */}
+        {/* 04 - Social Media & Community Management */}
         <div className="dm-block section-social alternate reveal-item">
           <div className="block-meta">
             <span className="block-num font-mono reveal-item">04</span>
             <h3 className="block-heading font-sans reveal-item">
-              Green Collar Jobs & Fair Trade
+              Social Media & Community Management
             </h3>
             <p className="block-paragraph font-mono reveal-item">
-              Strains Stitchery maintains strict ethical workplace standards. We focus on fair living wages, healthy working conditions, local skill development, and fostering stable green collar jobs within India's textile capital.
+              We build thriving brand communities across Instagram, LinkedIn, Twitter, and emerging platforms. Our team manages content calendars, engagement strategies, influencer collaborations, and real-time social listening to keep your brand culturally relevant.
             </p>
+            <ul className="dm-feature-list font-mono">
+              <li className="reveal-item">• Platform-specific content strategy</li>
+              <li className="reveal-item">• Influencer & creator partnership programs</li>
+              <li className="reveal-item">• Social listening & sentiment analysis</li>
+            </ul>
           </div>
           <div className="block-showcase">
             <div className="showcase-card reveal-item">
-              <Heart className="showcase-icon text-green" size={32} />
-              <h4 className="showcase-title font-sans">Ethical Manufacturing</h4>
+              <Users className="showcase-icon text-green" size={32} />
+              <h4 className="showcase-title font-sans">Community-First Growth</h4>
               <p className="showcase-desc font-mono">
-                Prioritizing safety, transparency, and social welfare, ensuring that our clothing is ethically made from seed to stitch.
+                Turning followers into advocates through authentic engagement, UGC campaigns, and data-backed posting schedules tailored to each platform's algorithm.
               </p>
             </div>
           </div>
         </div>
 
-        {/* 05 - Rigorous Quality Control */}
+        {/* 05 - SEO & Content Marketing */}
         <div className="dm-block section-seo reveal-item">
           <div className="block-meta">
             <span className="block-num font-mono reveal-item">05</span>
             <h3 className="block-heading font-sans reveal-item">
-              Rigorous Quality Control
+              SEO & Content Marketing
             </h3>
             <p className="block-paragraph font-mono reveal-item">
-              Every garment undergoes multi-stage inspection — from fabric testing and stitching precision checks to final packaging review. Our dedicated QC team ensures that each piece meets international standards before dispatch.
+              Our SEO-driven content marketing strategy ensures your brand ranks high on search engines while delivering genuine value. We cover keyword research, on-page optimization, technical SEO audits, and high-quality editorial content creation.
             </p>
             <ul className="dm-feature-list font-mono">
-              <li className="reveal-item">• 4-stage QC inspection process</li>
-              <li className="reveal-item">• Fabric strength & colorfastness testing</li>
-              <li className="reveal-item">• AQL-based random sampling audits</li>
+              <li className="reveal-item">• Technical SEO & site architecture audits</li>
+              <li className="reveal-item">• Long-form editorial & blog content</li>
+              <li className="reveal-item">• Backlink strategy & authority building</li>
             </ul>
           </div>
           <div className="block-showcase">
             <div className="showcase-card reveal-item">
-              <Shield className="showcase-icon text-green" size={32} />
-              <h4 className="showcase-title font-sans">Uncompromising Standards</h4>
+              <Search className="showcase-icon text-green" size={32} />
+              <h4 className="showcase-title font-sans">Search-First Visibility</h4>
               <p className="showcase-desc font-mono">
-                Zero-defect philosophy backed by trained inspectors, precision measuring tools, and digital tracking systems that flag deviations in real time.
+                Comprehensive keyword mapping and content clusters that drive organic traffic, reduce bounce rates, and establish your brand as an industry authority.
               </p>
             </div>
           </div>
         </div>
 
-        {/* 06 - Global Logistics & Supply Chain */}
+        {/* 06 - Email Marketing & Automation */}
         <div className="dm-block section-email alternate reveal-item">
           <div className="block-meta">
             <span className="block-num font-mono reveal-item">06</span>
             <h3 className="block-heading font-sans reveal-item">
-              Global Logistics & Supply Chain
+              Email Marketing & Automation
             </h3>
             <p className="block-paragraph font-mono reveal-item">
-              We manage end-to-end shipping and customs clearance for international clients. From Tirupur to Tokyo, London to New York — our logistics partners ensure timely delivery with full shipment tracking and consolidated freight options.
+              We design personalized email funnels that nurture leads from first touch to loyal customer. Our automated workflows include welcome sequences, abandoned cart recovery, post-purchase follow-ups, and segmented newsletter campaigns.
             </p>
             <ul className="dm-feature-list font-mono">
-              <li className="reveal-item">• Air & sea freight consolidation</li>
-              <li className="reveal-item">• Real-time shipment tracking portal</li>
-              <li className="reveal-item">• Customs documentation & compliance</li>
+              <li className="reveal-item">• Custom automation workflow design</li>
+              <li className="reveal-item">• A/B tested subject lines & CTAs</li>
+              <li className="reveal-item">• Detailed performance & ROI reporting</li>
             </ul>
           </div>
           <div className="block-showcase">
             <div className="showcase-card reveal-item">
-              <Truck className="showcase-icon text-green" size={32} />
-              <h4 className="showcase-title font-sans">Seamless Worldwide Delivery</h4>
+              <Send className="showcase-icon text-green" size={32} />
+              <h4 className="showcase-title font-sans">Automated Revenue Engines</h4>
               <p className="showcase-desc font-mono">
-                Strategic warehousing partnerships and optimized shipping routes that reduce transit times and costs for bulk and sample orders alike.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* 07 - Custom Design & Pattern Engineering */}
-        <div className="dm-block section-design reveal-item">
-          <div className="block-meta">
-            <span className="block-num font-mono reveal-item">07</span>
-            <h3 className="block-heading font-sans reveal-item">
-              Custom Design & Pattern Engineering
-            </h3>
-            <p className="block-paragraph font-mono reveal-item">
-              Our in-house design studio offers end-to-end pattern making, grading, and sampling. From tech packs to finished prototypes, we help emerging and established brands bring their vision to life with precision and speed.
-            </p>
-            <ul className="dm-feature-list font-mono">
-              <li className="reveal-item">• Digital pattern grading & marker making</li>
-              <li className="reveal-item">• Rapid sampling within 7-10 days</li>
-              <li className="reveal-item">• Tech pack development & consultation</li>
-            </ul>
-          </div>
-          <div className="block-showcase">
-            <div className="showcase-card reveal-item">
-              <Ruler className="showcase-icon text-green" size={32} />
-              <h4 className="showcase-title font-sans">From Concept to Creation</h4>
-              <p className="showcase-desc font-mono">
-                Expert pattern engineers using industry-grade CAD software to ensure accurate fits, minimal fabric waste, and seamless transition from sample to mass production.
+                Smart segmentation and behavioral triggers that deliver the right message at the right time, maximizing open rates, click-throughs, and lifetime customer value.
               </p>
             </div>
           </div>

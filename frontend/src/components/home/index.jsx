@@ -8,5 +8,6 @@ export { default as TestimonialsSection } from './testimonials/TestimonialsSecti
 export { default as ValuesSection } from './values/ValuesSection';
 export { default as TeamSection } from './team/TeamSection';
 export { default as ExtraEcosystem } from './ecosystem/ExtraEcosystem';
+export { default as StitcherySection } from './stitchery/StitcherySection';
 export { default as DigitalMarketing } from './digital-marketing/DigitalMarketing';
 export { default as Marquee } from './marquee/Marquee';

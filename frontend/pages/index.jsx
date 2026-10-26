@@ -9,6 +9,7 @@ import {
   ValuesSection,
   TeamSection,
   ExtraEcosystem,
+  StitcherySection,
   DigitalMarketing,
   Marquee,
 } from '@/components/home';
@@ -71,6 +72,7 @@ export default function HomePage() {
       <ValuesSection />
       <TeamSection />
       <ExtraEcosystem />
+      <StitcherySection />
       <DigitalMarketing />
       <Marquee />
     </MainLayout>
