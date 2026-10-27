@@ -9,6 +9,7 @@ import '@/styles/scroll-effects.scss';
 import '@/styles/team.scss';
 import '@/styles/showcase.scss';
 import '@/styles/services.scss';
+import '@/styles/about.scss';
 import Head from 'next/head';
 
 export default function MyApp({ Component, pageProps }) {

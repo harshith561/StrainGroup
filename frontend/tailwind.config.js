@@ -18,6 +18,7 @@ module.exports = {
         display: ['var(--font-display)', '"Bowlby One SC"', 'sans-serif'],
         sans: ['var(--font-sans)', '"Inter Tight"', 'sans-serif'],
         mono: ['var(--font-mono)', '"Space Mono"', 'monospace'],
+        timeline: ['"Anton"', '"Bebas Neue"', 'Impact', 'sans-serif'],
       },
       spacing: {
         'header': '80px',

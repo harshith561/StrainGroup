@@ -1,6 +1,3 @@
-import React from 'react';
-import { UnderMaintenance } from '@/components/common';
+import AboutStrainsGroupPage from '../about-strains-group';
 
-export default function AboutRoute() {
-  return <UnderMaintenance routeName="about" />;
-}
+export default AboutStrainsGroupPage;

@@ -1,0 +1,642 @@
+/* ==========================================================================
+   About Page Styles: Simple Black Screen "SINCE 2012" + Studio Next Section
+   Exact match to user's screenshots & instructions
+   ========================================================================== */
+
+.font-timeline {
+  font-family: 'Anton', 'Bebas Neue', 'Inter Tight', Impact, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+/* ================= 1. Simple Black Screen Hero with Background Video ================= */
+.simple-hero-screen {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  height: 90vh;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  padding: 60px 20px 30px;
+}
+
+/* Video Background Layer - Clearly Visible with Glass Blur & White/Green/Black Theme */
+.simple-hero-video-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.simple-hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* Grayscale + contrast tuned strictly to site theme: White, Green, and Black */
+  filter: grayscale(1) brightness(1.08) contrast(1.22);
+  transform: scale(1.04);
+  opacity: 0.72;
+}
+
+/* Glass View Overlay: Frosted Blur Effect with Subtle Emerald Tint */
+.simple-hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(0, 168, 89, 0.2) 0%, rgba(0, 0, 0, 0.4) 65%, rgba(0, 0, 0, 0.7) 100%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, transparent 45%, rgba(0, 0, 0, 0.65) 100%);
+  pointer-events: none;
+}
+
+.simple-hero-ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 168, 89, 0.16) 0%, transparent 65%);
+}
+
+.simple-hero-center {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto 0;
+  padding: 10px 0;
+}
+
+.simple-hero-title {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(14px, 3.2vw, 48px);
+  font-size: clamp(3rem, 11vw, 12rem);
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin: 0;
+  padding: 0;
+}
+
+.since-letters-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.year-digits-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.simple-hero-space {
+  display: inline-block;
+  width: clamp(10px, 2.5vw, 36px);
+}
+
+.simple-letter-mask {
+  display: inline-flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 0.18em 0.02em;
+  margin: -0.18em 0;
+  box-sizing: content-box;
+  vertical-align: middle;
+}
+
+.simple-letter-char {
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(135%);
+  opacity: 0;
+  filter: blur(8px);
+  will-change: transform, opacity, filter;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Kinetic reveal when opening about section */
+.simple-hero-screen.is-mounted .simple-letter-char {
+  animation: simpleLetterSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes simpleLetterSlideUp {
+  0% {
+    transform: translateY(135%);
+    opacity: 0;
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.simple-hero-title:hover .simple-letter-char.text-\[\#00a859\] {
+  transform: translateY(-4px) scale(1.03);
+  text-shadow: 0 0 35px rgba(0, 168, 89, 0.5);
+}
+
+.simple-hero-scroll-btn {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  outline: none;
+  transition: opacity 0.3s ease;
+  margin-top: auto;
+}
+
+.simple-hero-scroll-btn:hover {
+  opacity: 0.8;
+}
+
+.simple-arrow-bounce {
+  animation: simpleBounce 2s infinite ease-in-out;
+}
+
+@keyframes simpleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* ================= 2. About Studio Next Section (Exact Match to User's Screenshots) ================= */
+.about-studio-section {
+  position: relative;
+  width: 100%;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  padding: 130px 60px 110px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-studio-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Main Grid: Left Column for Tag | Right Column for Headline & Content */
+.about-studio-layout-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 85px;
+}
+
+@media (min-width: 1400px) {
+  .about-studio-layout-grid {
+    grid-template-columns: 270px 1fr;
+    gap: 60px;
+  }
+}
+
+/* Left Column: ABOUT STUDIO */
+.about-studio-left-col {
+  padding-top: 14px; /* Perfectly aligned to cap-height of giant title */
+}
+
+.about-studio-kicker {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #e5e5e5;
+  text-transform: uppercase;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Right Column: Giant Headline & Sub-content */
+.about-studio-right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Giant Headline */
+.about-studio-headline {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(34px, 5vw, 76px);
+  font-weight: 600;
+  line-height: 1.09;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin: 0 0 75px 0;
+  max-width: 1060px;
+}
+
+/* Sub-content Row: Bullets on Left | Two Paragraphs & CTA on Right */
+.about-studio-subcontent-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Left Sub-column: Square Bullet Points */
+.about-studio-bullets-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.studio-bullet-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: clamp(20px, 2.1vw, 29px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.square-bullet {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Right Sub-column: Copy & Explore Services CTA */
+.about-studio-copy-area {
+  display: flex;
+  flex-direction: column;
+  max-width: 620px;
+}
+
+.about-studio-p1,
+.about-studio-p2 {
+  font-size: clamp(16px, 1.35vw, 19px);
+  color: #949494;
+  line-height: 1.62;
+  font-weight: 400;
+  margin: 0 0 24px 0;
+}
+
+.about-studio-btn-wrap {
+  margin-top: 16px;
+}
+
+.white-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 36px;
+  border-radius: 9999px;
+  background-color: var(--accent-green, #00a859);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 168, 89, 0.35);
+  border: 1px solid transparent;
+
+  &:hover,
+  &.hovered-white,
+  &.is-hovered {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.35) !important;
+  }
+}
+
+/* ================= Horizontal Zigzag Studio Gallery (Alternating Heights) ================= */
+.about-studio-gallery-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 85px;
+}
+
+/* Navigation Controls placed UNDER the photo gallery (Only visible on tablet & mobile; hidden on laptops) */
+.about-gallery-bottom-controls {
+  display: none !important; /* Hidden on laptops & desktops per user instruction */
+
+  @media (max-width: 1024px) {
+    display: flex !important; /* Only visible in mobile and tablet */
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+
+/* Navigation Arrow Buttons (White, Green, Black theme) */
+.about-gallery-nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gallery-nav-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+
+  &:hover:not(:disabled) {
+    background-color: var(--accent-green, #00a859);
+    border-color: var(--accent-green, #00a859);
+    color: #ffffff;
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 168, 89, 0.45);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+  &:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Scrollable Container (Mouse wheel up/down translates to horizontal scroll) */
+.about-studio-gallery-scroll {
+  display: flex;
+  align-items: center; /* Crucial: vertically centers short cards against tall cards */
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 4px 18px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+  scroll-snap-type: x proximity;
+
+  /* Remove the underline scrollbar completely across all browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE / Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    width: 0;
+    height: 0;
+  }
+
+  &.is-dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+  }
+}
+
+/* Zigzag Cards - Alternating Heights ("One is big and second is small in height") */
+.studio-gallery-card {
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #141414;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55);
+  scroll-snap-align: start;
+
+  /* Tall Cards (Big in height) */
+  &.gallery-card-tall {
+    width: clamp(280px, 24vw, 360px);
+    height: clamp(400px, 32vw, 500px);
+  }
+
+  /* Short Cards (Small in height - centered vertically in row) */
+  &.gallery-card-short {
+    width: clamp(250px, 21vw, 320px);
+    height: clamp(260px, 20vw, 320px);
+    align-self: center;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75);
+
+    .studio-gallery-img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.studio-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  display: block;
+}
+
+/* Floating Scroll to Top Circle Button */
+.scroll-to-top-circle-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.scroll-to-top-circle-btn:hover {
+  background-color: #e5e5e5;
+  color: #000000;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ================= 3. Responsive Breakpoints ================= */
+@media (max-width: 1024px) {
+  .about-studio-section {
+    padding: 90px 36px 80px;
+  }
+  .about-studio-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+  .about-studio-left-col {
+    padding-top: 0;
+  }
+  .about-studio-subcontent-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-studio-gallery-wrapper {
+    margin-top: 60px;
+  }
+  .gallery-nav-arrow-btn {
+    width: 42px;
+    height: 42px;
+  }
+  .studio-gallery-card.gallery-card-tall {
+    width: 290px;
+    height: 380px;
+  }
+  .studio-gallery-card.gallery-card-short {
+    width: 250px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .simple-hero-screen {
+    min-height: 70vh !important;
+    height: 70vh !important;
+    max-height: 70vh !important;
+    padding: 30px 16px 15px !important;
+  }
+  .simple-hero-title {
+    font-size: clamp(2.4rem, 11.5vw, 4.4rem);
+    flex-wrap: nowrap !important;
+    gap: 12px;
+  }
+  .simple-hero-scroll-btn {
+    margin-top: 10px;
+    padding: 5px;
+  }
+  .about-studio-section {
+    padding: 55px 20px 60px;
+  }
+  .about-studio-headline {
+    font-size: clamp(26px, 6.5vw, 38px);
+    letter-spacing: -1px;
+    margin-bottom: 35px;
+  }
+  .about-studio-subcontent-row {
+    gap: 30px;
+  }
+  .studio-bullet-list li {
+    font-size: 20px;
+  }
+  /* Gallery responsiveness on mobile and tablet with prominent navigation arrows */
+  .about-studio-gallery-wrapper {
+    margin-top: 45px;
+  }
+  .about-gallery-header-row {
+    margin-bottom: 16px;
+  }
+  .about-gallery-hint {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+  .gallery-nav-arrow-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .about-studio-gallery-scroll {
+    gap: 14px;
+    padding: 14px 2px 20px;
+  }
+  .studio-gallery-card.gallery-card-tall {
+    width: 245px;
+    height: 330px;
+  }
+  .studio-gallery-card.gallery-card-short {
+    width: 210px;
+    height: 220px;
+  }
+  .scroll-to-top-circle-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-hero-screen {
+    min-height: 70vh !important;
+    height: 70vh !important;
+    max-height: 70vh !important;
+    padding: 20px 12px 10px !important;
+  }
+  .simple-hero-title {
+    flex-wrap: nowrap !important;
+    gap: 8px;
+    font-size: clamp(1.9rem, 11.8vw, 3.2rem);
+  }
+  .simple-hero-space {
+    width: 8px;
+  }
+  .about-studio-section {
+    padding: 40px 16px 50px;
+  }
+  .about-studio-headline {
+    font-size: 25px;
+    line-height: 1.15;
+  }
+  .about-gallery-hint {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .studio-gallery-card.gallery-card-tall {
+    width: 215px;
+    height: 290px;
+  }
+  .studio-gallery-card.gallery-card-short {
+    width: 180px;
+    height: 195px;
+  }
+}
+
