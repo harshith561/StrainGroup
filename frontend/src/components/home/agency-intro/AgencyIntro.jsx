@@ -55,7 +55,7 @@ export default function AgencyIntro() {
         <div className="intro-content-grid">
           <div className="intro-grid-left">
             <h3 className="intro-main-pitch font-sans">
-              Redox is the first and only creative agency for your real exploration. It's one private place to save everything you can realize about digital beautifully design.
+              Strains Group is the first and only creative agency for your real exploration. It's one private place to save everything you can realize about digital beautifully design.
             </h3>
           </div>
 

@@ -99,8 +99,7 @@ npm test
 strains-website/
 ├── frontend/
 │   ├── public/
-│   │   ├── assets/              # Original hashed webp and png assets
-│   │   ├── images/              # Torus images & brand logos
+│   │   ├── assets/              # Webp and png assets
 │   │   ├── videos/              # Strains Group production video overview
 │   │   └── strainsassociates.webp
 │   ├── src/

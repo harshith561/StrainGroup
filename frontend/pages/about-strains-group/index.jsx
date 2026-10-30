@@ -4,6 +4,9 @@ import MainLayout from '@/components/common/MainLayout';
 import {
   AboutHero,
   AboutStudioSection,
+  AboutApproachSection,
+  AboutWhoWeAreSection,
+  AboutBrandsMarqueeSection,
 } from '@/components/about';
 
 export default function AboutStrainsGroupPage() {
@@ -22,13 +25,22 @@ export default function AboutStrainsGroupPage() {
         />
       </Head>
 
-      <main className="about-page-main bg-[#000000] text-white">
+      <div className="about-page-main bg-[#000000] text-white">
         {/* Simple Black Screen with Animated "SINCE 2012" alone */}
         <AboutHero />
 
-        {/* Next Section Template from User Screenshots */}
+        {/* Studio Section with Zigzag Photo Gallery */}
         <AboutStudioSection />
-      </main>
+
+        {/* Method of Making Better Result (Approach Section) */}
+        <AboutApproachSection />
+
+        {/* Who We Are & Performance Metrics */}
+        <AboutWhoWeAreSection />
+
+        {/* Client Brands Marquee Showcase */}
+        <AboutBrandsMarqueeSection />
+      </div>
     </MainLayout>
   );
 }

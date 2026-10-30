@@ -24,7 +24,7 @@ export const STUDIO_SECTION_DATA = {
 
   // 4. Right Description Paragraphs
   paragraph1:
-    "Redox is the first and only creative agency for your real exploration. It's one private place to save everything you can realize about digital beautifully design.",
+    "Strains Group is the first and only creative agency for your real exploration. It's one private place to save everything you can realize about digital beautifully design.",
   paragraph2:
     "As a global creative agency, we understand the importance of staying ahead of the game. That's why we partner with some of the world's best talent to bring fresh ideas",
 

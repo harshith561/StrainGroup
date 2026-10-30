@@ -5,4 +5,8 @@ export { default as CompanyTimelineDeep } from './CompanyTimelineDeep';
 export { default as AboutDivisions } from './AboutDivisions';
 export { default as AboutLeadership } from './AboutLeadership';
 export { default as AboutValues } from './AboutValues';
+export { default as AboutApproachSection } from './AboutApproachSection';
+export { default as AboutWhoWeAreSection } from './AboutWhoWeAreSection';
+export { default as AboutBrandsMarqueeSection } from './AboutBrandsMarqueeSection';
+export { default as AboutClientsSection } from './AboutBrandsMarqueeSection';
 export { default as AboutCTA } from './AboutCTA';
