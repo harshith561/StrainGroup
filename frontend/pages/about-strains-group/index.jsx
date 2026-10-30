@@ -7,6 +7,7 @@ import {
   AboutApproachSection,
   AboutWhoWeAreSection,
   AboutBrandsMarqueeSection,
+  AboutTeamCoverflowSection,
 } from '@/components/about';
 
 export default function AboutStrainsGroupPage() {
@@ -40,6 +41,9 @@ export default function AboutStrainsGroupPage() {
 
         {/* Client Brands Marquee Showcase */}
         <AboutBrandsMarqueeSection />
+
+        {/* Team Members 3D Coverflow Section */}
+        <AboutTeamCoverflowSection />
       </div>
     </MainLayout>
   );

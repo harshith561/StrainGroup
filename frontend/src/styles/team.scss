@@ -1,7 +1,15 @@
-/* Team Section Styling with Mobile/Tablet Always-Color & Always-Visible Info */
+/* ==========================================================================
+   Strains Group — Team Section Styling
+   1. Home Page: Original 4-card Grid (.team-section)
+   2. About Page: 3D Coverflow Carousel (.about-team-coverflow-section)
+      with image height at 60% of section / stage for optimal proportions
+   ========================================================================== */
 
+/* -------------------------------------------------------------------------
+   1. HOME PAGE TEAM SECTION (Original 4-card grid)
+   ------------------------------------------------------------------------- */
 .team-section {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-primary, #0c0c0c);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   width: 100%;
   padding: 120px 80px;
@@ -18,7 +26,7 @@
 
       .team-title {
         text-transform: uppercase;
-        color: var(--text-primary);
+        color: var(--text-primary, #ffffff);
         font-size: 50px;
         font-weight: 800;
         line-height: 1.1;
@@ -46,7 +54,9 @@
         cursor: pointer;
         opacity: 1 !important;
         transform: translateY(0) !important;
-        transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+        transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                    transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                    border-color 0.4s ease;
 
         .member-image-wrapper {
           position: relative;
@@ -77,7 +87,7 @@
             transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
 
             .member-name {
-              color: var(--text-primary);
+              color: var(--text-primary, #ffffff);
               font-size: 22px;
               font-weight: 800;
               margin: 0;
@@ -118,8 +128,7 @@
     transform: translateY(0);
   }
 
-  /* ================= Tablet & Mobile Styling ================= */
-  /* No hover effect on mobile and tablet: color image & visible name by default */
+  /* Tablet & Mobile Styling for Home Team */
   @media (max-width: 1024px), (hover: none) {
     padding: 100px 40px;
 
@@ -201,6 +210,277 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------
+   2. ABOUT PAGE 3D COVERFLOW SECTION (.about-team-coverflow-section)
+   Positioned directly after the brands section in the About page.
+   Image height is precisely 60% of the section/stage for balanced proportion.
+   ------------------------------------------------------------------------- */
+.about-team-coverflow-section {
+  background-color: var(--bg-primary, #000000);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+  padding: 100px 80px 110px;
+  position: relative;
+  overflow: hidden;
+
+  .about-team-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* Header matching reference screenshot */
+  .about-team-header {
+    width: 100%;
+
+    .about-team-tag {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+    }
+
+    .about-team-title {
+      color: #ffffff;
+      font-family: var(--font-sans, "Inter Tight", sans-serif);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      text-transform: none;
+    }
+  }
+
+  /* 3D Coverflow Stage */
+  .about-coverflow-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    perspective: 1200px;
+  }
+
+  .about-coverflow-stage {
+    position: relative;
+    width: 100%;
+    height: 480px; /* Base stage height */
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 1280px) {
+      height: 520px;
+    }
+  }
+
+  /* 
+     CARD DIMENSIONS: Height is set to 60% of the section/stage (~310px - 340px)
+     with aspect ratio 3/4 for optimal aesthetic balance
+  */
+  .about-coverflow-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 310px; /* Exactly ~60% of stage height */
+    width: 235px;
+    transform-origin: center center;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                filter 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.4s ease;
+    will-change: transform, opacity;
+
+    @media (min-width: 1024px) {
+      height: 335px;
+      width: 255px;
+    }
+
+    @media (min-width: 1280px) {
+      height: 355px;
+      width: 270px;
+    }
+
+    /* CENTER ACTIVE CARD: Larger, in foreground, active green ambient glow */
+    &.card-pos-center {
+      transform: translate(-50%, -50%) scale(1.1) translateZ(50px) rotateY(0deg);
+      z-index: 30;
+      opacity: 1;
+      filter: brightness(1) contrast(1.02);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95),
+                  0 0 35px rgba(0, 168, 89, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+
+      &:hover {
+        border-color: rgba(0, 168, 89, 0.7);
+        box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.95),
+                    0 0 45px rgba(0, 168, 89, 0.38);
+      }
+    }
+
+    /* LEFT BACKGROUND CARD: Smaller, positioned behind, 3D tilt */
+    &.card-pos-left {
+      transform: translate(calc(-50% - 190px), -50%) scale(0.85) translateZ(-50px) rotateY(18deg);
+      z-index: 15;
+      opacity: 0.52;
+      filter: brightness(0.68) grayscale(15%);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      @media (min-width: 1024px) {
+        transform: translate(calc(-50% - 240px), -50%) scale(0.85) translateZ(-50px) rotateY(18deg);
+      }
+
+      @media (min-width: 1280px) {
+        transform: translate(calc(-50% - 280px), -50%) scale(0.85) translateZ(-50px) rotateY(18deg);
+      }
+
+      &:hover {
+        opacity: 0.85;
+        filter: brightness(0.88) grayscale(0%);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+    }
+
+    /* RIGHT BACKGROUND CARD: Smaller, positioned behind, 3D tilt */
+    &.card-pos-right {
+      transform: translate(calc(-50% + 190px), -50%) scale(0.85) translateZ(-50px) rotateY(-18deg);
+      z-index: 15;
+      opacity: 0.52;
+      filter: brightness(0.68) grayscale(15%);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      @media (min-width: 1024px) {
+        transform: translate(calc(-50% + 240px), -50%) scale(0.85) translateZ(-50px) rotateY(-18deg);
+      }
+
+      @media (min-width: 1280px) {
+        transform: translate(calc(-50% + 280px), -50%) scale(0.85) translateZ(-50px) rotateY(-18deg);
+      }
+
+      &:hover {
+        opacity: 0.85;
+        filter: brightness(0.88) grayscale(0%);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+    }
+
+    /* OFFSCREEN CARDS */
+    &.card-pos-far-left {
+      transform: translate(calc(-50% - 460px), -50%) scale(0.7) translateZ(-120px) rotateY(25deg);
+      z-index: 5;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &.card-pos-far-right {
+      transform: translate(calc(-50% + 460px), -50%) scale(0.7) translateZ(-120px) rotateY(-25deg);
+      z-index: 5;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  /* Active Member Metadata */
+  .about-active-member-meta {
+    h3 {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+
+      @media (min-width: 1024px) {
+        font-size: 34px;
+      }
+    }
+
+    p {
+      color: var(--accent-green, #00a859);
+      letter-spacing: 0.22em;
+      font-size: 13px;
+    }
+  }
+
+  /* Mobile Single-Card Layout (Image height ~60% of viewport / container) */
+  .about-team-mobile-view {
+    touch-action: pan-y;
+    overflow: hidden;
+
+    .about-mobile-slider-viewport {
+      width: 100%;
+      max-width: 290px;
+      margin: 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 168, 89, 0.18);
+      background-color: #121212;
+      position: relative;
+    }
+
+    .about-mobile-slider-track {
+      display: flex;
+      width: 100%;
+      transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: transform;
+    }
+
+    .about-mobile-slide {
+      width: 100%;
+      flex-shrink: 0;
+      aspect-ratio: 3 / 4;
+      max-height: 55vh; /* 60% of mobile section viewport */
+      position: relative;
+      background-color: #111;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+
+  /* Responsive Spacing */
+  @media (max-width: 1024px) {
+    padding: 80px 40px 90px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 70px 20px 80px;
+
+    .about-team-header {
+      margin-bottom: 28px;
+
+      .about-team-tag {
+        margin-bottom: 6px;
+      }
+
+      .about-team-title {
+        font-size: 29px;
+        line-height: 1.12;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 16px 70px;
+
+    .about-team-header {
+      .about-team-title {
+        font-size: 26px;
       }
     }
   }

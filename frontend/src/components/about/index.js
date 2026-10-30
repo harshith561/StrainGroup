@@ -9,4 +9,6 @@ export { default as AboutApproachSection } from './AboutApproachSection';
 export { default as AboutWhoWeAreSection } from './AboutWhoWeAreSection';
 export { default as AboutBrandsMarqueeSection } from './AboutBrandsMarqueeSection';
 export { default as AboutClientsSection } from './AboutBrandsMarqueeSection';
+export { default as AboutTeamCoverflowSection } from './AboutTeamCoverflowSection';
+export { default as TeamSection } from '../home/team/TeamSection';
 export { default as AboutCTA } from './AboutCTA';
