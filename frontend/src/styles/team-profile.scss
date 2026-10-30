@@ -1,0 +1,402 @@
+/* ==========================================================================
+   Strains Group — Individual Team Member Profile Styling
+   Follows exact Reference Screenshot 1 (Desktop) & Reference Screenshot 2 (Mobile)
+   ========================================================================== */
+
+.team-profile-page-wrapper {
+  background-color: var(--bg-primary, #0c0c0c);
+  color: var(--text-primary, #ffffff);
+  width: 100%;
+  min-height: calc(100vh - var(--header-height, 80px));
+  position: relative;
+  overflow-x: hidden;
+
+  /* Subtle page load fade-in */
+  animation: profilePageFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes profilePageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-profile-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 140px 80px 120px;
+  box-sizing: border-box;
+
+  @media (max-width: 1200px) {
+    padding: 130px 50px 100px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 120px 40px 90px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 115px 24px 70px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 105px 18px 60px;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP TWO-COLUMN LAYOUT (Reference Screenshot 1)
+   Equal-width columns (50% / 50%) inside one parent container
+   ========================================================================== */
+
+.team-profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Exactly 50% each */
+  gap: 70px;
+  align-items: start;
+  width: 100%;
+
+  @media (min-width: 1280px) {
+    gap: 90px;
+  }
+}
+
+/* Left Column: Text Information & Social Links */
+.team-profile-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+/* Right Column: Profile Image */
+.team-profile-right {
+  display: flex;
+  width: 100%;
+  align-self: start;
+}
+
+/* 1. Name */
+.team-profile-name {
+  color: #ffffff;
+  font-family: var(--font-sans, "Inter Tight", sans-serif);
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px 0;
+  word-break: break-word;
+
+  @media (min-width: 1280px) {
+    font-size: 64px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 70px;
+  }
+}
+
+/* 2. Designation (Existing Green Accent Color) */
+.team-profile-designation {
+  color: var(--accent-green, #00a859);
+  font-family: var(--font-mono, "Space Mono", monospace);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 32px 0;
+  display: block;
+}
+
+/* 3 & 4. Description Paragraphs */
+.team-profile-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 44px;
+
+  .team-profile-p {
+    color: var(--text-secondary, #8a8a8a);
+    font-family: var(--font-sans, "Inter Tight", sans-serif);
+    font-size: 15.5px;
+    font-weight: 400;
+    line-height: 1.75;
+    margin: 0;
+
+    @media (min-width: 1280px) {
+      font-size: 16.5px;
+      line-height: 1.8;
+    }
+  }
+}
+
+/* 5. Social Media Links */
+.team-profile-social-list {
+  width: 100%;
+  border-top: 1px dashed rgba(255, 255, 255, 0.16);
+  display: flex;
+  flex-direction: column;
+
+  .team-profile-social-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 8px;
+    width: 100%;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.16);
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    box-sizing: border-box;
+
+    .social-plus-icon {
+      color: #ffffff;
+      font-family: var(--font-sans, "Inter Tight", sans-serif);
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 1;
+      width: 16px;
+      text-align: center;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .social-label {
+      font-family: var(--font-sans, "Inter Tight", sans-serif);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease;
+    }
+
+    /* Desktop Hover Animation */
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.035);
+      color: var(--accent-green, #00a859);
+      padding-left: 14px;
+
+      .social-plus-icon {
+        color: var(--accent-green, #00a859);
+        transform: rotate(90deg);
+      }
+
+      .social-label {
+        color: var(--accent-green, #00a859);
+      }
+    }
+
+    /* Tap interaction for mobile/touch */
+    &:active {
+      background-color: rgba(0, 168, 89, 0.12);
+      color: var(--accent-green, #00a859);
+
+      .social-plus-icon,
+      .social-label {
+        color: var(--accent-green, #00a859);
+      }
+    }
+  }
+}
+
+/* Portrait Image Container (Right Column) */
+.team-profile-image-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: #121212;
+  overflow: hidden;
+  /* Square-edged appearance matching reference screenshot */
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8);
+  position: relative;
+
+  .team-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  &:hover .team-profile-image {
+    transform: scale(1.02);
+  }
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVENESS (768px - 1023px)
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .team-profile-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+
+  .team-profile-name {
+    font-size: 42px;
+    margin-bottom: 12px;
+  }
+
+  .team-profile-designation {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  .team-profile-description {
+    gap: 16px;
+    margin-bottom: 32px;
+
+    .team-profile-p {
+      font-size: 14.5px;
+      line-height: 1.68;
+    }
+  }
+
+  .team-profile-social-list .team-profile-social-row {
+    padding: 13px 6px;
+
+    .social-label {
+      font-size: 14px;
+    }
+  }
+
+  .team-profile-image-wrap {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* ==========================================================================
+   MOBILE LAYOUT (Reference Screenshot 2)
+   Vertical Rearrangement in exact order:
+   1. Team member's full name (heading)
+   2. Large team member portrait image
+   3. Professional designation
+   4. First descriptive paragraph
+   5. Second descriptive paragraph
+   6. Social media links
+   All text center-aligned. Dark background, white typography, green accent.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .team-profile-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 0;
+  }
+
+  /* CSS contents unrolls children to parent flex container for reordering */
+  .team-profile-left {
+    display: contents;
+  }
+
+  .team-profile-right {
+    display: contents;
+  }
+
+  /* 1. Heading: Full Name */
+  .team-profile-name {
+    order: 1;
+    text-align: center;
+    width: 100%;
+    font-size: 38px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px 0;
+  }
+
+  /* 2. Large Portrait Image Directly Below Heading */
+  .team-profile-image-wrap {
+    order: 2;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 28px;
+    aspect-ratio: 4 / 5;
+    border-radius: 0; /* Square-edged appearance */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9);
+  }
+
+  /* 3. Professional Designation Below Image */
+  .team-profile-designation {
+    order: 3;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: var(--accent-green, #00a859);
+    margin: 0 0 22px 0;
+  }
+
+  /* 4 & 5. Description Paragraphs Centered */
+  .team-profile-description {
+    order: 4;
+    text-align: center;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto 36px;
+    gap: 16px;
+
+    .team-profile-p {
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary, #8a8a8a);
+    }
+  }
+
+  /* 6. Social Media Links at Bottom */
+  .team-profile-social-list {
+    order: 5;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: left;
+    border-top: 1px dashed rgba(255, 255, 255, 0.18);
+
+    .team-profile-social-row {
+      padding: 15px 12px;
+
+      .social-label {
+        font-size: 14.5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .team-profile-name {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .team-profile-image-wrap {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .team-profile-designation {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    margin-bottom: 18px;
+  }
+
+  .team-profile-description .team-profile-p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}

@@ -27,7 +27,9 @@ export default function AboutLeadership() {
               Founder & Line Producer
             </span>
             <h3 className="founder-name-large font-sans">
-              Naga Praharsha Govindu
+              <Link href="/team/naga-praharsha" className="hover:text-strain-green transition-colors">
+                Naga Praharsha Govindu
+              </Link>
             </h3>
             <p className="founder-bio-text font-mono">
               Founded Strains in 2012 with a bold multi-disciplinary vision: uniting cutting-edge
@@ -74,7 +76,11 @@ export default function AboutLeadership() {
             </div>
             <p className="struct-subtitle font-mono">Direction & Post-Production</p>
             <ul className="struct-list font-mono">
-              <li><strong>Danny</strong> — Head of Direction & Post-Production</li>
+              <li>
+                <Link href="/team/danny-cooper" className="hover:text-strain-green transition-colors">
+                  <strong>Danny</strong> — Head of Direction & Post-Production
+                </Link>
+              </li>
               <li>High-End Colorists & Motion Artists</li>
               <li>VFX & Compositing Specialists</li>
             </ul>
@@ -87,7 +93,11 @@ export default function AboutLeadership() {
             </div>
             <p className="struct-subtitle font-mono">Camera, Lighting & Visuals</p>
             <ul className="struct-list font-mono">
-              <li><strong>Pavan</strong> — Head of Photography & Videography</li>
+              <li>
+                <Link href="/team/pavan-kumar" className="hover:text-strain-green transition-colors">
+                  <strong>Pavan</strong> — Head of Photography & Videography
+                </Link>
+              </li>
               <li>Professional Studio Photographers</li>
               <li>Gaffers & Lighting Engineers</li>
             </ul>
@@ -100,7 +110,11 @@ export default function AboutLeadership() {
             </div>
             <p className="struct-subtitle font-mono">Digital Media & Conversion</p>
             <ul className="struct-list font-mono">
-              <li><strong>Prasad</strong> — Head of Digital Marketing</li>
+              <li>
+                <Link href="/team/prasad-varma" className="hover:text-strain-green transition-colors">
+                  <strong>Prasad</strong> — Head of Digital Marketing
+                </Link>
+              </li>
               <li>Performance Advertising Strategists</li>
               <li>UI/UX & Interactive Engineers</li>
             </ul>

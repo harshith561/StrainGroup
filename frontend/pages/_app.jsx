@@ -7,6 +7,7 @@ import '@/styles/portfolio-effects.scss';
 import '@/styles/typography-effects.scss';
 import '@/styles/scroll-effects.scss';
 import '@/styles/team.scss';
+import '@/styles/team-profile.scss';
 import '@/styles/showcase.scss';
 import '@/styles/services.scss';
 import '@/styles/about.scss';

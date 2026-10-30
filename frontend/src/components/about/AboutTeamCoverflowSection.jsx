@@ -83,12 +83,11 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
 
     setCurrentIndex((prev) => (prev + 1) % totalMembers);
     setWithTransition(true);
-    setMobileIndex((prev) => prev + 1);
+    setMobileIndex((prev) => (prev >= totalMembers + 1 ? 2 : prev + 1));
 
-    // Timeout safety fallback for touch devices
     setTimeout(() => {
       isTransitioningRef.current = false;
-    }, 600);
+    }, 580);
   }, [totalMembers]);
 
   // Prev Slide: seamless backward transition from 1st to nth
@@ -98,11 +97,11 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
 
     setCurrentIndex((prev) => (prev - 1 + totalMembers) % totalMembers);
     setWithTransition(true);
-    setMobileIndex((prev) => prev - 1);
+    setMobileIndex((prev) => (prev <= 0 ? totalMembers - 1 : prev - 1));
 
     setTimeout(() => {
       isTransitioningRef.current = false;
-    }, 600);
+    }, 580);
   }, [totalMembers]);
 
   const goToSlide = (index) => {
@@ -113,20 +112,35 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
   };
 
   // Seamless invisible teleport at boundaries:
-  // When sliding forward past last item (mobileIndex === totalMembers + 1),
-  // instantly teleport to mobileIndex = 1 with transition: none
-  // When sliding backward before first item (mobileIndex === 0),
-  // instantly teleport to mobileIndex = totalMembers with transition: none
   const handleTransitionEnd = () => {
     isTransitioningRef.current = false;
-    if (mobileIndex === totalMembers + 1) {
+    if (mobileIndex >= totalMembers + 1) {
       setWithTransition(false);
       setMobileIndex(1);
-    } else if (mobileIndex === 0) {
+    } else if (mobileIndex <= 0) {
       setWithTransition(false);
       setMobileIndex(totalMembers);
     }
   };
+
+  // Bulletproof fallback: ensures boundaries reset even if browser throttles onTransitionEnd
+  useEffect(() => {
+    if (mobileIndex >= totalMembers + 1) {
+      const timer = setTimeout(() => {
+        setWithTransition(false);
+        setMobileIndex(1);
+        isTransitioningRef.current = false;
+      }, 560);
+      return () => clearTimeout(timer);
+    } else if (mobileIndex <= 0) {
+      const timer = setTimeout(() => {
+        setWithTransition(false);
+        setMobileIndex(totalMembers);
+        isTransitioningRef.current = false;
+      }, 560);
+      return () => clearTimeout(timer);
+    }
+  }, [mobileIndex, totalMembers]);
 
   // Re-enable transition on the next frame after invisible teleport
   useEffect(() => {
@@ -328,8 +342,8 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <div className="w-full max-w-[290px] mx-auto flex flex-col items-center">
-            {/* Viewport with smooth endless sliding track */}
+          <div className="w-full max-w-[220px] mx-auto flex flex-col items-center">
+            {/* Viewport with smooth endless sliding track (40% height) */}
             <div className="about-mobile-slider-viewport overflow-hidden w-full rounded-2xl border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_25px_rgba(0,168,89,0.18)] bg-neutral-900">
               <div
                 className="about-mobile-slider-track flex w-full"

@@ -260,14 +260,14 @@
   /* 3D Coverflow Stage */
   .about-coverflow-wrapper {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
     perspective: 1200px;
   }
 
   .about-coverflow-stage {
     position: relative;
     width: 100%;
-    height: 480px; /* Base stage height */
+    height: 380px; /* Compact stage height */
     perspective: 1200px;
     perspective-origin: 50% 50%;
     transform-style: preserve-3d;
@@ -276,22 +276,22 @@
     justify-content: center;
 
     @media (min-width: 1280px) {
-      height: 520px;
+      height: 410px;
     }
   }
 
   /* 
-     CARD DIMENSIONS: Height is set to 60% of the section/stage (~310px - 340px)
-     with aspect ratio 3/4 for optimal aesthetic balance
+     CARD DIMENSIONS: Height is set to 40% of the section/stage (~220px - 260px)
+     with aspect ratio 3/4 for compact, elegant visual balance
   */
   .about-coverflow-card {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 310px; /* Exactly ~60% of stage height */
-    width: 235px;
+    height: 225px; /* Exactly 40% proportion */
+    width: 170px;
     transform-origin: center center;
-    border-radius: 16px;
+    border-radius: 14px;
     overflow: hidden;
     cursor: pointer;
     user-select: none;
@@ -303,47 +303,47 @@
     will-change: transform, opacity;
 
     @media (min-width: 1024px) {
-      height: 335px;
-      width: 255px;
+      height: 245px;
+      width: 185px;
     }
 
     @media (min-width: 1280px) {
-      height: 355px;
-      width: 270px;
+      height: 260px;
+      width: 195px;
     }
 
     /* CENTER ACTIVE CARD: Larger, in foreground, active green ambient glow */
     &.card-pos-center {
-      transform: translate(-50%, -50%) scale(1.1) translateZ(50px) rotateY(0deg);
+      transform: translate(-50%, -50%) scale(1.1) translateZ(45px) rotateY(0deg);
       z-index: 30;
       opacity: 1;
       filter: brightness(1) contrast(1.02);
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95),
-                  0 0 35px rgba(0, 168, 89, 0.25);
+      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.95),
+                  0 0 30px rgba(0, 168, 89, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.22);
 
       &:hover {
         border-color: rgba(0, 168, 89, 0.7);
-        box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.95),
-                    0 0 45px rgba(0, 168, 89, 0.38);
+        box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.95),
+                    0 0 38px rgba(0, 168, 89, 0.38);
       }
     }
 
     /* LEFT BACKGROUND CARD: Smaller, positioned behind, 3D tilt */
     &.card-pos-left {
-      transform: translate(calc(-50% - 190px), -50%) scale(0.85) translateZ(-50px) rotateY(18deg);
+      transform: translate(calc(-50% - 150px), -50%) scale(0.85) translateZ(-40px) rotateY(18deg);
       z-index: 15;
       opacity: 0.52;
       filter: brightness(0.68) grayscale(15%);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
       border: 1px solid rgba(255, 255, 255, 0.08);
 
       @media (min-width: 1024px) {
-        transform: translate(calc(-50% - 240px), -50%) scale(0.85) translateZ(-50px) rotateY(18deg);
+        transform: translate(calc(-50% - 180px), -50%) scale(0.85) translateZ(-40px) rotateY(18deg);
       }
 
       @media (min-width: 1280px) {
-        transform: translate(calc(-50% - 280px), -50%) scale(0.85) translateZ(-50px) rotateY(18deg);
+        transform: translate(calc(-50% - 210px), -50%) scale(0.85) translateZ(-40px) rotateY(18deg);
       }
 
       &:hover {
@@ -355,19 +355,19 @@
 
     /* RIGHT BACKGROUND CARD: Smaller, positioned behind, 3D tilt */
     &.card-pos-right {
-      transform: translate(calc(-50% + 190px), -50%) scale(0.85) translateZ(-50px) rotateY(-18deg);
+      transform: translate(calc(-50% + 150px), -50%) scale(0.85) translateZ(-40px) rotateY(-18deg);
       z-index: 15;
       opacity: 0.52;
       filter: brightness(0.68) grayscale(15%);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
       border: 1px solid rgba(255, 255, 255, 0.08);
 
       @media (min-width: 1024px) {
-        transform: translate(calc(-50% + 240px), -50%) scale(0.85) translateZ(-50px) rotateY(-18deg);
+        transform: translate(calc(-50% + 180px), -50%) scale(0.85) translateZ(-40px) rotateY(-18deg);
       }
 
       @media (min-width: 1280px) {
-        transform: translate(calc(-50% + 280px), -50%) scale(0.85) translateZ(-50px) rotateY(-18deg);
+        transform: translate(calc(-50% + 210px), -50%) scale(0.85) translateZ(-40px) rotateY(-18deg);
       }
 
       &:hover {
@@ -379,14 +379,14 @@
 
     /* OFFSCREEN CARDS */
     &.card-pos-far-left {
-      transform: translate(calc(-50% - 460px), -50%) scale(0.7) translateZ(-120px) rotateY(25deg);
+      transform: translate(calc(-50% - 360px), -50%) scale(0.7) translateZ(-100px) rotateY(25deg);
       z-index: 5;
       opacity: 0;
       pointer-events: none;
     }
 
     &.card-pos-far-right {
-      transform: translate(calc(-50% + 460px), -50%) scale(0.7) translateZ(-120px) rotateY(-25deg);
+      transform: translate(calc(-50% + 360px), -50%) scale(0.7) translateZ(-100px) rotateY(-25deg);
       z-index: 5;
       opacity: 0;
       pointer-events: none;
@@ -396,35 +396,35 @@
   /* Active Member Metadata */
   .about-active-member-meta {
     h3 {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 800;
       letter-spacing: -0.02em;
 
       @media (min-width: 1024px) {
-        font-size: 34px;
+        font-size: 30px;
       }
     }
 
     p {
       color: var(--accent-green, #00a859);
       letter-spacing: 0.22em;
-      font-size: 13px;
+      font-size: 12px;
     }
   }
 
-  /* Mobile Single-Card Layout (Image height ~60% of viewport / container) */
+  /* Mobile Single-Card Layout (Image height set to 40% of viewport) */
   .about-team-mobile-view {
     touch-action: pan-y;
     overflow: hidden;
 
     .about-mobile-slider-viewport {
       width: 100%;
-      max-width: 290px;
+      max-width: 220px;
       margin: 0 auto;
-      border-radius: 18px;
+      border-radius: 16px;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 168, 89, 0.18);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 168, 89, 0.18);
       background-color: #121212;
       position: relative;
     }
@@ -440,7 +440,7 @@
       width: 100%;
       flex-shrink: 0;
       aspect-ratio: 3 / 4;
-      max-height: 55vh; /* 60% of mobile section viewport */
+      max-height: 40vh; /* Exactly 40% of mobile viewport height */
       position: relative;
       background-color: #111;
 
