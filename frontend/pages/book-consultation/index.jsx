@@ -1,6 +1,3 @@
-import React from 'react';
-import { UnderMaintenance } from '@/components/common';
+import ContactPage from '../contact/index';
 
-export default function BookConsultationRoute() {
-  return <UnderMaintenance routeName="book-consultation" />;
-}
+export default ContactPage;

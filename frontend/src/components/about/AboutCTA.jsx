@@ -22,7 +22,7 @@ export default function AboutCTA() {
           </p>
 
           <div className="about-cta-buttons font-sans">
-            <Link href="/book-consultation" className="pill-button" style={{ backgroundColor: '#00a859', borderColor: '#00a859', color: '#000000' }}>
+            <Link href="/contact" className="pill-button" style={{ backgroundColor: '#00a859', borderColor: '#00a859', color: '#000000' }}>
               <Calendar size={16} style={{ marginRight: '8px' }} />
               <span>BOOK A CONSULTATION</span>
             </Link>

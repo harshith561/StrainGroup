@@ -1,2 +1,5 @@
-export { default as ContactForm } from './form/ContactForm';
-export { default as ContactDetails } from './details/ContactDetails';
+export { default as ContactHero } from './ContactHero';
+export { default as ContactHeadline } from './ContactHeadline';
+export { default as ContactInfo } from './ContactInfo';
+export { default as ContactForm } from './ContactForm';
+export { default as ContactSocialLinks } from './ContactSocialLinks';

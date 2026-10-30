@@ -20,7 +20,7 @@ export const SIDEBAR_LINKS = [
   { num: '10.', label: 'Portfolio / Our Work', href: '/portfolio' },
   { num: '11.', label: 'Case Studies', href: '/case-studies' },
   { num: '12.', label: 'Pricing / Packages', href: '/pricing' },
-  { num: '13.', label: 'Book a Consultation', href: '/book-consultation' },
+  { num: '13.', label: 'Book a Consultation', href: '/contact' },
   { num: '14.', label: 'Sustainability', href: '/sustainability' },
   { num: '15.', label: 'Founder – Naga Praharsha Govindu', href: '/founder' },
   { num: '16.', label: 'Testimonials / Clients', href: '/testimonials' },

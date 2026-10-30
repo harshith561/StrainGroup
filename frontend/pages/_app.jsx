@@ -11,6 +11,7 @@ import '@/styles/team-profile.scss';
 import '@/styles/showcase.scss';
 import '@/styles/services.scss';
 import '@/styles/about.scss';
+import '@/styles/contact.scss';
 import Head from 'next/head';
 
 export default function MyApp({ Component, pageProps }) {
