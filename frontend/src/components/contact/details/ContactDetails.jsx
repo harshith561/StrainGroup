@@ -18,7 +18,7 @@ export default function ContactDetails() {
           <div>
             <span className="font-mono text-xs text-[#00e676] uppercase block">Headquarters</span>
             <p className="font-mono text-white/80 text-sm mt-1">
-              H.No. 15-21-1/LIG-55, Balaji Nagar, Kukatpally, Hyderabad, Telangana 500072, India
+              Vengalrao Nagar, Hyderabad, Telangana, India
             </p>
           </div>
         </div>
@@ -29,8 +29,8 @@ export default function ContactDetails() {
           </div>
           <div>
             <span className="font-mono text-xs text-[#00e676] uppercase block">Electronic Mail</span>
-            <a href="mailto:info@strains.in" className="font-mono text-white/80 hover:text-[#00e676] text-sm mt-1 block">
-              info@strains.in
+            <a href="mailto:hello@strainsassociates.com" className="font-mono text-white/80 hover:text-[#00e676] text-sm mt-1 block">
+              hello@strainsassociates.com
             </a>
           </div>
         </div>
@@ -41,17 +41,17 @@ export default function ContactDetails() {
           </div>
           <div>
             <span className="font-mono text-xs text-[#00e676] uppercase block">Direct Line</span>
-            <a href="tel:+919876543210" className="font-mono text-white/80 hover:text-[#00e676] text-sm mt-1 block">
-              +91 98765 43210
+            <a href="tel:+918686819898" className="font-mono text-white/80 hover:text-[#00e676] text-sm mt-1 block">
+              +91 8686819898
             </a>
           </div>
         </div>
       </div>
 
       <div className="bg-[#141414] border border-white/10 rounded-lg p-8">
-        <h4 className="font-sans text-lg font-bold text-white mb-2">Production Studio</h4>
+        <h4 className="font-sans text-lg font-bold text-white mb-2">Sustainable Manufacturing</h4>
         <p className="font-mono text-neutral-400 text-xs leading-relaxed">
-          Strains Stitchery garment manufacturing facility is operated in Tirupur, Tamil Nadu, India, supporting sustainable fashion brands with zero-discharge manufacturing.
+          Strains Associates eco-friendly garment manufacturing facility is located in Tirupur, Tamil Nadu, India, supporting sustainable fashion brands with organic cotton, hemp, natural dyeing, and zero-discharge production.
         </p>
       </div>
     </div>

@@ -10,23 +10,23 @@ import { ArrowUp, ChevronLeft, ChevronRight } from 'lucide-react';
    ========================================================================== */
 export const STUDIO_SECTION_DATA = {
   // 1. Top-Left Tag
-  tag: 'ABOUT STUDIO',
+  tag: 'ABOUT STRAINS ASSOCIATES',
 
   // 2. Main Giant Headline (supports regular text or \n for custom line breaks)
-  headline: 'Crafting digital products\nwith a unique — vision of\nmaking user experience\nbetter.',
+  headline: 'Building powerful brands\nthrough creative content,\nproduction & sustainable\nmanufacturing.',
 
   // 3. Left Bullet Points (shown with square markers)
   bulletPoints: [
-    'Art Direction',
-    'Capability',
-    'Sustainability',
+    'Video Production & Photography',
+    'Digital Marketing & Google Ads',
+    'Sustainable Fashion & Tirupur Hub',
   ],
 
   // 4. Right Description Paragraphs
   paragraph1:
-    "Strains Group is the first and only creative agency for your real exploration. It's one private place to save everything you can realize about digital beautifully design.",
+    'Strains Associates provides creative, branding, digital marketing, video production and sustainable fashion solutions. The company focuses on helping businesses build their brands through creative content, strategic marketing, professional production and sustainable manufacturing.',
   paragraph2:
-    "As a global creative agency, we understand the importance of staying ahead of the game. That's why we partner with some of the world's best talent to bring fresh ideas",
+    'With creative headquarters in Hyderabad, Telangana and our dedicated eco-friendly garment manufacturing facility in Tirupur, Tamil Nadu, we bridge cinematic video direction and performance marketing with ethical manufacturing scale.',
 
   // 5. Button Details
   buttonText: 'Explore Services',

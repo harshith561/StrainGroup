@@ -49,7 +49,17 @@ const TESTIMONIALS = [
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
     quote: 'Strains understood our complex microbial solutions and translated them into compelling digital campaigns. They are true strategic partners committed to sustainable business growth.',
   },
+  {
+    id: 6,
+    name: 'Managing Partner',
+    role: 'Executive Partner, Pakka Non Veg',
+    company: 'Pakka Non Veg',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80',
+    quote: 'The cinematic 4K culinary videography, slow-mo captures, and ASMR sound design produced by Danny and Pavan generated 850,000+ views and a massive 340% increase in weekend footfall.',
+  },
 ];
+
 
 export default function ServiceTestimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);

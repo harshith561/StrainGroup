@@ -13,15 +13,15 @@ export default function AboutHero() {
       setIsMounted(true);
     }, 100);
 
-    // Odometer year roll: 2000 -> 2017
+    // Odometer year roll: 2000 -> 2018
     let step = 2000;
-    const target = 2017;
+    const target = 2018;
     const counterTimer = setInterval(() => {
       step += 1;
       if (step <= target) {
         setDisplayYear(String(step));
       } else {
-        setDisplayYear('2017');
+        setDisplayYear('2018');
         clearInterval(counterTimer);
       }
     }, 90);

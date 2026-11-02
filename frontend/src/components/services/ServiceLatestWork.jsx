@@ -12,6 +12,7 @@ const PROJECTS = [
     desc: 'Achieved a 90.8% optimization score with 4.64% CTR over 3.5 years, generating 21,800 clicks and 471,000 targeted impressions.',
     image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
     tag: 'Industrial Performance',
+    slug: '/case-studies/aastu-refrigeration',
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const PROJECTS = [
     desc: 'Exceptional cost efficiency with ₹13.01 average CPC, delivering 18,800 clicks and 368,000 impressions at ₹2.45L total spend.',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
     tag: 'B2B PPC & ROI',
+    slug: '/case-studies/pioneer-cranes',
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const PROJECTS = [
     desc: 'Unified Tirupur sustainable organic hemp & cotton manufacturing with cinematic video direction and social growth campaigns.',
     image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
     tag: 'Fashion & Production',
+    slug: '/case-studies/xiti-fashion',
   },
 ];
 
@@ -73,29 +76,31 @@ export default function ServiceLatestWork() {
               whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="group flex flex-col cursor-pointer"
+              className="flex flex-col"
             >
-              {/* Image Container with Smooth Zoom Effect */}
-              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#181818] mb-5 border border-white/5 group-hover:border-[#00a859]/40 transition-all duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.5)]">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
-                <span className="absolute top-4 left-4 text-xs font-mono font-medium px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[#00a859] border border-white/10">
-                  {project.tag}
-                </span>
-              </div>
+              <Link href={project.slug} className="group flex flex-col h-full cursor-pointer">
+                {/* Image Container with Smooth Zoom Effect */}
+                <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#181818] mb-5 border border-white/5 group-hover:border-[#00a859]/40 transition-all duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.5)]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
+                  <span className="absolute top-4 left-4 text-xs font-mono font-medium px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[#00a859] border border-white/10">
+                    {project.tag}
+                  </span>
+                </div>
 
-              {/* Text Info */}
-              <h3 className="text-xl font-sans font-bold text-white mb-2 group-hover:text-[#00a859] transition-colors leading-snug">
-                {project.title}
-              </h3>
-              <p className="text-[#8c8c8c] text-sm leading-relaxed font-sans">
-                {project.desc}
-              </p>
+                {/* Text Info */}
+                <h3 className="text-xl font-sans font-bold text-white mb-2 group-hover:text-[#00a859] transition-colors leading-snug">
+                  {project.title}
+                </h3>
+                <p className="text-[#8c8c8c] text-sm leading-relaxed font-sans">
+                  {project.desc}
+                </p>
+              </Link>
             </motion.div>
           ))}
         </div>

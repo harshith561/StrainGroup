@@ -8,42 +8,43 @@ import React, { useState, useEffect, useRef } from 'react';
    ========================================================================== */
 export const WHO_WE_ARE_DATA = {
   tag: 'WHO ARE WE?',
-  headline: 'We deliver creative\nideas to a crowded\nworld.',
+  headline: 'Creative Agency,\nDigital Marketing &\nSustainable Fashion.',
   stats: [
     {
       id: 'stat-1',
-      label: '35+ Google reviews',
-      displayValue: '4.9',
-      target: 4.9,
+      label: 'Google Ads Optimization',
+      displayValue: '90.8%',
+      target: 90.8,
       decimals: 1,
-      suffix: '',
+      suffix: '%',
     },
     {
       id: 'stat-2',
-      label: 'Clients world-wide',
-      displayValue: '1.8K',
-      target: 1.8,
+      label: 'Procurement Inquiries',
+      displayValue: '40.6K',
+      target: 40.6,
       decimals: 1,
       suffix: 'K',
     },
     {
       id: 'stat-3',
-      label: 'Completed projects',
-      displayValue: '1.7K',
-      target: 1.7,
-      decimals: 1,
+      label: 'Audience Impressions',
+      displayValue: '839K',
+      target: 839,
+      decimals: 0,
       suffix: 'K',
     },
     {
       id: 'stat-4',
-      label: 'Client satisfaction',
-      displayValue: '95%',
-      target: 95,
-      decimals: 0,
-      suffix: '%',
+      label: 'Campaign Engagement',
+      displayValue: '3.5 Yrs',
+      target: 3.5,
+      decimals: 1,
+      suffix: ' Yrs',
     },
   ],
 };
+
 
 function StatCard({ stat, isRevealed, index }) {
   const [count, setCount] = useState(0);

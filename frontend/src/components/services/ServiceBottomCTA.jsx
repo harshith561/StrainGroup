@@ -59,14 +59,14 @@ export default function ServiceBottomCTA() {
               <span className="text-sm font-sans text-[#888888] font-medium">Or</span>
 
               <a
-                href="tel:+919876543210"
+                href="tel:+918686819898"
                 className="inline-flex items-center gap-2.5 text-white hover:text-[#00a859] transition-colors font-sans font-bold text-base group"
-                aria-label="Call Strains Group directly"
+                aria-label="Call Strains Associates directly"
               >
                 <div className="w-8 h-8 rounded-full bg-[#00a859]/15 flex items-center justify-center group-hover:bg-[#00a859] transition-colors">
                   <Phone className="w-4 h-4 text-[#00a859] group-hover:text-black transition-colors" />
                 </div>
-                <span>+91 98765 43210</span>
+                <span>+91 8686819898</span>
               </a>
             </motion.div>
           </div>

@@ -7,41 +7,48 @@ import { ArrowRight } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'Saudi Lime Green',
-    category: 'Branding & Campaigns',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+    title: 'Xiti',
+    category: 'Premium Fashion & Video Production',
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+    slug: '/case-studies/xiti-fashion',
   },
   {
     id: 2,
-    title: 'Panda Automap',
-    category: 'UI/UX Mobile Design',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+    title: 'Haraa Gold & Diamonds',
+    category: 'Jewellery & Cinematic Storytelling',
+    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80',
+    slug: '/case-studies/haraa-jewellers',
   },
   {
     id: 3,
-    title: 'Saudi Venture Capital',
-    category: 'Corporate Platforms',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+    title: 'Pakka Non Veg',
+    category: 'Restaurant Chain & Food Videography',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+    slug: '/case-studies/pakka-non-veg',
   },
   {
     id: 4,
-    title: 'Rebrand Lawberry',
-    category: 'Web Development & Identity',
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80',
+    title: 'JSW Cement',
+    category: 'Infrastructure & Corporate Production',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+    slug: '/case-studies/jsw-cement',
   },
   {
     id: 5,
-    title: 'Selicon Cloud Cave',
-    category: 'Cloud Engineering & Security',
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
+    title: 'Sri Bioaesthetics',
+    category: 'Microbial Company & B2B Growth',
+    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80',
+    slug: '/case-studies/sri-bioaesthetics',
   },
   {
     id: 6,
-    title: 'Mountain Upwork',
-    category: 'Creative Marketing & Direction',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    title: 'Partha Dentals',
+    category: 'Healthcare & Digital Marketing',
+    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
+    slug: '/case-studies/partha-dentals',
   },
 ];
+
 
 export default function PortfolioSection() {
   const [revealed, setRevealed] = useState(false);
@@ -79,7 +86,7 @@ export default function PortfolioSection() {
         <div className="work-header-block">
           <div className="work-title-area">
             <h2 className="work-title font-sans">
-              2017- 2025
+              2018 - 2026
               <br />
               <span className="accent-text text-green">Work</span>
             </h2>
@@ -87,7 +94,7 @@ export default function PortfolioSection() {
 
           <div className="work-desc-area">
             <p className="work-desc font-sans">
-              We help brands and people be part of the solution. As a cause-led branding and communications agency, we harness the power of technology and creativity to drive positive changes.
+              Strains Associates helps businesses build their brands through creative content, strategic digital marketing, professional video production, and sustainable fashion solutions.
             </p>
           </div>
         </div>
@@ -95,7 +102,7 @@ export default function PortfolioSection() {
         <div className="projects-grid">
           {projects.map((project, idx) => (
             <Link
-              href="/portfolio"
+              href={project.slug}
               key={project.id}
               className="project-card"
               style={{ transitionDelay: `${idx * 0.1}s` }}

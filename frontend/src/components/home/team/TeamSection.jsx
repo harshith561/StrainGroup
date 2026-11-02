@@ -6,33 +6,34 @@ import Link from 'next/link';
 const teamMembers = [
   {
     id: 1,
-    name: 'James David',
-    role: 'Creative Director',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400&q=80',
-    profileUrl: '/team/james-david',
+    name: 'Praharsha',
+    role: 'Strategy Maker and Line Producer',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80',
+    profileUrl: '/team/naga-praharsha',
   },
   {
     id: 2,
-    name: 'Brenda C. Janet',
-    role: 'Lead UX Architect',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=80',
-    profileUrl: '/team/brenda-janet',
+    name: 'Pavan',
+    role: 'Head of Photography and Videography',
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80',
+    profileUrl: '/team/pavan-kumar',
   },
   {
     id: 3,
-    name: 'Martin Carlos',
-    role: 'Senior Web Developer',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80',
-    profileUrl: '/team/martin-carlos',
+    name: 'Danny',
+    role: 'Head of Direction and Post-production',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400&q=80',
+    profileUrl: '/team/danny-cooper',
   },
   {
     id: 4,
-    name: 'Garry J. Coburn',
-    role: 'Motion Designer',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80',
-    profileUrl: '/team/garry-j-coburn',
+    name: 'Prasad',
+    role: 'Head of Digital Marketing Team',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80',
+    profileUrl: '/team/prasad-varma',
   },
 ];
+
 
 export default function TeamSection() {
   const [revealed, setRevealed] = useState(false);

@@ -6,7 +6,53 @@ import { motion } from 'framer-motion';
 const EXPERTISE_CARDS = [
   {
     id: '01',
-    title: 'Search\nEngine Optimization',
+    title: 'Video\nProduction',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
+        <rect x="6" y="14" width="24" height="20" rx="4" />
+        <path d="M30 21l12-7v20l-12-7v-6z" />
+      </svg>
+    ),
+  },
+  {
+    id: '02',
+    title: 'Commercial &\nFashion Photography',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
+        <path d="M42 38H6a2 2 0 0 1-2-2V18a2 2 0 0 1 2-2h7l3-6h12l3 6h7a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2z" />
+        <circle cx="24" cy="27" r="8" />
+      </svg>
+    ),
+  },
+  {
+    id: '03',
+    title: 'Digital Marketing &\nGoogle Ads',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
+        <circle cx="24" cy="24" r="16" />
+        <circle cx="24" cy="24" r="10" />
+        <circle cx="24" cy="24" r="4" />
+        <path d="M24 4v4" />
+        <path d="M24 40v4" />
+        <path d="M4 24h4" />
+        <path d="M40 24h4" />
+      </svg>
+    ),
+  },
+  {
+    id: '04',
+    title: 'Creative Strategy &\nBrand Development',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
+        <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" />
+        <path d="M6 14l18 10 18-10" />
+        <path d="M24 24v20" />
+      </svg>
+    ),
+  },
+  {
+    id: '05',
+    title: 'SEO & Social\nMedia Marketing',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M6 38h36" />
@@ -20,67 +66,17 @@ const EXPERTISE_CARDS = [
     ),
   },
   {
-    id: '02',
-    title: 'Website design &\nDevelopment',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <rect x="10" y="10" width="28" height="20" rx="2" />
-        <path d="M4 36h40" />
-        <path d="M18 20l-4 4 4 4" />
-        <path d="M30 20l4 4-4 4" />
-        <path d="M26 18l-4 8" />
-      </svg>
-    ),
-  },
-  {
-    id: '03',
-    title: 'Video editing &\nProduction',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <rect x="6" y="14" width="24" height="20" rx="4" />
-        <path d="M30 21l12-7v20l-12-7v-6z" />
-      </svg>
-    ),
-  },
-  {
-    id: '04',
-    title: 'Content\nWriting',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <rect x="8" y="8" width="32" height="32" rx="4" />
-        <path d="M16 32l14-14 4 4-14 14h-4v-4z" />
-        <path d="M30 18l4-4" />
-      </svg>
-    ),
-  },
-  {
-    id: '05',
-    title: 'Social Media\nMarketing',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <rect x="8" y="8" width="16" height="14" rx="2" />
-        <rect x="24" y="26" width="16" height="14" rx="2" />
-        <path d="M20 22h8" />
-        <path d="M24 18v8" />
-      </svg>
-    ),
-  },
-  {
     id: '06',
-    title: 'Pay\nPer Click (PPC)',
+    title: 'Sustainable Fashion &\nManufacturing',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <circle cx="24" cy="24" r="16" />
-        <circle cx="24" cy="24" r="10" />
-        <circle cx="24" cy="24" r="4" />
-        <path d="M24 4v4" />
-        <path d="M24 40v4" />
-        <path d="M4 24h4" />
-        <path d="M40 24h4" />
+        <path d="M24 4C14 4 6 12 6 22c0 14 18 22 18 22s18-8 18-22c0-10-8-18-18-18z" />
+        <path d="M24 14v16M18 20l6-6 6 6" />
       </svg>
     ),
   },
 ];
+
 
 export default function ServiceExpertise() {
   return (
@@ -138,12 +134,12 @@ export default function ServiceExpertise() {
             className="sm:col-span-2 lg:col-span-2 flex flex-col justify-center px-2 lg:px-6 py-4"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-extrabold text-white tracking-tight leading-[1.12] mb-4">
-              Our Digital
+              Our Core
               <br />
-              Marketing <span className="text-gradient-shimmer">Expertise</span>
+              Services & <span className="text-gradient-shimmer">Expertise</span>
             </h2>
             <p className="text-[#8c8c8c] text-sm sm:text-base font-sans leading-relaxed max-w-lg">
-              Comprehensive branding, end-to-end video production, and performance marketing delivered across diverse industries — from fashion & F&B to major infrastructure — with measurable growth and sustainable strategies.
+              Strains Associates provides creative, branding, digital marketing, video production and sustainable fashion solutions. We help businesses build their brands through creative content, strategic marketing, professional production and sustainable manufacturing.
             </p>
           </motion.div>
 

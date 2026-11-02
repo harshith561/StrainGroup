@@ -115,8 +115,9 @@ export default function ContactForm() {
       });
     } catch (error) {
       setIsSubmitting(false);
-      setErrors({ form: 'An unexpected issue occurred. Please try again or reach out to info@strains.in' });
+      setErrors({ form: 'An unexpected issue occurred. Please try again or reach out to hello@strainsassociates.com' });
     }
+
   };
 
   return (
@@ -210,7 +211,7 @@ export default function ContactForm() {
                 autoComplete="tel"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+91 98765 43210"
+                placeholder="+91 8686819898"
                 className={`contact-field-input ${errors.phone ? 'input-error' : ''}`}
                 aria-required="true"
                 aria-invalid={!!errors.phone}

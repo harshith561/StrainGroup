@@ -129,8 +129,9 @@ export default function ServiceWhyChoose() {
               transition={{ duration: 0.7, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
               className="text-[#9a9a9a] text-base sm:text-lg leading-relaxed max-w-xl mb-10 font-sans"
             >
-              Powered by our dedicated garment manufacturing facility in Tirupur — the textile capital of India — Strains uniquely unifies sustainable brand solutions, cinematic video production, and ethical manufacturing under one roof. Led by specialized teams in strategy, direction, and digital marketing, we deliver transparent, proven ROI for conscious fashion brands and major industrial enterprises.
+              Strains Associates provides creative, branding, digital marketing, video production and sustainable fashion solutions. With creative direction in Hyderabad, Telangana and eco-friendly garment manufacturing in Tirupur, Tamil Nadu, our specialized leadership team—Praharsha (Strategy & Line Producer), Pavan (Head of Photography & Videography), Danny (Head of Direction & Post-production), and Prasad (Head of Digital Marketing)—delivers proven ROI and creative excellence under one roof.
             </motion.p>
+
 
             <motion.div
               initial={{ opacity: 0, y: 15, scale: 0.95 }}

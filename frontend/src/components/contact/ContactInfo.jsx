@@ -11,8 +11,8 @@ import ContactSocialLinks from './ContactSocialLinks';
  * and Strains Associates (Creative studio & digital production).
  */
 export default function ContactInfo() {
-  const email = SITE_CONFIG?.contactEmail || 'info@strains.in';
-  const phone = SITE_CONFIG?.contactPhone || '+91 98765 43210';
+  const email = SITE_CONFIG?.contactEmail || 'hello@strainsassociates.com';
+  const phone = SITE_CONFIG?.contactPhone || '+91 8686819898';
 
   return (
     <aside className="contact-info-panel" aria-label="Contact Information">
@@ -62,7 +62,7 @@ export default function ContactInfo() {
             </span>
           </div>
           <p className="font-sans text-xs text-[#B5B5B5] leading-relaxed">
-            H.No. 15-21-1/LIG-55, Balaji Nagar, Kukatpally, Hyderabad, Telangana 500072, India
+            Vengalrao Nagar, Hyderabad, Telangana, India
           </p>
         </div>
 

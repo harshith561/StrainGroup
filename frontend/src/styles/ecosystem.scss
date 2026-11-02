@@ -1,0 +1,98 @@
+/* Strains Associates - Modern Ecosystem Page Styles */
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Glassmorphism tile enhancements */
+.ecosystem-glass-tile {
+  background: rgba(18, 18, 18, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ecosystem-glass-tile:hover {
+  background: rgba(24, 24, 24, 0.85);
+  border-color: rgba(0, 168, 89, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(0, 168, 89, 0.15);
+}
+
+/* Photo card with smooth zoom and cinematic vignette */
+.ecosystem-photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #121212;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ecosystem-photo-card:hover {
+  border-color: rgba(0, 168, 89, 0.5);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 168, 89, 0.12);
+}
+
+.ecosystem-photo-card img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+
+.ecosystem-photo-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Modern gradient accent text */
+.text-gradient-shimmer {
+  background: linear-gradient(135deg, #ffffff 0%, #00a859 40%, #00e676 60%, #ffffff 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 8s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 250% center;
+  }
+}
+
+/* Subtle dot matrix background */
+.bg-dot-matrix {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

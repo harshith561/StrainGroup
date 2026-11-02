@@ -64,23 +64,23 @@ export default function AgencyIntro() {
             })}
           </h1>
           <p className="intro-tagline font-mono">
-            An award winning creative agency & sustainable fashion ecosystem based in India...
+            Creative Agency, Digital Marketing, Video Production and Sustainable Fashion in Hyderabad & Tirupur
           </p>
         </div>
 
         <div className="intro-content-grid">
           <div className="intro-grid-left">
             <h3 className="intro-main-pitch font-sans">
-              Strains Group is the first and only creative agency for your real exploration. It's one private place to save everything you can realize about digital beautifully design.
+              Strains Associates provides creative, branding, digital marketing, video production and sustainable fashion solutions. We help businesses build their brands through creative content, strategic marketing, professional production and sustainable manufacturing.
             </h3>
           </div>
 
           <div className="intro-grid-right">
             <h2 className="intro-sub-pitch font-sans">
-              Creating virtual emotion in the universe, for the largest brands & market since
+              Empowering category-defining brands with creative storytelling and sustainable craft since
             </h2>
             <div className="intro-stats">
-              <span className="stat-number font-display">2017</span>
+              <span className="stat-number font-display">2018</span>
               <span className="stat-label font-mono">ESTABLISHED</span>
             </div>
           </div>

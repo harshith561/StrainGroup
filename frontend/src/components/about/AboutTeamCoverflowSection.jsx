@@ -8,47 +8,48 @@ import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
 export const ABOUT_TEAM_MEMBERS = [
   {
     id: 1,
-    name: 'Naga Praharsha',
-    role: 'Founder & Line Producer',
+    name: 'Praharsha',
+    role: 'Strategy Maker and Line Producer',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=85',
     profileUrl: '/team/naga-praharsha',
   },
   {
     id: 2,
-    name: 'Danny Cooper',
-    role: 'Head of Direction & Post-Production',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85',
-    profileUrl: '/team/danny-cooper',
-  },
-  {
-    id: 3,
-    name: 'Pavan Kumar',
-    role: 'Head of Photography & Visuals',
+    name: 'Pavan',
+    role: 'Head of Photography and Videography',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=85',
     profileUrl: '/team/pavan-kumar',
   },
   {
-    id: 4,
-    name: 'Brenda C. Janet',
-    role: 'Lead UX & Creative Strategist',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85',
-    profileUrl: '/team/brenda-janet',
+    id: 3,
+    name: 'Danny',
+    role: 'Head of Direction and Post-production',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85',
+    profileUrl: '/team/danny-cooper',
   },
   {
-    id: 5,
-    name: 'Prasad Varma',
-    role: 'Head of Digital Marketing & Growth',
+    id: 4,
+    name: 'Prasad',
+    role: 'Head of Digital Marketing Team',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=900&q=85',
     profileUrl: '/team/prasad-varma',
   },
   {
+    id: 5,
+    name: 'Brenda C. Janet',
+    role: 'Digital Marketing & Creative Lead',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85',
+    profileUrl: '/team/brenda-janet',
+  },
+  {
     id: 6,
     name: 'Elena Rostova',
-    role: 'Senior Motion & 3D Artist',
+    role: 'Video Editing & Motion Graphics',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85',
     profileUrl: '/team/elena-rostova',
   },
 ];
+
 
 export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS }) {
   const router = useRouter();

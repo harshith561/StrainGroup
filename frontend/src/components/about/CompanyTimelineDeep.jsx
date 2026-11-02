@@ -5,52 +5,52 @@ import { History, Award, CheckCircle2, Globe, Sparkles, Building2, Layers } from
 
 const DEEP_CHRONICLES = [
   {
-    year: '2017',
-    title: 'Genesis: Brand Strategy & Vision',
+    year: '2018',
+    title: 'Genesis: Incorporated in Hyderabad',
     era: 'Genesis Era',
     narrative:
-      'Strains Associates was founded with a forward-looking vision: bridging modern brand design with sustainable enterprise. Focusing on corporate identity, digital architectures, and brand positioning, Strains quickly established a reputation for uncompromising aesthetic precision, bold storytelling, and sustainable vision.',
-    highlights: ['Corporate Identity Frameworks', 'First 15 Enterprise Clients', 'Foundational Design System'],
+      'Strains was officially incorporated on 13 November 2018 (Strains Fashions Private Limited) in Hyderabad, Telangana. Founded with a forward-looking vision: bridging modern brand design, digital marketing, and video production with sustainable enterprise.',
+    highlights: ['Registered Corporate Entity', 'Creative Agency Launch', 'Foundational Design System'],
   },
   {
-    year: '2015',
-    title: 'Strains Stitchery — The Tirupur Revolution',
+    year: '2019',
+    title: 'Strains Stitchery — The Tirupur Facility',
     era: 'Industrial Expansion',
     narrative:
-      'Recognizing that modern brands need tangible, physical quality, founder Naga Praharsha Govindu commissioned the Strains Stitchery manufacturing factory in Tirupur, India’s textile heartland. The facility was designed around zero-discharge processes and organic apparel fabrication.',
-    highlights: ['State-of-the-Art Garment Hub', 'Launch of Private Label Manufacturing', 'Zero Toxic Runoff Pledge'],
+      'Recognizing that modern brands need tangible, physical quality, the company commissioned the sustainable garment manufacturing facility in Tirupur, Tamil Nadu. The facility was designed around zero-discharge processes, organic cotton, and eco-friendly fabrication.',
+    highlights: ['State-of-the-Art Garment Hub', 'Eco-Friendly Manufacturing', 'Zero Toxic Runoff Pledge'],
   },
   {
-    year: '2018',
-    title: 'Industrial Titans & High-Volume Campaigns',
+    year: '2020',
+    title: 'Industrial Titans & Proven Performance',
     era: 'Scale & Authority',
     narrative:
-      'Strains expanded into heavy enterprise markets, managing multi-year digital and creative accounts for industrial leaders such as JSW Cement and Pioneer Cranes. Combining high CTR digital campaigns with high-impact video reels.',
+      'Strains expanded into enterprise markets, managing multi-year digital and creative accounts for industrial leaders such as Pioneer Cranes and Aastu Refrigeration. Delivering 90.8% Google Ads optimization scores and high CTR performance.',
     highlights: ['JSW Cement Infrastructure Campaigns', 'Pioneer Cranes Performance Optimization', '3.5-Year High-ROI Accounts'],
   },
   {
-    year: '2021',
-    title: 'Strains Fashions & Eco-Innovation Launch',
+    year: '2022',
+    title: 'Sustainable Fashion & Material Innovation',
     era: 'Sustainable Innovation',
     narrative:
-      'The launch of Strains Fashions marked our entry into consumer conscious apparel. Introducing garments fabricated from organic hemp, vegan silk, fruit & vegetable dyeing, and biodegradable plantable seed tags.',
-    highlights: ['Hemp & Vegan Silk Fabrics', 'Fruit & Flower Natural Dyeing', 'Green Collar Employment Network'],
+      'Pioneered conscious apparel with products fabricated from organic hemp, organic cotton, vegan silk, vegan leather, natural dyeing using fruits and vegetables, and biodegradable plantable seed tags.',
+    highlights: ['Hemp, Vegan Silk & Vegan Leather', 'Fruit & Flower Natural Dyeing', 'Plantable Seed Price Tags'],
   },
   {
     year: '2024',
-    title: 'Full-Fidelity Commercial Video Production',
+    title: 'Commercial Video Production & Studio Photography',
     era: 'Media Elevation',
     narrative:
-      'Consolidating our media wing with dedicated cinema cameras, professional line production, and direction. Delivering television commercials, fashion lookbooks, and high-conversion social film assets.',
-    highlights: ['Cinema-Grade Direction by Danny', 'Lighting & Photography by Pavan', '50+ Commercial Film Assets'],
+      'Consolidating our full media wing with cinema-grade cameras, drone videography, line production, and sound design. Delivering corporate films, commercials, lookbooks, and high-conversion social video assets.',
+    highlights: ['Direction & Post-Production by Danny', 'Photography & Videography by Pavan', 'Corporate, Drone & Commercial Films'],
   },
   {
     year: '2026',
-    title: 'The Integrated Creative Ecosystem',
+    title: 'Integrated Creative Agency & Sustainable Fashion Hub',
     era: 'Present & Beyond',
     narrative:
-      'Strains Group stands as a rare, full-stack creative engine. Uniting strategy, design, film, and ethical manufacturing under one roof—empowering next-generation brands to launch, scale, and dominate globally.',
-    highlights: ['Global Client Footprint', '3D Interactive Product Catalogues', 'Next-Gen Brand Incubation'],
+      'Strains Associates stands as a comprehensive powerhouse: creative branding, digital marketing, video production, and sustainable fashion solutions uniting Hyderabad strategic direction with Tirupur manufacturing.',
+    highlights: ['Complete Creative & Digital Stack', 'End-to-End Video Production', 'Sustainable Manufacturing Hub'],
   },
 ];
 
@@ -63,7 +63,7 @@ export default function CompanyTimelineDeep() {
           02 / The Strains Chronicles
         </span>
         <h2 className="section-main-heading font-sans">
-          14 Years of Relentless Evolution
+          8+ Years of Relentless Evolution
         </h2>
         <p className="section-lead-paragraph font-sans">
           Explore the defining chapters that built the Strains Group into an internationally

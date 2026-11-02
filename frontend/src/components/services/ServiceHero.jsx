@@ -36,8 +36,9 @@ export default function ServiceHero() {
               transition={{ duration: 0.75, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
               className="service-hero-desc text-[#9a9a9a] text-base sm:text-lg leading-relaxed max-w-xl mb-10 font-sans"
             >
-              Pioneering organic marketing strategies, cinematic video direction, and ethical garment manufacturing from Tirupur — delivering tailored brand strategies, end-to-end production, and measurable business growth.
+              Strains Associates provides creative, branding, digital marketing, video production and sustainable fashion solutions. We help businesses build their brands through creative content, strategic marketing, professional production and sustainable manufacturing in Tirupur.
             </motion.p>
+
 
             {/* Button */}
             <motion.div

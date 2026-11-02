@@ -6,35 +6,36 @@ import { ArrowUpRight } from 'lucide-react';
 const services = [
   {
     id: '01',
-    title: 'Art Direction',
-    description: 'Our aim is to nurture brands and help them grow. And just like human brands need to grow.',
-    details: 'Creative styling, visual storytelling, and aesthetic design systems built to establish a dominant brand footprint.',
+    title: 'Video Production',
+    description: 'Corporate video production, brand films, commercial advertisements, product & industrial videos, and cinematic storytelling.',
+    details: 'Drone videography, event videography, high-speed 4K/8K capture, professional video editing, colour grading, motion graphics, visual effects, and sound design.',
   },
   {
     id: '02',
-    title: 'Interaction Design',
-    description: "Whether your inquiries are big or small, we're prepared to engage, focusing on complex problems.",
-    details: 'Immersive user experience flows, micro-interactions, and state transitions that make websites feel dynamic and alive.',
+    title: 'Photography',
+    description: 'Product, fashion, commercial, and advertising photography crafted with deliberate lighting and editorial mastery.',
+    details: 'Corporate photography, event photography, high-definition lookbooks, ecommerce catalog shoots, and professional studio photography in Hyderabad & Tirupur.',
   },
   {
     id: '03',
-    title: 'Web & Mobile Development',
-    description: 'Every opportunity comes with unique factors are the mainstream we can offer your brand.',
-    details: 'Robust frontend code structures, scalable backend integrations, and responsive architectures utilizing modern web principles.',
+    title: 'Digital Marketing',
+    description: 'Google Ads, social media marketing, SEO, PPC campaigns, and conversion-focused growth ecosystems.',
+    details: 'Facebook & Instagram advertising, search engine optimisation, influencer & WhatsApp marketing, email marketing, landing page creation, campaign management & ROI analytics.',
   },
   {
     id: '04',
-    title: 'Digital Marketing',
-    description: 'We offer digital marketing that connect, engage, and drive results. Let’s turn your vision into reality.',
-    details: 'Conversion-driven campaigns, data-led analytics modeling, search engine visibility mapping, and social media ecosystems.',
+    title: 'Creative & Branding',
+    description: 'Brand strategy, brand development, creative advertising, graphic design, and cinematic brand storytelling.',
+    details: 'Logo & visual identity design, social media creatives, high-converting advertising campaigns, brand guidelines, and AI-powered video advertisements.',
   },
   {
     id: '05',
-    title: 'Brand Guideline',
-    description: 'We always eager to collaborate with forward thinking individuals and the organizations.',
-    details: 'A practical guide explaining how and why Strains should be part of every project to ensure its high quality and coherence.',
+    title: 'Sustainable Fashion',
+    description: 'Organic cotton, hemp clothing, vegan silk, vegan leather, and premium customized garments manufactured in Tirupur.',
+    details: 'Zero-discharge sustainable garment manufacturing, natural dyeing using fruits, flowers & vegetables, recycled packaging, plantable seed price tags, and ethical production.',
   },
 ];
+
 
 export default function ServicesSection() {
   const [activeItem, setActiveItem] = useState(null);

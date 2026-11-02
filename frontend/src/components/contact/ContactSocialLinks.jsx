@@ -5,12 +5,13 @@ import { ArrowUpRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/constant';
 
 const SOCIAL_CHANNELS = [
-  { label: 'Facebook', href: SITE_CONFIG?.socials?.facebook || 'https://facebook.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
+  { label: 'Instagram', href: SITE_CONFIG?.socials?.instagram || 'https://instagram.com/strainsassociates' },
+  { label: 'YouTube', href: SITE_CONFIG?.socials?.youtube || 'https://youtube.com/@strainsassociates' },
   { label: 'LinkedIn', href: SITE_CONFIG?.socials?.linkedin || 'https://linkedin.com' },
-  { label: 'YouTube', href: 'https://youtube.com' },
+  { label: 'Facebook', href: SITE_CONFIG?.socials?.facebook || 'https://facebook.com' },
   { label: 'Twitter / X', href: SITE_CONFIG?.socials?.twitter || 'https://twitter.com' },
 ];
+
 
 /**
  * Social media link stack for the Contact Information column

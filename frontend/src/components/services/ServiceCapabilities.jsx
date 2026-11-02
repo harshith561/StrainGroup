@@ -7,75 +7,76 @@ import Link from 'next/link';
 const CAPABILITIES = [
   {
     id: '01',
-    category: 'Digital Strategy',
-    icon: TrendingUp,
-    title: 'Performance Digital Marketing & Growth',
-    shortDesc: 'Precision ad campaigns, multi-channel growth funnels, and data analytics that convert audiences into loyal advocates.',
+    category: 'Video Production',
+    icon: Video,
+    title: 'Cinematic & Corporate Video Production',
+    shortDesc: 'Corporate video production, brand films, commercial advertisements, product & industrial videos, and cinematic visual storytelling.',
     deliverables: [
-      'Meta & Google Ads Performance Scaling',
-      'Omnichannel Retargeting Architecture',
-      'SEO & Content Authority Engineering',
-      'Full-Funnel Conversion Rate Optimization (CRO)',
+      'Corporate Video Production & Brand Films',
+      'Commercial Ads, Product & Industrial Videos',
+      'Drone Videography & Event Coverage',
+      'Video Editing, Colour Grading, VFX & Sound Design',
     ],
-    highlight: '+185% Avg. ROAS across clients',
+    highlight: '4K/8K High-Fidelity Cinematic Capture',
   },
   {
     id: '02',
-    category: 'Media Production',
-    icon: Video,
-    title: 'Cinematic Fashion & Video Production',
-    shortDesc: 'High-production fashion films, commercial product photography, and dynamic social storytelling that define category leaders.',
+    category: 'Photography',
+    icon: Palette,
+    title: 'Professional Commercial & Fashion Photography',
+    shortDesc: 'Product photography, fashion lookbooks, commercial shoots, and advertising imagery crafted with deliberate studio lighting.',
     deliverables: [
-      'Editorial Fashion & Lookbook Direction',
-      'Cinematic 4K/8K Brand Commercials',
-      'High-Speed High-Res Product Visuals',
-      'Social-First Vertical Video Architecture',
+      'Product & Commercial Photography',
+      'High-Fashion Lookbooks & Editorial Shoots',
+      'Corporate & Event Photography',
+      'Professional In-House Studio Photography',
     ],
-    highlight: 'Award-winning visual storytelling',
+    highlight: 'Editorial Lighting & Studio Precision',
   },
   {
     id: '03',
-    category: 'Brand Architecture',
-    icon: Palette,
-    title: 'Art Direction & Strategic Brand Identity',
-    shortDesc: 'End-to-end aesthetic design systems, packaging engineering, and typography standards crafted to stand the test of time.',
+    category: 'Digital Marketing',
+    icon: TrendingUp,
+    title: 'Performance Digital Marketing & Google Ads',
+    shortDesc: 'Precision Google Ads, Meta campaigns, SEO, and multi-channel marketing models that transform attention into measurable revenue.',
     deliverables: [
-      'Visual Identity & Logo Engineering',
-      'Design Systems & Type Hierarchy',
-      'Eco-Friendly Luxury Packaging Design',
-      'Complete Brand Book & Style Guides',
+      'Google Ads & Search Engine Optimisation (SEO)',
+      'Facebook & Instagram Paid Advertising',
+      'Pay-Per-Click (PPC) & Landing Page Funnels',
+      'Influencer, WhatsApp, Email Marketing & Reporting',
     ],
-    highlight: 'Distinctive brand positioning',
+    highlight: '90.8% Avg. Optimization Score',
   },
   {
     id: '04',
-    category: 'Garment Manufacturing',
+    category: 'Creative & Branding',
     icon: Sparkles,
-    title: 'Zero-Discharge Sustainable Stitchery',
-    shortDesc: 'World-class circular apparel production from our state-of-the-art facility in Tirupur, blending ethical craft with industrial scale.',
+    title: 'Brand Strategy, Creative Design & Visual Identity',
+    shortDesc: 'Brand strategy, brand development, creative advertising, graphic design, logo & visual design, and AI-powered video advertisements.',
     deliverables: [
-      'Organic & Recycled Fiber Sourcing',
-      'Zero Liquid Discharge (ZLD) Wet Processing',
-      'Low Minimum Order Quantity (MOQ) Agility',
-      'Global Export Compliance & Quality Assurance',
+      'Brand Strategy & Complete Identity Development',
+      'Logo Engineering & Visual Design Systems',
+      'Creative Advertising & Social Media Creatives',
+      'AI-Powered Video Ads & Brand Storytelling',
     ],
-    highlight: '100% Zero-Discharge Certified',
+    highlight: 'Enduring Brand Equity & Identity',
   },
   {
     id: '05',
-    category: 'Digital Engineering',
+    category: 'Sustainable Fashion',
     icon: Layers,
-    title: 'Modern Web & Interactive Platforms',
-    shortDesc: 'Fast, responsive, fluid web applications and e-commerce ecosystems engineered for seamless conversions and stunning user experiences.',
+    title: 'Sustainable Garment Manufacturing (Tirupur)',
+    shortDesc: 'Organic cotton, hemp clothing, vegan silk and vegan leather custom garments manufactured in our zero-discharge factory in Tirupur.',
     deliverables: [
-      'Headless Next.js & React Web Apps',
-      'Shopify & Custom E-Commerce Integration',
-      'Micro-Animations & Smooth Motion Design',
-      'High Performance Core Web Vitals Optimization',
+      'Organic Cotton & Hemp Apparel Production',
+      'Vegan Silk & Vegan Leather Customized Garments',
+      'Natural Dyeing Using Fruits, Flowers & Vegetables',
+      'Recycled Packaging & Plantable Price Tags',
     ],
-    highlight: '<0.8s First Contentful Paint',
+    highlight: 'Zero-Discharge Eco Manufacturing',
   },
 ];
+
 
 export default function ServiceCapabilities() {
   const [activeTab, setActiveTab] = useState(0);
@@ -83,7 +84,7 @@ export default function ServiceCapabilities() {
   return (
     <section className="service-capabilities-section py-24 sm:py-32 bg-[#090909] text-white border-b border-white/10" aria-label="Our Full Capabilities">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
-        
+
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-white/10 gap-6">
           <div>
@@ -109,11 +110,10 @@ export default function ServiceCapabilities() {
               <div
                 key={cap.id}
                 onClick={() => setActiveTab(idx)}
-                className={`group relative rounded-2xl p-8 border transition-all duration-400 cursor-pointer flex flex-col justify-between ${
-                  isSelected
-                    ? 'bg-[#121212] border-[#00a859] shadow-[0_10px_30px_rgba(0,168,89,0.15)] -translate-y-1'
-                    : 'bg-[#0f0f0f] border-white/5 hover:border-white/20 hover:bg-[#141414] hover:-translate-y-1'
-                }`}
+                className={`group relative rounded-2xl p-8 border transition-all duration-400 cursor-pointer flex flex-col justify-between ${isSelected
+                  ? 'bg-[#121212] border-[#00a859] shadow-[0_10px_30px_rgba(0,168,89,0.15)] -translate-y-1'
+                  : 'bg-[#0f0f0f] border-white/5 hover:border-white/20 hover:bg-[#141414] hover:-translate-y-1'
+                  }`}
               >
                 <div>
                   {/* Top Badge & Number */}

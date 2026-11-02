@@ -9,7 +9,7 @@ export default function ContactForm() {
     name: '',
     email: '',
     phone: '',
-    service: 'Art Direction',
+    service: 'Video Production',
     message: '',
   });
 
@@ -34,7 +34,7 @@ export default function ContactForm() {
         name: '',
         email: '',
         phone: '',
-        service: 'Art Direction',
+        service: 'Video Production',
         message: '',
       });
     } catch (err) {
@@ -48,7 +48,7 @@ export default function ContactForm() {
         name: '',
         email: '',
         phone: '',
-        service: 'Art Direction',
+        service: 'Video Production',
         message: '',
       });
     }
@@ -111,7 +111,7 @@ export default function ContactForm() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+91 98765 43210"
+                placeholder="+91 8686819898"
                 className="w-full bg-[#1c1c1c] border border-white/10 rounded px-4 py-3 text-white font-mono text-sm focus:outline-none focus:border-[#00e676] transition"
               />
             </div>
@@ -127,12 +127,12 @@ export default function ContactForm() {
               onChange={handleChange}
               className="w-full bg-[#1c1c1c] border border-white/10 rounded px-4 py-3 text-white font-mono text-sm focus:outline-none focus:border-[#00e676] transition"
             >
-              <option value="Art Direction">Art Direction & Branding</option>
-              <option value="Video Production">Cinematic Video & Photo Production</option>
-              <option value="Digital Marketing">Growth & Performance Marketing</option>
-              <option value="Web Development">Interaction Design & Web Development</option>
-              <option value="Clothing Manufacturing">Strains Stitchery / Garment Manufacturing</option>
-              <option value="Fashion Brand">Strains Fashions / Organic Clothing</option>
+              <option value="Video Production">Video Production (Corporate, Brand Films, Commercial Ads, Drone)</option>
+              <option value="Photography">Photography (Product, Fashion, Commercial, Studio)</option>
+              <option value="Digital Marketing">Digital Marketing (Google Ads, Meta Ads, SEO, PPC, Analytics)</option>
+              <option value="Creative & Branding">Creative & Branding (Brand Strategy, Logo, Creative Campaigns)</option>
+              <option value="Sustainable Fashion">Sustainable Fashion (Organic Cotton, Hemp, Vegan Silk/Leather)</option>
+              <option value="Garment Manufacturing">Garment Manufacturing (Tirupur Eco-Production Facility)</option>
             </select>
           </div>
 

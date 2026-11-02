@@ -32,7 +32,7 @@ export default function AboutLeadership() {
               </Link>
             </h3>
             <p className="founder-bio-text font-mono">
-              Founded Strains in 2017 with a bold multi-disciplinary vision: uniting cutting-edge
+              Founded Strains in 2018 with a bold multi-disciplinary vision: uniting cutting-edge
               brand design with real industrial apparel manufacturing in Tirupur. Praharsha acts
               as chief strategist and line producer, managing multi-tier client engagements,
               creative direction, and global eco-fashion initiatives.

@@ -46,7 +46,7 @@ export default function UnderMaintenance({ routeName = '' }) {
           {/* Administration Contact Bar */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-10 text-left font-mono">
             <a
-              href="mailto:info@strains.in?subject=409%20System%20Maintenance%20Inquiry%20-%20Strains"
+              href="mailto:hello@strainsassociates.com?subject=409%20System%20Maintenance%20Inquiry%20-%20Strains%20Associates"
               className="flex items-center gap-3 p-4 rounded-lg bg-[#121212] border border-white/10 hover:border-[#00e676]/50 transition group"
             >
               <div className="w-10 h-10 rounded-full bg-[#00e676]/10 flex items-center justify-center text-[#00e676] group-hover:scale-110 transition-transform">
@@ -54,12 +54,12 @@ export default function UnderMaintenance({ routeName = '' }) {
               </div>
               <div>
                 <span className="text-[10px] uppercase text-neutral-500 block">Administration Desk</span>
-                <span className="text-xs text-white group-hover:text-[#00e676] transition-colors">info@strains.in</span>
+                <span className="text-xs text-white group-hover:text-[#00e676] transition-colors">hello@strainsassociates.com</span>
               </div>
             </a>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+918686819898"
               className="flex items-center gap-3 p-4 rounded-lg bg-[#121212] border border-white/10 hover:border-[#00e676]/50 transition group"
             >
               <div className="w-10 h-10 rounded-full bg-[#00e676]/10 flex items-center justify-center text-[#00e676] group-hover:scale-110 transition-transform">
@@ -67,7 +67,7 @@ export default function UnderMaintenance({ routeName = '' }) {
               </div>
               <div>
                 <span className="text-[10px] uppercase text-neutral-500 block">Direct Line</span>
-                <span className="text-xs text-white group-hover:text-[#00e676] transition-colors">+91 98765 43210</span>
+                <span className="text-xs text-white group-hover:text-[#00e676] transition-colors">+91 8686819898</span>
               </div>
             </a>
           </div>
@@ -81,7 +81,7 @@ export default function UnderMaintenance({ routeName = '' }) {
               <ArrowLeft size={16} /> RETURN HOME
             </Link>
             <a
-              href="mailto:info@strains.in?subject=Admin%20Support%20Request"
+              href="mailto:hello@strainsassociates.com?subject=Admin%20Support%20Request"
               className="pill-button bg-white/10 hover:bg-white/15 text-white font-sans text-xs px-6 py-3 inline-flex items-center gap-2 transition border border-white/10"
             >
               <Mail size={16} /> CONTACT ADMINISTRATION

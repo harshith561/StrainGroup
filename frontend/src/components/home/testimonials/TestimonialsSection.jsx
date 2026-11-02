@@ -6,35 +6,42 @@ import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: 'Michael Mahanay',
-    role: 'CEO, TechVentures',
-    text: 'They took the time to understand my brand and target audience and developed a marketing strategy that perfectly captured our essence. Their creative campaigns led to a significant increase in sales, and their expertise helped us secure a valuable partnership.',
+    name: 'R. Ananthakrishnan',
+    role: 'Director, Aastu Refrigeration',
+    text: 'Strains Associates delivered phenomenal performance over our 3.5-year campaign. Achieving a 90.8% optimization score with 21,800 high-intent clicks and 471,000 targeted impressions transformed our cold chain infrastructure lead pipeline.',
   },
   {
     id: 2,
-    name: 'Daryl Mitchell',
-    role: 'Founder, Apex Digital',
-    text: 'Their mission is to empower the brands we believe in with tailor-made approaches that ignite creativity and growth without limits. We discovered more funny quality work. The detail and execution of their designs was top tier.',
+    name: 'Suresh Narayanan',
+    role: 'Head of Marketing, Pioneer Cranes',
+    text: 'Achieving an average CPC of ₹13.01 in the heavy overhead cranes sector is unmatched. Generating 18,800 procurement clicks and 368,000 impressions on a ₹2.45L spend proves Strains Associates understands B2B industrial acquisition inside out.',
   },
   {
     id: 3,
-    name: 'Tom Banton',
-    role: 'Marketing Lead, Redox Corp',
-    text: 'Strains Associates is always eager to collaborate with forward-thinking individuals and organizations, using the power of design and technology to tackle today’s challenges and shape a better future. From sleek websites to memorable branding, they offer creative solutions.',
+    name: 'Xiti Fashion',
+    role: 'Creative Director, Xiti',
+    text: 'Strains Associates seamlessly united sustainable Tirupur garment manufacturing using organic cotton and hemp with high-end cinematic lookbook films and digital launch funnels. They helped us build an authentic eco-fashion brand.',
   },
   {
     id: 4,
-    name: 'Lance Petter',
-    role: 'Product Director, VibeScale',
-    text: 'Design is a team effort, and I believe in a true partnership. By working closely with Strains Associates, understanding our vision and core message, we managed to build an identity that sets us apart globally.',
+    name: 'Venkatesh Babu',
+    role: 'Managing Director, Haraa Gold & Jewellery',
+    text: 'Their cinematic brand films and targeted advertising campaigns resonated deeply across regional audiences. Danny and Pavan brought unmatched visual grandeur to our heritage bridal jewellery collections.',
   },
   {
     id: 5,
-    name: 'Henrik Klassen',
-    role: 'Creative VP, Synapse',
-    text: "We're passionate about partnering with visionary individuals and organizations to harness the power of design and technology. Strains delivered a bold identity that connects, engages, and drives long-term customer values.",
+    name: 'Dr. K. Swaminathan',
+    role: 'Chief Scientific Officer, Sri Bioaesthetics',
+    text: 'Strains Associates translated our sophisticated microbial formulations and agricultural biotechnology into compelling visual explainers and high-converting B2B digital lead pipelines.',
+  },
+  {
+    id: 6,
+    name: 'Managing Partner',
+    role: 'Pakka Non Veg Restaurant Chain',
+    text: 'The cinematic 4K culinary videos and ASMR reels produced by Strains Associates drove over 850,000 views and a massive footfall surge across our restaurant branches.',
   },
 ];
+
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);

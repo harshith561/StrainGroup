@@ -24,13 +24,13 @@ export default function AboutStory() {
           {/* Left Column: Narrative & Philosophy */}
           <div className="story-left">
             <blockquote className="story-lead-quote font-sans">
-              "Since 2017, our mission has remained uncompromised: to merge the conceptual genius of a
+              "Since 2018, our mission has remained uncompromised: to merge the conceptual genius of a
               top-tier design atelier with the industrial precision of a real manufacturing powerhouse."
             </blockquote>
 
             <div className="story-paragraphs font-mono">
               <p>
-                When Strains was founded in 2017, the branding landscape was fragmented. Creative
+                When Strains was founded in 2018, the branding landscape was fragmented. Creative
                 agencies conceptualized identities without understanding production logistics,
                 while manufacturers executed without design sensitivity. Strains broke this divide.
               </p>

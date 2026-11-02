@@ -588,4 +588,51 @@ export const CLIENT_LOGOS_DATA = [
       </svg>
     ),
   },
+
+  // 25. Aastu Refrigeration
+  {
+    id: 'aastu-refrigeration',
+    name: 'Aastu Refrigeration',
+    subtext: 'Industrial HVAC & Cold Chain',
+    category: 'Commercial Refrigeration & HVAC',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          <rect x="-14" y="-14" width="28" height="28" rx="4" stroke="#00E676" strokeWidth="1.5" fill="none" />
+          <path d="M-6 0 L6 0 M0 -6 L0 6" stroke="#00E676" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="0" cy="0" r="3" fill="#00E676" />
+        </g>
+        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          AASTU <tspan fill="#00E676">REFRIGERATION</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#6EE7B7" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          INDUSTRIAL HVAC & COLD CHAIN
+        </text>
+      </svg>
+    ),
+  },
+
+  // 26. Global Tree
+  {
+    id: 'global-tree',
+    name: 'Global Tree',
+    subtext: 'Overseas Education & Immigration',
+    category: 'Education & Global Immigration',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          <circle cx="0" cy="0" r="16" stroke="#38BDF8" strokeWidth="1.4" fill="none" />
+          <path d="M0 -10 C-6 -4 -4 8 0 12 C4 8 6 -4 0 -10 Z" fill="#38BDF8" />
+          <circle cx="0" cy="-2" r="2" fill="#FFFFFF" />
+        </g>
+        <text x="54" y="27" fontSize="16" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          GLOBAL <tspan fill="#38BDF8">TREE</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#BAE6FD" fontFamily="'Inter', sans-serif" letterSpacing="1">
+          EDUCATION & IMMIGRATION
+        </text>
+      </svg>
+    ),
+  },
 ];
+

@@ -7,50 +7,51 @@ import React, { useState, useEffect, useRef } from 'react';
    ✏️ Change any headline, steps, items, or badges directly here:
    ========================================================================== */
 export const APPROACH_SECTION_DATA = {
-  tag: 'APPROACH',
-  headline: 'Method of making\nbetter result',
+  tag: 'OUR METHODOLOGY',
+  headline: 'Strategic process for\nproven results',
   steps: [
     {
       id: 'step-01',
       number: '01',
-      title: 'Problem\ndiscovery',
+      title: 'Brand Strategy &\nCreative Concept',
       items: [
-        'Usability Studies',
-        'User Interviews',
-        'Stakeholder Interviews',
-        'Competitive Research',
-        'Insights Report',
-        'User Journey',
+        'Brand Strategy & Positioning',
+        'Creative Advertising Direction',
+        'Target Audience Research',
+        'Campaign Architecture',
+        'Scriptwriting & Storyboarding',
+        'Eco-Material Selection',
       ],
     },
     {
       id: 'step-02',
       number: '02',
-      title: 'Design\nsystem ready',
+      title: 'Cinematic Production &\nManufacturing',
       items: [
-        'Thinking Workshops',
-        'Sitemaps',
-        'Concepts',
-        'Designs',
-        'Prototypes',
-        'Usability Studies',
+        '4K/8K Video Production',
+        'Commercial & Fashion Photography',
+        'Video Editing & Colour Grading',
+        'Motion Graphics & Sound Design',
+        'Tirupur Garment Manufacturing',
+        'Natural Dyeing & Packaging',
       ],
     },
     {
       id: 'step-03',
       number: '03',
-      title: 'Design\nimplementation',
+      title: 'Digital Marketing &\nPerformance Scaling',
       items: [
-        'Design',
-        'Use Cases',
-        'User Flows',
-        'Various User Types',
-        'Annotations',
-        'Interactions',
+        'Google Ads Search Campaigns',
+        'Facebook & Instagram Advertising',
+        'Search Engine Optimisation (SEO)',
+        'Pay-Per-Click (PPC) Optimization',
+        'WhatsApp & Email Marketing',
+        'Analytics & ROI Reporting',
       ],
     },
   ],
 };
+
 
 function AnimatedStepNumber({ target, isRevealed, delay = 0 }) {
   const [displayNum, setDisplayNum] = useState('00');
