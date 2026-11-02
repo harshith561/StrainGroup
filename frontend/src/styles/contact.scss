@@ -88,27 +88,38 @@
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.02em;
-  line-height: 0.9;
-  /* Responsive viewport-based font size: ~15vw large desktop, ~14vw laptop/tablet/mobile */
-  font-size: clamp(52px, 14vw, 210px);
+  line-height: 1;
+  /* Scaled viewport-based font size for monumental 3-word title "WORK WITH US" */
+  font-size: clamp(34px, 8.5vw, 150px);
   margin: 0;
   display: inline-flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
   justify-content: center;
   align-items: center;
-  white-space: nowrap;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.85);
   max-width: 100%;
 
   @media (max-width: 1024px) {
-    font-size: clamp(48px, 13vw, 150px);
+    font-size: clamp(30px, 8vw, 110px);
   }
 
   @media (max-width: 767px) {
-    font-size: clamp(38px, 13.5vw, 92px);
+    font-size: clamp(26px, 8.5vw, 68px);
   }
 
   @media (max-width: 375px) {
-    font-size: clamp(34px, 13vw, 52px);
+    font-size: clamp(22px, 8vw, 38px);
+  }
+}
+
+.contact-word {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  &:not(:last-child) {
+    margin-right: clamp(12px, 2.4vw, 42px);
   }
 }
 
@@ -130,7 +141,7 @@
 .contact-letter {
   display: inline-block;
   opacity: 0;
-  margin: 0 clamp(2px, 0.35vw, 8px);
+  margin: 0 clamp(1px, 0.25vw, 6px);
   animation: contactLetterReveal 0.65s ease-out forwards;
   will-change: transform, opacity, filter;
 }

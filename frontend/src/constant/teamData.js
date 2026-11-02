@@ -37,7 +37,7 @@ export const TEAM_MEMBERS = [
     designation: 'Founder & Line Producer',
     profileImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85',
     description: [
-      'Naga Praharsha founded Strains in 2012 with a bold multidisciplinary vision: uniting cutting-edge brand design with real industrial apparel manufacturing in Tirupur. Praharsha acts as chief strategist and line producer, managing multi-tier client engagements, creative direction, and global eco-fashion initiatives.',
+      'Naga Praharsha founded Strains in 2017 with a bold multidisciplinary vision: uniting cutting-edge brand design with real industrial apparel manufacturing in Tirupur. Praharsha acts as chief strategist and line producer, managing multi-tier client engagements, creative direction, and global eco-fashion initiatives.',
       'He champions zero-discharge industrial processes and circular supply-chain models, seamlessly bridging the gap between studio concept art and industrial production scale for premium international brands.',
     ],
     facebook: 'https://facebook.com',

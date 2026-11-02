@@ -14,12 +14,12 @@ export default function AboutStrainsGroupPage() {
   return (
     <MainLayout>
       <Head>
-        <title>About Strains Group | Since 2012 — Creative Studio & Digital Craft</title>
+        <title>About Strains Group | Since 2017 — Creative Studio & Digital Craft</title>
         <meta
           name="description"
-          content="Crafting digital products with a unique vision of making user experience better. Strains Group since 2012."
+          content="Crafting digital products with a unique vision of making user experience better. Strains Group since 2017."
         />
-        <meta property="og:title" content="About Strains Group | Since 2012" />
+        <meta property="og:title" content="About Strains Group | Since 2017" />
         <meta
           property="og:description"
           content="Crafting digital products with a unique vision of making user experience better. Art Direction, Capability, and Sustainability."
@@ -27,7 +27,7 @@ export default function AboutStrainsGroupPage() {
       </Head>
 
       <div className="about-page-main bg-[#000000] text-white">
-        {/* Simple Black Screen with Animated "SINCE 2012" alone */}
+        {/* Simple Black Screen with Animated "SINCE 2017" alone */}
         <AboutHero />
 
         {/* Studio Section with Zigzag Photo Gallery */}

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   About Page Styles: Simple Black Screen "SINCE 2012" + Studio Next Section
+   About Page Styles: Simple Black Screen "SINCE 2017" + Studio Next Section
    Exact match to user's screenshots & instructions
    ========================================================================== */
 
@@ -53,7 +53,7 @@
   inset: 0;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: 
+  background:
     radial-gradient(circle at 50% 50%, rgba(0, 168, 89, 0.2) 0%, rgba(0, 0, 0, 0.4) 65%, rgba(0, 0, 0, 0.7) 100%),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, transparent 45%, rgba(0, 0, 0, 0.65) 100%);
   pointer-events: none;
@@ -141,10 +141,12 @@
     opacity: 0;
     filter: blur(8px);
   }
+
   60% {
     opacity: 1;
     filter: blur(0);
   }
+
   100% {
     transform: translateY(0%);
     opacity: 1;
@@ -183,9 +185,12 @@
 }
 
 @keyframes simpleBounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(6px);
   }
@@ -225,7 +230,8 @@
 
 /* Left Column: ABOUT STUDIO */
 .about-studio-left-col {
-  padding-top: 14px; /* Perfectly aligned to cap-height of giant title */
+  padding-top: 14px;
+  /* Perfectly aligned to cap-height of giant title */
 }
 
 .about-studio-kicker {
@@ -360,10 +366,12 @@
 
 /* Navigation Controls placed UNDER the photo gallery (Only visible on tablet & mobile; hidden on laptops) */
 .about-gallery-bottom-controls {
-  display: none !important; /* Hidden on laptops & desktops per user instruction */
+  display: none !important;
+  /* Hidden on laptops & desktops per user instruction */
 
   @media (max-width: 1024px) {
-    display: flex !important; /* Only visible in mobile and tablet */
+    display: flex !important;
+    /* Only visible in mobile and tablet */
     justify-content: center;
     align-items: center;
     margin-top: 24px;
@@ -415,7 +423,8 @@
 /* Scrollable Container (Mouse wheel up/down translates to horizontal scroll) */
 .about-studio-gallery-scroll {
   display: flex;
-  align-items: center; /* Crucial: vertically centers short cards against tall cards */
+  align-items: center;
+  /* Crucial: vertically centers short cards against tall cards */
   gap: 20px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -427,11 +436,14 @@
   scroll-snap-type: x proximity;
 
   /* Remove the underline scrollbar completely across all browsers */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE / Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE / Edge */
 
   &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
     width: 0;
     height: 0;
   }
@@ -516,18 +528,22 @@
   .about-studio-section {
     padding: 90px 36px 80px;
   }
+
   .about-studio-layout-grid {
     grid-template-columns: 1fr;
     gap: 32px;
     margin-bottom: 60px;
   }
+
   .about-studio-left-col {
     padding-top: 0;
   }
+
   .about-studio-subcontent-row {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .about-studio-gallery-wrapper {
     margin-top: 60px;
   }
@@ -569,6 +585,7 @@
     width: 290px;
     height: 380px;
   }
+
   .studio-gallery-card.gallery-card-short {
     width: 250px;
     height: 260px;
@@ -593,56 +610,70 @@
     max-height: 70vh !important;
     padding: 30px 16px 15px !important;
   }
+
   .simple-hero-title {
     font-size: clamp(2.4rem, 11.5vw, 4.4rem);
     flex-wrap: nowrap !important;
     gap: 12px;
   }
+
   .simple-hero-scroll-btn {
     margin-top: 10px;
     padding: 5px;
   }
+
   .about-studio-section {
     padding: 55px 20px 60px;
   }
+
   .about-studio-headline {
     font-size: clamp(26px, 6.5vw, 38px);
     letter-spacing: -1px;
     margin-bottom: 35px;
   }
+
   .about-studio-subcontent-row {
     gap: 30px;
   }
+
   .studio-bullet-list li {
     font-size: 20px;
   }
+
   /* Gallery responsiveness on mobile and tablet with prominent navigation arrows */
   .about-studio-gallery-wrapper {
     margin-top: 45px;
   }
+
   .about-gallery-header-row {
     margin-bottom: 16px;
   }
+
   .about-gallery-hint {
     font-size: 11px;
     letter-spacing: 1.5px;
   }
+
   .gallery-nav-arrow-btn {
     width: 40px;
     height: 40px;
   }
+
   .about-studio-gallery-scroll {
     gap: 14px;
     padding: 14px 2px 20px;
   }
+
   .studio-gallery-card.gallery-card-tall {
     width: 245px;
     height: 330px;
   }
+
   .studio-gallery-card.gallery-card-short {
     width: 210px;
     height: 220px;
   }
+
   .scroll-to-top-circle-btn {
     bottom: 20px;
     right: 20px;
@@ -658,29 +689,36 @@
     max-height: 70vh !important;
     padding: 20px 12px 10px !important;
   }
+
   .simple-hero-title {
     flex-wrap: nowrap !important;
     gap: 8px;
     font-size: clamp(1.9rem, 11.8vw, 3.2rem);
   }
+
   .simple-hero-space {
     width: 8px;
   }
+
   .about-studio-section {
     padding: 40px 16px 50px;
   }
+
   .about-studio-headline {
     font-size: 25px;
     line-height: 1.15;
   }
+
   .about-gallery-hint {
     font-size: 10px;
     letter-spacing: 1px;
   }
+
   .studio-gallery-card.gallery-card-tall {
     width: 215px;
     height: 290px;
   }
+
   .studio-gallery-card.gallery-card-short {
     width: 180px;
     height: 195px;
@@ -889,10 +927,13 @@
 }
 
 @keyframes pulseDot {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.7;
   }
+
   50% {
     transform: scale(1.4);
     opacity: 1;
@@ -990,6 +1031,7 @@
   0% {
     stroke-dashoffset: 96;
   }
+
   100% {
     stroke-dashoffset: -24;
   }
@@ -1505,6 +1547,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-100% / 3));
   }
@@ -1553,7 +1596,8 @@
 
 /* ================= Tablet & Mobile Styling ================= */
 /* No natural hover on mobile/tablet: apply the hover color change directly by DEFAULT */
-@media (max-width: 1024px), (hover: none) {
+@media (max-width: 1024px),
+(hover: none) {
   .about-esteemed-clients-section {
     padding: 70px 0 80px;
   }

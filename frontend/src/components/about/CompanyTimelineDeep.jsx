@@ -5,7 +5,7 @@ import { History, Award, CheckCircle2, Globe, Sparkles, Building2, Layers } from
 
 const DEEP_CHRONICLES = [
   {
-    year: '2012',
+    year: '2017',
     title: 'The Foundation in Germany & India',
     era: 'Genesis Era',
     narrative:

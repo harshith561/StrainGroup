@@ -13,15 +13,15 @@ export default function AboutHero() {
       setIsMounted(true);
     }, 100);
 
-    // Odometer year roll: 2000 -> 2012
+    // Odometer year roll: 2000 -> 2017
     let step = 2000;
-    const target = 2012;
+    const target = 2017;
     const counterTimer = setInterval(() => {
       step += 1;
       if (step <= target) {
         setDisplayYear(String(step));
       } else {
-        setDisplayYear('2012');
+        setDisplayYear('2017');
         clearInterval(counterTimer);
       }
     }, 90);
@@ -61,7 +61,7 @@ export default function AboutHero() {
         <div className="simple-hero-video-overlay" />
       </div>
 
-      {/* Center Monumental Typography: "SINCE 2012" */}
+      {/* Center Monumental Typography: "SINCE 2017" */}
       <div className="simple-hero-center">
         <h1 className="simple-hero-title font-timeline" aria-label={`SINCE ${displayYear}`}>
           {/* Word: SINCE in Bold White */}
@@ -83,7 +83,7 @@ export default function AboutHero() {
           {/* Spacer */}
           <span className="simple-hero-space" />
 
-          {/* Year: 2012 in Strains Emerald Green with Animation */}
+          {/* Year: 2017 in Strains Emerald Green with Animation */}
           <span className="year-digits-wrap text-[#00a859]">
             {yearDigits.map((digit, index) => (
               <span key={`year-digit-${displayYear}-${index}`} className="simple-letter-mask">

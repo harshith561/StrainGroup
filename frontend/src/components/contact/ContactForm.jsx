@@ -3,22 +3,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
-const ENQUIRY_OPTIONS = [
-  'Sustainable Fashion',
-  'Garment Manufacturing',
-  'Brand Strategy',
-  'Video & Photography Production',
-  'Digital Marketing',
-  'Other Enquiries',
-];
-
-const BUDGET_OPTIONS = [
-  '< $10,000',
-  '$10,000 – $25,000',
-  '$25,000 – $50,000',
-  '$50,000 – $100,000',
-  '$100,000+',
-];
 
 /**
  * Section Eight & Nine – Minimalist Contact Form
@@ -31,9 +15,6 @@ export default function ContactForm() {
     email: '',
     phone: '',
     company: '',
-    budget: '',
-    subject: '',
-    enquiryType: 'Sustainable Fashion',
     message: '',
   });
 
@@ -54,14 +35,6 @@ export default function ContactForm() {
         return next;
       });
     }
-  };
-
-  // Toggle enquiry pill
-  const handleEnquirySelect = (option) => {
-    setFormData((prev) => ({
-      ...prev,
-      enquiryType: prev.enquiryType === option ? '' : option,
-    }));
   };
 
   // Frontend validation for the 3 mandatory fields
@@ -138,9 +111,6 @@ export default function ContactForm() {
         email: '',
         phone: '',
         company: '',
-        budget: '',
-        subject: '',
-        enquiryType: 'Sustainable Fashion',
         message: '',
       });
     } catch (error) {
@@ -268,63 +238,6 @@ export default function ContactForm() {
               />
             </div>
 
-            {/* ROW 3: Budget & Subject */}
-            <div className="contact-field-group">
-              <label htmlFor="field-budget" className="contact-field-label">
-                Budget
-              </label>
-              <select
-                id="field-budget"
-                name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-                className="contact-field-input cursor-pointer bg-[#151515]"
-              >
-                <option value="" className="bg-[#151515] text-[#888888]">
-                  Select project budget range (optional)
-                </option>
-                {BUDGET_OPTIONS.map((opt) => (
-                  <option key={opt} value={opt} className="bg-[#191919] text-white">
-                    {opt}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="contact-field-group">
-              <label htmlFor="field-subject" className="contact-field-label">
-                Subject
-              </label>
-              <input
-                id="field-subject"
-                type="text"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                placeholder="e.g. Sustainable Apparel Line / Campaign"
-                className="contact-field-input"
-              />
-            </div>
-
-            {/* ENQUIRY TYPE: What are you looking for? */}
-            <div className="contact-field-group full-width">
-              <label className="contact-field-label">
-                What are you looking for? <span className="text-[#666666] font-normal lowercase tracking-normal">(optional)</span>
-              </label>
-              <div className="enquiry-type-group" role="group" aria-label="Enquiry categories">
-                {ENQUIRY_OPTIONS.map((opt) => (
-                  <button
-                    key={opt}
-                    type="button"
-                    onClick={() => handleEnquirySelect(opt)}
-                    className={`enquiry-pill-btn ${formData.enquiryType === opt ? 'active' : ''}`}
-                    aria-pressed={formData.enquiryType === opt}
-                  >
-                    {opt}
-                  </button>
-                ))}
-              </div>
-            </div>
 
             {/* FULL-WIDTH MESSAGE TEXTAREA */}
             <div className="contact-field-group full-width">
