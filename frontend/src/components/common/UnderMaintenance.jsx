@@ -59,7 +59,7 @@ export default function UnderMaintenance({ routeName = '' }) {
             </a>
 
             <a
-              href="tel:+49123456789"
+              href="tel:+919876543210"
               className="flex items-center gap-3 p-4 rounded-lg bg-[#121212] border border-white/10 hover:border-[#00e676]/50 transition group"
             >
               <div className="w-10 h-10 rounded-full bg-[#00e676]/10 flex items-center justify-center text-[#00e676] group-hover:scale-110 transition-transform">
@@ -67,7 +67,7 @@ export default function UnderMaintenance({ routeName = '' }) {
               </div>
               <div>
                 <span className="text-[10px] uppercase text-neutral-500 block">Direct Line</span>
-                <span className="text-xs text-white group-hover:text-[#00e676] transition-colors">+49 123 456 789</span>
+                <span className="text-xs text-white group-hover:text-[#00e676] transition-colors">+91 98765 43210</span>
               </div>
             </a>
           </div>

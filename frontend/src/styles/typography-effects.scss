@@ -38,3 +38,34 @@
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Alternating Marquee Colors: Green and White */
+.marquee-text-custom .marquee-item-green {
+  color: var(--accent-green, #00a859) !important;
+  -webkit-text-stroke: 1px transparent !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.marquee-text-custom .marquee-item-white {
+  color: #ffffff !important;
+  -webkit-text-stroke: 1px transparent !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.marquee-bullet {
+  display: inline-block;
+  margin: 0 0.35em;
+  opacity: 0.9;
+}
+
+.marquee-text-custom .marquee-bullet.bullet-white {
+  color: #ffffff !important;
+  -webkit-text-stroke: 1px transparent !important;
+}
+
+.marquee-text-custom .marquee-bullet.bullet-green {
+  color: var(--accent-green, #00a859) !important;
+  -webkit-text-stroke: 1px transparent !important;
+}

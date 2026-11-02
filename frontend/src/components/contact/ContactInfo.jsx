@@ -12,7 +12,7 @@ import ContactSocialLinks from './ContactSocialLinks';
  */
 export default function ContactInfo() {
   const email = SITE_CONFIG?.contactEmail || 'info@strains.in';
-  const phone = SITE_CONFIG?.contactPhone || '+49 123 456 789';
+  const phone = SITE_CONFIG?.contactPhone || '+91 98765 43210';
 
   return (
     <aside className="contact-info-panel" aria-label="Contact Information">
@@ -53,16 +53,16 @@ export default function ContactInfo() {
 
       {/* 3. Strains Ecosystem Facilities */}
       <div className="flex flex-col gap-3">
-        {/* Creative Headquarters */}
+        {/* Corporate Headquarters */}
         <div className="contact-division-badge">
           <div className="flex items-center gap-2 text-[#00D765]">
             <MapPin size={15} />
             <span className="font-mono text-xs uppercase tracking-wider font-bold">
-              Creative Headquarters
+              Corporate Headquarters
             </span>
           </div>
           <p className="font-sans text-xs text-[#B5B5B5] leading-relaxed">
-            Strains Tower, Sector 5, Creative District, Germany
+            H.No. 15-21-1/LIG-55, Balaji Nagar, Kukatpally, Hyderabad, Telangana 500072, India
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export default function ContactInfo() {
             </span>
           </div>
           <p className="font-sans text-xs text-[#B5B5B5] leading-relaxed">
-            Zero-discharge organic cotton, hemp, and natural dye garment manufacturing facility in Tirupur, India.
+            Zero-discharge organic cotton, hemp, and natural dye garment manufacturing facility in Tirupur, Tamil Nadu, India.
           </p>
         </div>
       </div>

@@ -210,7 +210,7 @@ export default function ContactForm() {
                 autoComplete="tel"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+49 123 456 789"
+                placeholder="+91 98765 43210"
                 className={`contact-field-input ${errors.phone ? 'input-error' : ''}`}
                 aria-required="true"
                 aria-invalid={!!errors.phone}

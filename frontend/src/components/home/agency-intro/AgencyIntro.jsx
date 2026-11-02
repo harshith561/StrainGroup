@@ -27,7 +27,7 @@ export default function AgencyIntro() {
     };
   }, []);
 
-  const headlineText = 'DesignEdgeCreativeAgency';
+  const headlineWords = 'Design Edge Creative Agency'.split(' ');
 
   return (
     <section
@@ -37,18 +37,34 @@ export default function AgencyIntro() {
       <div className="agency-intro-inner">
         <div className="intro-header">
           <h1 className="intro-title font-sans">
-            {headlineText.split('').map((char, index) => (
-              <span
-                key={index}
-                className="char-span"
-                style={{ transitionDelay: `${index * 0.03}s` }}
-              >
-                {char}
-              </span>
-            ))}
+            {headlineWords.map((word, wordIndex) => {
+              const wordStartIndex = headlineWords
+                .slice(0, wordIndex)
+                .reduce((acc, w) => acc + w.length + 1, 0);
+
+              return (
+                <span
+                  key={wordIndex}
+                  className="intro-word inline-flex items-center whitespace-nowrap"
+                  style={{
+                    marginRight: wordIndex < headlineWords.length - 1 ? '0.32em' : '0',
+                  }}
+                >
+                  {word.split('').map((char, charIndex) => (
+                    <span
+                      key={charIndex}
+                      className="char-span"
+                      style={{ transitionDelay: `${(wordStartIndex + charIndex) * 0.03}s` }}
+                    >
+                      {char}
+                    </span>
+                  ))}
+                </span>
+              );
+            })}
           </h1>
           <p className="intro-tagline font-mono">
-            An award winning creative agency, working based in Germany...
+            An award winning creative agency & sustainable fashion ecosystem based in India...
           </p>
         </div>
 

@@ -106,7 +106,7 @@ export default function Footer() {
           <ul className="footer-contact-list font-mono">
             <li>
               <span className="contact-label">Address:</span>
-              <p>Strains Tower, Sector 5, Creative District, Germany</p>
+              <p>Balaji Nagar, Kukatpally, Hyderabad, Telangana 500072, India</p>
             </li>
             <li>
               <span className="contact-label">Email:</span>
@@ -114,7 +114,7 @@ export default function Footer() {
             </li>
             <li>
               <span className="contact-label">Phone:</span>
-              <a href="tel:+49123456789">+49 123 456 789</a>
+              <a href="tel:+919876543210">+91 98765 43210</a>
             </li>
           </ul>
         </div>

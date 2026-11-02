@@ -18,7 +18,7 @@ export default function ContactDetails() {
           <div>
             <span className="font-mono text-xs text-[#00e676] uppercase block">Headquarters</span>
             <p className="font-mono text-white/80 text-sm mt-1">
-              Strains Tower, Sector 5, Creative District, Germany
+              H.No. 15-21-1/LIG-55, Balaji Nagar, Kukatpally, Hyderabad, Telangana 500072, India
             </p>
           </div>
         </div>
@@ -41,8 +41,8 @@ export default function ContactDetails() {
           </div>
           <div>
             <span className="font-mono text-xs text-[#00e676] uppercase block">Direct Line</span>
-            <a href="tel:+49123456789" className="font-mono text-white/80 hover:text-[#00e676] text-sm mt-1 block">
-              +49 123 456 789
+            <a href="tel:+919876543210" className="font-mono text-white/80 hover:text-[#00e676] text-sm mt-1 block">
+              +91 98765 43210
             </a>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function ContactDetails() {
       <div className="bg-[#141414] border border-white/10 rounded-lg p-8">
         <h4 className="font-sans text-lg font-bold text-white mb-2">Production Studio</h4>
         <p className="font-mono text-neutral-400 text-xs leading-relaxed">
-          Strains Stitchery garments manufacturing facility is operated in Tirupur, India, with global client service hubs in Berlin and Frankfurt.
+          Strains Stitchery garment manufacturing facility is operated in Tirupur, Tamil Nadu, India, supporting sustainable fashion brands with zero-discharge manufacturing.
         </p>
       </div>
     </div>

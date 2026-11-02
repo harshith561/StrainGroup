@@ -6,11 +6,11 @@ import { History, Award, CheckCircle2, Globe, Sparkles, Building2, Layers } from
 const DEEP_CHRONICLES = [
   {
     year: '2017',
-    title: 'The Foundation in Germany & India',
+    title: 'Genesis: Brand Strategy & Vision',
     era: 'Genesis Era',
     narrative:
-      'Strains Associates is founded as an international creative consultancy. Focusing initially on corporate identity, digital architectures, and brand positioning, Strains quickly established a reputation for uncompromising aesthetic precision and bold typography.',
-    highlights: ['Corporate Identity Frameworks', 'First 15 European & Indian Clients', 'Foundational Design System'],
+      'Strains Associates was founded with a forward-looking vision: bridging modern brand design with sustainable enterprise. Focusing on corporate identity, digital architectures, and brand positioning, Strains quickly established a reputation for uncompromising aesthetic precision, bold storytelling, and sustainable vision.',
+    highlights: ['Corporate Identity Frameworks', 'First 15 Enterprise Clients', 'Foundational Design System'],
   },
   {
     year: '2015',
