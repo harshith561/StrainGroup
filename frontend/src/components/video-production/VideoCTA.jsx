@@ -1,16 +1,20 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Phone, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG, VIDEO_PRODUCTION_ASSETS } from '@/constant';
 
 export default function VideoCTA() {
   const videoRef = useRef(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const phone = SITE_CONFIG?.contactPhone || '+91 8686819898';
 
   useEffect(() => {
     if (videoRef.current) {
+      if (videoRef.current.readyState >= 2) {
+        setIsVideoLoaded(true);
+      }
       videoRef.current.play().catch(() => { });
     }
   }, []);
@@ -21,8 +25,8 @@ export default function VideoCTA() {
       className="relative w-full min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-black text-white py-24 sm:py-32"
       aria-label="Start Your Video Production"
     >
-      {/* 1. Full-Screen Full-Width Background Video */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none">
+      {/* 1. Full-Screen Full-Width Background Video with Smooth Fade-In */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none bg-black">
         <video
           ref={videoRef}
           autoPlay
@@ -30,8 +34,11 @@ export default function VideoCTA() {
           loop
           playsInline
           preload="auto"
-          poster={VIDEO_PRODUCTION_ASSETS.ctaVideo?.poster || VIDEO_PRODUCTION_ASSETS.heroVideo.poster}
-          className="w-full h-full object-cover filter brightness-[1.5] contrast-[1.2] saturate-[1.1]"
+          onLoadedData={() => setIsVideoLoaded(true)}
+          onPlaying={() => setIsVideoLoaded(true)}
+          className={`w-full h-full object-cover filter brightness-[1.5] contrast-[1.2] saturate-[1.1] transition-opacity duration-1000 ease-out ${
+            isVideoLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
         >
           <source src={VIDEO_PRODUCTION_ASSETS.ctaVideo?.src || VIDEO_PRODUCTION_ASSETS.heroVideo.src} type="video/mp4" />
           {VIDEO_PRODUCTION_ASSETS.ctaVideo?.fallbackSrc && (

@@ -1,6 +1,6 @@
 /* ==========================================================================
    Video Production Page Styles — Strains Associates
-   Cinematic Editorial Aesthetics, High Contrast, Micro-Interactions & AOS
+   Cinematic Editorial Aesthetics, High Contrast & Micro-Interactions
    ========================================================================== */
 
 .video-production-page {
@@ -116,93 +116,4 @@
       display: block;
     }
   }
-}
-
-/* Pulse animation for live record badge */
-@keyframes recordPulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
-  }
-
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
-  }
-
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
-  }
-}
-
-.animate-record-dot {
-  animation: recordPulse 2s infinite;
-}
-
-/* AOS (Animate On Scroll) Emulated Styles */
-@keyframes aosFadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(32px);
-    filter: blur(4px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0px);
-  }
-}
-
-@keyframes aosFadeIn {
-  0% {
-    opacity: 0;
-    filter: blur(6px);
-  }
-
-  100% {
-    opacity: 1;
-    filter: blur(0px);
-  }
-}
-
-@keyframes aosFadeLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes aosFadeRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-[data-aos='fade-up'] {
-  animation: aosFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-[data-aos='fade-in'] {
-  animation: aosFadeIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-[data-aos='fade-left'] {
-  animation: aosFadeLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-[data-aos='fade-right'] {
-  animation: aosFadeRight 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

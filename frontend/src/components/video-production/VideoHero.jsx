@@ -1,16 +1,19 @@
 'use client';
 
 import React, { useRef, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import { ArrowDown, Film } from 'lucide-react';
 import { VIDEO_PRODUCTION_ASSETS } from '@/constant';
 
 export default function VideoHero() {
   const videoRef = useRef(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
     if (videoRef.current) {
+      if (videoRef.current.readyState >= 2) {
+        setIsVideoLoaded(true);
+      }
       videoRef.current.play().catch(() => { });
     }
   }, []);
@@ -36,9 +39,9 @@ export default function VideoHero() {
       className="video-hero-viewport relative w-full min-h-[92vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-[#050505] text-white pt-28 pb-16"
       aria-label="Video Production Hero"
     >
-      {/* 1. 3D Cinematic Background Video with Depth Perspective */}
+      {/* 1. 3D Cinematic Background Video with Smooth Fade-in Transition */}
       <div
-        className="absolute inset-0 w-full h-full pointer-events-none transition-transform duration-700 ease-out"
+        className="absolute inset-0 w-full h-full pointer-events-none transition-transform duration-700 ease-out bg-[#050505]"
         style={{
           transform: `scale(1.05) translate3d(${mousePos.x * 0.4}px, ${mousePos.y * 0.4}px, 0)`,
         }}
@@ -50,8 +53,11 @@ export default function VideoHero() {
           loop
           playsInline
           preload="auto"
-          poster={VIDEO_PRODUCTION_ASSETS.heroVideo.poster}
-          className="video-hero-bg absolute inset-0 w-full h-full object-cover filter brightness-[2] contrast-[1.2] saturate-[1.15]"
+          onLoadedData={() => setIsVideoLoaded(true)}
+          onPlaying={() => setIsVideoLoaded(true)}
+          className={`video-hero-bg absolute inset-0 w-full h-full object-cover filter brightness-[2] contrast-[1.2] saturate-[1.15] transition-opacity duration-1000 ease-out ${
+            isVideoLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
         >
           <source src={VIDEO_PRODUCTION_ASSETS.heroVideo.src} type="video/mp4" />
           {VIDEO_PRODUCTION_ASSETS.heroVideo.fallbackSrc && (

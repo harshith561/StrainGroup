@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { VIDEO_PRODUCTION_ASSETS } from '@/constant';
@@ -40,10 +40,14 @@ const SERVICES_LIST = [
 
 export default function VideoShowcase() {
   const videoRef = useRef(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      if (videoRef.current.readyState >= 2) {
+        setIsVideoLoaded(true);
+      }
+      videoRef.current.play().catch(() => { });
     }
   }, []);
 
@@ -141,7 +145,7 @@ export default function VideoShowcase() {
               {/* Outer Ambient Glow Ring */}
               <div className="absolute -inset-1 bg-gradient-to-r from-[#00a859]/30 to-emerald-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none" />
 
-              {/* Pure Video Frame — Only the Video */}
+              {/* Pure Video Frame — Only the Video with Clean Smooth Fade-In */}
               <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/15 group-hover:border-[#00e676]/50 shadow-2xl bg-black transition-all duration-500">
                 <video
                   ref={videoRef}
@@ -150,8 +154,10 @@ export default function VideoShowcase() {
                   loop
                   playsInline
                   preload="auto"
-                  poster={VIDEO_PRODUCTION_ASSETS.showcaseVideo.poster}
-                  className="w-full h-full object-cover"
+                  onLoadedData={() => setIsVideoLoaded(true)}
+                  onPlaying={() => setIsVideoLoaded(true)}
+                  className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
+                    }`}
                 >
                   <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.src} type="video/mp4" />
                   {VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc && (
