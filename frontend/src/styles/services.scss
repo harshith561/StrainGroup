@@ -408,3 +408,70 @@
   animation: textShimmer 8s linear infinite;
 }
 
+
+
+/* ==========================================================================
+   Services Directory & Capabilities Dedicated Styling
+   ========================================================================== */
+
+.services-page-main {
+  scroll-behavior: smooth;
+}
+
+.service-hero-human {
+  position: relative;
+  background-color: #090909;
+
+  blockquote {
+    letter-spacing: -0.02em;
+  }
+}
+
+.service-card-deep {
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    box-shadow: 0 20px 50px rgba(0, 168, 89, 0.08);
+  }
+}
+
+/* ==========================================================================
+   Hero Carousel Auto-Scroll Progress Animation
+   ========================================================================== */
+
+@keyframes heroProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-hero-progress {
+  animation-name: heroProgress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.service-hero-modern {
+  position: relative;
+
+  blockquote {
+    letter-spacing: -0.015em;
+  }
+}
+
+.text-gradient-expertise {
+  background: linear-gradient(90deg, #99f6e4 0%, #4ade80 40%, #00a859 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: textShimmer 6s linear infinite;
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at center, transparent 30%, rgba(8, 8, 8, 0.7) 100%);
+}

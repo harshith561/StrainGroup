@@ -65,21 +65,6 @@ export default function EcosystemHero() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 relative z-10">
 
-        {/* Top Status Bar (Clean without artificial numbers) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-wrap items-center justify-between gap-4 mb-8"
-        >
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white font-mono text-xs backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-[#00a859] animate-pulse" />
-            <span className="text-[#00a859] font-bold">HYDERABAD &harr; TIRUPUR</span>
-            <span className="text-white/40">|</span>
-            <span className="text-white/80">Closed-Loop Creative & Manufacturing</span>
-          </div>
-        </motion.div>
 
         {/* Hero Title & Pitch with AOS unblur animation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-end mb-16 sm:mb-20">
