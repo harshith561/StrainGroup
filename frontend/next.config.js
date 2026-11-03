@@ -11,11 +11,6 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: [
-      'images.unsplash.com',
-      'strains.in',
-      'strains-groups.vercel.app'
-    ],
     remotePatterns: [
       {
         protocol: 'https',

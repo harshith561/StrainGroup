@@ -13,9 +13,23 @@ import '@/styles/services.scss';
 import '@/styles/about.scss';
 import '@/styles/contact.scss';
 import '@/styles/ecosystem.scss';
+import '@/styles/video-production.scss';
+import 'aos/dist/aos.css';
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 export default function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    const AOS = require('aos');
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 60,
+      delay: 0,
+    });
+  }, []);
+
   return (
     <>
       <Head>

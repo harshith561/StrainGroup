@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Video Production Page Styles — Strains Associates
+   Cinematic Editorial Aesthetics, High Contrast, Micro-Interactions & AOS
+   ========================================================================== */
+
+.video-production-page {
+  background-color: #050505;
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Subtle Film Grain / Scanline Overlay */
+.cinema-scanlines {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.3) 50%), linear-gradient(90deg,
+      rgba(0, 230, 118, 0.02),
+      rgba(0, 0, 0, 0.01),
+      rgba(0, 230, 118, 0.02));
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Hero Video Container */
+.video-hero-viewport {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #050505;
+}
+
+.video-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(1.25) contrast(1.05) saturate(1.1);
+  transition: opacity 0.8s ease;
+}
+
+.video-hero-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    radial-gradient(circle at center,
+      rgba(5, 5, 5, 0.05) 0%,
+      rgba(5, 5, 5, 0.25) 85%,
+      rgba(5, 5, 5, 0.4) 100%),
+    linear-gradient(to bottom,
+      rgba(5, 5, 5, 0.15) 0%,
+      transparent 20%,
+      transparent 75%,
+      rgba(5, 5, 5, 0.5) 100%);
+  pointer-events: none;
+}
+
+/* Glassmorphic Cards */
+.cinema-card {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: rgba(0, 230, 118, 0.4);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(0, 230, 118, 0.15);
+    transform: translateY(-4px);
+  }
+}
+
+/* 3D Perspective Container */
+.perspective-cinema {
+  perspective: 1200px;
+}
+
+/* Shimmer Accent Gradient */
+.text-shimmer-green {
+  background: linear-gradient(135deg, #00e676 0%, #00a859 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cinema {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Interactive Timeline Connectors */
+.process-step-indicator {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 230, 118, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%);
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+/* Pulse animation for live record badge */
+@keyframes recordPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-record-dot {
+  animation: recordPulse 2s infinite;
+}
+
+/* AOS (Animate On Scroll) Emulated Styles */
+@keyframes aosFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+    filter: blur(4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes aosFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes aosFadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes aosFadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+[data-aos='fade-up'] {
+  animation: aosFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[data-aos='fade-in'] {
+  animation: aosFadeIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[data-aos='fade-left'] {
+  animation: aosFadeLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[data-aos='fade-right'] {
+  animation: aosFadeRight 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
