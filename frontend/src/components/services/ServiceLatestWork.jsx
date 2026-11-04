@@ -10,7 +10,7 @@ const PROJECTS = [
     id: 1,
     title: 'Aastu Refrigeration — Industrial Growth & Lead Gen',
     desc: 'Achieved a 90.8% optimization score with 4.64% CTR over 3.5 years, generating 21,800 clicks and 471,000 targeted impressions.',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    image: '/images/case-studies/aastu-refrigeration.jpg',
     tag: 'Industrial Performance',
     slug: '/case-studies/aastu-refrigeration',
   },
@@ -18,7 +18,7 @@ const PROJECTS = [
     id: 2,
     title: 'Pioneer Cranes — Heavy Sector PPC Optimization',
     desc: 'Exceptional capital efficiency with ₹13.01 average CPC, delivering 18,800 enterprise clicks and 368,000 impressions at ₹2.45L budget.',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+    image: '/images/case-studies/pioneer-cranes.jpg',
     tag: 'B2B Search & PPC',
     slug: '/case-studies/pioneer-cranes',
   },
@@ -26,7 +26,7 @@ const PROJECTS = [
     id: 3,
     title: 'JSW Cement — Infrastructure Media & Plant Cinematography',
     desc: 'Industrial facility drone cinematography and high-impact corporate brand films documenting green slag cement manufacturing for investor summits.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=800&q=80',
+    image: '/images/case-studies/jsw-cement.jpeg',
     tag: 'Industrial Video Production',
     slug: '/case-studies/jsw-cement',
   },
@@ -34,7 +34,7 @@ const PROJECTS = [
     id: 4,
     title: 'Xiti — Zero-Discharge Fashion & Tirupur Manufacturing',
     desc: 'Unified Tirupur sustainable organic hemp & cotton manufacturing with cinematic video direction and social growth campaigns yielding 4.2x ROAS.',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+    image: '/images/case-studies/xiti-fashion.jpg',
     tag: 'Ethical Manufacturing',
     slug: '/case-studies/xiti-fashion',
   },
@@ -42,7 +42,7 @@ const PROJECTS = [
     id: 5,
     title: 'Pakka Non Veg — High-Speed Food Videography & Viral Footfall',
     desc: 'Dynamic 4K culinary slow-mo videography and ASMR sizzle sound engineering driving 850,000+ views and +340% weekend restaurant footfall.',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/case-studies/pakka-non-veg.jpg',
     tag: 'Culinary Videography',
     slug: '/case-studies/pakka-non-veg',
   },
@@ -50,7 +50,7 @@ const PROJECTS = [
     id: 6,
     title: 'Haraa Gold & Diamonds — Heritage Bridal Storytelling',
     desc: 'Cinematic three-part bridal narrative series and geo-targeted festive campaigns delivering 1.2M targeted views and +68% bridal appointments.',
-    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80',
+    image: '/images/case-studies/haraa-jewellers.jpg',
     tag: 'Luxury Bridal Film',
     slug: '/case-studies/haraa-jewellers',
   },
@@ -60,11 +60,11 @@ export default function ServiceLatestWork() {
   return (
     <section className="service-latest-work-section relative bg-[#0c0c0c] text-white py-24 sm:py-32 border-b border-white/10 overflow-hidden" aria-label="Our latest work">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
-        
+
         {/* Section Heading with Modern AOS Text Animation */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 gap-4">
           <div>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 25, filter: 'blur(6px)' }}
               whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               viewport={{ once: true, margin: '-40px' }}

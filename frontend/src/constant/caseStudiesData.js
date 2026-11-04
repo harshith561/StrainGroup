@@ -295,7 +295,7 @@ export const CASE_STUDIES = [
     serviceNumber: '01',
     servicePillar: 'Video Production',
     timeline: 'Corporate Production Engagement',
-    heroImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    heroImage: '/images/case-studies/jsw-cement.jpeg',
     summary: 'Industrial video production and drone cinematography capturing large-scale green cement manufacturing facilities, commercial infrastructure projects, and sustainable building innovations.',
     metrics: [
       { label: 'Plant Visuals Captured', value: '4K Cinema', desc: 'Drone & industrial cameras' },
@@ -335,7 +335,7 @@ export const CASE_STUDIES = [
     serviceNumber: '03',
     servicePillar: 'Digital Marketing',
     timeline: 'Annual Performance Retainer',
-    heroImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80',
+    heroImage: '/images/case-studies/partha-dentals.jpg',
     summary: 'Full-funnel Google Ads, local SEO, and Meta advertising campaigns generating a +175% surge in patient clinic appointments and high-volume consultation bookings across Southern India.',
     metrics: [
       { label: 'Clinic Appointment Surge', value: '+175%', desc: 'Verified patient consults' },
