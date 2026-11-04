@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { FASHION_BRAND_ASSETS } from '@/constant';
+import { useAutoplayVideo } from '@/hooks';
 
 const SERVICES_LIST = [
   {
@@ -39,17 +40,7 @@ const SERVICES_LIST = [
 ];
 
 export default function FashionBrandShowcase() {
-  const videoRef = useRef(null);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      if (videoRef.current.readyState >= 2) {
-        setIsVideoLoaded(true);
-      }
-      videoRef.current.play().catch(() => { });
-    }
-  }, []);
+  const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
 
   return (
     <section
@@ -132,19 +123,23 @@ export default function FashionBrandShowcase() {
           {/* RIGHT SIDE — Sticky Video Panel */}
           <div className="lg:col-span-6 relative lg:self-stretch">
             <div className="lg:sticky lg:top-28 xl:top-32 transition-all duration-300 z-20">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#00a859]/30 to-emerald-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none" />
+              <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#00a859]/30 to-emerald-500/20 rounded-3xl blur-xl opacity-100 pointer-events-none" />
 
-                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/15 group-hover:border-[#00e676]/50 shadow-2xl bg-black transition-all duration-500">
+                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[#00e676]/50 shadow-2xl bg-black">
                   <video
                     ref={videoRef}
+                    src={FASHION_BRAND_ASSETS.showcaseVideo.src}
                     autoPlay
                     muted
                     loop
                     playsInline
+                    webkit-playsinline="true"
+                    x5-playsinline="true"
                     preload="auto"
                     onLoadedData={() => setIsVideoLoaded(true)}
                     onPlaying={() => setIsVideoLoaded(true)}
+                    onCanPlay={() => setIsVideoLoaded(true)}
                     className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${
                       isVideoLoaded ? 'opacity-100' : 'opacity-0'
                     }`}

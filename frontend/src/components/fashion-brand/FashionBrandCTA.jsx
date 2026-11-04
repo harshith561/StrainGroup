@@ -1,23 +1,14 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Phone, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG, FASHION_BRAND_ASSETS } from '@/constant';
+import { useAutoplayVideo } from '@/hooks';
 
 export default function FashionBrandCTA() {
-  const videoRef = useRef(null);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
   const phone = SITE_CONFIG?.contactPhone || '+91 8686819898';
-
-  useEffect(() => {
-    if (videoRef.current) {
-      if (videoRef.current.readyState >= 2) {
-        setIsVideoLoaded(true);
-      }
-      videoRef.current.play().catch(() => { });
-    }
-  }, []);
 
   return (
     <section
@@ -28,16 +19,19 @@ export default function FashionBrandCTA() {
       <div className="absolute inset-0 w-full h-full pointer-events-none bg-black">
         <video
           ref={videoRef}
+          src={FASHION_BRAND_ASSETS.ctaVideo?.src || FASHION_BRAND_ASSETS.heroVideo.src}
           autoPlay
           muted
           loop
           playsInline
+          webkit-playsinline="true"
+          x5-playsinline="true"
           preload="auto"
           onLoadedData={() => setIsVideoLoaded(true)}
           onPlaying={() => setIsVideoLoaded(true)}
-          className={`w-full h-full object-cover filter brightness-[1.5] contrast-[1.2] saturate-[1.1] transition-opacity duration-1000 ease-out ${
-            isVideoLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          onCanPlay={() => setIsVideoLoaded(true)}
+          className={`w-full h-full object-cover filter brightness-[1.5] contrast-[1.2] saturate-[1.1] transition-opacity duration-1000 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <source src={FASHION_BRAND_ASSETS.ctaVideo?.src || FASHION_BRAND_ASSETS.heroVideo.src} type="video/mp4" />
           {FASHION_BRAND_ASSETS.ctaVideo?.fallbackSrc && (

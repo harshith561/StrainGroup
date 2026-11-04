@@ -12,7 +12,7 @@ export const START_YOUR_BRAND_ASSETS = {
 
   // 2. Split Showcase Incubator Launch Reel Video
   showcaseVideo: {
-    src: '/videos/rells.mp4',
+    src: '/videos/start-your-brand-video.mp4',
     fallbackSrc: '/videos/about-hero-bg.mp4',
   },
 

@@ -1,22 +1,13 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ArrowDown, Rocket } from 'lucide-react';
 import { START_YOUR_BRAND_ASSETS } from '@/constant';
+import { useAutoplayVideo } from '@/hooks';
 
 export default function StartBrandHero() {
-  const videoRef = useRef(null);
+  const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      if (videoRef.current.readyState >= 2) {
-        setIsVideoLoaded(true);
-      }
-      videoRef.current.play().catch(() => { });
-    }
-  }, []);
 
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
@@ -48,13 +39,17 @@ export default function StartBrandHero() {
       >
         <video
           ref={videoRef}
+          src={START_YOUR_BRAND_ASSETS.heroVideo.src}
           autoPlay
           muted
           loop
           playsInline
+          webkit-playsinline="true"
+          x5-playsinline="true"
           preload="auto"
           onLoadedData={() => setIsVideoLoaded(true)}
           onPlaying={() => setIsVideoLoaded(true)}
+          onCanPlay={() => setIsVideoLoaded(true)}
           className={`video-hero-bg absolute inset-0 w-full h-full object-cover filter brightness-[1.8] contrast-[1.15] saturate-[1.1] transition-opacity duration-1000 ease-out ${
             isVideoLoaded ? 'opacity-100' : 'opacity-0'
           }`}
