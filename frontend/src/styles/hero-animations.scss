@@ -24,6 +24,8 @@
 
     .slide-bg-item {
       opacity: 0;
+      background-color: #0c0c0c;
+      background-image: radial-gradient(circle at center, #1c1c1c 0%, #0c0c0c 100%);
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: cover;

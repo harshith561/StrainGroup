@@ -205,12 +205,15 @@ export default function CaseStudyDetail({ caseStudy }) {
             <div className="team-profile-right flex flex-col gap-6">
 
               {/* Profile / Case Study Showcase Image */}
-              <div className="team-profile-image-wrap shadow-[0_25px_60px_rgba(0,0,0,0.8)] border border-white/10">
+              <div className="team-profile-image-wrap media-placeholder shadow-[0_25px_60px_rgba(0,0,0,0.8)] border border-white/10">
                 <img
                   src={caseStudy.heroImage}
                   alt={caseStudy.title}
                   className="team-profile-image"
                   loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  onLoad={(e) => e.currentTarget.parentElement?.classList.remove('media-placeholder')}
                 />
               </div>
 

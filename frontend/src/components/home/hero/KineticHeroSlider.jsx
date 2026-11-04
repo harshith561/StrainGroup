@@ -66,6 +66,14 @@ export default function KineticHeroSlider() {
     return () => clearInterval(timer);
   }, [nextSlide]);
 
+  // Preload slide background images in memory so transitions are instant
+  useEffect(() => {
+    slides.forEach((slide) => {
+      const img = new window.Image();
+      img.src = slide.bgImage;
+    });
+  }, []);
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {

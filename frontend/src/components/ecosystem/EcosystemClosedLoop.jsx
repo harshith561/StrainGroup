@@ -247,11 +247,16 @@ export default function EcosystemClosedLoop() {
 
               {/* Right Column: High-Res Local Real Photo */}
               <div className="lg:col-span-5 relative">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.8)] relative group">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.8)] relative group bg-[#141414] media-placeholder">
                   <img
                     src={activePhase.image}
                     alt={activePhase.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    onLoad={(e) => {
+                      e.currentTarget.parentElement?.classList.remove('media-placeholder');
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   

@@ -35,6 +35,8 @@ export default function Footer() {
               src="/assets/strainsassociates-CfG1A0jo.webp"
               alt="Strains Associates"
               className="footer-logo-img"
+              loading="lazy"
+              decoding="async"
             />
           </Link>
           <p className="footer-pitch-text font-mono">

@@ -7,11 +7,15 @@ import { SITE_CONFIG, CLOTHING_MANUFACTURING_ASSETS } from '@/constant';
 import { useAutoplayVideo } from '@/hooks';
 
 export default function ClothingCTA() {
-  const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
+  const { videoRef, containerRef, isVideoLoaded, setIsVideoLoaded, isNearViewport } = useAutoplayVideo({ lazy: true });
   const phone = SITE_CONFIG?.contactPhone || '+91 8686819898';
+
+  const ctaVideoSrc = CLOTHING_MANUFACTURING_ASSETS.ctaVideo?.src || CLOTHING_MANUFACTURING_ASSETS.heroVideo.src;
+  const ctaVideoFallback = CLOTHING_MANUFACTURING_ASSETS.ctaVideo?.fallbackSrc || CLOTHING_MANUFACTURING_ASSETS.heroVideo.fallbackSrc;
 
   return (
     <section
+      ref={containerRef}
       id="clothing-cta"
       className="relative w-full min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-black text-white py-24 sm:py-32"
       aria-label="Start Your Clothing Manufacturing Project"
@@ -19,14 +23,14 @@ export default function ClothingCTA() {
       <div className="absolute inset-0 w-full h-full pointer-events-none bg-black">
         <video
           ref={videoRef}
-          src={CLOTHING_MANUFACTURING_ASSETS.ctaVideo?.src || CLOTHING_MANUFACTURING_ASSETS.heroVideo.src}
+          src={isNearViewport ? ctaVideoSrc : undefined}
           autoPlay
           muted
           loop
           playsInline
           webkit-playsinline="true"
           x5-playsinline="true"
-          preload="auto"
+          preload={isNearViewport ? 'metadata' : 'none'}
           onLoadedData={() => setIsVideoLoaded(true)}
           onPlaying={() => setIsVideoLoaded(true)}
           onCanPlay={() => setIsVideoLoaded(true)}
@@ -34,9 +38,13 @@ export default function ClothingCTA() {
             isVideoLoaded ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <source src={CLOTHING_MANUFACTURING_ASSETS.ctaVideo?.src || CLOTHING_MANUFACTURING_ASSETS.heroVideo.src} type="video/mp4" />
-          {CLOTHING_MANUFACTURING_ASSETS.ctaVideo?.fallbackSrc && (
-            <source src={CLOTHING_MANUFACTURING_ASSETS.ctaVideo.fallbackSrc} type="video/mp4" />
+          {isNearViewport && (
+            <>
+              <source src={ctaVideoSrc} type="video/mp4" />
+              {ctaVideoFallback && (
+                <source src={ctaVideoFallback} type="video/mp4" />
+              )}
+            </>
           )}
         </video>
       </div>

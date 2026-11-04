@@ -86,11 +86,16 @@ export default function TeamSection() {
               style={{ transitionDelay: `${idx * 0.1}s` }}
               aria-label={`View profile of ${member.name}, ${member.role}`}
             >
-              <div className="member-image-wrapper">
+              <div className="member-image-wrapper media-placeholder bg-[#141414]">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="member-image"
+                  loading="lazy"
+                  decoding="async"
+                  onLoad={(e) => {
+                    e.currentTarget.parentElement?.classList.remove('media-placeholder');
+                  }}
                 />
                 <div className="member-info-overlay">
                   <h4 className="member-name font-sans">{member.name}</h4>

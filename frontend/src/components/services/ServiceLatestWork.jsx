@@ -80,12 +80,14 @@ export default function ServiceLatestWork() {
             >
               <Link href={project.slug} className="group flex flex-col h-full cursor-pointer">
                 {/* Image Container with Smooth Zoom Effect */}
-                <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#181818] mb-5 border border-white/5 group-hover:border-[#00a859]/40 transition-all duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.5)]">
+                <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#181818] media-placeholder mb-5 border border-white/5 group-hover:border-[#00a859]/40 transition-all duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.5)]">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
+                    onLoad={(e) => e.currentTarget.parentElement?.classList.remove('media-placeholder')}
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
                   <span className="absolute top-4 left-4 text-xs font-mono font-medium px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[#00a859] border border-white/10">

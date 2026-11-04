@@ -46,7 +46,7 @@ export default function FashionBrandHero() {
           playsInline
           webkit-playsinline="true"
           x5-playsinline="true"
-          preload="auto"
+          preload="metadata"
           onLoadedData={() => setIsVideoLoaded(true)}
           onPlaying={() => setIsVideoLoaded(true)}
           onCanPlay={() => setIsVideoLoaded(true)}

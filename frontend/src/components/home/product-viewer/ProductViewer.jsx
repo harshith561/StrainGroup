@@ -134,6 +134,10 @@ export default function ProductViewer() {
               <img
                 src={current.image}
                 alt={current.title}
+                loading="lazy"
+                decoding="async"
+                width={288}
+                height={288}
                 className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64 xl:w-72 xl:h-72 object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.18)] select-none pointer-events-none animate-[spin_30s_linear_infinite]"
               />
             </div>
@@ -141,6 +145,10 @@ export default function ProductViewer() {
               <img
                 src={current.image}
                 alt={current.title}
+                loading="lazy"
+                decoding="async"
+                width={288}
+                height={288}
                 className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64 xl:w-72 xl:h-72 object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.18)] select-none pointer-events-none animate-[spin_30s_linear_infinite]"
               />
             </div>

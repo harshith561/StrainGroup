@@ -206,8 +206,11 @@ export default function ServiceTestimonials() {
                     <img
                       src={item.avatar}
                       alt={item.name}
-                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-[#00a859] shrink-0 shadow-[0_0_20px_rgba(0,168,89,0.3)]"
+                      width={64}
+                      height={64}
+                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-[#00a859] shrink-0 shadow-[0_0_20px_rgba(0,168,89,0.3)] bg-neutral-900"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div>
                       <h3 className="text-base sm:text-lg font-sans font-bold text-white leading-tight">

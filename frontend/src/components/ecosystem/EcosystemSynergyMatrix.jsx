@@ -88,11 +88,16 @@ export default function EcosystemSynergyMatrix() {
               className="rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between group hover:border-[#00a859]/50 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
             >
               {/* Photo Header */}
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-black media-placeholder">
                 <img
                   src={item.image}
                   alt={item.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 filter brightness-[0.85] group-hover:brightness-100"
+                  onLoad={(e) => {
+                    e.currentTarget.parentElement?.classList.remove('media-placeholder');
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/30" />
                 

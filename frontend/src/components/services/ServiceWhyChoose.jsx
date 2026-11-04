@@ -52,10 +52,10 @@ export default function ServiceWhyChoose() {
                   <span className="text-[11px] font-sans text-[#a0a0a0] font-medium">Our Customers</span>
                   <div className="flex items-center gap-2">
                     <div className="flex -space-x-2">
-                      <img className="w-6 h-6 rounded-full border border-black object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Customer" />
-                      <img className="w-6 h-6 rounded-full border border-black object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Customer" />
-                      <img className="w-6 h-6 rounded-full border border-black object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="Customer" />
-                      <img className="w-6 h-6 rounded-full border border-black object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="Customer" />
+                      <img width="24" height="24" loading="lazy" decoding="async" className="w-6 h-6 rounded-full border border-black object-cover bg-neutral-800" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Customer" />
+                      <img width="24" height="24" loading="lazy" decoding="async" className="w-6 h-6 rounded-full border border-black object-cover bg-neutral-800" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Customer" />
+                      <img width="24" height="24" loading="lazy" decoding="async" className="w-6 h-6 rounded-full border border-black object-cover bg-neutral-800" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="Customer" />
+                      <img width="24" height="24" loading="lazy" decoding="async" className="w-6 h-6 rounded-full border border-black object-cover bg-neutral-800" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="Customer" />
                     </div>
                     <span className="text-[11px] font-mono font-bold text-[#f97316]">+25K</span>
                   </div>
@@ -95,11 +95,12 @@ export default function ServiceWhyChoose() {
               {/* 7. Foreground Portrait of Man Pointing Right */}
               <div className="relative w-full h-full flex items-end justify-center z-10 pointer-events-none">
                 <Image
-                  src="/images/why_you_choose_service.svg"
+                  src="/images/why_you_choose_service.png"
                   alt="Why Choose Strains - Creative Professional"
                   width={395}
                   height={621}
-                  unoptimized
+                  sizes="(max-width: 768px) 100vw, 395px"
+                  loading="lazy"
                   className="w-full h-auto max-h-[580px] lg:max-h-[620px] object-contain select-none pointer-events-none drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)]"
                 />
               </div>

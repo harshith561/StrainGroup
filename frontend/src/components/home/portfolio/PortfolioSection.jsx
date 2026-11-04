@@ -107,11 +107,16 @@ export default function PortfolioSection() {
               className="project-card"
               style={{ transitionDelay: `${idx * 0.1}s` }}
             >
-              <div className="project-image-wrapper ">
+              <div className="project-image-wrapper media-placeholder bg-[#141414]">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="project-image"
+                  loading="lazy"
+                  decoding="async"
+                  onLoad={(e) => {
+                    e.currentTarget.parentElement?.classList.remove('media-placeholder');
+                  }}
                 />
                 <div className="project-hover-overlay">
                   <span className="hover-explore-btn font-mono">

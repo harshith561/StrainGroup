@@ -7,11 +7,15 @@ import { SITE_CONFIG, FASHION_BRAND_ASSETS } from '@/constant';
 import { useAutoplayVideo } from '@/hooks';
 
 export default function FashionBrandCTA() {
-  const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
+  const { videoRef, containerRef, isVideoLoaded, setIsVideoLoaded, isNearViewport } = useAutoplayVideo({ lazy: true });
   const phone = SITE_CONFIG?.contactPhone || '+91 8686819898';
+
+  const ctaVideoSrc = FASHION_BRAND_ASSETS.ctaVideo?.src || FASHION_BRAND_ASSETS.heroVideo.src;
+  const ctaVideoFallback = FASHION_BRAND_ASSETS.ctaVideo?.fallbackSrc || FASHION_BRAND_ASSETS.heroVideo.fallbackSrc;
 
   return (
     <section
+      ref={containerRef}
       id="fashion-brand-cta"
       className="relative w-full min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-black text-white py-24 sm:py-32"
       aria-label="Start Your Fashion Brand Project"
@@ -19,23 +23,28 @@ export default function FashionBrandCTA() {
       <div className="absolute inset-0 w-full h-full pointer-events-none bg-black">
         <video
           ref={videoRef}
-          src={FASHION_BRAND_ASSETS.ctaVideo?.src || FASHION_BRAND_ASSETS.heroVideo.src}
+          src={isNearViewport ? ctaVideoSrc : undefined}
           autoPlay
           muted
           loop
           playsInline
           webkit-playsinline="true"
           x5-playsinline="true"
-          preload="auto"
+          preload={isNearViewport ? 'metadata' : 'none'}
           onLoadedData={() => setIsVideoLoaded(true)}
           onPlaying={() => setIsVideoLoaded(true)}
           onCanPlay={() => setIsVideoLoaded(true)}
-          className={`w-full h-full object-cover filter brightness-[1.5] contrast-[1.2] saturate-[1.1] transition-opacity duration-1000 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+          className={`w-full h-full object-cover filter brightness-[1.5] contrast-[1.2] saturate-[1.1] transition-opacity duration-1000 ease-out ${
+            isVideoLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
         >
-          <source src={FASHION_BRAND_ASSETS.ctaVideo?.src || FASHION_BRAND_ASSETS.heroVideo.src} type="video/mp4" />
-          {FASHION_BRAND_ASSETS.ctaVideo?.fallbackSrc && (
-            <source src={FASHION_BRAND_ASSETS.ctaVideo.fallbackSrc} type="video/mp4" />
+          {isNearViewport && (
+            <>
+              <source src={ctaVideoSrc} type="video/mp4" />
+              {ctaVideoFallback && (
+                <source src={ctaVideoFallback} type="video/mp4" />
+              )}
+            </>
           )}
         </video>
       </div>

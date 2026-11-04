@@ -50,6 +50,10 @@ export default function EcosystemBottomCTA() {
                   <img
                     src={member.img}
                     alt={member.name}
+                    loading="lazy"
+                    decoding="async"
+                    width={48}
+                    height={48}
                     className="w-full h-full object-cover"
                   />
                 </div>

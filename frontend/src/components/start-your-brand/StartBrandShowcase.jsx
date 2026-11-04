@@ -8,45 +8,45 @@ import { useAutoplayVideo } from '@/hooks';
 
 const SERVICES_LIST = [
   {
-    title: 'Turnkey Brand Formation & Strategy',
-    desc: 'Trademark assistance, core brand narrative, target buyer personas, packaging systems, and comprehensive brand identity bibles.',
-    tag: 'Incubator Core',
+    title: 'Brand Naming & Identity Systems',
+    desc: 'Proprietary phonetic trademark testing, visual identity manuals, typography hierarchies, and premium packaging design.',
+    tag: 'Identity & IP',
   },
   {
-    title: 'Tech Pack & Fabric Engineering',
-    desc: 'Bespoke garment measurements, pattern drafting, stitch specifications, and fiber curation (organic cotton, pure hemp, vegan silk).',
+    title: 'Product Line Formulation & Sourcing',
+    desc: 'Translating design concepts into technical apparel spec packs, tech packs, bill-of-materials, and raw fiber procurement.',
     tag: 'Tech Packs',
   },
   {
-    title: 'Low-Risk Prototype & Sampling Runs',
-    desc: 'First-article golden master prototypes and low MOQ starter production runs produced in our Tirupur manufacturing facility.',
-    tag: 'Tirupur Facility',
+    title: 'Incubator Garment Sampling & Fit',
+    desc: 'Rapid physical prototype pattern drafting, fit corrections, fabric drape trials, and master sample approvals in Tirupur.',
+    tag: 'Sampling Lab',
   },
   {
-    title: 'Hollywood-Grade Launch Content',
-    desc: '4K cinema launch film, e-commerce lookbook photography, and vertical social ad hooks produced in our Hyderabad production studios.',
-    tag: 'Commercial Media',
+    title: 'Shopify Plus & Headless Commerce',
+    desc: 'Conversion-engineered online stores built for high AOV, sub-second mobile page loads, dynamic bundles, and seamless checkout.',
+    tag: 'E-Commerce Store',
   },
   {
-    title: 'E-Commerce Storefront Deployment',
-    desc: 'Complete Shopify or custom Next.js storefront configured with payment gateways, domestic/international shipping, and email capture.',
-    tag: 'Flagship Web',
+    title: 'High-Impact Launch Campaign Films',
+    desc: 'Cinematic brand launch films, founder vision documentaries, and social tease episodes directed to create waitlist frenzies.',
+    tag: 'Launch Media',
   },
   {
-    title: 'Customer Acquisition Ad Sprints',
-    desc: 'Prasad-led performance Google Ads and Meta campaigns engineered to drive initial profitable sales and sell out your debut drop.',
-    tag: 'Paid Acquisition',
+    title: 'Growth Architecture & D2C Scaling',
+    desc: 'Full-funnel Meta and Google acquisition funnels, email automation sequences, and unit economics optimization for profitability.',
+    tag: 'D2C Scaling',
   },
 ];
 
 export default function StartBrandShowcase() {
-  const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
+  const { videoRef, containerRef, isVideoLoaded, setIsVideoLoaded, isNearViewport } = useAutoplayVideo({ lazy: true });
 
   return (
     <section
       id="start-brand-showcase"
       className="relative bg-[#050505] text-white py-24 sm:py-32 border-b border-white/10 overflow-clip"
-      aria-label="Start Your Brand Capabilities & Showcase"
+      aria-label="Start Your Brand Incubator Showcase"
     >
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#00a859]/10 blur-[180px] rounded-full pointer-events-none" />
       <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[160px] rounded-full pointer-events-none" />
@@ -60,12 +60,12 @@ export default function StartBrandShowcase() {
             className="lg:col-span-6 flex flex-col justify-center"
           >
             <h2 className="text-3xl sm:text-5xl font-sans font-black tracking-tight uppercase text-white leading-[1.1] mb-6">
-              Turnkey Brand Services <br className="hidden sm:inline" />
-              Designed To Eliminate Friction
+              Brand Incubation <br className="hidden sm:inline" />
+              Engineered From Zero To One
             </h2>
 
             <p className="text-neutral-300 font-sans text-base sm:text-lg leading-relaxed mb-8">
-              Launching an apparel label traditionally requires managing at least five different vendors who constantly blame one another for delays. Strains Associates acts as your single accountable partner from raw cotton fiber to your first online sale.
+              Launching an enduring brand requires synchronizing manufacturing capacity, commercial media, and performance growth. Strains Group provides the complete turnkey infrastructure so visionary founders can launch with institutional backing.
             </p>
 
             {/* 6 Services Grid */}
@@ -100,13 +100,13 @@ export default function StartBrandShowcase() {
             <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-6">
                 <div>
-                  <div className="text-xl font-mono font-bold text-[#00e676]">0 Middlemen</div>
-                  <div className="text-xs font-mono text-neutral-400 uppercase">Direct Factory Line</div>
+                  <div className="text-xl font-mono font-bold text-[#00e676]">60 Days</div>
+                  <div className="text-xs font-mono text-neutral-400 uppercase">Concept To Launch</div>
                 </div>
                 <div className="w-px h-8 bg-white/10" />
                 <div>
                   <div className="text-xl font-mono font-bold text-white">Turnkey</div>
-                  <div className="text-xs font-mono text-neutral-400 uppercase">Concept to 1st Sale</div>
+                  <div className="text-xs font-mono text-neutral-400 uppercase">Production & Growth</div>
                 </div>
               </div>
 
@@ -114,38 +114,70 @@ export default function StartBrandShowcase() {
                 href="/book-consultation"
                 className="px-6 py-3.5 rounded-xl bg-[#00a859] hover:bg-[#00e676] text-black font-sans font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_4px_20px_rgba(0,168,89,0.3)] hover:-translate-y-0.5 flex items-center gap-2 group"
               >
-                <span>Apply For Incubator</span>
+                <span>Apply For Incubation</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
 
           {/* RIGHT SIDE — Sticky Video Panel */}
-          <div className="lg:col-span-6 relative lg:self-stretch">
+          <div ref={containerRef} className="lg:col-span-6 relative lg:self-stretch">
             <div className="lg:sticky lg:top-28 xl:top-32 transition-all duration-300 z-20">
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#00a859]/30 to-emerald-500/20 rounded-3xl blur-xl opacity-100 pointer-events-none" />
 
-                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[#00e676]/50 shadow-2xl bg-black">
+                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[#00e676]/50 shadow-2xl bg-[#080808]">
+                  {/* High-Tech Video Loader Overlay — Visible ONLY until the video is loaded & ready */}
+                  <div
+                    className={`absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#0c0c0c] via-[#111111] to-[#080808] transition-opacity duration-700 ease-out ${
+                      isVideoLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                    }`}
+                    aria-hidden={isVideoLoaded}
+                  >
+                    <div className="absolute w-36 h-36 bg-[#00a859]/20 rounded-full blur-2xl pointer-events-none animate-pulse" />
+
+                    <div className="relative flex flex-col items-center gap-3.5 z-10">
+                      <div className="relative w-12 h-12 flex items-center justify-center">
+                        <div className="absolute inset-0 rounded-full border border-[#00e676]/25 animate-ping opacity-40" />
+                        <div className="w-10 h-10 rounded-full border-2 border-transparent border-t-[#00e676] border-r-[#00a859] animate-spin" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-2 h-2 rounded-full bg-[#00e676] animate-pulse" />
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00e676] animate-pulse" />
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-300">
+                          Loading 4K Reel...
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
                   <video
                     ref={videoRef}
-                    src={START_YOUR_BRAND_ASSETS.showcaseVideo.src}
+                    src={isNearViewport ? START_YOUR_BRAND_ASSETS.showcaseVideo.src : undefined}
                     autoPlay
                     muted
                     loop
                     playsInline
                     webkit-playsinline="true"
                     x5-playsinline="true"
-                    preload="auto"
+                    preload={isNearViewport ? 'metadata' : 'none'}
                     onLoadedData={() => setIsVideoLoaded(true)}
                     onPlaying={() => setIsVideoLoaded(true)}
                     onCanPlay={() => setIsVideoLoaded(true)}
-                    className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
-                      }`}
+                    className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${
+                      isVideoLoaded ? 'opacity-100' : 'opacity-0'
+                    }`}
                   >
-                    <source src={START_YOUR_BRAND_ASSETS.showcaseVideo.src} type="video/mp4" />
-                    {START_YOUR_BRAND_ASSETS.showcaseVideo.fallbackSrc && (
-                      <source src={START_YOUR_BRAND_ASSETS.showcaseVideo.fallbackSrc} type="video/mp4" />
+                    {isNearViewport && (
+                      <>
+                        <source src={START_YOUR_BRAND_ASSETS.showcaseVideo.src} type="video/mp4" />
+                        {START_YOUR_BRAND_ASSETS.showcaseVideo.fallbackSrc && (
+                          <source src={START_YOUR_BRAND_ASSETS.showcaseVideo.fallbackSrc} type="video/mp4" />
+                        )}
+                      </>
                     )}
                   </video>
                 </div>
@@ -157,4 +189,3 @@ export default function StartBrandShowcase() {
     </section>
   );
 }
-

@@ -8,45 +8,45 @@ import { useAutoplayVideo } from '@/hooks';
 
 const SERVICES_LIST = [
   {
-    title: 'Certified Organic Cotton Apparel',
-    desc: 'Heavyweight tees, luxury hoodies, loungewear, and activewear crafted from 100% GOTS-certified combed organic cotton.',
-    tag: 'Organic Cotton',
+    title: 'GOTS Organic Cotton & Hemp',
+    desc: 'Pure, certified ethical knits, fleece, and single jersey custom-spun with strict biological traceability from farm to roll.',
+    tag: 'Certified Fibers',
   },
   {
-    title: 'Pure Himalayan Hemp Textiles',
-    desc: 'Antimicrobial, UV-resistant, and high-tensile hemp linen garments that soften with each wash and endure for decades.',
-    tag: 'Hemp Fabrics',
+    title: 'Zero Liquid Discharge Dyeing',
+    desc: 'Proprietary non-toxic natural dyeing using botanical fruits, madder roots, indigo, and pomegranate rinds with 100% water recovery.',
+    tag: 'Zero-Effluent',
   },
   {
-    title: 'Zero-Discharge Botanical Dyeing',
-    desc: 'Chemical-free natural colors derived from fruits, roots, and flowers with closed-loop water treatment recycling 100% of effluent.',
-    tag: 'Natural Dyes',
+    title: 'Ahimsa Vegan Silk & Plant Leather',
+    desc: 'Cruelty-free botanical luxury textiles engineered for high-fashion draping, premium hand-feel, and timeless wear resistance.',
+    tag: 'Cruelty-Free',
   },
   {
-    title: 'Plantable Seed Price Tags',
-    desc: 'Recycled seed paper tags embedded with marigold and basil seeds that consumers plant directly in soil after unboxing.',
-    tag: 'Circular Tags',
+    title: 'Custom Precision Pattern Cutting',
+    desc: 'CAD-engineered computerized nesting and zero-waste fabric layout cutting optimizing material yield and stitch perfection.',
+    tag: 'Micro-Tolerances',
   },
   {
-    title: 'Private Label Cut-Make-Trim (CMT)',
-    desc: 'Custom garment pattern design, bespoke inner neck labels, luxury embroidery, screen printing, and tailored silhouette grading.',
-    tag: 'Private Label',
+    title: 'Low MOQ Scalable Production',
+    desc: 'Flexible batch production units in Tirupur tailored for emerging designer labels to high-volume corporate uniform programs.',
+    tag: 'Flexible MOQs',
   },
   {
-    title: 'Low-MOQ Sprints to Container Export',
-    desc: 'Flexible production runs supporting emerging ethical designer collections up to high-volume commercial container exports.',
-    tag: 'Global Scale',
+    title: 'Plantable Wildflower Seed Tags',
+    desc: '100% biodegradable post-consumer recycled paper packaging embedded with real seeds that blossom into flowers when planted.',
+    tag: 'Circular Trims',
   },
 ];
 
 export default function ClothingShowcase() {
-  const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
+  const { videoRef, containerRef, isVideoLoaded, setIsVideoLoaded, isNearViewport } = useAutoplayVideo({ lazy: true });
 
   return (
     <section
       id="clothing-showcase"
       className="relative bg-[#050505] text-white py-24 sm:py-32 border-b border-white/10 overflow-clip"
-      aria-label="Clothing Manufacturing Capabilities and Factory Showcase"
+      aria-label="Clothing Manufacturing Capabilities and Craft Showcase"
     >
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#00a859]/10 blur-[180px] rounded-full pointer-events-none" />
       <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[160px] rounded-full pointer-events-none" />
@@ -60,12 +60,12 @@ export default function ClothingShowcase() {
             className="lg:col-span-6 flex flex-col justify-center"
           >
             <h2 className="text-3xl sm:text-5xl font-sans font-black tracking-tight uppercase text-white leading-[1.1] mb-6">
-              Tirupur Apparel Manufacturing <br className="hidden sm:inline" />
+              Tirupur Manufacturing <br className="hidden sm:inline" />
               Engineered For Circularity
             </h2>
 
             <p className="text-neutral-300 font-sans text-base sm:text-lg leading-relaxed mb-8">
-              At our manufacturing facility in Tirupur, Tamil Nadu, we prove that luxury craftsmanship and environmental stewardship coexist. From raw seed to finished export carton, our ethical supply chain eliminates hazardous chemistry, plastic waste, and worker exploitation.
+              At Strains Stitchery, we prove that luxury apparel manufacturing does not require environmental degradation. From natural dye formulations to zero-effluent water cycles, our Tirupur facility is built for forward-thinking brands that demand uncompromising craft.
             </p>
 
             {/* 6 Services Grid */}
@@ -100,13 +100,13 @@ export default function ClothingShowcase() {
             <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-6">
                 <div>
-                  <div className="text-xl font-mono font-bold text-[#00e676]">100%</div>
-                  <div className="text-xs font-mono text-neutral-400 uppercase">Zero-Discharge ZLD</div>
+                  <div className="text-xl font-mono font-bold text-[#00e676]">Zero Liquid</div>
+                  <div className="text-xs font-mono text-neutral-400 uppercase">Effluent Discharge</div>
                 </div>
                 <div className="w-px h-8 bg-white/10" />
                 <div>
-                  <div className="text-xl font-mono font-bold text-white">Tirupur</div>
-                  <div className="text-xs font-mono text-neutral-400 uppercase">Facility Hub</div>
+                  <div className="text-xl font-mono font-bold text-white">100% GOTS</div>
+                  <div className="text-xs font-mono text-neutral-400 uppercase">Certified Organic</div>
                 </div>
               </div>
 
@@ -114,29 +114,56 @@ export default function ClothingShowcase() {
                 href="/book-consultation"
                 className="px-6 py-3.5 rounded-xl bg-[#00a859] hover:bg-[#00e676] text-black font-sans font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_4px_20px_rgba(0,168,89,0.3)] hover:-translate-y-0.5 flex items-center gap-2 group"
               >
-                <span>Request Sample Kit</span>
+                <span>Book Factory Consult</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
 
           {/* RIGHT SIDE — Sticky Video Panel */}
-          <div className="lg:col-span-6 relative lg:self-stretch">
+          <div ref={containerRef} className="lg:col-span-6 relative lg:self-stretch">
             <div className="lg:sticky lg:top-28 xl:top-32 transition-all duration-300 z-20">
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#00a859]/30 to-emerald-500/20 rounded-3xl blur-xl opacity-100 pointer-events-none" />
 
-                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[#00e676]/50 shadow-2xl bg-black">
+                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[#00e676]/50 shadow-2xl bg-[#080808]">
+                  {/* High-Tech Video Loader Overlay — Visible ONLY until the video is loaded & ready */}
+                  <div
+                    className={`absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#0c0c0c] via-[#111111] to-[#080808] transition-opacity duration-700 ease-out ${
+                      isVideoLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                    }`}
+                    aria-hidden={isVideoLoaded}
+                  >
+                    <div className="absolute w-36 h-36 bg-[#00a859]/20 rounded-full blur-2xl pointer-events-none animate-pulse" />
+
+                    <div className="relative flex flex-col items-center gap-3.5 z-10">
+                      <div className="relative w-12 h-12 flex items-center justify-center">
+                        <div className="absolute inset-0 rounded-full border border-[#00e676]/25 animate-ping opacity-40" />
+                        <div className="w-10 h-10 rounded-full border-2 border-transparent border-t-[#00e676] border-r-[#00a859] animate-spin" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-2 h-2 rounded-full bg-[#00e676] animate-pulse" />
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00e676] animate-pulse" />
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-300">
+                          Loading 4K Reel...
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
                   <video
                     ref={videoRef}
-                    src={CLOTHING_MANUFACTURING_ASSETS.showcaseVideo.src}
+                    src={isNearViewport ? CLOTHING_MANUFACTURING_ASSETS.showcaseVideo.src : undefined}
                     autoPlay
                     muted
                     loop
                     playsInline
                     webkit-playsinline="true"
                     x5-playsinline="true"
-                    preload="auto"
+                    preload={isNearViewport ? 'metadata' : 'none'}
                     onLoadedData={() => setIsVideoLoaded(true)}
                     onPlaying={() => setIsVideoLoaded(true)}
                     onCanPlay={() => setIsVideoLoaded(true)}
@@ -144,9 +171,13 @@ export default function ClothingShowcase() {
                       isVideoLoaded ? 'opacity-100' : 'opacity-0'
                     }`}
                   >
-                    <source src={CLOTHING_MANUFACTURING_ASSETS.showcaseVideo.src} type="video/mp4" />
-                    {CLOTHING_MANUFACTURING_ASSETS.showcaseVideo.fallbackSrc && (
-                      <source src={CLOTHING_MANUFACTURING_ASSETS.showcaseVideo.fallbackSrc} type="video/mp4" />
+                    {isNearViewport && (
+                      <>
+                        <source src={CLOTHING_MANUFACTURING_ASSETS.showcaseVideo.src} type="video/mp4" />
+                        {CLOTHING_MANUFACTURING_ASSETS.showcaseVideo.fallbackSrc && (
+                          <source src={CLOTHING_MANUFACTURING_ASSETS.showcaseVideo.fallbackSrc} type="video/mp4" />
+                        )}
+                      </>
                     )}
                   </video>
                 </div>
@@ -158,4 +189,3 @@ export default function ClothingShowcase() {
     </section>
   );
 }
-

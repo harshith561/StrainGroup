@@ -292,12 +292,14 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
                   }}
                   aria-label={`View profile of ${member.name}, ${member.role}`}
                 >
-                  <div className="card-image-container relative w-full h-full group bg-neutral-900 overflow-hidden">
+                  <div className="card-image-container relative w-full h-full group bg-neutral-900 media-placeholder overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
+                      onLoad={(e) => e.currentTarget.parentElement?.classList.remove('media-placeholder')}
                     />
 
                     {/* Gradient depth vignette */}
@@ -365,14 +367,16 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') router.push(member.profileUrl);
                     }}
-                    className="about-mobile-slide w-full flex-shrink-0 aspect-[3/4] relative cursor-pointer group active:scale-[0.98] transition-transform"
+                    className="about-mobile-slide w-full flex-shrink-0 aspect-[3/4] relative cursor-pointer group active:scale-[0.98] transition-transform bg-neutral-900 media-placeholder overflow-hidden"
                     aria-label={`View profile of ${member.name}, ${member.role}`}
                   >
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover"
-                      loading="eager"
+                      loading="lazy"
+                      decoding="async"
+                      onLoad={(e) => e.currentTarget.parentElement?.classList.remove('media-placeholder')}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent pointer-events-none" />
 

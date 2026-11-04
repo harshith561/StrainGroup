@@ -38,3 +38,25 @@ body {
   background-color: var(--accent-green);
   color: #000000;
 }
+
+/* Media Skeleton & Smooth Fade-In Transitions */
+.media-placeholder {
+  background: linear-gradient(110deg, #121212 8%, #1c1c1c 18%, #121212 33%);
+  background-size: 200% 100%;
+  animation: media-shimmer 1.8s linear infinite;
+}
+
+@keyframes media-shimmer {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+.img-fade-in {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.img-fade-in.loaded {
+  opacity: 1;
+}

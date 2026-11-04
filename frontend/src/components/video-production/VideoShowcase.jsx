@@ -40,7 +40,7 @@ const SERVICES_LIST = [
 ];
 
 export default function VideoShowcase() {
-  const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
+  const { videoRef, containerRef, isVideoLoaded, setIsVideoLoaded, isNearViewport } = useAutoplayVideo({ lazy: true });
 
   return (
     <section
@@ -126,33 +126,65 @@ export default function VideoShowcase() {
           </div>
 
           {/* RIGHT SIDE — Sticky Video Panel */}
-          <div className="lg:col-span-6 relative lg:self-stretch">
+          <div ref={containerRef} className="lg:col-span-6 relative lg:self-stretch">
             <div className="lg:sticky lg:top-28 xl:top-32 transition-all duration-300 z-20">
               <div className="relative">
                 {/* Outer Ambient Glow Ring */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#00a859]/30 to-emerald-500/20 rounded-3xl blur-xl opacity-100 pointer-events-none" />
 
                 {/* Pure Video Frame — Only the Video with Clean Smooth Fade-In */}
-                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[#00e676]/50 shadow-2xl bg-black">
+                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[#00e676]/50 shadow-2xl bg-[#080808]">
+                  {/* High-Tech Video Loader Overlay — Visible ONLY until the video is loaded & ready */}
+                  <div
+                    className={`absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#0c0c0c] via-[#111111] to-[#080808] transition-opacity duration-700 ease-out ${
+                      isVideoLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                    }`}
+                    aria-hidden={isVideoLoaded}
+                  >
+                    <div className="absolute w-36 h-36 bg-[#00a859]/20 rounded-full blur-2xl pointer-events-none animate-pulse" />
+
+                    <div className="relative flex flex-col items-center gap-3.5 z-10">
+                      <div className="relative w-12 h-12 flex items-center justify-center">
+                        <div className="absolute inset-0 rounded-full border border-[#00e676]/25 animate-ping opacity-40" />
+                        <div className="w-10 h-10 rounded-full border-2 border-transparent border-t-[#00e676] border-r-[#00a859] animate-spin" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-2 h-2 rounded-full bg-[#00e676] animate-pulse" />
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00e676] animate-pulse" />
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-300">
+                          Loading 4K Reel...
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
                   <video
                     ref={videoRef}
-                    src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.src}
+                    src={isNearViewport ? VIDEO_PRODUCTION_ASSETS.showcaseVideo.src : undefined}
                     autoPlay
                     muted
                     loop
                     playsInline
                     webkit-playsinline="true"
                     x5-playsinline="true"
-                    preload="auto"
+                    preload={isNearViewport ? 'metadata' : 'none'}
                     onLoadedData={() => setIsVideoLoaded(true)}
                     onPlaying={() => setIsVideoLoaded(true)}
                     onCanPlay={() => setIsVideoLoaded(true)}
-                    className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
-                      }`}
+                    className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${
+                      isVideoLoaded ? 'opacity-100' : 'opacity-0'
+                    }`}
                   >
-                    <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.src} type="video/mp4" />
-                    {VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc && (
-                      <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc} type="video/mp4" />
+                    {isNearViewport && (
+                      <>
+                        <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.src} type="video/mp4" />
+                        {VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc && (
+                          <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc} type="video/mp4" />
+                        )}
+                      </>
                     )}
                   </video>
                 </div>

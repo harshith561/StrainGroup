@@ -51,6 +51,7 @@ export default function AboutHero() {
           muted
           loop
           playsInline
+          preload="metadata"
           className="simple-hero-bg-video"
           poster="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80"
         >

@@ -83,12 +83,14 @@ export default function CaseStudiesListing() {
                   className="group flex flex-col h-full bg-[#121212] hover:bg-[#161616] border border-white/5 hover:border-[#00a859]/40 rounded-2xl overflow-hidden transition-all duration-400 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
                 >
                   {/* Clean Image Container with No Overlay Pills */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#1a1a1a]">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#1a1a1a] media-placeholder">
                     <img
                       src={study.heroImage}
                       alt={study.title}
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
+                      onLoad={(e) => e.currentTarget.parentElement?.classList.remove('media-placeholder')}
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
                   </div>

@@ -3,24 +3,72 @@
 import { useRef, useState, useEffect } from 'react';
 
 /**
- * Custom hook to guarantee reliable video autoplay on mobile browsers (iOS Safari, Android Chrome)
+ * High-Performance Autoplay & Lazy-Loading Video Hook
  *
- * Mobile browsers enforce strict policies:
- * 1. Video MUST be muted at the DOM property level (not just React prop).
- * 2. Video MUST have playsinline & webkit-playsinline attributes.
- * 3. Offscreen videos on mobile are paused/suspended by the browser — IntersectionObserver resumes them.
- * 4. Low Power Mode blocks unprompted autoplay — touch/scroll fallback immediately starts playback.
- * 5. Fallback timer prevents permanent invisibility (opacity-0).
+ * Capabilities:
+ * 1. Supports lazy: true (IntersectionObserver with rootMargin) so below-the-fold videos
+ *    never consume network bandwidth until the user scrolls towards them.
+ * 2. Never flips isVideoLoaded prematurely before actual video frames are buffered.
+ * 3. Pauses playback when offscreen to save mobile CPU/battery, and resumes on scroll.
+ * 4. Ensures strict DOM-level muted and inline playback attributes for iOS Safari / Android Chrome.
+ * 5. Handles user-gesture fallback (first touch/scroll) for Low Power Mode.
  */
-export function useAutoplayVideo() {
+export function useAutoplayVideo(options = {}) {
+  const config = typeof options === 'boolean' ? { lazy: options } : options;
+  const {
+    lazy = false,
+    rootMargin = '400px 0px',
+    threshold = 0.05,
+  } = config;
+
   const videoRef = useRef(null);
+  const containerRef = useRef(null);
+
+  // For non-lazy videos (e.g. Hero), isNearViewport is immediately true.
+  // For lazy videos (Showcase, CTA), it starts false and activates as user approaches.
+  const [isNearViewport, setIsNearViewport] = useState(!lazy);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
+  // 1. Viewport Proximity Detection for Lazy Loading
   useEffect(() => {
+    if (!lazy) {
+      setIsNearViewport(true);
+      return;
+    }
+
+    const target = containerRef.current || videoRef.current;
+    if (!target || typeof IntersectionObserver === 'undefined') {
+      setIsNearViewport(true);
+      return;
+    }
+
+    const proximityObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsNearViewport(true);
+            proximityObserver.disconnect();
+          }
+        });
+      },
+      { rootMargin, threshold }
+    );
+
+    proximityObserver.observe(target);
+
+    return () => {
+      proximityObserver.disconnect();
+    };
+  }, [lazy, rootMargin, threshold]);
+
+  // 2. Playback & State Management once in viewport
+  useEffect(() => {
+    if (!isNearViewport) return;
+
     const video = videoRef.current;
     if (!video) return;
 
-    // 1. Force muted & inline playback at DOM level (required for iOS Safari & Android Chrome)
+    // Strict DOM attributes for mobile inline autoplay policy
     video.defaultMuted = true;
     video.muted = true;
     video.setAttribute('muted', '');
@@ -28,7 +76,33 @@ export function useAutoplayVideo() {
     video.setAttribute('webkit-playsinline', 'true');
     video.setAttribute('x5-playsinline', 'true');
 
-    const playVideo = () => {
+    const handlePlaying = () => {
+      setIsVideoLoaded(true);
+    };
+
+    const handleCanPlay = () => {
+      if (video.readyState >= 2) {
+        setIsVideoLoaded(true);
+      }
+    };
+
+    const handleTimeUpdate = () => {
+      if (video.currentTime > 0) {
+        setIsVideoLoaded(true);
+      }
+    };
+
+    video.addEventListener('playing', handlePlaying);
+    video.addEventListener('canplay', handleCanPlay);
+    video.addEventListener('canplaythrough', handleCanPlay);
+    video.addEventListener('loadeddata', handleCanPlay);
+    video.addEventListener('timeupdate', handleTimeUpdate);
+
+    if (video.readyState >= 2 || video.currentTime > 0) {
+      setIsVideoLoaded(true);
+    }
+
+    const attemptPlay = () => {
       if (!video) return;
       video.defaultMuted = true;
       video.muted = true;
@@ -37,44 +111,47 @@ export function useAutoplayVideo() {
       if (promise !== undefined) {
         promise
           .then(() => {
-            setIsVideoLoaded(true);
+            if (video.currentTime > 0 || video.readyState >= 2) {
+              setIsVideoLoaded(true);
+            }
           })
           .catch(() => {
-            // Autoplay blocked by mobile browser (e.g. Low Power Mode).
-            // Awaiting user gesture (touch / scroll).
+            // Mobile policy or low power mode waiting for gesture
           });
       }
     };
 
-    // If video hasn't loaded source yet, trigger load
     if (video.readyState === 0 && typeof video.load === 'function') {
       try {
         video.load();
-      } catch (_) { }
+      } catch (_) {}
     }
 
-    // Initial play attempt
-    playVideo();
+    attemptPlay();
 
-    // 2. IntersectionObserver: Autoplay when scrolled into viewport on mobile
-    let observer;
+    // Pause when scrolled out of view to save battery/bandwidth; resume when in view
+    let visibilityObserver;
     if (typeof IntersectionObserver !== 'undefined') {
-      observer = new IntersectionObserver(
+      visibilityObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              playVideo();
+              attemptPlay();
+            } else {
+              try {
+                video.pause();
+              } catch (_) {}
             }
           });
         },
         { threshold: 0.1 }
       );
-      observer.observe(video);
+      visibilityObserver.observe(video);
     }
 
-    // 3. User interaction fallback (first touch/scroll unlocks mobile audio/video policy)
+    // Gesture unlock for iOS / low-power mobile mode
     const handleGesture = () => {
-      playVideo();
+      attemptPlay();
       window.removeEventListener('touchstart', handleGesture);
       window.removeEventListener('touchend', handleGesture);
       window.removeEventListener('scroll', handleGesture);
@@ -86,16 +163,25 @@ export function useAutoplayVideo() {
     window.addEventListener('scroll', handleGesture, { passive: true });
     window.addEventListener('click', handleGesture, { passive: true });
 
-    // 4. Fallback visibility timer so video is never permanently hidden by opacity-0
+    // Safety fallback timer (7s) in case events are suppressed
     const fallbackTimer = setTimeout(() => {
-      setIsVideoLoaded(true);
-    }, 1200);
+      if (video && (video.readyState >= 1 || video.videoWidth > 0)) {
+        setIsVideoLoaded(true);
+      }
+    }, 7000);
 
     return () => {
-      if (observer && video) {
-        try {
-          observer.unobserve(video);
-        } catch (_) { }
+      if (video) {
+        video.removeEventListener('playing', handlePlaying);
+        video.removeEventListener('canplay', handleCanPlay);
+        video.removeEventListener('canplaythrough', handleCanPlay);
+        video.removeEventListener('loadeddata', handleCanPlay);
+        video.removeEventListener('timeupdate', handleTimeUpdate);
+        if (visibilityObserver) {
+          try {
+            visibilityObserver.unobserve(video);
+          } catch (_) {}
+        }
       }
       window.removeEventListener('touchstart', handleGesture);
       window.removeEventListener('touchend', handleGesture);
@@ -103,10 +189,9 @@ export function useAutoplayVideo() {
       window.removeEventListener('click', handleGesture);
       clearTimeout(fallbackTimer);
     };
-  }, []);
+  }, [isNearViewport]);
 
-  return { videoRef, isVideoLoaded, setIsVideoLoaded };
+  return { videoRef, containerRef, isVideoLoaded, setIsVideoLoaded, isNearViewport };
 }
 
 export default useAutoplayVideo;
-

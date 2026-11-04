@@ -84,6 +84,8 @@ export default function Header() {
                 src="/assets/strainsassociates-CfG1A0jo.webp"
                 alt="Strains Associates"
                 className="logo-img"
+                decoding="async"
+                fetchPriority="high"
               />
             </Link>
           </div>
@@ -176,6 +178,8 @@ export default function Header() {
               src="/assets/strainsassociates-CfG1A0jo.webp"
               alt="Strains Associates"
               className="logo-img"
+              decoding="async"
+              loading="lazy"
             />
           </div>
           <button

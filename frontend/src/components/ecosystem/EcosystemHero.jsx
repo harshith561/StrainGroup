@@ -130,11 +130,16 @@ export default function EcosystemHero() {
                 style={{ minHeight: '380px' }}
               >
                 {/* Background Photo Container with Vignette */}
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 bg-[#121212] media-placeholder">
                   <img
                     src={pillar.image}
                     alt={pillar.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover filter brightness-[0.45] group-hover:brightness-[0.7] group-hover:scale-105 transition-all duration-700"
+                    onLoad={(e) => {
+                      e.currentTarget.parentElement?.classList.remove('media-placeholder');
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/70 to-transparent" />
                 </div>

@@ -123,12 +123,15 @@ export default function TeamMemberProfile({ member }) {
 
             {/* Right Column: Profile Image */}
             <div className="team-profile-right">
-              <div className="team-profile-image-wrap">
+              <div className="team-profile-image-wrap media-placeholder">
                 <img
                   src={member.profileImage}
                   alt={member.name}
                   className="team-profile-image"
                   loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  onLoad={(e) => e.currentTarget.parentElement?.classList.remove('media-placeholder')}
                 />
               </div>
             </div>

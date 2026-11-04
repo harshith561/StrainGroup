@@ -112,11 +112,12 @@ export default function ServiceBottomCTA() {
               {/* 5. Portrait of Man in Striped T-Shirt Pointing Left */}
               <div className="relative w-full h-full flex items-end justify-center z-10 pointer-events-none">
                 <Image
-                  src="/images/contact_image_service.svg"
+                  src="/images/contact_image_service.png"
                   alt="Creative Agency Consultant Pointing Left"
                   width={395}
                   height={399}
-                  unoptimized
+                  sizes="(max-width: 768px) 100vw, 395px"
+                  loading="lazy"
                   className="w-full h-auto max-h-[500px] lg:max-h-[560px] object-contain select-none pointer-events-none drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)]"
                 />
               </div>

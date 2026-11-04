@@ -246,14 +246,18 @@ export default function AboutStudioSection({ data = STUDIO_SECTION_DATA }) {
                 return (
                   <div
                     key={img.id || idx}
-                    className={`studio-gallery-card ${isTall ? 'gallery-card-tall' : 'gallery-card-short'}`}
+                    className={`studio-gallery-card bg-[#141414] media-placeholder ${isTall ? 'gallery-card-tall' : 'gallery-card-short'}`}
                   >
                     <img
                       src={img.src}
                       alt={img.alt || `Studio visual ${idx + 1}`}
                       loading="lazy"
+                      decoding="async"
                       className="studio-gallery-img"
                       draggable="false"
+                      onLoad={(e) => {
+                        e.currentTarget.parentElement?.classList.remove('media-placeholder');
+                      }}
                     />
                   </div>
                 );

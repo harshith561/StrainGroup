@@ -49,11 +49,16 @@ export default function EcosystemDualHub() {
             className="rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] group hover:border-[#00a859]/50 transition-all duration-500"
           >
             {/* Top Photo Header */}
-            <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-black media-placeholder">
               <img
                 src="/images/ecosystem/hub-hyderabad.jpg"
                 alt="Hyderabad Studio"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-[0.7]"
+                onLoad={(e) => {
+                  e.currentTarget.parentElement?.classList.remove('media-placeholder');
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40" />
 
@@ -121,11 +126,16 @@ export default function EcosystemDualHub() {
             className="rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] group hover:border-[#00a859]/50 transition-all duration-500"
           >
             {/* Top Photo Header */}
-            <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-black media-placeholder">
               <img
                 src="/images/ecosystem/hub-tirupur.jpg"
                 alt="Tirupur Stitchery Hub"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-[0.7]"
+                onLoad={(e) => {
+                  e.currentTarget.parentElement?.classList.remove('media-placeholder');
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40" />
 
