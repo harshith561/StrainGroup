@@ -14,6 +14,7 @@ import '@/styles/about.scss';
 import '@/styles/contact.scss';
 import '@/styles/ecosystem.scss';
 import '@/styles/video-production.scss';
+import '@/styles/founder.scss';
 import 'aos/dist/aos.css';
 import Head from 'next/head';
 import { useEffect } from 'react';
