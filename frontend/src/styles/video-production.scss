@@ -6,7 +6,7 @@
 .video-production-page {
   background-color: #050505;
   color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
@@ -116,4 +116,12 @@
       display: block;
     }
   }
+}
+
+/* Sticky Showcase Video Panel */
+.sticky-showcase-video {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 7rem;
+  z-index: 20;
 }

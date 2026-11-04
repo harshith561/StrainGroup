@@ -54,7 +54,7 @@ export default function VideoShowcase() {
   return (
     <section
       id="video-showcase"
-      className="relative bg-[#050505] text-white py-24 sm:py-32 border-b border-white/10 overflow-hidden"
+      className="relative bg-[#050505] text-white py-24 sm:py-32 border-b border-white/10 overflow-clip"
       aria-label="Video Production Capabilities & Reel Showcase"
     >
       {/* Background Radial Glow */}
@@ -63,8 +63,8 @@ export default function VideoShowcase() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 relative z-10">
 
-        {/* Split Section: Left Side Heading & Services, Right Side Pure Video */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        {/* Split Section: Left Side Heading & Services, Right Side Sticky Video */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
 
           {/* LEFT SIDE — slides in from left */}
           <div
@@ -134,36 +134,33 @@ export default function VideoShowcase() {
             </div>
           </div>
 
-          {/* RIGHT SIDE — slides in from right */}
-          <div
-            data-aos="fade-left"
-            data-aos-duration="900"
-            data-aos-delay="100"
-            className="lg:col-span-6"
-          >
-            <div className="relative group">
-              {/* Outer Ambient Glow Ring */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#00a859]/30 to-emerald-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none" />
+          {/* RIGHT SIDE — Sticky Video Panel */}
+          <div className="lg:col-span-6 relative lg:self-stretch">
+            <div className="lg:sticky lg:top-28 xl:top-32 transition-all duration-300 z-20">
+              <div className="relative group">
+                {/* Outer Ambient Glow Ring */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#00a859]/30 to-emerald-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none" />
 
-              {/* Pure Video Frame — Only the Video with Clean Smooth Fade-In */}
-              <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/15 group-hover:border-[#00e676]/50 shadow-2xl bg-black transition-all duration-500">
-                <video
-                  ref={videoRef}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  onLoadedData={() => setIsVideoLoaded(true)}
-                  onPlaying={() => setIsVideoLoaded(true)}
-                  className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
-                    }`}
-                >
-                  <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.src} type="video/mp4" />
-                  {VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc && (
-                    <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc} type="video/mp4" />
-                  )}
-                </video>
+                {/* Pure Video Frame — Only the Video with Clean Smooth Fade-In */}
+                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/15 group-hover:border-[#00e676]/50 shadow-2xl bg-black transition-all duration-500">
+                  <video
+                    ref={videoRef}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    onLoadedData={() => setIsVideoLoaded(true)}
+                    onPlaying={() => setIsVideoLoaded(true)}
+                    className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
+                      }`}
+                  >
+                    <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.src} type="video/mp4" />
+                    {VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc && (
+                      <source src={VIDEO_PRODUCTION_ASSETS.showcaseVideo.fallbackSrc} type="video/mp4" />
+                    )}
+                  </video>
+                </div>
               </div>
             </div>
           </div>

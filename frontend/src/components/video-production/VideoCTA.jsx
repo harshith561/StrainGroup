@@ -36,9 +36,8 @@ export default function VideoCTA() {
           preload="auto"
           onLoadedData={() => setIsVideoLoaded(true)}
           onPlaying={() => setIsVideoLoaded(true)}
-          className={`w-full h-full object-cover filter brightness-[1.5] contrast-[1.2] saturate-[1.1] transition-opacity duration-1000 ease-out ${
-            isVideoLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`w-full h-full object-cover filter brightness-[1] contrast-[1.2] saturate-[1.1] transition-opacity duration-1000 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <source src={VIDEO_PRODUCTION_ASSETS.ctaVideo?.src || VIDEO_PRODUCTION_ASSETS.heroVideo.src} type="video/mp4" />
           {VIDEO_PRODUCTION_ASSETS.ctaVideo?.fallbackSrc && (

@@ -20,7 +20,7 @@ const EXPERTISE_CARDS = [
   {
     id: '02',
     title: 'Commercial &\nFashion Photography',
-    href: '/advertising-marketing',
+    href: '/fashion-brand',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M42 38H6a2 2 0 0 1-2-2V18a2 2 0 0 1 2-2h7l3-6h12l3 6h7a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2z" />
@@ -47,7 +47,7 @@ const EXPERTISE_CARDS = [
   {
     id: '04',
     title: 'Creative Strategy &\nBrand Development',
-    href: '/fashion-brand',
+    href: '/start-your-brand',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" />
