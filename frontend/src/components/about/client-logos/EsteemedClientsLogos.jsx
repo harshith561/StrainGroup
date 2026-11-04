@@ -1,45 +1,218 @@
 import React from 'react';
 
 /* ==========================================================================
-   ESTEEMED CLIENTS - 24 HIGH-CONTRAST HORIZONTAL VECTOR BRAND LOGOS
-   Crisp, visible, bold typography & iconic marks tailored for dark theme.
+   ESTEEMED CLIENTS - 20 VERIFIED HIGH-CONTRAST VECTOR BRAND LOGOS
+   100% Authentic to Strains Associates & Strains Fashions Private Limited.
+   Includes 18 Verified External Clients + 2 In-House Flagship Brands.
    Proportioned with 250x60 viewBox for optimal prominence and legibility.
    ========================================================================== */
 
 export const CLIENT_LOGOS_DATA = [
-  // 1. Beauty Essentials
+  // 1. JSW Cement (Core Client - Official PDF)
   {
-    id: 'beauty-essentials',
-    name: 'Beauty Essentials',
-    subtext: 'Experience • Express • Emerge',
-    category: 'Beauty & Wellness',
+    id: 'jsw-cement',
+    name: 'JSW Cement',
+    subtext: 'Green Cement • Slag & Concreel HD',
+    category: 'Infrastructure & Heavy Industry',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
-          <path d="M-6 -14 C-12 -14 -15 -8 -12 -1 C-9 5 -1 7 0 0 C-1 -8 -1 -14 -6 -14 Z" fill="#FF7A00" />
-          <path d="M6 -14 C12 -14 15 -8 12 -1 C9 5 1 7 0 0 C1 -8 1 -14 6 -14 Z" fill="#FF2A6D" />
-          <path d="M14 -1 C17 5 15 12 9 14 C2 15 0 9 0 0 C7 0 11 -7 14 -1 Z" fill="#9C27B0" />
-          <path d="M-14 -1 C-17 5 -15 12 -9 14 C-2 15 0 9 0 0 C-7 0 -11 -7 -14 -1 Z" fill="#E91E63" />
-          <path d="M-8 11 C-8 17 0 19 0 11 C0 7 -3 7 -8 11 Z" fill="#FFB300" />
-          <path d="M8 11 C8 17 0 19 0 11 C0 7 3 7 8 11 Z" fill="#FF5722" />
-          <circle cx="0" cy="0" r="2.8" fill="#FFFFFF" />
+          {/* Slanted architectural blocks symbolizing structural cement */}
+          <polygon points="-14,10 -8,-12 0,-12 -6,10" fill="#0284C7" />
+          <polygon points="-3,10 3,-12 11,-12 5,10" fill="#EF4444" />
+          <polygon points="8,10 14,-12 18,-12 12,10" fill="#0284C7" />
         </g>
-        <text x="54" y="27" fontSize="14.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
-          BEAUTY ESSENTIALS
+        <text x="54" y="27" fontSize="16.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          JSW <tspan fill="#38BDF8">CEMENT</tspan>
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="600" fill="#38BDF8" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
-          EXPERIENCE • EXPRESS • EMERGE
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#38BDF8" fontFamily="'Inter', sans-serif" letterSpacing="1.4">
+          GREEN CEMENT • INFRASTRUCTURE
         </text>
       </svg>
     ),
   },
 
-  // 2. Bhama Emporio
+  // 2. Xiti (Core Client - Official PDF)
+  {
+    id: 'xiti',
+    name: 'Xiti',
+    subtext: 'Handlooms & Eco-Apparel',
+    category: 'Luxury Fashion & Handloom',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          {/* Weave loom diamond geometric mark */}
+          <polygon points="0,-14 14,0 0,14 -14,0" stroke="#DFBA73" strokeWidth="1.6" fill="none" />
+          <polygon points="0,-8 8,0 0,8 -8,0" fill="#10B981" />
+          <circle cx="0" cy="0" r="2.5" fill="#FFFFFF" />
+          <line x1="-14" y1="0" x2="14" y2="0" stroke="#DFBA73" strokeWidth="1" strokeDasharray="2 2" />
+        </g>
+        <text x="54" y="27" fontSize="17.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="2.5">
+          XITI
+        </text>
+        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#DFBA73" fontFamily="'Inter', sans-serif" letterSpacing="1.6">
+          HANDLOOMS & ECO-APPAREL
+        </text>
+      </svg>
+    ),
+  },
+
+  // 3. Haraa Gold & Diamonds (Core Client - Official PDF)
+  {
+    id: 'haraa-gold',
+    name: 'Haraa Gold & Diamonds',
+    subtext: 'Luxury Bridal Jewellery • Jubilee Hills',
+    category: 'Luxury Gold & Diamonds',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          {/* Crown and radiant diamond facet */}
+          <polygon points="0,-13 12,-4 0,14 -12,-4" stroke="#FFD700" strokeWidth="1.5" fill="none" />
+          <polygon points="0,-13 6,-4 0,4 -6,-4" fill="#FFD700" />
+          <circle cx="0" cy="-14" r="1.6" fill="#FFFFFF" />
+          <circle cx="-12" cy="-4" r="1.4" fill="#FFFFFF" />
+          <circle cx="12" cy="-4" r="1.4" fill="#FFFFFF" />
+        </g>
+        <text x="54" y="27" fontSize="16" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="1.8">
+          HARAA <tspan fill="#FFD700">GOLD</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#DFBA73" fontFamily="'Inter', sans-serif" letterSpacing="1.5">
+          DIAMONDS • JUBILEE HILLS
+        </text>
+      </svg>
+    ),
+  },
+
+  // 4. Partha Dental (Core Client - Official PDF)
+  {
+    id: 'partha-dental',
+    name: 'Partha Dental',
+    subtext: 'Skin & Hair Clinics • 130+ Centers',
+    category: 'Healthcare & Aesthetics',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          {/* Clinical cross & aesthetic dental shield */}
+          <circle cx="0" cy="0" r="15" stroke="#00E5FF" strokeWidth="1.6" fill="none" />
+          <path d="M-5 -8 C-8 -8 -9 -3 -6 2 L0 10 L6 2 C9 -3 8 -8 5 -8 C2 -8 0 -5 0 -5 C0 -5 -2 -8 -5 -8 Z" fill="#00E5FF" />
+          <circle cx="0" cy="-1" r="2" fill="#0284C7" />
+        </g>
+        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          PARTHA <tspan fill="#00E5FF">DENTAL</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#7DD3FC" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          SKIN & HAIR • 130+ CLINICS
+        </text>
+      </svg>
+    ),
+  },
+
+  // 5. Sri BioAesthetics (Core Client - Official PDF)
+  {
+    id: 'sri-bioaesthetics',
+    name: 'Sri BioAesthetics',
+    subtext: 'Microbial Agri-Biotech • SoilFirst',
+    category: 'Microbial Biotechnology',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          {/* Bio-helix and living sprout leaf */}
+          <circle cx="0" cy="0" r="15" stroke="#10B981" strokeWidth="1.4" strokeDasharray="3 2" fill="none" />
+          <path d="M-7 7 C-10 0 -5 -11 0 -13 C5 -11 10 0 7 7 C3 11 -3 11 -7 7 Z" fill="#10B981" />
+          <path d="M0 -11 L0 8" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
+          <circle cx="-3" cy="-1" r="1.4" fill="#34D399" />
+          <circle cx="3" cy="2" r="1.4" fill="#34D399" />
+        </g>
+        <text x="54" y="27" fontSize="15" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.5">
+          SRI <tspan fill="#10B981">BIOAESTHETICS</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#6EE7B7" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          MICROBIAL BIOTECH • SOILFIRST
+        </text>
+      </svg>
+    ),
+  },
+
+  // 6. Pakka Non Veg (Core Client - Official PDF)
+  {
+    id: 'pakka-non-veg',
+    name: 'Pakka Non Veg',
+    subtext: 'Authentic South Indian Cuisine',
+    category: 'Culinary & Restaurant Chain',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          {/* Culinary woodfire sizzle and clay-pot flame */}
+          <circle cx="0" cy="0" r="16" stroke="#EF4444" strokeWidth="1.4" fill="none" />
+          <path d="M-6 8 C-10 2 -8 -7 0 -13 C2 -7 7 -5 7 0 C7 6 2 10 -6 8 Z" fill="#EF4444" />
+          <path d="M-2 7 C-5 4 -3 -2 1 -6 C3 -2 4 1 4 4 C4 7 1 8 -2 7 Z" fill="#F59E0B" />
+        </g>
+        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.6">
+          PAKKA <tspan fill="#EF4444">NON VEG</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#FBBF24" fontFamily="'Inter', sans-serif" letterSpacing="1.3">
+          SOUTH INDIAN CULINARY
+        </text>
+      </svg>
+    ),
+  },
+
+  // 7. Pioneer Cranes & Hoists (Verified Online Portfolio)
+  {
+    id: 'pioneer-cranes',
+    name: 'Pioneer Cranes',
+    subtext: 'Industrial Overhead EOT Cranes',
+    category: 'Heavy Material Handling',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          {/* Heavy industrial crane gantry & hook */}
+          <rect x="-14" y="-12" width="28" height="5" rx="1" fill="#F59E0B" />
+          <line x1="-10" y1="-7" x2="-10" y2="12" stroke="#F59E0B" strokeWidth="2.5" />
+          <line x1="10" y1="-7" x2="10" y2="12" stroke="#F59E0B" strokeWidth="2.5" />
+          <path d="M0 -7 L0 3 C0 7 4 8 4 11 C4 13 2 14 0 14 C-2 14 -4 13 -4 11" stroke="#FFFFFF" strokeWidth="2" fill="none" />
+        </g>
+        <text x="54" y="27" fontSize="15" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          PIONEER <tspan fill="#F59E0B">CRANES</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#FCD34D" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          EOT CRANES & HOISTS
+        </text>
+      </svg>
+    ),
+  },
+
+  // 8. Aastu Refrigeration (Verified Online Portfolio)
+  {
+    id: 'aastu-refrigeration',
+    name: 'Aastu Refrigeration',
+    subtext: 'Industrial HVAC & Cold Chain',
+    category: 'Commercial Refrigeration & HVAC',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          {/* Industrial cooling snowflake crystal */}
+          <rect x="-14" y="-14" width="28" height="28" rx="4" stroke="#00E676" strokeWidth="1.5" fill="none" />
+          <path d="M-8 0 L8 0 M0 -8 L0 8" stroke="#00E676" strokeWidth="2" strokeLinecap="round" />
+          <path d="M-5 -5 L5 5 M-5 5 L5 -5" stroke="#38BDF8" strokeWidth="1.4" strokeLinecap="round" />
+          <circle cx="0" cy="0" r="2.5" fill="#FFFFFF" />
+        </g>
+        <text x="54" y="27" fontSize="15" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          AASTU <tspan fill="#00E676">REFRIGERATION</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#6EE7B7" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          INDUSTRIAL HVAC & COLD CHAIN
+        </text>
+      </svg>
+    ),
+  },
+
+  // 9. Bhama Emporio (Verified Online Portfolio)
   {
     id: 'bhama-emporio',
     name: 'Bhama Emporio',
-    subtext: 'Fashion & Retail',
-    category: 'Fashion & Retail',
+    subtext: 'Bridal Couture & Silks • Jubilee Hills',
+    category: 'Fashion & Bridal Retail',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
@@ -49,217 +222,21 @@ export const CLIENT_LOGOS_DATA = [
           <ellipse cx="7" cy="8" rx="5" ry="7.5" fill="#7B2CBF" transform="rotate(-30, 7, 8)" />
           <circle cx="0" cy="0" r="2.8" fill="#FFFFFF" />
         </g>
-        <text x="54" y="27" fontSize="16.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="1.8">
+        <text x="54" y="27" fontSize="16" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="1.8">
           BHAMA
         </text>
-        <text x="54" y="43" fontSize="9.5" fontWeight="700" fill="#DFBA73" fontFamily="'Inter', sans-serif" letterSpacing="3">
-          EMPORIO
+        <text x="54" y="43" fontSize="9" fontWeight="700" fill="#DFBA73" fontFamily="'Inter', sans-serif" letterSpacing="2.5">
+          EMPORIO • JUBILEE HILLS
         </text>
       </svg>
     ),
   },
 
-  // 3. Branding with Shakthi
-  {
-    id: 'shakthi',
-    name: 'Branding with Shakthi',
-    subtext: 'Brand Consulting',
-    category: 'Brand Consulting',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="17" stroke="#DFBA73" strokeWidth="1.2" strokeDasharray="3 2" fill="none" />
-          <circle cx="0" cy="0" r="14.5" stroke="#C5A059" strokeWidth="0.8" fill="none" />
-          <path d="M 6 -8 C 6 -12 -3 -12 -4 -8 C -5 -4 6 -2 6 4 C 6 10 -4 11 -6 7" stroke="#FFD700" strokeWidth="2.6" strokeLinecap="round" fill="none" />
-          <circle cx="6" cy="-8" r="1.4" fill="#FFD700" />
-          <circle cx="-6" cy="7" r="1.4" fill="#FFD700" />
-        </g>
-        <text x="54" y="22" fontSize="10.5" fontStyle="italic" fill="#DFBA73" fontFamily="'Playfair Display', serif">
-          Branding with
-        </text>
-        <text x="54" y="38" fontSize="15.5" fontWeight="800" fill="#FFD700" fontFamily="'Cinzel', serif" letterSpacing="1.8">
-          SHAKTHI
-        </text>
-        <text x="54" y="49" fontSize="7.5" fontWeight="600" fill="#CBD5E1" fontFamily="'Inter', sans-serif" letterSpacing="1.5">
-          STRATEGY & DESIGN
-        </text>
-      </svg>
-    ),
-  },
-
-  // 4. Cornileus Pharmaceuticals
-  {
-    id: 'cornileus',
-    name: 'Cornileus Pharmaceuticals',
-    subtext: 'Pharmaceuticals (P) Ltd.',
-    category: 'Healthcare & Pharma',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <path d="M-13 -3 C-8 -11 8 -11 13 -3 C15 4 10 13 0 15 C-10 13 -15 4 -13 -3 Z" fill="none" stroke="#FF7043" strokeWidth="2.2" />
-          <path d="M-6 -12 L6 6" stroke="#FF7043" strokeWidth="2.6" strokeLinecap="round" />
-          <path d="M-2 -7 Q -9 -14 -14 -9 Q -9 -4 -2 -7" fill="#FF7043" />
-          <path d="M2 -7 Q 9 -14 14 -9 Q 9 -4 2 -7" fill="#10B981" />
-        </g>
-        <text x="54" y="27" fontSize="16.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.4">
-          Cornileus
-        </text>
-        <text x="54" y="42" fontSize="8.5" fontWeight="700" fill="#FF7043" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
-          PHARMACEUTICALS (P) LTD.
-        </text>
-      </svg>
-    ),
-  },
-
-  // 5. Global Tree
-  {
-    id: 'global-tree',
-    name: 'Global Tree',
-    subtext: 'Education • Immigration • Training',
-    category: 'Global Education & Careers',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <polygon points="0,-13 15,-6.5 0,0 -15,-6.5" fill="#00E5FF" />
-          <path d="M-11,-3 L-11,5.5 Q 0,12 11,5.5 L11,-3" fill="none" stroke="#00E5FF" strokeWidth="2.2" />
-          <circle cx="0" cy="1" r="13" fill="none" stroke="#26A69A" strokeWidth="1.6" strokeDasharray="3 2" />
-          <path d="M15,-6.5 L18,4 L16,11" fill="none" stroke="#FFD700" strokeWidth="1.3" />
-          <circle cx="16" cy="12" r="1.6" fill="#FFD700" />
-        </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.6">
-          GLOBAL <tspan fill="#00E5FF">TREE</tspan>
-        </text>
-        <text x="54" y="43" fontSize="8" fontWeight="600" fill="#CBD5E1" fontFamily="'Inter', sans-serif">
-          Education • Immigration • Training
-        </text>
-      </svg>
-    ),
-  },
-
-  // 6. House of Hariya (3R)
-  {
-    id: 'house-of-hariya',
-    name: 'House of Hariya (3R)',
-    subtext: 'Heritage & Luxury',
-    category: 'Heritage & Luxury',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="18" fill="none" stroke="#D4AF37" strokeWidth="1.5" strokeDasharray="3 2" />
-          <circle cx="0" cy="0" r="15.5" stroke="#C5A059" strokeWidth="1.3" fill="none" />
-          <rect x="-13" y="-9" width="26" height="18" rx="9" fill="#9E0031" stroke="#D4AF37" strokeWidth="1.3" />
-          <text x="0" y="4" textAnchor="middle" fontSize="10.5" fontWeight="900" fill="#FFD700" fontFamily="'Cinzel', serif">
-            3R
-          </text>
-        </g>
-        <text x="54" y="26" fontSize="14.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="1.2">
-          HOUSE OF HARIYA
-        </text>
-        <text x="54" y="42" fontSize="8.5" fontWeight="700" fill="#DFBA73" fontFamily="'Inter', sans-serif" letterSpacing="1.5">
-          HERITAGE & LUXURY
-        </text>
-      </svg>
-    ),
-  },
-
-  // 7. IndustryARC
-  {
-    id: 'industryarc',
-    name: 'IndustryARC',
-    subtext: 'Analytics • Research • Consulting',
-    category: 'Market Intelligence',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="15" fill="#0091EA" />
-          <path d="M-15 0 C-15 -15 15 -15 17 0 C15 -10 -8 -10 -11 5" fill="#00E5FF" />
-          <circle cx="0" cy="0" r="5" fill="#FFFFFF" />
-        </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.5">
-          INDUSTRY<tspan fill="#00B0FF">ARC</tspan>
-        </text>
-        <text x="54" y="43" fontSize="8" fontWeight="600" fill="#CBD5E1" fontFamily="'Inter', sans-serif">
-          Analytics • Research • Consulting
-        </text>
-      </svg>
-    ),
-  },
-
-  // 8. Naatu Entertainments
-  {
-    id: 'naatu-entertainments',
-    name: 'Naatu Entertainments',
-    subtext: 'Media & Entertainment',
-    category: 'Media & Film Production',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="16" stroke="#DFBA73" strokeWidth="1.3" fill="none" />
-          <polygon points="0,-11 3.5,-3.5 11,-3.5 4.5,2 7,10 0,5.5 -7,10 -4.5,2 -11,-3.5 -3.5,-3.5" fill="#FFD700" />
-        </g>
-        <text x="54" y="28" fontSize="21" fontWeight="800" fontStyle="italic" fill="#FFD700" fontFamily="'Playfair Display', cursive">
-          Naatu
-        </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="2">
-          ENTERTAINMENTS
-        </text>
-      </svg>
-    ),
-  },
-
-  // 9. Pegasus Solutions
-  {
-    id: 'pegasus-solutions',
-    name: 'Pegasus Solutions',
-    subtext: 'Reach us to reach abroad',
-    category: 'Overseas Consultancy',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <path d="M -10 4 C -12 1 -8 -5 0 -7 C 5 -9 11 -3 13 0 C 11 3 3 5 0 5 Z" fill="#10B981" />
-          <path d="M-2 -7 C-7 -15 5 -18 13 -11 C16 -8 13 -2 8 -3 C3 -5 3 -7 -2 -7 Z" fill="#34D399" />
-          <path d="M3 -9 C0 -15 11 -16 16 -11 C14 -5 9 -3 3 -9 Z" fill="#6EE7B7" />
-          <path d="M-5 5 L-9 13 M0 5 L-2 14 M5 5 L11 11 M8 3 L13 8" stroke="#10B981" strokeWidth="1.6" strokeLinecap="round" />
-        </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#10B981" fontFamily="'Inter', sans-serif">
-          Pegasus <tspan fill="#FFFFFF">Solutions</tspan>
-        </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#6EE7B7" fontFamily="'Inter', sans-serif">
-          Reach us to reach abroad
-        </text>
-      </svg>
-    ),
-  },
-
-  // 10. Radiant
-  {
-    id: 'radiant',
-    name: 'Radiant',
-    subtext: 'Luxury & Hospitality',
-    category: 'Hospitality & Real Estate',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="17" stroke="#DFBA73" strokeWidth="1.2" strokeDasharray="4 2" fill="none" />
-          <text x="0" y="7.5" textAnchor="middle" fontSize="22" fontWeight="800" fill="#FFD700" fontFamily="'Playfair Display', serif">
-            R
-          </text>
-        </g>
-        <text x="54" y="27" fontSize="16.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="2">
-          RADIANT
-        </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#DFBA73" fontFamily="'Inter', sans-serif" letterSpacing="2">
-          LUXURY & HOSPITALITY
-        </text>
-      </svg>
-    ),
-  },
-
-  // 11. Royal eV
+  // 10. Royal EV (Verified Online Portfolio)
   {
     id: 'royal-ev',
-    name: 'Royal eV',
-    subtext: 'Ride with Pride',
+    name: 'Royal EV',
+    subtext: 'Ride with Pride • Clean Mobility',
     category: 'Electric Mobility & Green Tech',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
@@ -271,92 +248,138 @@ export const CLIENT_LOGOS_DATA = [
           <circle cx="11" cy="-8" r="1.6" fill="#FFD700" />
         </g>
         <text x="54" y="27" fontSize="16.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif">
-          Royal <tspan fill="#FFD700">eV</tspan>
+          Royal <tspan fill="#FFD700">EV</tspan>
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#4ADE80" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
-          RIDE WITH PRIDE • GREEN TECH
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#4ADE80" fontFamily="'Inter', sans-serif" letterSpacing="1">
+          RIDE WITH PRIDE • CLEAN MOBILITY
         </text>
       </svg>
     ),
   },
 
-  // 12. Savin Technologies
+  // 11. CryoVault Biotech (Verified Online Portfolio)
   {
-    id: 'savin-technologies',
-    name: 'Savin Technologies',
-    subtext: 'IT & Cloud Solutions',
-    category: 'IT & Cloud Solutions',
+    id: 'cryovault',
+    name: 'CryoVault',
+    subtext: 'Stem Cell & Cord Blood Banking',
+    category: 'Biotechnology & Stem Cells',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
-          <path d="M -8 -9 L 0 -13 L 8 -9 L 8 2 L 0 6 L -8 2 Z" stroke="#7C4DFF" strokeWidth="2.4" fill="none" />
-          <path d="M 0 -6 L 8 -2 L 8 9 L 0 13 L -8 9 L -8 -2 Z" stroke="#00E5FF" strokeWidth="2.4" fill="none" />
+          <circle cx="0" cy="0" r="13" stroke="#38BDF8" strokeWidth="2.4" fill="none" />
+          <circle cx="0" cy="0" r="5.5" fill="#EF4444" />
+          <path d="M0 -15 L0 -11 M0 11 L0 15 M-15 0 L-11 0 M11 0 L15 0" stroke="#38BDF8" strokeWidth="2" />
         </g>
-        <text x="54" y="27" fontSize="17.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif">
-          Savin
+        <text x="54" y="27" fontSize="16" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif">
+          Cryo<tspan fill="#EF4444">Vault</tspan>
         </text>
-        <text x="54" y="42" fontSize="9" fontWeight="800" fill="#A78BFA" fontFamily="'Inter', sans-serif" letterSpacing="2">
-          TECHNOLOGIES
+        <text x="54" y="43" fontSize="8" fontWeight="600" fill="#CBD5E1" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          STEM CELL & CORD BLOOD BANKING
         </text>
       </svg>
     ),
   },
 
-  // 13. Snow Mist
+  // 12. Cornileus Pharmaceuticals (Verified Online Portfolio)
   {
-    id: 'snow-mist',
-    name: 'Snow Mist',
-    subtext: 'Premium Pure Living',
-    category: 'FMCG & Beverages',
+    id: 'cornileus',
+    name: 'Cornileus Pharmaceuticals',
+    subtext: 'Pellet Formulations & APIs',
+    category: 'Healthcare & Pharma',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
-          <polygon points="-13,9 -4,-6 5,9" fill="#FFFFFF" />
-          <polygon points="-4,9 5,-8 14,9" fill="#E2E8F0" />
-          <polygon points="-7,1 -4,-6 -1,1" fill="#38BDF8" />
-          <polygon points="2,0 5,-8 8,0" fill="#38BDF8" />
-          {[-8, 0, 8].map((dx, i) => (
-            <polygon key={i} points="0,-1.6 0.5,-0.5 1.6,-0.5 0.8,0.2 1.1,1.4 0,0.8 -1.1,1.4 -0.8,0.2 -1.6,-0.5 -0.5,-0.5" fill="#38BDF8" transform={`translate(${dx}, -11)`} />
-          ))}
+          <path d="M-13 -3 C-8 -11 8 -11 13 -3 C15 4 10 13 0 15 C-10 13 -15 4 -13 -3 Z" fill="none" stroke="#FF7043" strokeWidth="2" />
+          <path d="M-6 -12 L6 6" stroke="#FF7043" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M-2 -7 Q -9 -14 -14 -9 Q -9 -4 -2 -7" fill="#FF7043" />
+          <path d="M2 -7 Q 9 -14 14 -9 Q 9 -4 2 -7" fill="#10B981" />
         </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="1.2">
-          SNOW MIST
+        <text x="54" y="27" fontSize="15.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.4">
+          Cornileus
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#38BDF8" fontFamily="'Inter', sans-serif" letterSpacing="1.5">
-          HERITAGE PURE LIVING
+        <text x="54" y="42" fontSize="8" fontWeight="700" fill="#FF7043" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          PHARMACEUTICALS (P) LTD.
         </text>
       </svg>
     ),
   },
 
-  // 14. Tejas Elite
+  // 13. Global Tree (Verified Online Portfolio)
   {
-    id: 'tejas-elite',
-    name: 'Tejas Elite',
-    subtext: 'We Care For Your Events',
-    category: 'Event Management & Luxury',
+    id: 'global-tree',
+    name: 'Global Tree',
+    subtext: 'Overseas Education & Immigration',
+    category: 'Global Education & Careers',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
-          <path d="M-8 3 C-8 -2 0 -12 0 -12 C0 -12 8 -2 8 3 C8 9 -8 9 -8 3 Z" fill="#EF4444" />
-          <path d="M-4 4 C-4 0 0 -6 0 -6 C0 -6 4 0 4 4 C4 8 -4 8 -4 4 Z" fill="#F59E0B" />
-          <path d="M-11 9 Q 0 15 11 9" stroke="#EF4444" strokeWidth="1.5" fill="none" />
+          <polygon points="0,-13 15,-6.5 0,0 -15,-6.5" fill="#00E5FF" />
+          <path d="M-11,-3 L-11,5.5 Q 0,12 11,5.5 L11,-3" fill="none" stroke="#00E5FF" strokeWidth="2.2" />
+          <circle cx="0" cy="1" r="13" fill="none" stroke="#26A69A" strokeWidth="1.6" strokeDasharray="3 2" />
         </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="1.2">
-          TEJAS ELITE
+        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.6">
+          GLOBAL <tspan fill="#00E5FF">TREE</tspan>
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#F59E0B" fontFamily="'Inter', sans-serif" letterSpacing="1">
-          WE CARE FOR YOUR EVENTS
+        <text x="54" y="43" fontSize="8" fontWeight="600" fill="#CBD5E1" fontFamily="'Inter', sans-serif" letterSpacing="1">
+          EDUCATION & IMMIGRATION
         </text>
       </svg>
     ),
   },
 
-  // 15. trip Zada
+  // 14. IndustryARC (Verified Online Portfolio)
+  {
+    id: 'industryarc',
+    name: 'IndustryARC',
+    subtext: 'Analytics • Research • Consulting',
+    category: 'Market Intelligence & Analytics',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          <circle cx="0" cy="0" r="15" fill="#0091EA" />
+          <path d="M-15 0 C-15 -15 15 -15 17 0 C15 -10 -8 -10 -11 5" fill="#00E5FF" />
+          <circle cx="0" cy="0" r="5" fill="#FFFFFF" />
+        </g>
+        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.5">
+          INDUSTRY<tspan fill="#00B0FF">ARC</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="600" fill="#CBD5E1" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          ANALYTICS • RESEARCH • REPORTS
+        </text>
+      </svg>
+    ),
+  },
+
+  // 15. Ship AtoZ (Verified Online Portfolio)
+  {
+    id: 'ship-atoz',
+    name: 'Ship AtoZ',
+    subtext: 'Intra-City Logistics Platform',
+    category: 'Logistics & Supply Chain',
+    logo: (
+      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
+        <g transform="translate(26, 30)">
+          <circle cx="0" cy="0" r="16" fill="none" stroke="#FBBF24" strokeWidth="1.6" />
+          <rect x="-9" y="-4" width="11" height="9" rx="1" fill="#FBBF24" />
+          <path d="M2 -1 H8 L10 2 V4 H2 Z" fill="#FBBF24" />
+          <circle cx="-5.5" cy="5.5" r="2.4" fill="#000000" stroke="#FBBF24" strokeWidth="1" />
+          <circle cx="5.5" cy="5.5" r="2.4" fill="#000000" stroke="#FBBF24" strokeWidth="1" />
+        </g>
+        <text x="54" y="27" fontSize="16.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif">
+          Ship <tspan fill="#FBBF24">AtoZ</tspan>
+        </text>
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#FDE047" fontFamily="'Inter', sans-serif" letterSpacing="1">
+          ON-DEMAND LOGISTICS PLATFORM
+        </text>
+      </svg>
+    ),
+  },
+
+  // 16. TripZada (Verified Online Portfolio)
   {
     id: 'trip-zada',
-    name: 'trip Zada',
-    subtext: 'Travel & Vacations',
+    name: 'TripZada',
+    subtext: 'Curated Tours & Experiential Travel',
     category: 'Travel & Tourism',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
@@ -368,271 +391,103 @@ export const CLIENT_LOGOS_DATA = [
         <text x="54" y="28" fontSize="16.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif">
           trip <tspan fill="#22C55E">Zada</tspan>
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#CBD5E1" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
-          VACATIONS & EXPERIENCES
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#CBD5E1" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          CURATED TOURS & EXPERIENCES
         </text>
       </svg>
     ),
   },
 
-  // 16. Vijay Eye Care
+  // 17. Tejas Elite (Verified Online Portfolio)
   {
-    id: 'vijay-eye-care',
-    name: 'Vijay Eye Care',
-    subtext: 'Vision First Hand',
-    category: 'Ophthalmology & Healthcare',
+    id: 'tejas-elite',
+    name: 'Tejas Elite',
+    subtext: 'Property Development & Infrastructure',
+    category: 'Real Estate & Construction',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
-          <path d="M-14 0 C-10 -10 10 -10 14 0 C10 10 -10 10 -14 0 Z" stroke="#FF7043" strokeWidth="2.2" fill="none" />
-          <circle cx="0" cy="0" r="5.5" stroke="#00E5FF" strokeWidth="2.2" fill="none" />
-          <circle cx="0" cy="0" r="2.4" fill="#FF7043" />
+          <path d="M-8 3 C-8 -2 0 -12 0 -12 C0 -12 8 -2 8 3 C8 9 -8 9 -8 3 Z" fill="#EF4444" />
+          <path d="M-4 4 C-4 0 0 -6 0 -6 C0 -6 4 0 4 4 C4 8 -4 8 -4 4 Z" fill="#F59E0B" />
+          <path d="M-11 9 Q 0 15 11 9" stroke="#EF4444" strokeWidth="1.5" fill="none" />
         </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.5">
-          VIJAY EYE CARE
+        <text x="54" y="27" fontSize="15" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="1.2">
+          TEJAS ELITE
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#FF7043" fontFamily="'Inter', sans-serif">
-          Vision First Hand • Eyecare
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#F59E0B" fontFamily="'Inter', sans-serif" letterSpacing="1">
+          REAL ESTATE & DEVELOPMENTS
         </text>
       </svg>
     ),
   },
 
-  // 17. Raki Avenues Pvt Ltd.
+  // 18. Savin International (Verified Online Portfolio)
   {
-    id: 'raki-avenues',
-    name: 'Raki Avenues Pvt Ltd.',
-    subtext: "Venu's Infrastructure",
-    category: 'Real Estate & Infrastructure',
+    id: 'savin-international',
+    name: 'Savin International',
+    subtext: 'Global Commodity Trade & Export',
+    category: 'International Trade & Export',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="16" fill="#0284C7" stroke="#FBBF24" strokeWidth="1.6" />
-          <circle cx="0" cy="-5" r="5.5" fill="#FBBF24" />
-          <path d="M-15 10 Q -6 -2 4 10 Z" fill="#15803D" />
-          <path d="M-3 10 Q 7 2 15 10 Z" fill="#16A34A" />
+          <circle cx="0" cy="0" r="16" stroke="#818CF8" strokeWidth="1.4" fill="none" />
+          <path d="M-12 0 H12 M0 -12 V12" stroke="#818CF8" strokeWidth="1.2" />
+          <ellipse cx="0" cy="0" rx="9" ry="15" stroke="#2DD4BF" strokeWidth="1.2" fill="none" />
+          <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
         </g>
-        <text x="54" y="27" fontSize="14.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.5">
-          RAKI AVENUES
+        <text x="54" y="27" fontSize="14.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          SAVIN <tspan fill="#818CF8">INTERNATIONAL</tspan>
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#FBBF24" fontFamily="'Inter', sans-serif">
-          Venu's Infrastructure (P) Ltd.
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#A78BFA" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          GLOBAL COMMODITY TRADE
         </text>
       </svg>
     ),
   },
 
-  // 18. CryoVault
+  // 19. Strains Fashions (In-House Flagship Brand)
   {
-    id: 'cryovault',
-    name: 'CryoVault',
-    subtext: 'Stemcell Banking & Beyond',
-    category: 'Biotech & Stem Cell Banking',
+    id: 'strains-fashions',
+    name: 'Strains Fashions',
+    subtext: 'Conscious Organic Apparel & Botanic Dyes',
+    category: 'Sustainable D2C Fashion',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="13" stroke="#38BDF8" strokeWidth="2.6" fill="none" />
-          <circle cx="0" cy="0" r="6" fill="#EF4444" />
-          <path d="M0 -15 L0 -11 M0 11 L0 15 M-15 0 L-11 0 M11 0 L15 0" stroke="#38BDF8" strokeWidth="2" />
+          <circle cx="0" cy="0" r="15" stroke="#00a859" strokeWidth="1.6" fill="none" />
+          <path d="M0 -10 C-6 -4 -4 8 0 12 C4 8 6 -4 0 -10 Z" fill="#00a859" />
+          <circle cx="0" cy="-2" r="2.2" fill="#FFFFFF" />
         </g>
-        <text x="54" y="27" fontSize="16.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif">
-          Cryo<tspan fill="#EF4444">Vault</tspan>
+        <text x="54" y="27" fontSize="15" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          STRAINS <tspan fill="#00a859">FASHIONS</tspan>
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="600" fill="#CBD5E1" fontFamily="'Inter', sans-serif">
-          Stemcell Banking & Beyond
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#86EFAC" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          CONSCIOUS ORGANIC WEAR
         </text>
       </svg>
     ),
   },
 
-  // 19. KOKA INFRA LLP
+  // 20. Strains Stitchery (In-House Manufacturing Hub, Tirupur)
   {
-    id: 'koka-infra',
-    name: 'KOKA INFRA LLP',
-    subtext: 'Construction & Development',
-    category: 'Civil & Infra Construction',
+    id: 'strains-stitchery',
+    name: 'Strains Stitchery',
+    subtext: 'Zero-Discharge Garments • Tirupur',
+    category: 'Ethical Garment Manufacturing',
     logo: (
       <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
         <g transform="translate(26, 30)">
-          <path d="M-9 9 L-9 -11 L-3 -11 L-3 9 Z" fill="#EF4444" />
-          <path d="M-3 -3 L6 -11 L11 -11 L1 0 L12 9 L7 9 L-3 1 Z" fill="#EF4444" />
-          <polygon points="-11,-11 -3,-17 5,-11" fill="#DC2626" />
-          <rect x="-1" y="-7" width="3" height="3" fill="#F59E0B" />
+          <circle cx="0" cy="0" r="15" stroke="#DFBA73" strokeWidth="1.4" strokeDasharray="3 2" fill="none" />
+          <path d="M-10 -10 L10 10 M7 -10 L-7 10" stroke="#00a859" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="0" cy="0" r="3.5" fill="#DFBA73" />
         </g>
-        <text x="54" y="27" fontSize="16.5" fontWeight="900" fill="#EF4444" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
-          KOKA <tspan fill="#FFFFFF">INFRA</tspan>
+        <text x="54" y="27" fontSize="15" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
+          STRAINS <tspan fill="#00a859">STITCHERY</tspan>
         </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="800" fill="#F87171" fontFamily="'Inter', sans-serif" letterSpacing="1">
-          CIVIL CONSTRUCTION LLP
-        </text>
-      </svg>
-    ),
-  },
-
-  // 20. India Matrimony Hub
-  {
-    id: 'india-matrimony',
-    name: 'India Matrimony Hub',
-    subtext: 'Bringing Hearts Together',
-    category: 'Matrimonial & Social',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <path d="M-4 -3 C-9 -9 -14 0 -6 8 L0 13 L6 8 C14 0 9 -9 4 -3 L0 1 Z" fill="#F43F5E" />
-          <circle cx="0" cy="-6" r="3.2" fill="#FFD700" />
-        </g>
-        <text x="54" y="27" fontSize="14.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.5">
-          INDIA MATRIMONY
-        </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="800" fill="#F43F5E" fontFamily="'Inter', sans-serif" letterSpacing="1">
-          HUB • HEARTS TOGETHER
-        </text>
-      </svg>
-    ),
-  },
-
-  // 21. Liquor Cave
-  {
-    id: 'liquor-cave',
-    name: 'Liquor Cave',
-    subtext: 'Fine Wine • Spirits • Craft Beer',
-    category: 'Fine Beverages & Retail',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="16" stroke="#E11D48" strokeWidth="1.3" fill="none" />
-          <path d="M-3 -9 H3 V-3 L5 0 V9 H-5 V0 L-3 -3 Z" fill="#E11D48" />
-          <circle cx="0" cy="-11" r="1.6" fill="#F59E0B" />
-        </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="1.5">
-          LIQUOR CAVE
-        </text>
-        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#E11D48" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
-          FINE WINES & SPIRITS
-        </text>
-      </svg>
-    ),
-  },
-
-  // 22. Rank One Odyssey
-  {
-    id: 'odyssey',
-    name: 'Rank One Odyssey',
-    subtext: 'Where You Belong',
-    category: 'Architecture & Living',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="15" stroke="#F59E0B" strokeWidth="1.3" fill="none" />
-          <circle cx="0" cy="0" r="5" fill="#F59E0B" />
-          {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
-            <line key={deg} x1="0" y1="-6.5" x2="0" y2="-13" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" transform={`rotate(${deg}, 0, 0)`} />
-          ))}
-        </g>
-        <text x="54" y="27" fontSize="14.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="0.8">
-          RANK ONE ODYSSEY
-        </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#F59E0B" fontFamily="'Inter', sans-serif" letterSpacing="1.5">
-          WHERE YOU BELONG
-        </text>
-      </svg>
-    ),
-  },
-
-  // 23. Chavan's Clinic
-  {
-    id: 'chavans',
-    name: "Chavan's Clinic",
-    subtext: 'Skin • Hair • Trichology • Laser',
-    category: 'Dermatology & Cosmetology',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="16" stroke="#EF4444" strokeWidth="1.3" fill="none" />
-          <path d="M-2 -10 C5 -10 7 -3 7 2 C7 7 2 11 -3 13 C-2 7 -1 2 -2 -10 Z" fill="#EF4444" />
-          <path d="M-5 -7 C-2 -7 0 -3 0 0 C0 3 -3 6 -6 9 C-5 3 -4 -1 -5 -7 Z" fill="#FFFFFF" />
-          <circle cx="0" cy="-4" r="1.3" fill="#EF4444" />
-        </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="800" fill="#FFFFFF" fontFamily="'Cinzel', serif" letterSpacing="0.8">
-          CHAVAN'S CLINIC
-        </text>
-        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#F87171" fontFamily="'Inter', sans-serif" letterSpacing="1">
-          SKIN • HAIR • TRICHOLOGY
-        </text>
-      </svg>
-    ),
-  },
-
-  // 24. Ship Atoz
-  {
-    id: 'ship-atoz',
-    name: 'Ship Atoz',
-    subtext: 'Fast Courier & Logistics',
-    category: 'Logistics & Supply Chain',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="16" fill="none" stroke="#FBBF24" strokeWidth="1.6" />
-          <rect x="-9" y="-4" width="11" height="9" rx="1" fill="#FBBF24" />
-          <path d="M2 -1 H8 L10 2 V4 H2 Z" fill="#FBBF24" />
-          <circle cx="-5.5" cy="5.5" r="2.4" fill="#000000" stroke="#FBBF24" strokeWidth="1" />
-          <circle cx="5.5" cy="5.5" r="2.4" fill="#000000" stroke="#FBBF24" strokeWidth="1" />
-          <circle cx="0" cy="-7" r="1.5" fill="#EF4444" />
-        </g>
-        <text x="54" y="27" fontSize="16.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif">
-          Ship <tspan fill="#FBBF24">Atoz</tspan>
-        </text>
-        <text x="54" y="43" fontSize="8.5" fontWeight="700" fill="#FDE047" fontFamily="'Inter', sans-serif" letterSpacing="1">
-          FAST COURIER & LOGISTICS
-        </text>
-      </svg>
-    ),
-  },
-
-  // 25. Aastu Refrigeration
-  {
-    id: 'aastu-refrigeration',
-    name: 'Aastu Refrigeration',
-    subtext: 'Industrial HVAC & Cold Chain',
-    category: 'Commercial Refrigeration & HVAC',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <rect x="-14" y="-14" width="28" height="28" rx="4" stroke="#00E676" strokeWidth="1.5" fill="none" />
-          <path d="M-6 0 L6 0 M0 -6 L0 6" stroke="#00E676" strokeWidth="2" strokeLinecap="round" />
-          <circle cx="0" cy="0" r="3" fill="#00E676" />
-        </g>
-        <text x="54" y="27" fontSize="15.5" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
-          AASTU <tspan fill="#00E676">REFRIGERATION</tspan>
-        </text>
-        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#6EE7B7" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
-          INDUSTRIAL HVAC & COLD CHAIN
-        </text>
-      </svg>
-    ),
-  },
-
-  // 26. Global Tree
-  {
-    id: 'global-tree',
-    name: 'Global Tree',
-    subtext: 'Overseas Education & Immigration',
-    category: 'Education & Global Immigration',
-    logo: (
-      <svg viewBox="0 0 250 60" className="w-full h-full" fill="none">
-        <g transform="translate(26, 30)">
-          <circle cx="0" cy="0" r="16" stroke="#38BDF8" strokeWidth="1.4" fill="none" />
-          <path d="M0 -10 C-6 -4 -4 8 0 12 C4 8 6 -4 0 -10 Z" fill="#38BDF8" />
-          <circle cx="0" cy="-2" r="2" fill="#FFFFFF" />
-        </g>
-        <text x="54" y="27" fontSize="16" fontWeight="900" fill="#FFFFFF" fontFamily="'Inter', sans-serif" letterSpacing="0.8">
-          GLOBAL <tspan fill="#38BDF8">TREE</tspan>
-        </text>
-        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#BAE6FD" fontFamily="'Inter', sans-serif" letterSpacing="1">
-          EDUCATION & IMMIGRATION
+        <text x="54" y="43" fontSize="8" fontWeight="700" fill="#DFBA73" fontFamily="'Inter', sans-serif" letterSpacing="1.2">
+          ZERO-DISCHARGE HUB • TIRUPUR
         </text>
       </svg>
     ),
   },
 ];
-

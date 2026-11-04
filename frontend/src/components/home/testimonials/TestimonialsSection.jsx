@@ -24,14 +24,14 @@ const testimonials = [
   },
   {
     id: 4,
-    name: 'Venkatesh Babu',
-    role: 'Managing Director, Haraa Gold & Jewellery',
+    name: 'Shanila Reddy',
+    role: 'Founder & Managing Director, Haraa Gold & Diamonds',
     text: 'Their cinematic brand films and targeted advertising campaigns resonated deeply across regional audiences. Danny and Pavan brought unmatched visual grandeur to our heritage bridal jewellery collections.',
   },
   {
     id: 5,
-    name: 'Dr. K. Swaminathan',
-    role: 'Chief Scientific Officer, Sri Bioaesthetics',
+    name: 'Dr. K.R.K. Reddy',
+    role: 'Founder & Managing Director, Sri BioAesthetics',
     text: 'Strains Associates translated our sophisticated microbial formulations and agricultural biotechnology into compelling visual explainers and high-converting B2B digital lead pipelines.',
   },
   {

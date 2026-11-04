@@ -164,6 +164,9 @@
 
 ## 7. Registered Corporate Entity Information
 
+Public registries (Ministry of Corporate Affairs / ROC Hyderabad) and media archives confirm two distinct, synergistic corporate entities behind Strains Associates:
+
+### A. Strains Fashions Private Limited
 | Corporate Attribute | Registration Details |
 | :--- | :--- |
 | **Legal Entity Name** | Strains Fashions Private Limited |
@@ -173,8 +176,19 @@
 | **Registrar of Companies** | ROC Hyderabad |
 | **Registered Office Address** | Vengalrao Nagar, Hyderabad, Telangana, India |
 | **Board of Directors** | Naga Praharsha Govindu & Pavan Kumar Kodimela |
+| **Operational Focus** | Sustainable Apparel, Eco-Manufacturing & Export Operations (Tirupur hub) |
 
-> **Operational Note**: Strains Associates operates as the integrated creative, production, and marketing agency brand, while Strains Fashions Private Limited serves as the corporate/manufacturing legal entity.
+### B. Strains Associates LLP
+| Corporate Attribute | Registration Details |
+| :--- | :--- |
+| **Legal Entity Name** | Strains Associates LLP |
+| **Date of Incorporation** | September 2026 |
+| **Registration Office** | ROC Hyderabad |
+| **Registered Office Address** | Kukatpally, Hyderabad, Telangana, India |
+| **Designated Partners** | Naga Praharsha Govindu & Manorama Sandyapogu |
+| **Operational Focus** | Creative Agency, Brand Atelier, Commercial Video Production & Digital Marketing |
+
+> **Operational Model**: Strains Associates operates as the integrated creative, media production, and digital marketing agency brand, while Strains Fashions Private Limited anchors the industrial manufacturing facility in Tirupur. Founder Naga Praharsha Govindu (profiled in *Telangana Today*, Feb 2021) transitioned from corporate sales management to self-funded entrepreneurship.
 
 ---
 

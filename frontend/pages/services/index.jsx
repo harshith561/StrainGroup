@@ -9,6 +9,7 @@ import {
   ServiceTestimonials,
   ServiceBottomCTA,
 } from '@/components/services';
+import { AboutBrandsMarqueeSection } from '@/components/about';
 
 export default function ServicesPage() {
   return (
@@ -37,7 +38,13 @@ export default function ServicesPage() {
         {/* Section 3: Why should you choose Strains (Pointing Man + Revenue Card + Customers Pill) */}
         <ServiceWhyChoose />
 
-        {/* Section 4: Our latest work (3 Portfolio Showcase Cards) */}
+        {/* Client Brands Marquee Showcase */}
+        <AboutBrandsMarqueeSection
+          title="TRUSTED BY INDUSTRY LEADERS"
+          subtitle="Partnering with market leaders, infrastructure giants, and visionary labels across India."
+        />
+
+        {/* Section 4: Our latest work (6 Portfolio Showcase Cards) */}
         <ServiceLatestWork />
 
         {/* Section 5: Testimonials (3 Client Reviews + Carousel Indicators) */}
