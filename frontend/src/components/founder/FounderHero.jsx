@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles, MapPin, Award, ShieldCheck } from 'lucide-react';
+import { ArrowDown, Sparkles } from 'lucide-react';
 
 export default function FounderHero() {
   const founderImage = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85';
@@ -62,30 +62,9 @@ export default function FounderHero() {
               <p className="text-white/90 italic font-sans text-sm sm:text-base leading-relaxed">
                 “Fashion doesn’t need to poison rivers to look breathtaking. And brand films don’t need to be hollow to drive millions in growth.”
               </p>
-              <div className="mt-2.5 flex items-center justify-between text-xs font-mono text-neutral-400">
+              <div className="mt-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-neutral-400">
                 <span className="text-[#00a859] font-bold">— Naga Praharsha Govindu</span>
                 <span>Founder &amp; Strategy Maker</span>
-              </div>
-            </motion.div>
-
-            {/* Credential Tags */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex flex-wrap items-center gap-3 text-xs font-mono text-neutral-400 mb-8"
-            >
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 border border-white/5">
-                <MapPin className="w-3.5 h-3.5 text-[#00a859]" />
-                <span>HQ: Hyderabad &amp; Tirupur</span>
-              </div>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 border border-white/5">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#00a859]" />
-                <span>CIN: U51494TG2018PTC128277</span>
-              </div>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 border border-white/5">
-                <Award className="w-3.5 h-3.5 text-[#84cc16]" />
-                <span>Featured in Telangana Today</span>
               </div>
             </motion.div>
 
@@ -93,7 +72,7 @@ export default function FounderHero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.25 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
               className="flex flex-wrap items-center gap-4"
             >
               <button
@@ -148,12 +127,6 @@ export default function FounderHero() {
                       Strains Associates LLP &amp; Strains Fashions Pvt Ltd
                     </p>
                   </div>
-                </div>
-
-                {/* Sub-ribbon under image */}
-                <div className="mt-3 pt-2.5 px-2 flex items-center justify-between text-[11px] font-mono text-neutral-400">
-                  <span>ROC Hyderabad Regd.</span>
-                  <span className="text-[#00a859] font-medium">Est. November 2018</span>
                 </div>
 
               </div>

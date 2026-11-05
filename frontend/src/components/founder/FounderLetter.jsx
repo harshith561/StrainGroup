@@ -23,9 +23,6 @@ export default function FounderLetter() {
           >
             A Letter to Every Founder &amp; Creator
           </motion.h2>
-          <p className="mt-3 text-neutral-400 font-mono text-xs sm:text-sm">
-            Hyderabad Studio • Telangana, India
-          </p>
         </div>
 
         {/* The Letter Paper / Card Container */}
@@ -37,14 +34,10 @@ export default function FounderLetter() {
           className="founder-letter-box rounded-2xl p-8 sm:p-12 md:p-16 text-neutral-300 leading-relaxed font-sans text-base sm:text-lg"
         >
           {/* Header of Letter */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-8 mb-8 border-b border-white/10 font-mono text-xs text-neutral-400">
+          <div className="pb-8 mb-8 border-b border-white/10 font-mono text-xs text-neutral-400">
             <div>
               <span className="text-white font-bold block text-sm">NAGA PRAHARSHA GOVINDU</span>
               <span className="text-[#00a859]">Founder &amp; Line Producer</span>
-            </div>
-            <div className="text-left sm:text-right">
-              <span className="block text-neutral-300">Strains Associates &amp; Strains Fashions</span>
-              <span className="text-neutral-500">Kukatpally, Hyderabad × Tirupur Hub</span>
             </div>
           </div>
 
@@ -117,7 +110,7 @@ export default function FounderLetter() {
           </div>
 
           {/* Letter Footer & Sign-off */}
-          <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
+          <div className="mt-12 pt-8 border-t border-white/10">
             <div>
               <span className="block text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3">
                 With Warmth &amp; Conviction,
@@ -133,11 +126,6 @@ export default function FounderLetter() {
                 Strains Associates &amp; Strains Fashions Private Limited
               </p>
             </div>
-
-            <div className="text-left sm:text-right font-mono text-xs text-neutral-500">
-              <span>Hyderabad Studio × Tirupur Hub</span>
-            </div>
-
           </div>
 
         </motion.div>

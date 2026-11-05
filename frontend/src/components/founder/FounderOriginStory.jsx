@@ -44,7 +44,7 @@ export default function FounderOriginStory() {
       quote:
         '“I had no angel investors. Just personal savings, stubborn belief, and a one-way train ticket down south to the textile mills.”',
       details: [
-        'CIN: U51494TG2018PTC128277 registered at ROC Hyderabad.',
+        'Official incorporation of Strains Fashions Private Limited.',
         'Initial setup focused on ethical supply chain architecture and fair artisan wages.',
         'Committed 100% of bootstrapping capital to sustainable fabric research.',
       ],
@@ -76,7 +76,7 @@ export default function FounderOriginStory() {
       icon: Film,
       image: '/images/ecosystem/synergy-camera-cinematography.jpg',
       summary:
-        'Profiled in Telangana Today (Feb 2021), Praharsha realized green products fail if their brand films look amateur. He founded Strains Associates in Hyderabad, assembling Pavan, Danny, and Prasad.',
+        'In early 2021, Praharsha realized green products fail if their brand films look amateur. He founded Strains Associates in Hyderabad, assembling Pavan, Danny, and Prasad.',
       quote:
         '“We realized sustainability won’t win on guilt; it wins on desire. We brought DaVinci color grading, cinematic camera crews, and high-performance Google Ads into our arsenal.”',
       details: [
@@ -164,8 +164,8 @@ export default function FounderOriginStory() {
             {/* Left Story Column */}
             <div className="lg:col-span-7 flex flex-col justify-between p-6 sm:p-10 rounded-2xl bg-[#121212] border border-white/10">
               <div>
-                <div className="flex items-center justify-between gap-4 mb-4">
-                  <span className="px-3 py-1 rounded bg-[#00a859]/15 border border-[#00a859]/30 text-[#4ade80] font-mono text-xs font-semibold tracking-wider uppercase">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between items-start gap-2.5 sm:gap-4 mb-4">
+                  <span className="px-3 py-1 rounded bg-[#00a859]/15 border border-[#00a859]/30 text-[#4ade80] font-mono text-xs font-semibold tracking-wider uppercase inline-block">
                     Chapter 0{activeChapter + 1} • {current.year}
                   </span>
                   <span className="text-xs font-mono text-neutral-500">
