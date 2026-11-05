@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { ShieldCheck, Award, CheckCircle2, QrCode, FileText, Check, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Award, CheckCircle2, FileText, Check } from 'lucide-react';
 
 const CERTIFICATIONS = [
   {
@@ -15,8 +14,8 @@ const CERTIFICATIONS = [
   },
   {
     code: 'OEKO-TEX',
-    title: 'OEKO-TEX Standard 100 (Class I)',
-    standard: 'Tested for Harmful Substances',
+    title: 'OEKO-TEX Standard 100',
+    standard: 'Class I • Tested for Harmful Substances',
     description:
       'Certified Class I (the strictest tier, safe for baby skin). Zero toxic formaldehyde, heavy metals, volatile organic compounds (VOCs), or carcinogenic chemical dyes.',
     badge: '100% Non-Toxic',
@@ -46,12 +45,12 @@ const CERTIFICATIONS = [
     badge: 'Living Wage',
   },
   {
-    code: 'SEED-TO-SHELF',
-    title: 'End-to-End Batch Traceability',
-    standard: 'QR-Enabled Production Ledgers',
+    code: 'LAB TESTED',
+    title: 'Colorfastness & Quality Audits',
+    standard: 'Batch Testing & Fiber Integrity',
     description:
-      'Every production batch includes complete laboratory test reports, yarn count verification, fiber origin documentation, and optional custom QR codes for your consumer packaging.',
-    badge: 'Traceability',
+      'Every fabric run undergoes testing for washfastness, tensile strength, shrinkage, and skin safety to guarantee lasting quality and comfort.',
+    badge: 'Lab Tested',
   },
 ];
 
@@ -119,32 +118,6 @@ export default function SustainabilityCertifications() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Traceability Callout Banner */}
-        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-[#161616] via-[#121212] to-[#181818] border border-white/10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 flex-1">
-            <div className="w-14 h-14 rounded-2xl bg-[#00a859]/20 border border-[#00e676]/40 flex items-center justify-center text-[#00e676] shrink-0 shadow-[0_0_20px_rgba(0,230,118,0.15)]">
-              <QrCode className="w-7 h-7" />
-            </div>
-            <div>
-              <h4 className="text-xl sm:text-2xl font-sans font-black text-white mb-2 leading-tight">
-                Consumer-Facing Transparency QR Tags
-              </h4>
-              <p className="text-xs sm:text-sm text-neutral-300 font-sans max-w-2xl leading-relaxed">
-                Empower your customers to scan the plantable seed tag with their smartphone to view 
-                the exact farm origin, closed-loop water metrics, and natural botanical dye recipes for their garment.
-              </p>
-            </div>
-          </div>
-
-          <Link
-            href="/contact"
-            className="w-full lg:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-[#00a859] hover:text-black border border-white/15 text-white font-sans font-bold text-xs uppercase tracking-wider transition-all duration-300 text-center flex items-center justify-center gap-2 shrink-0 group"
-          >
-            <span>Inquire About QR Program</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
         </div>
       </div>
     </section>
