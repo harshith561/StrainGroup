@@ -42,14 +42,14 @@ export default function PricingHero({ billingCycle, setBillingCycle }) {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="inline-flex items-center p-1.5 rounded-full bg-[#161616] border border-white/10 shadow-inner"
+          className="flex flex-col sm:inline-flex sm:flex-row items-stretch sm:items-center w-full max-w-[320px] sm:max-w-none sm:w-auto p-1.5 rounded-2xl sm:rounded-full bg-[#161616] border border-white/10 shadow-inner gap-1.5 sm:gap-0"
           role="group"
           aria-label="Billing cycle selector"
         >
           <button
             type="button"
             onClick={() => setBillingCycle('monthly')}
-            className={`px-5 py-2 rounded-full text-xs sm:text-sm font-mono tracking-wider transition-all duration-300 ${
+            className={`w-full sm:w-auto px-5 py-2.5 sm:py-2 rounded-xl sm:rounded-full text-xs sm:text-sm font-mono tracking-wider whitespace-nowrap transition-all duration-300 text-center flex items-center justify-center ${
               billingCycle === 'monthly'
                 ? 'bg-[#00a859] text-black font-bold shadow-md'
                 : 'text-neutral-400 hover:text-white'
@@ -60,14 +60,20 @@ export default function PricingHero({ billingCycle, setBillingCycle }) {
           <button
             type="button"
             onClick={() => setBillingCycle('project')}
-            className={`px-5 py-2 rounded-full text-xs sm:text-sm font-mono tracking-wider transition-all duration-300 flex items-center gap-1.5 ${
+            className={`w-full sm:w-auto px-5 py-2.5 sm:py-2 rounded-xl sm:rounded-full text-xs sm:text-sm font-mono tracking-wider whitespace-nowrap transition-all duration-300 flex items-center justify-center gap-2 ${
               billingCycle === 'project'
                 ? 'bg-[#00a859] text-black font-bold shadow-md'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
             <span>PROJECT / SPRINT</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-white/20 text-white font-mono uppercase">
+            <span
+              className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono uppercase ${
+                billingCycle === 'project'
+                  ? 'bg-black/20 text-black'
+                  : 'bg-white/10 text-white/80'
+              }`}
+            >
               Milestone
             </span>
           </button>
