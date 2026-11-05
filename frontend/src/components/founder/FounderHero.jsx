@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Sparkles } from 'lucide-react';
 
 export default function FounderHero() {
-  const founderImage = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85';
+  const founderImage = '/images/ecosystem/team-praharsha.jpg';
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);

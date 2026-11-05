@@ -29,7 +29,7 @@ export default function FounderPage() {
     ],
     description:
       'Founder and Director of Strains Associates and Strains Fashions Private Limited. Strategy maker and line producer driving cinematic commercial films, full-funnel digital growth, and zero-discharge sustainable apparel manufacturing in Hyderabad and Tirupur.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85',
+    image: '/images/ecosystem/team-praharsha.jpg',
     url: 'https://strains.in/founder',
     sameAs: [
       'https://www.linkedin.com',
@@ -56,7 +56,7 @@ export default function FounderPage() {
         />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://strains.in/founder" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85" />
+        <meta property="og:image" content="/images/ecosystem/team-praharsha.jpg" />
         <link rel="canonical" href="https://strains.in/founder" />
         
         {/* JSON-LD Schema */}

@@ -8,32 +8,31 @@ const teamMembers = [
     id: 1,
     name: 'Praharsha',
     role: 'Strategy Maker and Line Producer',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80',
+    image: '/images/ecosystem/team-praharsha.jpg',
     profileUrl: '/team/naga-praharsha',
   },
   {
     id: 2,
     name: 'Pavan',
     role: 'Head of Photography and Videography',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80',
+    image: '/images/ecosystem/team-pavan.jpg',
     profileUrl: '/team/pavan-kumar',
   },
   {
     id: 3,
     name: 'Danny',
     role: 'Head of Direction and Post-production',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400&q=80',
+    image: '/images/ecosystem/team-danny.jpg',
     profileUrl: '/team/danny-cooper',
   },
   {
     id: 4,
     name: 'Prasad',
     role: 'Head of Digital Marketing Team',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80',
+    image: '/images/ecosystem/team-prasad.jpg',
     profileUrl: '/team/prasad-varma',
   },
 ];
-
 
 export default function TeamSection() {
   const [revealed, setRevealed] = useState(false);
@@ -90,7 +89,7 @@ export default function TeamSection() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="member-image"
+                  className="member-image object-cover object-top w-full h-full"
                   loading="lazy"
                   decoding="async"
                   onLoad={(e) => {
@@ -98,8 +97,8 @@ export default function TeamSection() {
                   }}
                 />
                 <div className="member-info-overlay">
-                  <h4 className="member-name font-sans">{member.name}</h4>
-                  <span className="member-role font-mono">{member.role}</span>
+                  <h3 className="member-name font-sans">{member.name}</h3>
+                  <p className="member-role font-mono">{member.role}</p>
                 </div>
               </div>
             </Link>

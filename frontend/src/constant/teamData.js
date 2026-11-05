@@ -20,7 +20,7 @@ export const TEAM_MEMBERS = [
     name: 'Praharsha',
     slug: 'naga-praharsha',
     designation: 'Strategy Maker and Line Producer',
-    profileImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85',
+    profileImage: '/images/ecosystem/team-praharsha.jpg',
     description: [
       'Naga Praharsha Govindu is the Founder and Director of Strains Associates and Strains Fashions Private Limited. Acting as chief Strategy Maker and Line Producer, Praharsha drives multi-tier client engagements, brand development, creative campaigns, and eco-fashion manufacturing.',
       'He champions zero-discharge industrial processes, circular supply-chain models, and high-impact brand storytelling, seamlessly uniting creative digital studio execution in Hyderabad with industrial apparel production in Tirupur.',
@@ -35,7 +35,7 @@ export const TEAM_MEMBERS = [
     name: 'Pavan',
     slug: 'pavan-kumar',
     designation: 'Head of Photography and Videography',
-    profileImage: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=85',
+    profileImage: '/images/ecosystem/team-pavan.jpg',
     description: [
       'Pavan Kumar Kodimela is a Director and Head of Photography and Videography at Strains Associates. He leads the visual capture department, managing technical camera crews, drone videography, and professional studio lighting rigs.',
       'From editorial fashion lookbooks and commercial product showcases to heavy industrial and corporate shoots, Pavan crafts evocative visual atmospheres that define modern category leaders.',
@@ -50,7 +50,7 @@ export const TEAM_MEMBERS = [
     name: 'Danny',
     slug: 'danny-cooper',
     designation: 'Head of Direction and Post-production',
-    profileImage: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=85',
+    profileImage: '/images/ecosystem/team-danny.jpg',
     description: [
       'Danny leads Direction and Post-production at Strains Associates, bringing cinematic grandeur and precision pacing to commercial brand films, corporate videos, and social reels.',
       'His multidisciplinary mastery spans script direction, offline/online video editing, high-end colour grading, visual effects (VFX), motion graphics, and immersive sound design.',
@@ -65,7 +65,7 @@ export const TEAM_MEMBERS = [
     name: 'Prasad',
     slug: 'prasad-varma',
     designation: 'Head of Digital Marketing Team',
-    profileImage: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=1200&q=85',
+    profileImage: '/images/ecosystem/team-prasad.jpg',
     description: [
       'Prasad heads the Digital Marketing Team at Strains Associates, orchestrating full-funnel performance marketing, Google Ads campaigns, SEO, and social media advertising across Facebook and Instagram.',
       'With proven achievements including a verified 90.8% Google Ads optimization score and industry-leading low CPCs for major enterprises, Prasad integrates data analytics with high-converting creative distribution.',
@@ -105,14 +105,12 @@ export const TEAM_MEMBERS = [
     dribbble: null,
     linkedin: 'https://linkedin.com',
   },
-
-
   {
     id: 'james-david',
     name: 'James David',
     slug: 'james-david',
     designation: 'Creative Director',
-    profileImage: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80',
+    profileImage: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1200&q=80',
     description: [
       'James guides the overall artistic vision and brand identity across client engagements at Strains. Combining traditional design discipline with modern digital experimentation, he crafts memorable brand worlds.',
       'With a decade of experience helming creative teams, James ensures every project resonates emotionally with audiences while fulfilling strategic business goals.',
@@ -127,7 +125,7 @@ export const TEAM_MEMBERS = [
     name: 'Martin Carlos',
     slug: 'martin-carlos',
     designation: 'Senior Web Developer',
-    profileImage: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=1200&q=80',
+    profileImage: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80',
     description: [
       'Martin architects scalable frontend systems, performant interactive animations, and robust web applications. He bridges design fidelity with engineering precision to deliver silky smooth user experiences.',
       "Specializing in modern JavaScript frameworks and creative coding, Martin ensures the agency's digital builds achieve industry-leading speed, accessibility, and visual fluidity.",
@@ -142,7 +140,7 @@ export const TEAM_MEMBERS = [
     name: 'Garry J. Coburn',
     slug: 'garry-j-coburn',
     designation: 'Motion Designer',
-    profileImage: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=80',
+    profileImage: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=80',
     description: [
       'Garry transforms static design systems into dynamic kinetic visual narratives. His work brings life to user interfaces, video promos, and interactive brand assets.',
       'Focusing on micro-interactions and high-impact title sequences, Garry blends rhythm, timing, and bold graphic sensibility to engage viewers instantaneously.',
