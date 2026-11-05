@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { ArrowRight, CheckCircle2, AlertCircle, Loader2, Sparkles } from 'lucide-react';
 
 
 /**
@@ -21,6 +22,28 @@ export default function ContactForm() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const router = useRouter();
+  const [selectedPlanQuery, setSelectedPlanQuery] = useState('');
+
+  // Prefill form message if user navigated from pricing page with a selected plan
+  useEffect(() => {
+    if (router && router.isReady) {
+      const { plan, cycle, addons } = router.query;
+      if (plan) {
+        setSelectedPlanQuery(plan);
+        const details = [];
+        if (cycle) details.push(cycle === 'monthly' ? 'Monthly Retainer' : 'Project / Sprint');
+        if (addons) details.push(`Add-ons: ${addons}`);
+        const extraNote = details.length > 0 ? ` (${details.join(' | ')})` : '';
+
+        setFormData((prev) => ({
+          ...prev,
+          message: prev.message || `Hi, I am interested in getting started with the "${plan}" plan${extraNote}. Let's discuss our brand requirements and next steps.`,
+        }));
+      }
+    }
+  }, [router, router?.isReady, router?.query]);
 
   // Field change handler
   const handleChange = (e) => {
@@ -148,6 +171,20 @@ export default function ContactForm() {
             <div className="mb-6 p-4 rounded bg-red-950/40 border border-red-800 text-red-200 text-sm flex items-center gap-2">
               <AlertCircle size={16} />
               <span>{errors.form}</span>
+            </div>
+          )}
+
+          {selectedPlanQuery && (
+            <div className="mb-6 p-3.5 rounded-xl bg-[#00a859]/10 border border-[#00a859]/30 text-white text-xs sm:text-sm font-sans flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-[#00a859] shrink-0" />
+                <span>
+                  Selected Plan: <strong className="text-[#00a859] font-bold">{selectedPlanQuery}</strong>
+                </span>
+              </div>
+              <span className="text-[11px] font-mono text-neutral-400 hidden sm:inline">
+                Pre-filled in message
+              </span>
             </div>
           )}
 
