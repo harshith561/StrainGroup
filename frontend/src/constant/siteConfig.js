@@ -21,8 +21,8 @@ export const SITE_CONFIG = {
     process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL ||
     'https://www.google.com/search?q=Strains+Associates+Hyderabad+reviews#lrd=0x0:0x0,3,,,',
   socials: {
-    instagram: 'https://instagram.com/strainsassociates',
-    youtube: 'https://youtube.com/@strainsassociates',
+    instagram: 'https://instagram.com',
+    youtube: 'https://youtube.com',
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com',
     facebook: 'https://facebook.com',

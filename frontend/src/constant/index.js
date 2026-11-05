@@ -9,3 +9,4 @@ export * from './startYourBrandConfig';
 export * from './sustainabilityConfig';
 export * from './testimonialsData';
 export * from './caseStudiesData';
+export * from './shopData';

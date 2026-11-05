@@ -25,11 +25,12 @@ export default function ContactForm() {
 
   const router = useRouter();
   const [selectedPlanQuery, setSelectedPlanQuery] = useState('');
+  const [selectedProductQuery, setSelectedProductQuery] = useState('');
 
-  // Prefill form message if user navigated from pricing page with a selected plan
+  // Prefill form message if user navigated from pricing or shop page
   useEffect(() => {
     if (router && router.isReady) {
-      const { plan, cycle, addons } = router.query;
+      const { plan, cycle, addons, product, category } = router.query;
       if (plan) {
         setSelectedPlanQuery(plan);
         const details = [];
@@ -40,6 +41,18 @@ export default function ContactForm() {
         setFormData((prev) => ({
           ...prev,
           message: prev.message || `Hi, I am interested in getting started with the "${plan}" plan${extraNote}. Let's discuss our brand requirements and next steps.`,
+        }));
+      } else if (product) {
+        const productTitle = Array.isArray(product) ? product[0] : product;
+        const categoryTitle = Array.isArray(category) ? category[0] : category;
+        setSelectedProductQuery(productTitle);
+        const catNote = categoryTitle ? ` (${categoryTitle})` : '';
+
+        setFormData((prev) => ({
+          ...prev,
+          message:
+            prev.message ||
+            `Hi Strains team, I would like to inquire about the "${productTitle}"${catNote} from your apparel catalog. Please share details regarding sample availability, custom private-label branding, and minimum order quantities.`,
         }));
       }
     }
@@ -180,6 +193,20 @@ export default function ContactForm() {
                 <CheckCircle2 size={16} className="text-[#00a859] shrink-0" />
                 <span>
                   Selected Plan: <strong className="text-[#00a859] font-bold">{selectedPlanQuery}</strong>
+                </span>
+              </div>
+              <span className="text-[11px] font-mono text-neutral-400 hidden sm:inline">
+                Pre-filled in message
+              </span>
+            </div>
+          )}
+
+          {selectedProductQuery && (
+            <div className="mb-6 p-3.5 rounded-xl bg-[#00a859]/10 border border-[#00a859]/30 text-white text-xs sm:text-sm font-sans flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-[#00a859] shrink-0" />
+                <span>
+                  Apparel Inquiry: <strong className="text-[#00a859] font-bold">{selectedProductQuery}</strong>
                 </span>
               </div>
               <span className="text-[11px] font-mono text-neutral-400 hidden sm:inline">
