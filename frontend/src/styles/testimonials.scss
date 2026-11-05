@@ -1,0 +1,112 @@
+/* ==========================================================================
+   TESTIMONIALS & HUMAN STORIES STYLES
+   Dark theme luxury aesthetic with emerald (#00a859) & gold (#dfba73) accents
+   ========================================================================== */
+
+.testimonials-page-wrapper {
+  background-color: #0c0c0c;
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ambient glow orbs */
+.testimonial-glow-emerald {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 168, 89, 0.12) 0%, rgba(0, 168, 89, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonial-glow-gold {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(223, 186, 115, 0.08) 0%, rgba(223, 186, 115, 0) 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glassmorphism card */
+.testimonial-card-glass {
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: rgba(0, 168, 89, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 168, 89, 0.15), 0 0 0 1px rgba(0, 168, 89, 0.2);
+  }
+}
+
+.testimonial-card-human {
+  background: rgba(22, 22, 22, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: rgba(223, 186, 115, 0.45);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(223, 186, 115, 0.12), 0 0 0 1px rgba(223, 186, 115, 0.25);
+  }
+}
+
+/* Quote watermarks */
+.quote-watermark {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.75rem;
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  user-select: none;
+  transition: color 0.4s ease;
+}
+
+.testimonial-card-glass:hover .quote-watermark {
+  color: rgba(0, 168, 89, 0.1);
+}
+
+.testimonial-card-human:hover .quote-watermark {
+  color: rgba(223, 186, 115, 0.12);
+}
+
+/* Video modal backdrop */
+.video-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Metric badge shimmer */
+@keyframes metricGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 168, 89, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 168, 89, 0.45);
+  }
+}
+
+.metric-glow-badge {
+  animation: metricGlow 4s ease-in-out infinite;
+}
+

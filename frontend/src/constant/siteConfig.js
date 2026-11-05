@@ -17,6 +17,9 @@ export const SITE_CONFIG = {
   contactEmail: 'hello@strainsassociates.com',
   contactPhone: '+91 8686819898',
   establishedYear: 2018,
+  googleReviewUrl:
+    process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL ||
+    'https://www.google.com/search?q=Strains+Associates+Hyderabad+reviews#lrd=0x0:0x0,3,,,',
   socials: {
     instagram: 'https://instagram.com/strainsassociates',
     youtube: 'https://youtube.com/@strainsassociates',
