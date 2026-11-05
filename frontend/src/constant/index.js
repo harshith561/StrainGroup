@@ -6,5 +6,6 @@ export * from './advertisingMarketingConfig';
 export * from './clothingManufacturingConfig';
 export * from './fashionBrandConfig';
 export * from './startYourBrandConfig';
+export * from './sustainabilityConfig';
 export * from './testimonialsData';
 export * from './caseStudiesData';
