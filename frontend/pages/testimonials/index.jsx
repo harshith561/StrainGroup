@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';

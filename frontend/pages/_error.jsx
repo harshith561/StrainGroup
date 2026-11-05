@@ -1,24 +1,22 @@
 import React from 'react';
-import Link from 'next/link';
+import Head from 'next/head';
+import { CommonErrorView } from '@/components/common';
 
 export default function ErrorPage({ statusCode }) {
+  const isServer = !statusCode || statusCode >= 500;
+  const errorType = statusCode === 409 ? '409' : isServer ? 'server-issue' : '404';
+
   return (
-    <div className="min-h-screen bg-[#050505] text-white flex flex-col items-center justify-center px-6 text-center">
-      <h1 className="text-6xl sm:text-8xl font-sans font-black text-[#00e676] mb-4">
-        {statusCode || '500'}
-      </h1>
-      <p className="text-neutral-300 text-base sm:text-lg mb-8 max-w-md">
-        {statusCode
-          ? `An error ${statusCode} occurred on the server.`
-          : 'An unexpected application error occurred.'}
-      </p>
-      <Link
-        href="/"
-        className="px-8 py-3.5 rounded-xl bg-[#00a859] hover:bg-[#00e676] text-black font-sans font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_4px_20px_rgba(0,168,89,0.3)]"
-      >
-        Return to Home
-      </Link>
-    </div>
+    <>
+      <Head>
+        <title>{statusCode ? `${statusCode} Error` : 'Server Issue'} — Strains Associates</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <CommonErrorView
+        type={errorType}
+        statusCode={statusCode ? String(statusCode) : '500'}
+      />
+    </>
   );
 }
 
@@ -26,4 +24,3 @@ ErrorPage.getInitialProps = ({ res, err }) => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
   return { statusCode };
 };
-
