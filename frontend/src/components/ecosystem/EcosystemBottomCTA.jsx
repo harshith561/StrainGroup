@@ -33,7 +33,7 @@ export default function EcosystemBottomCTA() {
           whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="rounded-3xl border border-white/10 bg-[#121212]/90 backdrop-blur-2xl p-8 sm:p-14 lg:p-16 shadow-[0_30px_80px_rgba(0,0,0,0.8)] relative overflow-hidden"
+          className="ecosystem-cta-card rounded-3xl border border-white/10 bg-[#121212]/90 backdrop-blur-2xl p-8 sm:p-14 lg:p-16 shadow-[0_30px_80px_rgba(0,0,0,0.8)] relative overflow-hidden"
         >
           {/* Top Subtle Beam Line */}
           <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-gradient-to-r from-transparent via-[#00a859] to-transparent" />
@@ -60,7 +60,7 @@ export default function EcosystemBottomCTA() {
               ))}
             </div>
 
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-[#8c8c8c]">
+            <div className="ecosystem-live-badge inline-flex items-center gap-2 font-mono text-xs text-[#8c8c8c]">
               <span className="w-2 h-2 rounded-full bg-[#00a859] animate-pulse" />
               <span>Praharsha, Danny, Pavan & Prasad &mdash; Live in Hyderabad Studio</span>
             </div>
@@ -79,7 +79,7 @@ export default function EcosystemBottomCTA() {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
             <Link
               href="/contact"
-              className="pill-button"
+              className="pill-button ecosystem-cta-btn-primary"
               style={{ backgroundColor: '#00a859', borderColor: '#00a859', color: '#000', fontSize: '13px', padding: '14px 34px', fontWeight: '800' }}
             >
               <Calendar size={15} style={{ marginRight: '8px' }} />
@@ -88,7 +88,7 @@ export default function EcosystemBottomCTA() {
 
             <Link
               href="/case-studies"
-              className="pill-button"
+              className="pill-button ecosystem-cta-btn-secondary"
               style={{ fontSize: '13px', padding: '14px 30px' }}
             >
               <span>BROWSE CLIENT CASE STUDIES</span>

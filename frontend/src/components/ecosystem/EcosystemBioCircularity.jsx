@@ -144,9 +144,9 @@ export default function EcosystemBioCircularity() {
               <button
                 key={item.id}
                 onClick={() => setSelectedId(item.id)}
-                className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl border font-mono text-xs font-bold whitespace-nowrap transition-all duration-300 ${
+                className={`biocircularity-tab flex items-center gap-2.5 px-5 py-3 rounded-2xl border font-mono text-xs font-bold whitespace-nowrap transition-all duration-300 ${
                   isSelected
-                    ? 'bg-[#00a859] border-[#00a859] text-black shadow-[0_0_25px_rgba(0,168,89,0.3)]'
+                    ? 'active bg-[#00a859] border-[#00a859] text-black shadow-[0_0_25px_rgba(0,168,89,0.3)]'
                     : 'bg-[#141414] border-white/10 text-[#aaa] hover:text-white hover:border-white/20'
                 }`}
               >
@@ -165,7 +165,7 @@ export default function EcosystemBioCircularity() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.35 }}
-            className="rounded-3xl border border-white/10 bg-[#141414] p-6 sm:p-10 lg:p-12 relative overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.6)]"
+            className="biocircularity-card rounded-3xl border border-white/10 bg-[#141414] p-6 sm:p-10 lg:p-12 relative overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.6)]"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               
@@ -190,7 +190,7 @@ export default function EcosystemBioCircularity() {
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 font-mono text-xs">
-                  <span className="px-3.5 py-1.5 rounded-xl bg-black/60 border border-white/10 text-white flex items-center gap-2">
+                  <span className="biocircularity-origin-chip px-3.5 py-1.5 rounded-xl bg-black/60 border border-white/10 text-white flex items-center gap-2">
                     <ShieldCheck size={14} className="text-[#00a859]" />
                     <span>Origin: {activeMaterial.origin}</span>
                   </span>
@@ -204,7 +204,7 @@ export default function EcosystemBioCircularity() {
                   {activeMaterial.specs.map((spec, i) => (
                     <div
                       key={i}
-                      className="p-4 rounded-xl bg-black/50 border border-white/5 flex flex-col justify-between"
+                      className="biocircularity-spec-box p-4 rounded-xl bg-black/50 border border-white/5 flex flex-col justify-between"
                     >
                       <span className="text-[10px] uppercase tracking-wider text-[#777] block mb-1">
                         {spec.label}

@@ -95,9 +95,9 @@ export default function EcosystemIntegrationTiers() {
               whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.8, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className={`rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all duration-500 relative ${
+              className={`integration-tier-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all duration-500 relative ${
                 tier.featured
-                  ? 'bg-[#151515] border-2 border-[#00a859] shadow-[0_20px_60px_rgba(0,168,89,0.2)] lg:-translate-y-3'
+                  ? 'featured bg-[#151515] border-2 border-[#00a859] shadow-[0_20px_60px_rgba(0,168,89,0.2)] lg:-translate-y-3'
                   : 'bg-[#111111] border border-white/10 hover:border-white/25 hover:bg-[#141414]'
               }`}
             >
@@ -125,7 +125,7 @@ export default function EcosystemIntegrationTiers() {
                   {tier.focus}
                 </span>
 
-                <div className="p-3 rounded-xl bg-black/50 border border-white/5 font-mono text-xs text-[#00a859] mb-6">
+                <div className="integration-timeline-pill p-3 rounded-xl bg-black/50 border border-white/5 font-mono text-xs text-[#00a859] mb-6">
                   &bull; Timeline: {tier.timeline}
                 </div>
 
@@ -150,7 +150,7 @@ export default function EcosystemIntegrationTiers() {
               <div className="pt-6 border-t border-white/10 mt-auto">
                 <Link
                   href="/contact"
-                  className="pill-button w-full justify-center text-xs"
+                  className={`pill-button w-full justify-center text-xs ${tier.featured ? 'tier-btn-featured' : 'tier-btn-standard'}`}
                   style={
                     tier.featured
                       ? { backgroundColor: '#00a859', borderColor: '#00a859', color: '#000', fontWeight: '800' }

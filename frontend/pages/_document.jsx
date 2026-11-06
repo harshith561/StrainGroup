@@ -15,8 +15,28 @@ export default function Document() {
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="stylesheet" href="/fonts/fonts.css" />
+        {/* Anti-FOUC Theme Script: Immediately sync theme before first render */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('strains_theme');
+                  var theme = saved || 'dark';
+                  if (theme === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    document.documentElement.classList.add('light');
+                  } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    document.documentElement.classList.remove('light');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
       </Head>
-      <body className="bg-[#080808] text-white antialiased selection:bg-[#00a859] selection:text-black">
+      <body className="theme-transition antialiased selection:bg-[#00a859] selection:text-black">
         <Main />
         <NextScript />
       </body>

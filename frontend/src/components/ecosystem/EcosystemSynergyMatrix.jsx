@@ -85,7 +85,7 @@ export default function EcosystemSynergyMatrix() {
               whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.8, delay: idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between group hover:border-[#00a859]/50 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              className="synergy-card rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between group hover:border-[#00a859]/50 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
             >
               {/* Photo Header */}
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-black media-placeholder">

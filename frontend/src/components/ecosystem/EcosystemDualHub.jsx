@@ -46,7 +46,7 @@ export default function EcosystemDualHub() {
             whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] group hover:border-[#00a859]/50 transition-all duration-500"
+            className="dual-hub-card rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] group hover:border-[#00a859]/50 transition-all duration-500"
           >
             {/* Top Photo Header */}
             <div className="relative aspect-[16/9] w-full overflow-hidden bg-black media-placeholder">
@@ -92,19 +92,19 @@ export default function EcosystemDualHub() {
 
                 {/* Team Roster */}
                 <div className="grid grid-cols-2 gap-3 font-mono text-xs mb-6">
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5">
+                  <div className="dual-hub-team-tile p-3 rounded-xl bg-black/40 border border-white/5">
                     <span className="text-[#00a859] block text-[10px] font-bold">Strategy & Line Producer</span>
                     <strong className="text-white text-xs">Praharsha Govindu</strong>
                   </div>
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5">
+                  <div className="dual-hub-team-tile p-3 rounded-xl bg-black/40 border border-white/5">
                     <span className="text-[#00a859] block text-[10px] font-bold">Direction & Post-Production</span>
                     <strong className="text-white text-xs">Danny Cooper</strong>
                   </div>
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5">
+                  <div className="dual-hub-team-tile p-3 rounded-xl bg-black/40 border border-white/5">
                     <span className="text-[#00a859] block text-[10px] font-bold">Head of Cinematography</span>
                     <strong className="text-white text-xs">Pavan Kumar</strong>
                   </div>
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5">
+                  <div className="dual-hub-team-tile p-3 rounded-xl bg-black/40 border border-white/5">
                     <span className="text-[#00a859] block text-[10px] font-bold">Head of Digital Marketing</span>
                     <strong className="text-white text-xs">Prasad Varma</strong>
                   </div>
@@ -123,7 +123,7 @@ export default function EcosystemDualHub() {
             whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.85, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] group hover:border-[#00a859]/50 transition-all duration-500"
+            className="dual-hub-card rounded-3xl border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)] group hover:border-[#00a859]/50 transition-all duration-500"
           >
             {/* Top Photo Header */}
             <div className="relative aspect-[16/9] w-full overflow-hidden bg-black media-placeholder">
@@ -168,15 +168,15 @@ export default function EcosystemDualHub() {
 
                 {/* Capability Badges */}
                 <div className="space-y-2.5 font-mono text-xs mb-6">
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2.5 text-white">
+                  <div className="dual-hub-team-tile p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2.5 text-white">
                     <CheckCircle2 size={15} className="text-[#00a859] flex-shrink-0" />
                     <span>Hemp, Organic Cotton & Vegan Leather Custom Cutting</span>
                   </div>
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2.5 text-white">
+                  <div className="dual-hub-team-tile p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2.5 text-white">
                     <CheckCircle2 size={15} className="text-[#00a859] flex-shrink-0" />
                     <span>Natural Fruit/Flower Dyeing with Recycled Water Tanks</span>
                   </div>
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2.5 text-white">
+                  <div className="dual-hub-team-tile p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2.5 text-white">
                     <CheckCircle2 size={15} className="text-[#00a859] flex-shrink-0" />
                     <span>Plastic-Free Recycled Packaging & Plantable Seed Tags</span>
                   </div>

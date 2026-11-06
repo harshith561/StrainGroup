@@ -16,10 +16,12 @@ import '@/styles/ecosystem.scss';
 import '@/styles/video-production.scss';
 import '@/styles/founder.scss';
 import '@/styles/testimonials.scss';
+import '@/styles/theme.scss';
 import 'aos/dist/aos.css';
 import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect } from 'react';
+import { ThemeProvider } from '@/context/ThemeContext';
 
 export default function MyApp({ Component, pageProps }) {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -36,7 +38,7 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <title>Strains Group | Creative Agency & Sustainable Garment Manufacturing</title>
@@ -75,6 +77,6 @@ export default function MyApp({ Component, pageProps }) {
       )}
 
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }

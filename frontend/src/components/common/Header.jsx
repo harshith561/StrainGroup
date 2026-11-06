@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Grid3X3, Menu, X } from 'lucide-react';
+import { Grid3X3, Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { theme, toggleTheme, isLight } = useTheme();
   const router = useRouter();
   const pathname = router ? router.pathname : '';
 
@@ -134,6 +136,19 @@ export default function Header() {
             >
               {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
+            <button
+              type="button"
+              className="theme-toggle-btn"
+              onClick={toggleTheme}
+              title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+              aria-label={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+            >
+              {theme === 'light' ? (
+                <Moon className="theme-icon text-slate-800" size={19} />
+              ) : (
+                <Sun className="theme-icon text-amber-300" size={19} />
+              )}
+            </button>
           </div>
         </div>
 
@@ -151,6 +166,22 @@ export default function Header() {
                   </Link>
                 </li>
               ))}
+              <li className="mobile-theme-item">
+                <button
+                  type="button"
+                  className="mobile-theme-toggle"
+                  onClick={toggleTheme}
+                  aria-label="Toggle Theme Mode"
+                >
+                  <span className="font-mono text-xs uppercase tracking-wider">
+                    Mode: {theme === 'light' ? 'Light Theme' : 'Dark Theme'}
+                  </span>
+                  <div className="theme-badge">
+                    {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+                    <span>{theme === 'light' ? 'Light' : 'Dark'}</span>
+                  </div>
+                </button>
+              </li>
               <li className="mobile-btn-container">
                 <Link
                   href="/contact"
@@ -184,13 +215,28 @@ export default function Header() {
               loading="lazy"
             />
           </div>
-          <button
-            className="close-sidebar-btn"
-            onClick={() => setSidebarOpen(false)}
-            aria-label="Close menu"
-          >
-            <X size={28} />
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              className="theme-toggle-btn sidebar-theme-toggle"
+              onClick={toggleTheme}
+              title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+              aria-label="Toggle Theme"
+            >
+              {theme === 'light' ? (
+                <Moon className="theme-icon" size={18} />
+              ) : (
+                <Sun className="theme-icon text-amber-300" size={18} />
+              )}
+            </button>
+            <button
+              className="close-sidebar-btn"
+              onClick={() => setSidebarOpen(false)}
+              aria-label="Close menu"
+            >
+              <X size={28} />
+            </button>
+          </div>
         </div>
 
         <div className="sidebar-content">

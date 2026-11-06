@@ -137,9 +137,9 @@ export default function EcosystemClosedLoop() {
               <button
                 key={phase.num}
                 onClick={() => setActiveTab(idx)}
-                className={`p-4 rounded-2xl border text-left transition-all duration-300 relative overflow-hidden ${
+                className={`closed-loop-tab p-4 rounded-2xl border text-left transition-all duration-300 relative overflow-hidden ${
                   isCurrent
-                    ? 'bg-[#00a859]/15 border-[#00a859] shadow-[0_0_25px_rgba(0,168,89,0.2)]'
+                    ? 'active bg-[#00a859]/15 border-[#00a859] shadow-[0_0_25px_rgba(0,168,89,0.2)]'
                     : 'bg-[#141414] border-white/10 hover:border-white/20 hover:bg-[#181818]'
                 }`}
               >
@@ -168,7 +168,7 @@ export default function EcosystemClosedLoop() {
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             exit={{ opacity: 0, y: -25 }}
             transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-3xl border border-white/10 bg-[#141414] p-6 sm:p-10 lg:p-12 shadow-[0_30px_70px_rgba(0,0,0,0.6)]"
+            className="closed-loop-card rounded-3xl border border-white/10 bg-[#141414] p-6 sm:p-10 lg:p-12 shadow-[0_30px_70px_rgba(0,0,0,0.6)]"
           >
             {/* Top Row: Title & Metadata */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-8 mb-8 border-b border-white/10 gap-6">
@@ -192,11 +192,11 @@ export default function EcosystemClosedLoop() {
               </div>
 
               <div className="flex items-center gap-4 font-mono text-xs">
-                <div className="p-3.5 rounded-xl bg-black/50 border border-white/10">
+                <div className="closed-loop-meta-chip p-3.5 rounded-xl bg-black/50 border border-white/10">
                   <span className="text-[#777] block text-[10px]">Orchestrator</span>
                   <span className="text-white font-bold">{activePhase.lead}</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-black/50 border border-white/10">
+                <div className="closed-loop-meta-chip p-3.5 rounded-xl bg-black/50 border border-white/10">
                   <span className="text-[#777] block text-[10px]">Timeline</span>
                   <span className="text-[#00a859] font-bold">{activePhase.timeline}</span>
                 </div>
@@ -213,7 +213,7 @@ export default function EcosystemClosedLoop() {
 
                 {/* 3-Column Deliverables Pill Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs pt-2">
-                  <div className="p-4 rounded-xl bg-black/40 border border-white/5">
+                  <div className="closed-loop-deliverable-box p-4 rounded-xl bg-black/40 border border-white/5">
                     <span className="text-[#00a859] font-bold block mb-2 uppercase text-[11px]">Inputs</span>
                     <ul className="space-y-1.5 text-[#888]">
                       {activePhase.inputs.map((item, i) => (
@@ -222,7 +222,7 @@ export default function EcosystemClosedLoop() {
                     </ul>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-black/40 border border-white/5">
+                  <div className="closed-loop-deliverable-box p-4 rounded-xl bg-black/40 border border-white/5">
                     <span className="text-[#00a859] font-bold block mb-2 uppercase text-[11px]">Operations</span>
                     <ul className="space-y-1.5 text-[#888]">
                       {activePhase.processes.map((item, i) => (
@@ -231,7 +231,7 @@ export default function EcosystemClosedLoop() {
                     </ul>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-black/40 border border-white/5">
+                  <div className="closed-loop-deliverable-box p-4 rounded-xl bg-black/40 border border-white/5">
                     <span className="text-[#00a859] font-bold block mb-2 uppercase text-[11px]">Outputs</span>
                     <ul className="space-y-1.5 text-white">
                       {activePhase.outputs.map((item, i) => (

@@ -186,7 +186,7 @@ export default function ServiceTestimonials() {
         </div>
 
         {/* Animated Carousel Track */}
-        <div className="relative w-full overflow-hidden mb-12">
+        <div className="relative w-full overflow-hidden mb-12 py-6 -my-6 px-4 -mx-4">
           <div 
             className="flex transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
             style={{
@@ -196,9 +196,9 @@ export default function ServiceTestimonials() {
             {TESTIMONIALS.map((item, index) => (
               <div
                 key={item.id}
-                className="w-full shrink-0 px-2 sm:px-3"
+                className="w-full shrink-0 px-3 sm:px-4"
               >
-                <div className="bg-[#141414] border border-white/10 hover:border-[#00a859]/40 rounded-3xl p-8 sm:p-12 lg:p-14 relative transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+                <div className="service-testimonial-card bg-[#141414] border border-white/10 hover:border-[#00a859]/40 rounded-3xl p-8 sm:p-12 lg:p-14 relative transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
                   {/* Decorative Quote Icon & Star Rating */}
                   <div className="flex items-center justify-between mb-8">
                     <div className="flex items-center gap-1.5">
@@ -253,9 +253,9 @@ export default function ServiceTestimonials() {
                 key={idx}
                 type="button"
                 onClick={() => setCurrentIndex(idx)}
-                className={`h-1.5 rounded-full transition-all duration-500 ${
+                className={`service-progress-dot h-1.5 rounded-full transition-all duration-500 ${
                   currentIndex === idx
-                    ? 'w-12 bg-[#00a859] shadow-[0_0_12px_rgba(0,168,89,0.5)]'
+                    ? 'active w-12 bg-[#00a859] shadow-[0_0_12px_rgba(0,168,89,0.5)]'
                     : 'w-6 bg-white/20 hover:bg-white/40'
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
