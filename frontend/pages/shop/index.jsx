@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   ShopHeroBanner,
   ShopFilters,
@@ -60,22 +60,18 @@ export default function ShopPage() {
 
   return (
     <MainLayout>
-      <Head>
-        <title>Sustainable Apparel Catalog & Shop | Strains Group</title>
-        <meta
-          name="description"
-          content="Explore Strains sustainable apparel catalog: GOTS organic cotton tees, European hemp shirts, zero-discharge track pants, and custom Tirupur manufacturing prototypes."
-        />
-        <meta
-          property="og:title"
-          content="Sustainable Apparel Catalog & Shop | Strains Group"
-        />
-        <meta
-          property="og:description"
-          content="Browse ethical clothing, sample prototypes, and organic fabrics directly from our zero-discharge manufacturing facility in Tirupur."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Sustainable Apparel Catalog & Shop | Strains Group"
+        description="Explore Strains sustainable apparel catalog: GOTS organic cotton tees, European hemp shirts, zero-discharge track pants, and custom Tirupur manufacturing prototypes."
+        keywords={[
+          'sustainable apparel shop',
+          'organic cotton t-shirts wholesale',
+          'hemp shirts India',
+          'zero discharge garments',
+          'ethical fashion sample prototypes',
+        ]}
+        canonical="/shop"
+      />
 
       <div className="shop-page-wrapper bg-[#0c0c0c] text-white min-h-screen">
         {/* 1. Hero Image Banner Section */}

@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import MainLayout from '@/components/common/MainLayout';
+import { ShareButtons } from '@/components/blog';
 
 /**
  * CaseStudyDetail Component
@@ -41,24 +42,49 @@ export default function CaseStudyDetail({ caseStudy }) {
 
   const pageTitle = `${caseStudy.title} — ${caseStudy.subtitle} | Case Study Strains Group`;
   const metaDescription = caseStudy.summary;
+  const canonicalUrl = `https://strains.in/case-studies/${caseStudy.slug}`;
+
+  const caseStudySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: caseStudy.title,
+    headline: `${caseStudy.title} — ${caseStudy.subtitle}`,
+    description: metaDescription,
+    image: caseStudy.heroImage ? `https://strains.in${caseStudy.heroImage}` : undefined,
+    url: canonicalUrl,
+    creator: {
+      '@type': 'Organization',
+      name: 'Strains Associates',
+    },
+  };
 
   return (
     <MainLayout>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
         {caseStudy.heroImage && (
-          <meta property="og:image" content={caseStudy.heroImage} />
+          <meta property="og:image" content={caseStudy.heroImage.startsWith('http') ? caseStudy.heroImage : `https://strains.in${caseStudy.heroImage}`} />
         )}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }}
+        />
       </Head>
 
       <div className="team-profile-page-wrapper bg-[#0c0c0c] text-white  pb-32">
         <div className="team-profile-container max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
 
-          {/* Breadcrumb / Back Link */}
-          <div className="mb-10">
+          {/* Breadcrumb / Back Link & Share Buttons */}
+          <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <Link
               href="/work"
               className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-wider uppercase text-neutral-400 hover:text-[#00a859] transition-colors"
@@ -66,6 +92,12 @@ export default function CaseStudyDetail({ caseStudy }) {
               <ArrowLeft className="w-4 h-4" />
               <span>Back to all case studies</span>
             </Link>
+
+            <ShareButtons
+              title={`${caseStudy.title} — Case Study`}
+              slug={caseStudy.slug}
+              basePath="/case-studies"
+            />
           </div>
 
           {/* Main Two-Column Container (50% / 50% Desktop Layout matching TeamMemberProfile) */}

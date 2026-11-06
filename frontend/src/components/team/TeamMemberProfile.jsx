@@ -58,17 +58,43 @@ export default function TeamMemberProfile({ member }) {
   const metaDescription =
     descriptionParagraphs[0] ||
     `${member.name}, ${member.designation} at Strains Group. Discover our creative vision and team squad.`;
+  const canonicalUrl = `https://strains.in/team/${member.slug || ''}`;
+
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: member.name,
+    jobTitle: member.designation,
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Strains Associates',
+      url: 'https://strains.in',
+    },
+    description: metaDescription,
+    image: member.profileImage ? `https://strains.in${member.profileImage}` : undefined,
+    url: canonicalUrl,
+  };
 
   return (
     <MainLayout>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="profile" />
         {member.profileImage && (
-          <meta property="og:image" content={member.profileImage} />
+          <meta property="og:image" content={member.profileImage.startsWith('http') ? member.profileImage : `https://strains.in${member.profileImage}`} />
         )}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       </Head>
 
       <div className="team-profile-page-wrapper">

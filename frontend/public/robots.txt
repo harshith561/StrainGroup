@@ -1,0 +1,13 @@
+# Robots.txt for Strains Group (https://strains.in)
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /server-issue
+Disallow: /404
+Disallow: /409
+Disallow: /500
+
+# Sitemap location
+Sitemap: https://strains.in/sitemap.xml
+

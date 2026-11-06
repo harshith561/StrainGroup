@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   ClothingHero,
   ClothingProcess,
@@ -13,22 +13,18 @@ import {
 export default function ClothingManufacturingPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Sustainable Clothing Manufacturing &amp; Tirupur Hub | Strains Associates</title>
-        <meta
-          name="description"
-          content="Strains Associates operates a zero-discharge sustainable apparel manufacturing hub in Tirupur, producing organic cotton, hemp, vegan silk, botanical-dyed garments, and plantable seed tags."
-        />
-        <meta
-          property="og:title"
-          content="Sustainable Clothing Manufacturing &amp; Tirupur Hub | Strains Associates"
-        />
-        <meta
-          property="og:description"
-          content="Zero-discharge garment manufacturing in Tirupur: organic cotton, hemp, plantable seed tags, and botanical natural dyes by Strains Associates."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Sustainable Clothing Manufacturing & Tirupur Hub | Strains Associates"
+        description="Zero-discharge sustainable apparel manufacturing hub in Tirupur, producing organic cotton, hemp, vegan silk, botanical-dyed garments, and plantable seed tags."
+        keywords={[
+          'sustainable clothing manufacturer Tirupur',
+          'zero discharge garment manufacturing',
+          'organic cotton clothing manufacturer India',
+          'botanical dyes clothing supplier',
+          'ethical apparel supply chain',
+        ]}
+        canonical="/clothing-manufacturing"
+      />
 
       <main className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Green Subheading, White Main Heading */}

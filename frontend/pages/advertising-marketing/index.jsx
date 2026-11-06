@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   AdvertisingHero,
   AdvertisingProcess,
@@ -13,22 +13,18 @@ import {
 export default function AdvertisingMarketingPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Advertising &amp; Performance Digital Marketing | Strains Associates</title>
-        <meta
-          name="description"
-          content="Strains Associates delivers high-intent Google Ads, Meta SMM campaigns, enterprise B2B PPC, and SEO engines with verified industry-leading conversion metrics and transparent reporting."
-        />
-        <meta
-          property="og:title"
-          content="Advertising &amp; Performance Digital Marketing | Strains Associates"
-        />
-        <meta
-          property="og:description"
-          content="High-intent Google Ads, B2B PPC management, Meta advertising, and SEO engines engineered for verified revenue by Strains Associates."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Advertising & Performance Digital Marketing | Strains Associates"
+        description="High-intent Google Ads, Meta SMM campaigns, enterprise B2B PPC, and SEO engines with verified industry-leading conversion metrics and transparent reporting."
+        keywords={[
+          'performance marketing agency Hyderabad',
+          'Google ads management India',
+          'Meta paid advertising agency',
+          'B2B PPC lead generation',
+          'full funnel growth marketing',
+        ]}
+        canonical="/advertising-marketing"
+      />
 
       <main className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Green Subheading, White Main Heading */}

@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   SustainabilityHero,
   SustainabilityProducts,
@@ -13,27 +13,19 @@ import {
 export default function SustainabilityPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Sustainable Fashion &amp; Eco Products | Strains Group</title>
-        <meta
-          name="description"
-          content="Discover Strains Group's sustainable fashion solutions: 100% organic cotton, Himalayan hemp clothing, vegan silk & leather, natural botanical dyeing, plantable basil seed tags, and zero-discharge manufacturing in Tirupur."
-        />
-        <meta
-          property="og:title"
-          content="Sustainable Fashion &amp; Eco Products | Strains Group"
-        />
-        <meta
-          property="og:description"
-          content="Ethical and sustainable clothing manufacturing: organic cotton, hemp apparel, fruit & flower natural dyes, plantable seed price tags, and zero toxic discharge."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://strains.in/sustainability" />
-        <meta
-          name="keywords"
-          content="organic cotton clothing, hemp clothing, vegan silk, vegan leather, plantable seed tags, botanical dyeing, zero discharge clothing manufacturing, tirupur eco factory"
-        />
-      </Head>
+      <SEO
+        title="Sustainable Fashion & Eco Products | Strains Group"
+        description="100% organic cotton, Himalayan hemp clothing, vegan silk & leather, natural botanical dyeing, plantable basil seed tags, and zero-discharge manufacturing in Tirupur."
+        keywords={[
+          'organic cotton clothing manufacturer',
+          'hemp clothing India',
+          'vegan silk apparel',
+          'plantable seed tags',
+          'botanical natural dyeing',
+          'zero discharge clothing factory Tirupur',
+        ]}
+        canonical="/sustainability"
+      />
 
       <main className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Subheading & Quick Benchmarks */}

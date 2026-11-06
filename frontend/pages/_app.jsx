@@ -18,9 +18,12 @@ import '@/styles/founder.scss';
 import '@/styles/testimonials.scss';
 import 'aos/dist/aos.css';
 import Head from 'next/head';
+import Script from 'next/script';
 import { useEffect } from 'react';
 
 export default function MyApp({ Component, pageProps }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   useEffect(() => {
     const AOS = require('aos');
     AOS.init({
@@ -35,15 +38,42 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Strains Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <title>Strains Group | Creative Agency & Sustainable Garment Manufacturing</title>
         <meta
           name="description"
-          content="Strains Associates - Award winning creative agency, video production, digital marketing, sustainable fashion manufacturing, and creative ecosystems."
+          content="Strains Associates - Award winning creative agency, video production, digital marketing, sustainable fashion manufacturing, and creative ecosystems in Hyderabad & Tirupur."
         />
+        <meta name="robots" content="index, follow" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
+
+      {/* Google Analytics 4 (GA4) Integration */}
+      {gaId && (
+        <>
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          />
+          <Script
+            id="google-analytics"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
+          />
+        </>
+      )}
+
       <Component {...pageProps} />
     </>
   );

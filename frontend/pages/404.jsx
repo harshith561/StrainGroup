@@ -6,14 +6,14 @@ export default function Custom404Page() {
   return (
     <>
       <Head>
-        <title>409 — Route Under Maintenance | Strains Associates</title>
+        <title>404 — Page Not Found | Strains Associates</title>
         <meta
           name="description"
-          content="This route is currently undergoing scheduled updates or requires administration clearance."
+          content="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
         />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
-      <CommonErrorView type="409" />
+      <CommonErrorView type="404" />
     </>
   );
 }

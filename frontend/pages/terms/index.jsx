@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   Scale,
   Briefcase,
@@ -27,19 +27,12 @@ import {
 export default function TermsPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Terms of Service | Strains Group</title>
-        <meta
-          name="description"
-          content="Commercial Terms of Service for Strains Group (Strains Associates & Strains Fashions). Governing our creative services and sustainable apparel manufacturing in Tirupur."
-        />
-        <meta property="og:title" content="Terms of Service | Strains Group" />
-        <meta
-          property="og:description"
-          content="Terms of service, production tolerances, payment milestones, and IP ownership rights for Strains Group."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Terms of Service | Strains Group"
+        description="Commercial Terms of Service for Strains Group (Strains Associates & Strains Fashions). Governing our creative services and sustainable apparel manufacturing in Tirupur."
+        canonical="/terms"
+        noindex={false}
+      />
 
       <div className="bg-[#0c0c0c] text-white min-h-screen w-full pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-16 sm:pb-20 md:pb-28 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
         {/* Top Full-Width Hero */}

@@ -4,3 +4,4 @@ export { default as MainLayout } from './MainLayout';
 export { default as Layout } from './MainLayout';
 export { default as UnderMaintenance } from './UnderMaintenance';
 export { default as CommonErrorView } from './CommonErrorView';
+export { default as SEO } from './SEO';

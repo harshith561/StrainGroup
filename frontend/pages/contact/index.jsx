@@ -1,12 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   ContactHero,
   ContactHeadline,
   ContactInfo,
   ContactForm,
+  ContactMap,
 } from '@/components/contact';
+import { SITE_CONFIG } from '@/constant/siteConfig';
 
 /**
  * Strains Group – Contact Page
@@ -14,24 +16,51 @@ import {
  * and Strains Associates (sustainable brand solutions & creative digital agency).
  */
 export default function ContactPage() {
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Strains Associates & Strains Fashions',
+    image: 'https://strains.in/assets/strainsassociates-CfG1A0jo.webp',
+    telephone: SITE_CONFIG?.contactPhone || '+91 8686819898',
+    email: SITE_CONFIG?.contactEmail || 'hello@strainsassociates.com',
+    url: 'https://strains.in/contact',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Vengalrao Nagar',
+      addressLocality: 'Hyderabad',
+      addressRegion: 'Telangana',
+      postalCode: '500038',
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '17.4378',
+      longitude: '78.4358',
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '19:00',
+    },
+    priceRange: '₹₹₹',
+  };
+
   return (
     <MainLayout>
-      <Head>
-        <title>Contact Strains Group | Sustainable Fashion & Creative Production</title>
-        <meta
-          name="description"
-          content="Connect with Strains Group for sustainable garment manufacturing, brand strategy, cinematic video production, and creative digital campaigns."
-        />
-        <meta
-          property="og:title"
-          content="Contact Strains Group | Sustainable Fashion & Creative Production"
-        />
-        <meta
-          property="og:description"
-          content="Let's start something special together. Sustainable apparel manufacturing and cinematic brand creative agency."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Contact Strains Group | Sustainable Fashion & Creative Production"
+        description="Connect with Strains Group for sustainable garment manufacturing in Tirupur and brand strategy, cinematic video production & digital marketing in Hyderabad."
+        keywords={[
+          'contact Strains Group',
+          'Tirupur garment manufacturers contact',
+          'creative agency Hyderabad office',
+          'apparel production inquiry',
+          'commercial film consultation',
+        ]}
+        canonical="/contact"
+        structuredData={contactSchema}
+      />
 
       <div className="contact-page-wrapper">
         {/* Section One: Cinematic Video-Background CONTACT Hero */}
@@ -50,6 +79,9 @@ export default function ContactPage() {
             <ContactForm />
           </div>
         </section>
+
+        {/* Section Four: Google Verified Locations with Embedded Map */}
+        <ContactMap />
       </div>
     </MainLayout>
   );

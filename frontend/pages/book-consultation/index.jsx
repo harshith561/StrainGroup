@@ -1,24 +1,22 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   ContactHero,
   ContactHeadline,
   ContactInfo,
   ContactForm,
+  ContactMap,
 } from '@/components/contact';
 
 export default function BookConsultationPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Book a Consultation | Strains Group</title>
-        <meta
-          name="description"
-          content="Schedule a strategic consultation with Strains Group for creative marketing, video production, or sustainable apparel manufacturing."
-        />
-        <meta property="og:title" content="Book a Consultation | Strains Group" />
-      </Head>
+      <SEO
+        title="Book a Consultation | Strains Group"
+        description="Schedule a strategic consultation with Strains Group for creative marketing, video production, or sustainable apparel manufacturing."
+        canonical="/contact"
+      />
 
       <div className="contact-page-wrapper">
         <ContactHero />
@@ -29,6 +27,7 @@ export default function BookConsultationPage() {
             <ContactForm />
           </div>
         </section>
+        <ContactMap />
       </div>
     </MainLayout>
   );

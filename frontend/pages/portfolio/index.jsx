@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   PortfolioHero,
   PortfolioIntro,
@@ -10,19 +10,18 @@ import {
 export default function PortfolioPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Portfolio & Curated Work | Strains Associates</title>
-        <meta
-          name="description"
-          content="Explore recent works by Strains Associates: design, development, marketing, and brand storytelling across visionary partners and innovative brands."
-        />
-        <meta property="og:title" content="Portfolio & Curated Work | Strains Associates" />
-        <meta
-          property="og:description"
-          content="Creative works with our incredible people — Design, Development, Marketing, and Writing."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Portfolio & Curated Work | Strains Associates"
+        description="Explore recent works by Strains Associates: design, web development, marketing campaigns, and brand storytelling across visionary partners."
+        keywords={[
+          'creative portfolio Strains Associates',
+          'branding design showcase',
+          'video production portfolio',
+          'sustainable apparel portfolio',
+          'digital marketing case work',
+        ]}
+        canonical="/portfolio"
+      />
 
       <div className="portfolio-page-main bg-[#0c0c0c] text-white min-h-screen">
         {/* SECTION 1: HERO HEADER (Centered "PORTFOLIO" with background video) */}

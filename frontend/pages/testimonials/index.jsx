@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import { AboutBrandsMarqueeSection } from '@/components/about';
 import {
   TestimonialsHero,
@@ -59,20 +59,19 @@ export default function TestimonialsPage() {
 
   return (
     <MainLayout>
-      <Head>
-        <title>Client & Human Testimonials | Strains Group Reviews & Verified Outcomes</title>
-        <meta
-          name="description"
-          content="Explore verified testimonials from enterprise leaders, industrial clients, sustainable fashion customers, and Tirupur artisans at Strains Group."
-        />
-        <meta property="og:title" content="Testimonials & Human Stories — Strains Group" />
-        <meta
-          property="og:description"
-          content="4.9/5 satisfaction across 200+ reviews. Verified B2B growth metrics, customer stories, and behind-the-scenes artisan experiences."
-        />
-        <meta property="og:type" content="website" />
-        <meta name="keywords" content="Strains Group testimonials, client reviews, human testimonials, sustainable fashion reviews, video production reviews, marketing ROI" />
-      </Head>
+      <SEO
+        title="Client & Human Testimonials | Strains Group Reviews & Verified Outcomes"
+        description="Explore verified testimonials from enterprise leaders, industrial clients, sustainable fashion customers, and Tirupur artisans at Strains Group."
+        keywords={[
+          'Strains Group testimonials',
+          'client reviews',
+          'human testimonials',
+          'sustainable fashion reviews',
+          'video production reviews',
+          'marketing ROI',
+        ]}
+        canonical="/testimonials"
+      />
 
       <div className="testimonials-page-wrapper bg-[#0c0c0c] text-white">
         

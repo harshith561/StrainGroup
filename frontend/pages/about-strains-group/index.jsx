@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   AboutHero,
   AboutStudioSection,
@@ -13,18 +13,18 @@ import {
 export default function AboutStrainsGroupPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>About Strains Group | Since 2017 — Creative Studio & Digital Craft</title>
-        <meta
-          name="description"
-          content="Crafting digital products with a unique vision of making user experience better. Strains Group since 2017."
-        />
-        <meta property="og:title" content="About Strains Group | Since 2017" />
-        <meta
-          property="og:description"
-          content="Crafting digital products with a unique vision of making user experience better. Art Direction, Capability, and Sustainability."
-        />
-      </Head>
+      <SEO
+        title="About Strains Group | Since 2017 — Creative Studio & Sustainable Manufacturing"
+        description="Crafting digital products, commercial films, and sustainable textiles. Learn the story, vision, and team squad behind Strains Group since 2017."
+        keywords={[
+          'About Strains Group',
+          'Strains Associates story',
+          'creative agency team Hyderabad',
+          'sustainable apparel founders',
+          'Tirupur manufacturing heritage',
+        ]}
+        canonical="/about-strains-group"
+      />
 
       <div className="about-page-main bg-[#000000] text-white">
         {/* Simple Black Screen with Animated "SINCE 2017" alone */}

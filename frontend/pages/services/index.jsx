@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   ServiceHero,
   ServiceExpertise,
@@ -14,19 +14,18 @@ import { AboutBrandsMarqueeSection } from '@/components/about';
 export default function ServicesPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Services | Creative Digital Marketing Agency & Sustainable Production — Strains Group</title>
-        <meta
-          name="description"
-          content="Strains Group delivers creative digital marketing, SEO, PPC, web design, video production, and zero-discharge sustainable apparel manufacturing."
-        />
-        <meta property="og:title" content="Services | Strains Group Creative Agency & Sustainable Manufacturing" />
-        <meta
-          property="og:description"
-          content="Full-spectrum creative digital marketing, brand architecture, cinematic media, and circular apparel manufacturing."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Services | Creative Digital Marketing & Sustainable Apparel Production"
+        description="Strains Group delivers creative digital marketing, SEO, PPC, web design, video production, and zero-discharge sustainable apparel manufacturing."
+        keywords={[
+          'creative digital marketing agency',
+          'video production services Hyderabad',
+          'sustainable garment production Tirupur',
+          'PPC and performance marketing',
+          'brand architecture studio',
+        ]}
+        canonical="/services"
+      />
 
       <div className="services-page-main bg-[#0c0c0c] text-white">
         {/* Section 1: Hero — Creative Digital Marketing Agency */}

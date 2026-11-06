@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   VideoHero,
   VideoProcess,
@@ -13,23 +13,19 @@ import {
 export default function VideoProductionPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Video Production &amp; Cinematic Brand Films | Strains Associates</title>
-        <meta
-          name="description"
-          content="Strains Associates directs, shoots, and produces 4K cinematic brand films, high-converting commercial advertisements, industrial documentaries, aerial drone videography, and in-house DaVinci post-production in Hyderabad &amp; Tirupur."
-        />
-        <meta
-          property="og:title"
-          content="Video Production &amp; Cinematic Brand Films | Strains Associates"
-        />
-        <meta
-          property="og:description"
-          content="Commercial video production, 4K aerial cinematography, industrial films, and complete in-house DaVinci post-production by Strains Associates."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/ecosystem/synergy-camera-cinematography.jpg" />
-      </Head>
+      <SEO
+        title="Video Production & Cinematic Brand Films | Strains Associates"
+        description="4K cinematic brand films, high-converting commercial advertisements, industrial documentaries, aerial drone videography, and in-house DaVinci post-production in Hyderabad."
+        keywords={[
+          'video production company Hyderabad',
+          'commercial film production India',
+          'corporate video maker',
+          '4K brand storytelling films',
+          'aerial drone videography studio',
+        ]}
+        canonical="/video-production"
+        ogImage="/images/ecosystem/synergy-camera-cinematography.jpg"
+      />
 
       <main className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with 3D Video Ad Background, Green Subheading, White Main Heading */}

@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   FounderHero,
   FounderLetter,
@@ -29,7 +29,7 @@ export default function FounderPage() {
     ],
     description:
       'Founder and Director of Strains Associates and Strains Fashions Private Limited. Strategy maker and line producer driving cinematic commercial films, full-funnel digital growth, and zero-discharge sustainable apparel manufacturing in Hyderabad and Tirupur.',
-    image: '/images/ecosystem/team-praharsha.jpg',
+    image: 'https://strains.in/images/ecosystem/team-praharsha.jpg',
     url: 'https://strains.in/founder',
     sameAs: [
       'https://www.linkedin.com',
@@ -39,32 +39,24 @@ export default function FounderPage() {
 
   return (
     <MainLayout>
-      <Head>
-        <title>Naga Praharsha Govindu — Founder's Story &amp; Message | Strains Group</title>
-        <meta
-          name="description"
-          content="Discover the journey of Naga Praharsha Govindu, Founder of Strains Associates &amp; Strains Fashions. How he resigned corporate sales management in 2018 to build a dual-hub ecosystem: cinematic video production &amp; performance marketing in Hyderabad paired with zero-discharge garment manufacturing in Tirupur."
-        />
-        <meta
-          name="keywords"
-          content="Naga Praharsha Govindu, Strains founder, Strains Associates, Strains Fashions, sustainable fashion Tirupur, video production Hyderabad, zero-discharge manufacturing, botanical dyes clothing"
-        />
-        <meta property="og:title" content="Naga Praharsha Govindu — Founder's Story &amp; Message | Strains Group" />
-        <meta
-          property="og:description"
-          content="From corporate sales to the mill floors of Tirupur. The human story of how Naga Praharsha Govindu built Strains into an integrated creative and zero-discharge manufacturing ecosystem."
-        />
-        <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://strains.in/founder" />
-        <meta property="og:image" content="/images/ecosystem/team-praharsha.jpg" />
-        <link rel="canonical" href="https://strains.in/founder" />
-        
-        {/* JSON-LD Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
-        />
-      </Head>
+      <SEO
+        title="Naga Praharsha Govindu — Founder's Story & Message | Strains Group"
+        description="Discover the journey of Naga Praharsha Govindu, Founder of Strains Associates & Strains Fashions. Building a dual-hub ecosystem: cinematic video production in Hyderabad paired with zero-discharge garment manufacturing in Tirupur."
+        keywords={[
+          'Naga Praharsha Govindu',
+          'Strains founder',
+          'Strains Associates',
+          'Strains Fashions',
+          'sustainable fashion Tirupur',
+          'video production Hyderabad',
+          'zero-discharge manufacturing',
+          'botanical dyes clothing',
+        ]}
+        canonical="/founder"
+        ogImage="/images/ecosystem/team-praharsha.jpg"
+        ogType="profile"
+        structuredData={founderSchema}
+      />
 
       <div className="founder-page-wrapper">
         {/* 1. Hero Section with Founder Portrait & Key Highlights */}

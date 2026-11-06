@@ -53,6 +53,7 @@ export default function Header() {
     { label: 'SERVICES', href: '/services' },
     { label: 'VIDEO PRODUCTION', href: '/video-production' },
     { label: 'SHOP', href: '/shop' },
+    { label: 'BLOG', href: '/blog' },
   ];
 
   const sidebarLinks = [
@@ -72,6 +73,7 @@ export default function Header() {
     { num: '14.', label: 'Sustainability', href: '/sustainability' },
     { num: '15.', label: 'Founder – Naga Praharsha Govindu', href: '/founder' },
     { num: '16.', label: 'Testimonials / Clients', href: '/testimonials' },
+    { num: '17.', label: 'Blog & Industry Insights', href: '/blog' },
   ];
 
   return (

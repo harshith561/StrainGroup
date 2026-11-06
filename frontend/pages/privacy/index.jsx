@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   ShieldCheck,
   Database,
@@ -26,19 +26,12 @@ import {
 export default function PrivacyPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Privacy Policy | Strains Group</title>
-        <meta
-          name="description"
-          content="Privacy Policy for Strains Group (Strains Associates & Strains Fashions). Learn how we safeguard your data and proprietary apparel design tech packs."
-        />
-        <meta property="og:title" content="Privacy Policy | Strains Group" />
-        <meta
-          property="og:description"
-          content="Privacy policy and data protection framework for Strains Group clients and partners."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Privacy Policy | Strains Group"
+        description="Privacy Policy for Strains Group (Strains Associates & Strains Fashions). Learn how we safeguard your data and proprietary apparel design tech packs."
+        canonical="/privacy"
+        noindex={false}
+      />
 
       <div className="bg-[#0c0c0c] text-white min-h-screen w-full pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-16 sm:pb-20 md:pb-28 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
         {/* Top Full-Width Hero */}

@@ -99,6 +99,7 @@ export default function Footer() {
             <li><Link href="/founder">Founder’s Story</Link></li>
             <li><Link href="/services">Services</Link></li>
             <li><Link href="/case-studies">Case Studies</Link></li>
+            <li><Link href="/blog">Blog & Insights</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>

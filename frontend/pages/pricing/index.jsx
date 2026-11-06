@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   PricingHero,
   PricingCards,
@@ -33,22 +33,17 @@ export default function PricingPage() {
 
   return (
     <MainLayout>
-      <Head>
-        <title>Pricing & Partnership Packages | Strains Group</title>
-        <meta
-          name="description"
-          content="Explore clear, transparent pricing packages and modular services across video production, digital marketing, and zero-discharge clothing manufacturing at Strains Group."
-        />
-        <meta
-          property="og:title"
-          content="Pricing & Partnership Packages | Strains Group"
-        />
-        <meta
-          property="og:description"
-          content="Transparent investment tiers for cinematic video production, performance advertising, and ethical garment manufacturing in Tirupur."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Pricing & Partnership Packages | Strains Group"
+        description="Explore clear, transparent pricing packages and modular services across video production, digital marketing, and zero-discharge clothing manufacturing at Strains Group."
+        keywords={[
+          'creative agency pricing',
+          'video production packages India',
+          'digital marketing retainers Hyderabad',
+          'clothing manufacturing quote Tirupur',
+        ]}
+        canonical="/pricing"
+      />
 
       <div className="pricing-page-main bg-[#0c0c0c] text-white min-h-screen relative">
         {/* Section 1: Hero & Retainer/Project Toggle */}

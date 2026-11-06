@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   StartBrandHero,
   StartBrandProcess,
@@ -13,22 +13,18 @@ import {
 export default function StartYourBrandPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Start Your Brand | Turnkey Fashion &amp; Apparel Incubator — Strains Associates</title>
-        <meta
-          name="description"
-          content="Launch your apparel or consumer brand with Strains Associates: complete brand strategy, low-MOQ Tirupur sustainable manufacturing, 4K commercial videos, and customer acquisition."
-        />
-        <meta
-          property="og:title"
-          content="Start Your Brand | Turnkey Fashion &amp; Apparel Incubator — Strains Associates"
-        />
-        <meta
-          property="og:description"
-          content="The complete founder brand launchpad: brand identity, Tirupur garment manufacturing, 4K commercial media, and customer acquisition by Strains Associates."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Start Your Brand | Turnkey Fashion & Apparel Incubator — Strains Associates"
+        description="Launch your apparel brand with Strains Associates: complete brand strategy, low-MOQ Tirupur sustainable manufacturing, 4K commercial videos, and customer acquisition."
+        keywords={[
+          'start an apparel brand India',
+          'clothing line incubator',
+          'low MOQ fashion production',
+          'launch fashion brand Tirupur',
+          'turnkey brand development',
+        ]}
+        canonical="/start-your-brand"
+      />
 
       <main className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Green Subheading, White Main Heading */}

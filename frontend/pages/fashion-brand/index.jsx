@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
+import SEO from '@/components/common/SEO';
 import {
   FashionBrandHero,
   FashionBrandProcess,
@@ -13,22 +13,18 @@ import {
 export default function FashionBrandPage() {
   return (
     <MainLayout>
-      <Head>
-        <title>Fashion Brand Architecture &amp; Luxury D2C | Strains Associates</title>
-        <meta
-          name="description"
-          content="Strains Associates builds iconic luxury and direct-to-consumer fashion brands: haute couture positioning, editorial lookbooks, 4K runway films, Tirupur sustainable manufacturing, and e-commerce flagships."
-        />
-        <meta
-          property="og:title"
-          content="Fashion Brand Architecture &amp; Luxury D2C | Strains Associates"
-        />
-        <meta
-          property="og:description"
-          content="From runway concept to consumer closet: luxury fashion brand architecture, editorial photography, 4K fashion films, and sustainable manufacturing by Strains Associates."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO
+        title="Fashion Brand Architecture & Luxury D2C | Strains Associates"
+        description="Build iconic luxury and direct-to-consumer fashion brands: haute couture positioning, editorial lookbooks, 4K runway films, and sustainable manufacturing."
+        keywords={[
+          'fashion brand design agency',
+          'luxury D2C apparel branding',
+          'fashion runway films',
+          'apparel brand identity studio',
+          'fashion e-commerce growth',
+        ]}
+        canonical="/fashion-brand"
+      />
 
       <main className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Green Subheading, White Main Heading */}
