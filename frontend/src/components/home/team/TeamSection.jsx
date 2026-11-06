@@ -89,6 +89,8 @@ export default function TeamSection() {
                 <img
                   src={member.image}
                   alt={member.name}
+                  width={350}
+                  height={350}
                   className="member-image object-cover object-top w-full h-full"
                   loading="lazy"
                   decoding="async"

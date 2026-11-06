@@ -27,13 +27,15 @@ export default function MyApp({ Component, pageProps }) {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   useEffect(() => {
-    const AOS = require('aos');
-    AOS.init({
-      duration: 800,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 60,
-      delay: 0,
+    import('aos').then((module) => {
+      const AOS = module.default || module;
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 60,
+        delay: 0,
+      });
     });
   }, []);
 

@@ -296,6 +296,8 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
                     <img
                       src={member.image}
                       alt={member.name}
+                      width={320}
+                      height={420}
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       loading="lazy"
                       decoding="async"
@@ -373,6 +375,8 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
                     <img
                       src={member.image}
                       alt={member.name}
+                      width={320}
+                      height={420}
                       className="w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"

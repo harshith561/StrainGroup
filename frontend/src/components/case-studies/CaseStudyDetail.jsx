@@ -241,6 +241,8 @@ export default function CaseStudyDetail({ caseStudy }) {
                 <img
                   src={caseStudy.heroImage}
                   alt={caseStudy.title}
+                  width={800}
+                  height={500}
                   className="team-profile-image"
                   loading="eager"
                   decoding="async"

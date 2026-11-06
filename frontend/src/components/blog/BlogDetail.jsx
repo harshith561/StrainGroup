@@ -42,8 +42,11 @@ export default function BlogDetail({ post }) {
             <img
               src={post.authorImage}
               alt={post.author}
+              width={44}
+              height={44}
               className="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border border-[#00a859]/40 shrink-0"
               loading="lazy"
+              decoding="async"
             />
             <div>
               <p className="text-sm font-bold text-white leading-tight">{post.author}</p>
@@ -59,9 +62,12 @@ export default function BlogDetail({ post }) {
           <img
             src={post.heroImage}
             alt={post.title}
+            width={1280}
+            height={720}
             className="w-full h-full object-cover"
             loading="eager"
             decoding="async"
+            fetchPriority="high"
           />
         </div>
 

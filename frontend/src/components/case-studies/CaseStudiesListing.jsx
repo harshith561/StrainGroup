@@ -87,6 +87,8 @@ export default function CaseStudiesListing() {
                     <img
                       src={study.heroImage}
                       alt={study.title}
+                      width={640}
+                      height={400}
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       loading="lazy"
                       decoding="async"

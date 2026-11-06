@@ -251,6 +251,8 @@ export default function AboutStudioSection({ data = STUDIO_SECTION_DATA }) {
                     <img
                       src={img.src}
                       alt={img.alt || `Studio visual ${idx + 1}`}
+                      width={400}
+                      height={isTall ? 500 : 350}
                       loading="lazy"
                       decoding="async"
                       className="studio-gallery-img"

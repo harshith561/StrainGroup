@@ -153,6 +153,8 @@ export default function TeamMemberProfile({ member }) {
                 <img
                   src={member.profileImage}
                   alt={member.name}
+                  width={600}
+                  height={700}
                   className="team-profile-image"
                   loading="eager"
                   decoding="async"

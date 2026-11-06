@@ -14,7 +14,28 @@ export default function Document() {
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="stylesheet" href="/fonts/fonts.css" />
+        {/* Preload critical local fonts for instant text rendering */}
+        <link
+          rel="preload"
+          href="/fonts/font-13-NGSyv5HMAFg6IuGlBNMjxLsCwapkRA.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/font-6-DtVlJxerQqQm37tzN3wMug9P_g_2og.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        {/* DNS prefetch & preconnect for external domains */}
+        <link rel="dns-prefetch" href="https://strains.in" />
+        <link rel="preconnect" href="https://strains.in" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         {/* Anti-FOUC Theme Script: Immediately sync theme before first render */}
         <script
           dangerouslySetInnerHTML={{

@@ -142,6 +142,7 @@ export default function HumanTestimonialsSection({ testimonials = HUMAN_TESTIMON
                       height={48}
                       className="w-12 h-12 rounded-full object-cover border-2 border-[#dfba73]/70 bg-neutral-900 shrink-0 shadow-sm"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div className="min-w-0">
                       <h4 className="text-sm font-bold text-white group-hover:text-[#dfba73] transition-colors truncate">

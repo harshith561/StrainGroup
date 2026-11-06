@@ -78,6 +78,8 @@ export default function BlogListing() {
                 <img
                   src={post.heroImage}
                   alt={post.title}
+                  width={640}
+                  height={400}
                   loading={idx === 0 ? 'eager' : 'lazy'}
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -106,8 +108,11 @@ export default function BlogListing() {
                     <img
                       src={post.authorImage}
                       alt={post.author}
+                      width={36}
+                      height={36}
                       className="w-9 h-9 rounded-full object-cover border border-[#00a859]/30"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div>
                       <p className="text-xs font-semibold text-white leading-tight">{post.author}</p>

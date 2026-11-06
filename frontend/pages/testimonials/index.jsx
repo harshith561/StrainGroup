@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import MainLayout from '@/components/common/MainLayout';
 import SEO from '@/components/common/SEO';
 import { AboutBrandsMarqueeSection } from '@/components/about';
@@ -9,12 +10,16 @@ import {
   TestimonialsFilterTabs,
   ClientTestimonialsGrid,
   HumanTestimonialsSection,
-  ShareStoryModal,
 } from '@/components/testimonials';
 import {
   CLIENT_TESTIMONIALS,
   HUMAN_TESTIMONIALS,
 } from '@/constant/testimonialsData';
+
+const ShareStoryModal = dynamic(
+  () => import('@/components/testimonials/ShareStoryModal'),
+  { ssr: false }
+);
 
 export default function TestimonialsPage() {
   const [activeTab, setActiveTab] = useState('all');

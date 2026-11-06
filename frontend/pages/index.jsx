@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import MainLayout from '@/components/common/MainLayout';
 import SEO from '@/components/common/SEO';
 import { SITE_CONFIG } from '@/constant/siteConfig';
 import {
+  HeroSlider,
+  ProductViewer,
   AgencyIntro,
   PortfolioSection,
   ServicesSection,
@@ -15,32 +17,6 @@ import {
   DigitalMarketing,
   Marquee,
 } from '@/components/home';
-
-// dynamic(): For heavy components with complex animations or browser-only functionality
-const HeroSlider = dynamic(
-  () => import('@/components/home/hero/HeroSlider'),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="h-screen min-h-[700px] w-full bg-[#080808] flex items-center justify-center text-neutral-500 font-mono text-xs">
-        Loading Kinetic Hero...
-      </div>
-    ),
-  }
-);
-
-// dynamic(): For interactive 3D product configurator requiring canvas & browser DOM APIs
-const ProductViewer = dynamic(
-  () => import('@/components/home/product-viewer/ProductViewer'),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="min-h-[600px] w-full bg-[#111111] flex items-center justify-center text-neutral-500 font-mono text-xs">
-        Loading 3D Product Configurator...
-      </div>
-    ),
-  }
-);
 
 export default function HomePage() {
   useEffect(() => {
@@ -121,6 +97,14 @@ export default function HomePage() {
         canonical="/"
         structuredData={homeSchema}
       />
+      <Head>
+        <link
+          rel="preload"
+          as="image"
+          href="https://strains.in/wp-content/uploads/revslider/Animated-Type-Hero-Collection/1bg-texture.png"
+          fetchPriority="high"
+        />
+      </Head>
       <HeroSlider />
       <ProductViewer />
       <AgencyIntro />

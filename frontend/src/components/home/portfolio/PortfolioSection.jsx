@@ -111,6 +111,8 @@ export default function PortfolioSection() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  width={640}
+                  height={400}
                   className="project-image"
                   loading="lazy"
                   decoding="async"

@@ -13,14 +13,17 @@ export default function Header() {
   const pathname = router ? router.pathname : '';
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 40);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -87,6 +90,8 @@ export default function Header() {
               <img
                 src="/assets/strainsassociates-CfG1A0jo.webp"
                 alt="Strains Associates"
+                width={175}
+                height={48}
                 className="logo-img"
                 decoding="async"
                 fetchPriority="high"

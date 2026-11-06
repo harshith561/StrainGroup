@@ -26,8 +26,11 @@ export default function ShopProductCard({ product, index = 0 }) {
         <img
           src={product.image}
           alt={product.name}
+          width={400}
+          height={300}
           className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out select-none"
           loading="lazy"
+          decoding="async"
         />
 
         {/* Ambient Dark Gradient Bottom Vignette */}

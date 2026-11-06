@@ -112,6 +112,7 @@ export default function ClientTestimonialsGrid({ testimonials = [] }) {
                       height={52}
                       className="w-13 h-13 rounded-full object-cover border-2 border-[#00a859]/60 bg-neutral-900 shadow-md"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-[#0c0c0c] flex items-center justify-center">
                       <ShieldCheck className="w-3.5 h-3.5 text-[#00a859]" />

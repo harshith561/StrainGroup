@@ -4,6 +4,14 @@ const path = require('path');
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
+  poweredByHeader: false,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
+  },
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
   webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
@@ -40,6 +48,15 @@ const nextConfig = {
   async headers() {
     return [
       {
+        source: '/fonts/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
         source: '/videos/:path*',
         headers: [
           {
@@ -50,6 +67,15 @@ const nextConfig = {
       },
       {
         source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate=604800',
+          },
+        ],
+      },
+      {
+        source: '/assets/:path*',
         headers: [
           {
             key: 'Cache-Control',

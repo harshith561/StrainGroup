@@ -93,8 +93,11 @@ export default function FeaturedClientSpotlight() {
                     <img
                       src={current.avatar}
                       alt={current.name}
+                      width={400}
+                      height={450}
                       className="w-full h-full object-cover object-center filter brightness-[0.98] transition-transform duration-700 hover:scale-105"
                       loading="lazy"
+                      decoding="async"
                     />
 
                     {/* Gradient Overlay for bottom text legibility */}

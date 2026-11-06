@@ -34,6 +34,8 @@ export default function Footer() {
             <img
               src="/assets/strainsassociates-CfG1A0jo.webp"
               alt="Strains Associates"
+              width={219}
+              height={60}
               className="footer-logo-img"
               loading="lazy"
               decoding="async"
