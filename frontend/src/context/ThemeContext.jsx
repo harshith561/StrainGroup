@@ -32,6 +32,18 @@ export function ThemeProvider({ children }) {
     setMounted(true);
   }, []);
 
+  const triggerThemeTransition = () => {
+    if (typeof document === 'undefined') return;
+    const root = document.documentElement;
+    root.classList.add('theme-transitioning');
+    if (window.__themeTransitionTimer) {
+      window.clearTimeout(window.__themeTransitionTimer);
+    }
+    window.__themeTransitionTimer = window.setTimeout(() => {
+      root.classList.remove('theme-transitioning');
+    }, 450);
+  };
+
   const applyThemeToDOM = (newTheme) => {
     if (typeof document === 'undefined') return;
     const root = document.documentElement;
@@ -58,6 +70,7 @@ export function ThemeProvider({ children }) {
 
   const setTheme = (newTheme) => {
     const validTheme = newTheme === 'light' ? 'light' : 'dark';
+    triggerThemeTransition();
     setThemeState(validTheme);
     applyThemeToDOM(validTheme);
     try {

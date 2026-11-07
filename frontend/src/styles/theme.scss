@@ -3,23 +3,53 @@
    Complete styling coverage across 100% of pages, components, and interactions.
    ========================================================================== */
 
-/* Universal Theme Smooth Transitions */
+/* ==========================================================================
+   Universal Smooth Theme Transition Engine
+   Synchronously blends backgrounds, text colors, borders, shadows, and filters
+   when switching between Dark and Light modes.
+   ========================================================================== */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              background 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              fill 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              stroke 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition-delay: 0s !important;
+}
+
+/* Persistent Surface Smooth Transitions */
 .theme-transition,
 body,
 .app-container,
 .main-content,
 .header-container,
 .footer-container,
+.fullscreen-sidebar,
+.mobile-nav,
 .shop-card-item,
 .service-item,
 .testimonial-card,
 .team-card-item,
 .contact-form-card,
 .fashion-card,
-.showcase-card {
-  transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-              color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-              border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+.showcase-card,
+.logo-img,
+.footer-logo-img,
+.pill-button,
+.theme-toggle-btn,
+.grid-menu-btn,
+.mobile-menu-toggle {
+  transition: background-color 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              color 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Theme Toggle Button Component (Navbar & Sidebar) */
@@ -42,19 +72,56 @@ body,
     border-color: var(--accent-green, #00a859);
     color: var(--accent-green, #00a859);
     background: rgba(255, 255, 255, 0.06);
-    transform: scale(1.05);
+    transform: scale(1.06);
   }
 
   &:active {
-    transform: scale(0.95);
+    transform: scale(0.92);
   }
 
-  .theme-icon {
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  .theme-icon-wrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  &:hover .theme-icon {
-    transform: rotate(20deg);
+  .theme-icon-sun,
+  .theme-icon-moon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.35s ease;
+  }
+
+  /* Default (Dark Mode): Sun visible, Moon hidden */
+  .theme-icon-sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  .theme-icon-moon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.4);
+    pointer-events: none;
+  }
+
+  /* Light Mode State */
+  &.is-light {
+    .theme-icon-sun {
+      opacity: 0;
+      transform: rotate(-90deg) scale(0.4);
+      pointer-events: none;
+    }
+
+    .theme-icon-moon {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+      pointer-events: auto;
+    }
   }
 }
 
@@ -817,13 +884,22 @@ body.light-theme {
   }
 
   .browse-all-btn {
-    border-color: rgba(0, 0, 0, 0.2) !important;
-    color: #0f172a !important;
+    background-color: #0f172a !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    color: #ffffff !important;
+
+    svg {
+      color: #ffffff !important;
+    }
 
     &:hover {
       background-color: var(--accent-green, #00a859) !important;
       border-color: var(--accent-green, #00a859) !important;
       color: #000000 !important;
+
+      svg {
+        color: #000000 !important;
+      }
     }
   }
 
@@ -2633,29 +2709,85 @@ body.light-theme {
       }
     }
 
+    .contact-label {
+      color: var(--accent-green, #00a859) !important;
+      font-weight: 800 !important;
+      letter-spacing: 1px !important;
+    }
+
+    .footer-contact-list {
+      li {
+        color: #1e293b !important;
+      }
+      a {
+        color: #0f172a !important;
+        font-weight: 600 !important;
+        &:hover {
+          color: var(--accent-green, #00a859) !important;
+        }
+      }
+    }
+
     .subscribe-desc {
-      color: #475569 !important;
+      color: #334155 !important;
     }
 
     .subscribe-input-wrap {
       background-color: #ffffff !important;
-      border: 1px solid rgba(0, 0, 0, 0.14) !important;
+      border: 1.5px solid rgba(0, 0, 0, 0.15) !important;
+      border-radius: 9999px !important;
+      padding: 10px 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      position: relative !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.25s ease !important;
+
+      &:focus-within {
+        border-color: var(--accent-green, #00a859) !important;
+        box-shadow: 0 0 0 3px rgba(0, 168, 89, 0.15) !important;
+      }
 
       .mail-icon {
         color: #64748b !important;
+        margin-right: 10px !important;
+        flex-shrink: 0 !important;
       }
 
       .subscribe-input {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
         color: #0f172a !important;
+        padding: 0 36px 0 0 !important;
+        width: 100% !important;
+        font-size: 13px !important;
+
         &::placeholder {
           color: #94a3b8 !important;
         }
       }
 
       .subscribe-submit-btn {
+        background: transparent !important;
+        border: none !important;
         color: #0f172a !important;
+        position: absolute !important;
+        right: 14px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        padding: 4px !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.2s ease !important;
+
         &:hover {
           color: var(--accent-green, #00a859) !important;
+          transform: translateY(-50%) translateX(3px) !important;
         }
       }
     }
@@ -2708,7 +2840,40 @@ body.light-theme {
   .showcase-desc,
   .struct-list li,
   .dashboard-summary p {
-    color: #475569 !important;
+    color: #1e293b !important;
+    line-height: 1.65 !important;
+  }
+
+  .detail-desc strong,
+  .struct-list li strong,
+  .dashboard-summary p strong {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+  }
+
+  .mfg-badge {
+    color: #0f172a !important;
+    background: rgba(0, 168, 89, 0.08) !important;
+    border: 1px solid rgba(0, 168, 89, 0.28) !important;
+    font-weight: 600 !important;
+
+    svg {
+      color: var(--accent-green, #00a859) !important;
+    }
+  }
+
+  .card-subheading,
+  .struct-subtitle,
+  .brand-tag {
+    color: var(--accent-green, #00a859) !important;
+    font-weight: 800 !important;
+  }
+
+  .stitchery-feature-list li,
+  .dm-feature-list li {
+    color: #008f4c !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
   }
 
   .fashion-card,
@@ -2744,7 +2909,7 @@ body.light-theme {
     }
 
     .founder-bio {
-      color: #334155 !important;
+      color: #1e293b !important;
     }
   }
 

@@ -143,16 +143,15 @@ export default function Header() {
             </button>
             <button
               type="button"
-              className="theme-toggle-btn"
+              className={`theme-toggle-btn ${theme === 'light' ? 'is-light' : ''}`}
               onClick={toggleTheme}
               title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
               aria-label={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
             >
-              {theme === 'light' ? (
-                <Moon className="theme-icon text-slate-800" size={19} />
-              ) : (
-                <Sun className="theme-icon text-amber-300" size={19} />
-              )}
+              <div className="theme-icon-wrapper">
+                <Sun className="theme-icon-sun text-amber-300" size={19} />
+                <Moon className="theme-icon-moon text-slate-800" size={19} />
+              </div>
             </button>
           </div>
         </div>
@@ -223,16 +222,15 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              className="theme-toggle-btn sidebar-theme-toggle"
+              className={`theme-toggle-btn sidebar-theme-toggle ${theme === 'light' ? 'is-light' : ''}`}
               onClick={toggleTheme}
               title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
               aria-label="Toggle Theme"
             >
-              {theme === 'light' ? (
-                <Moon className="theme-icon" size={18} />
-              ) : (
-                <Sun className="theme-icon text-amber-300" size={18} />
-              )}
+              <div className="theme-icon-wrapper">
+                <Sun className="theme-icon-sun text-amber-300" size={18} />
+                <Moon className="theme-icon-moon" size={18} />
+              </div>
             </button>
             <button
               className="close-sidebar-btn"
