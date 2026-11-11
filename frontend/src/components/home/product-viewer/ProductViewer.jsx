@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 
 const products = [
@@ -57,23 +57,44 @@ const colorStyles = {
 export default function ProductViewer() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSwapping, setIsSwapping] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const swapTimeoutRef = useRef(null);
 
-  const selectProduct = (index) => {
-    if (index === currentIndex || isSwapping) return;
-    setIsSwapping(true);
-    setCurrentIndex(index);
-    setTimeout(() => setIsSwapping(false), 350);
-  };
+  const selectProduct = useCallback(
+    (index) => {
+      if (index === currentIndex || isSwapping) return;
+      setIsSwapping(true);
+      setCurrentIndex(index);
+      if (swapTimeoutRef.current) clearTimeout(swapTimeoutRef.current);
+      swapTimeoutRef.current = setTimeout(() => setIsSwapping(false), 350);
+    },
+    [currentIndex, isSwapping]
+  );
 
   useEffect(() => {
+    const sectionNode = sectionRef.current;
+    if (!sectionNode) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(sectionNode);
+    return () => {
+      observer.unobserve(sectionNode);
+      if (swapTimeoutRef.current) clearTimeout(swapTimeoutRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
     const timer = setInterval(() => {
-      if (!isSwapping) {
+      if (!document.hidden && !isSwapping) {
         selectProduct(currentIndex === products.length - 1 ? 0 : currentIndex + 1);
       }
     }, 4000);
     return () => clearInterval(timer);
-  }, [currentIndex, isSwapping]);
+  }, [currentIndex, isSwapping, isVisible, selectProduct]);
 
   const current = products[currentIndex];
 

@@ -6,12 +6,13 @@ export default function Custom500Page() {
   return (
     <>
       <Head>
-        <title>500 — Server Issue Encountered | Strains Associates</title>
+        <title key="title">500 — Server Issue Encountered | Strains Associates</title>
         <meta
+          key="description"
           name="description"
           content="An unexpected server issue occurred. Our engineering team has been notified."
         />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta key="robots" name="robots" content="noindex, nofollow" />
       </Head>
       <CommonErrorView type="server-issue" />
     </>

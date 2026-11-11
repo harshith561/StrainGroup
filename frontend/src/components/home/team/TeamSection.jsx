@@ -53,14 +53,15 @@ export default function TeamSection() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const sectionNode = sectionRef.current;
+    if (sectionNode) {
+      observer.observe(sectionNode);
     }
 
     return () => {
       clearTimeout(timer);
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionNode) {
+        observer.unobserve(sectionNode);
       }
     };
   }, []);

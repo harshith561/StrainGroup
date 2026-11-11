@@ -6,12 +6,13 @@ export default function Custom409Page() {
   return (
     <>
       <Head>
-        <title>409 — Under Maintenance | Strains Associates</title>
+        <title key="title">409 — Under Maintenance | Strains Associates</title>
         <meta
+          key="description"
           name="description"
           content="This route is currently undergoing scheduled system maintenance and structure updates. Contact administration for clearance."
         />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta key="robots" name="robots" content="noindex, nofollow" />
       </Head>
       <CommonErrorView type="409" />
     </>

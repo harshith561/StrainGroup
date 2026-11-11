@@ -99,7 +99,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="desktop-nav">
+          <nav className="desktop-nav" aria-label="Primary Navigation">
             <ul className="nav-list">
               {navLinks.map((item) => (
                 <li key={item.label}>
@@ -127,6 +127,8 @@ export default function Header() {
                 setMobileMenuOpen(false);
               }}
               aria-label="Open Ecosystem Directory"
+              aria-expanded={sidebarOpen}
+              aria-controls="ecosystem-sidebar"
             >
               <Grid3X3 className="grid-icon" size={22} />
             </button>
@@ -138,6 +140,8 @@ export default function Header() {
                 setSidebarOpen(false);
               }}
               aria-label="Toggle Navigation"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-primary-nav"
             >
               {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -157,7 +161,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <nav className="mobile-nav">
+          <nav id="mobile-primary-nav" className="mobile-nav" aria-label="Mobile Navigation">
             <ul className="mobile-nav-list">
               {navLinks.map((item) => (
                 <li key={item.label}>
@@ -208,12 +212,21 @@ export default function Header() {
           aria-hidden="true"
         />
       )}
-      <div className={`fullscreen-sidebar ${sidebarOpen ? 'open' : ''}`}>
+      <div
+        id="ecosystem-sidebar"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Ecosystem Directory"
+        aria-hidden={!sidebarOpen}
+        className={`fullscreen-sidebar ${sidebarOpen ? 'open' : ''}`}
+      >
         <div className="sidebar-header">
           <div className="logo-area">
             <img
               src="/assets/strainsassociates-CfG1A0jo.webp"
               alt="Strains Associates"
+              width={175}
+              height={48}
               className="logo-img"
               decoding="async"
               loading="lazy"
@@ -244,7 +257,7 @@ export default function Header() {
 
         <div className="sidebar-content">
           <span className="menu-heading font-mono">ecosystem directory</span>
-          <nav className="sidebar-nav">
+          <nav className="sidebar-nav" aria-label="Ecosystem Directory Links">
             <ul className="sidebar-nav-list font-sans">
               {sidebarLinks.map((item) => (
                 <li key={item.num}>

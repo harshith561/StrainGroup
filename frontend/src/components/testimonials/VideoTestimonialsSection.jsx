@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, X, Clock, Video, Sparkles } from 'lucide-react';
 import { VIDEO_TESTIMONIALS } from '@/constant/testimonialsData';
@@ -15,6 +15,15 @@ export default function VideoTestimonialsSection() {
   const closeVideo = () => {
     setActiveVideo(null);
   };
+
+  useEffect(() => {
+    if (!activeVideo) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeVideo();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [activeVideo]);
 
   return (
     <section 
@@ -47,11 +56,20 @@ export default function VideoTestimonialsSection() {
           {VIDEO_TESTIMONIALS.map((video, index) => (
             <motion.div
               key={video.id}
+              role="button"
+              tabIndex={0}
+              aria-label={`Play video testimonial: ${video.title}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               onClick={() => openVideo(video)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  openVideo(video);
+                }
+              }}
               className="group relative rounded-3xl bg-[#141414] border border-white/10 hover:border-[#00a859]/50 overflow-hidden cursor-pointer transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.6)] hover:-translate-y-1.5"
             >
               {/* Thumbnail Container */}
@@ -59,8 +77,11 @@ export default function VideoTestimonialsSection() {
                 <img
                   src={video.thumbnail}
                   alt={video.title}
+                  width={800}
+                  height={500}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Dark Vignette Overlay */}

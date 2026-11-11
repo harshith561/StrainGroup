@@ -143,9 +143,9 @@ export default function VideoFAQ() {
               <MessageCircle className="w-6 h-6 text-[#00e676]" />
             </div>
             <div>
-              <h4 className="text-lg font-sans font-bold text-white">
+              <h3 className="text-lg font-sans font-bold text-white">
                 Have a unique video concept or custom requirement?
-              </h4>
+              </h3>
               <p className="text-neutral-400 text-xs sm:text-sm font-sans mt-0.5">
                 Speak directly with Danny or Praharsha to scope your filming specifications.
               </p>

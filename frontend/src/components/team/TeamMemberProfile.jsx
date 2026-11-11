@@ -54,11 +54,20 @@ export default function TeamMemberProfile({ member }) {
     (item) => typeof item.url === 'string' && item.url.trim().length > 0
   );
 
-  const pageTitle = `${member.name} — ${member.designation} | Strains Group`;
-  const metaDescription =
+  const rawTitle = `${member.name} — ${member.designation} | Strains Group`;
+  const pageTitle =
+    rawTitle.length > 65 ? `${member.name} — Team | Strains Group` : rawTitle;
+  const rawDesc =
     descriptionParagraphs[0] ||
     `${member.name}, ${member.designation} at Strains Group. Discover our creative vision and team squad.`;
+  const metaDescription =
+    rawDesc.length > 158 ? `${rawDesc.slice(0, 155).trimEnd()}...` : rawDesc;
   const canonicalUrl = `https://strains.in/team/${member.slug || ''}`;
+  const resolvedImage = member.profileImage
+    ? member.profileImage.startsWith('http')
+      ? member.profileImage
+      : `https://strains.in${member.profileImage.startsWith('/') ? '' : '/'}${member.profileImage}`
+    : undefined;
 
   const personSchema = {
     '@context': 'https://schema.org',
@@ -71,27 +80,38 @@ export default function TeamMemberProfile({ member }) {
       url: 'https://strains.in',
     },
     description: metaDescription,
-    image: member.profileImage ? `https://strains.in${member.profileImage}` : undefined,
+    image: resolvedImage,
     url: canonicalUrl,
   };
 
   return (
     <MainLayout>
       <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="profile" />
-        {member.profileImage && (
-          <meta property="og:image" content={member.profileImage.startsWith('http') ? member.profileImage : `https://strains.in${member.profileImage}`} />
+        <title key="title">{pageTitle}</title>
+        <meta key="description" name="description" content={metaDescription} />
+        <link key="canonical" rel="canonical" href={canonicalUrl} />
+        <meta
+          key="robots"
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta key="og:title" property="og:title" content={pageTitle} />
+        <meta key="og:description" property="og:description" content={metaDescription} />
+        <meta key="og:url" property="og:url" content={canonicalUrl} />
+        <meta key="og:type" property="og:type" content="profile" />
+        <meta key="og:site_name" property="og:site_name" content="Strains Associates" />
+        {resolvedImage && (
+          <meta key="og:image" property="og:image" content={resolvedImage} />
         )}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={metaDescription} />
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
+        <meta key="twitter:url" name="twitter:url" content={canonicalUrl} />
+        <meta key="twitter:title" name="twitter:title" content={pageTitle} />
+        <meta key="twitter:description" name="twitter:description" content={metaDescription} />
+        {resolvedImage && (
+          <meta key="twitter:image" name="twitter:image" content={resolvedImage} />
+        )}
         <script
+          key="schema-person"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />

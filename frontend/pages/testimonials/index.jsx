@@ -65,7 +65,7 @@ export default function TestimonialsPage() {
   return (
     <MainLayout>
       <SEO
-        title="Client & Human Testimonials | Strains Group Reviews & Verified Outcomes"
+        title="Client & Human Testimonials | Strains Group"
         description="Explore verified testimonials from enterprise leaders, industrial clients, sustainable fashion customers, and Tirupur artisans at Strains Group."
         keywords={[
           'Strains Group testimonials',

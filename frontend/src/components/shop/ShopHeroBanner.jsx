@@ -23,6 +23,11 @@ export default function ShopHeroBanner() {
         <img
           src={SHOP_HERO_CONFIG.bannerImage}
           alt="Strains Apparel and Textile Manufacturing"
+          width={1200}
+          height={1661}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover object-center brightness-95 contrast-[1.05] scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
         />
 

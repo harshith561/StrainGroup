@@ -32,16 +32,16 @@ export default function FounderPage() {
     image: 'https://strains.in/images/ecosystem/team-praharsha.jpg',
     url: 'https://strains.in/founder',
     sameAs: [
-      'https://www.linkedin.com',
       'https://instagram.com/strainsassociates',
+      'https://youtube.com/@strainsassociates',
     ],
   };
 
   return (
     <MainLayout>
       <SEO
-        title="Naga Praharsha Govindu — Founder's Story & Message | Strains Group"
-        description="Discover the journey of Naga Praharsha Govindu, Founder of Strains Associates & Strains Fashions. Building a dual-hub ecosystem: cinematic video production in Hyderabad paired with zero-discharge garment manufacturing in Tirupur."
+        title="Naga Praharsha Govindu — Founder's Story | Strains Group"
+        description="Meet Naga Praharsha Govindu, Founder of Strains Associates & Strains Fashions: pairing Hyderabad video production with zero-discharge Tirupur manufacturing."
         keywords={[
           'Naga Praharsha Govindu',
           'Strains founder',

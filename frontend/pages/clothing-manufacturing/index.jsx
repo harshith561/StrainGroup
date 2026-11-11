@@ -14,7 +14,7 @@ export default function ClothingManufacturingPage() {
   return (
     <MainLayout>
       <SEO
-        title="Sustainable Clothing Manufacturing & Tirupur Hub | Strains Associates"
+        title="Sustainable Clothing Manufacturing in Tirupur"
         description="Zero-discharge sustainable apparel manufacturing hub in Tirupur, producing organic cotton, hemp, vegan silk, botanical-dyed garments, and plantable seed tags."
         keywords={[
           'sustainable clothing manufacturer Tirupur',
@@ -26,7 +26,7 @@ export default function ClothingManufacturingPage() {
         canonical="/clothing-manufacturing"
       />
 
-      <main className="video-production-page bg-[#050505] text-white">
+      <div className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Green Subheading, White Main Heading */}
         <ClothingHero />
 
@@ -44,7 +44,7 @@ export default function ClothingManufacturingPage() {
 
         {/* Section 6: High-Impact Consultation Call To Action */}
         <ClothingCTA />
-      </main>
+      </div>
     </MainLayout>
   );
 }

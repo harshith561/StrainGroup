@@ -19,9 +19,10 @@ export default function Footer() {
       setStatus({ state: 'success', message: 'Thank you for subscribing to our newsletter!' });
       setEmail('');
     } catch (err) {
-      // Graceful fallback message
-      setStatus({ state: 'success', message: 'Thank you for subscribing to our newsletter!' });
-      setEmail('');
+      setStatus({
+        state: 'error',
+        message: err?.response?.data?.message || err?.message || 'Unable to subscribe right now. Please try again.',
+      });
     }
   };
 
@@ -94,7 +95,7 @@ export default function Footer() {
 
         {/* Links Column */}
         <div className="footer-links-col">
-          <h4 className="footer-col-title font-sans">Useful Links</h4>
+          <h2 className="footer-col-title font-sans">Useful Links</h2>
           <ul className="footer-links-list">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about-strains-group">About Us</Link></li>
@@ -108,7 +109,7 @@ export default function Footer() {
 
         {/* Contact Column */}
         <div className="footer-links-col">
-          <h4 className="footer-col-title font-sans">Contact Us</h4>
+          <h2 className="footer-col-title font-sans">Contact Us</h2>
           <ul className="footer-contact-list font-mono">
             <li>
               <span className="contact-label">Location:</span>
@@ -129,16 +130,21 @@ export default function Footer() {
 
         {/* Subscribe Column */}
         <div className="footer-subscribe-col">
-          <h4 className="footer-col-title font-sans">Subscribe Newsletter</h4>
+          <h2 className="footer-col-title font-sans">Subscribe Newsletter</h2>
           <p className="subscribe-desc font-mono">
             Receive modern creative design case studies and technical updates directly in your inbox.
           </p>
           <form className="subscribe-form" onSubmit={handleSubscribe}>
             <div className="subscribe-input-wrap">
-              <Mail className="mail-icon" size={18} />
+              <Mail className="mail-icon" size={18} aria-hidden="true" />
+              <label htmlFor="footer-newsletter-email" className="sr-only">
+                Email address for newsletter
+              </label>
               <input
+                id="footer-newsletter-email"
                 type="email"
                 placeholder="Your email address"
+                aria-label="Email address for newsletter"
                 className="subscribe-input font-mono"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -154,7 +160,12 @@ export default function Footer() {
               </button>
             </div>
             {status.message && (
-              <p className="mt-2 text-xs font-mono text-strain-green">{status.message}</p>
+              <p
+                role="status"
+                className={`mt-2 text-xs font-mono ${status.state === 'error' ? 'text-red-400' : 'text-strain-green'}`}
+              >
+                {status.message}
+              </p>
             )}
           </form>
         </div>

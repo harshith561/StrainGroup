@@ -15,7 +15,7 @@ export default function ServicesPage() {
   return (
     <MainLayout>
       <SEO
-        title="Services | Creative Digital Marketing & Sustainable Apparel Production"
+        title="Services | Digital Marketing & Apparel Production"
         description="Strains Group delivers creative digital marketing, SEO, PPC, web design, video production, and zero-discharge sustainable apparel manufacturing."
         keywords={[
           'creative digital marketing agency',

@@ -14,8 +14,8 @@ export default function VideoProductionPage() {
   return (
     <MainLayout>
       <SEO
-        title="Video Production & Cinematic Brand Films | Strains Associates"
-        description="4K cinematic brand films, high-converting commercial advertisements, industrial documentaries, aerial drone videography, and in-house DaVinci post-production in Hyderabad."
+        title="Video Production & Cinematic Brand Films"
+        description="4K cinematic brand films, high-converting commercial ads, industrial documentaries, aerial drone shoots, and DaVinci post-production in Hyderabad."
         keywords={[
           'video production company Hyderabad',
           'commercial film production India',
@@ -27,7 +27,7 @@ export default function VideoProductionPage() {
         ogImage="/images/ecosystem/synergy-camera-cinematography.jpg"
       />
 
-      <main className="video-production-page bg-[#050505] text-white">
+      <div className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with 3D Video Ad Background, Green Subheading, White Main Heading */}
         <VideoHero />
 
@@ -45,7 +45,7 @@ export default function VideoProductionPage() {
 
         {/* Section 6: High-Impact Video Consultation Call To Action */}
         <VideoCTA />
-      </main>
+      </div>
     </MainLayout>
   );
 }

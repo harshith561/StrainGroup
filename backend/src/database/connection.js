@@ -3,6 +3,14 @@ const config = require('../config/env');
 
 let pool = null;
 let isConnected = false;
+let lastFailureAt = 0;
+const DB_FAILURE_COOLDOWN_MS = 30000;
+
+function isConnectionLevelError(err) {
+  if (!err) return false;
+  const connCodes = new Set(['ECONNREFUSED', 'ETIMEDOUT', 'ENOTFOUND', 'ECONNRESET', '3D000', '28P01', '28000', '57P01', '57P02', '57P03']);
+  return connCodes.has(err.code) || /timeout|connect|terminated/i.test(err.message || '');
+}
 
 // In-memory fallback stores for when local postgres instance is not currently active
 const inMemoryStore = {
@@ -40,15 +48,24 @@ function initPool() {
       user: config.database.user,
       password: config.database.password,
       database: config.database.database,
-      connectionTimeoutMillis: 3000,
+      max: 20,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 1500,
     });
 
     pool.on('error', (err) => {
       console.warn('⚠️  PostgreSQL background connection notice:', err.message);
       isConnected = false;
+      lastFailureAt = Date.now();
     });
   }
   return pool;
+}
+
+function canAttemptDb() {
+  if (isConnected) return true;
+  if (!lastFailureAt) return true;
+  return Date.now() - lastFailureAt > DB_FAILURE_COOLDOWN_MS;
 }
 
 async function query(text, params) {
@@ -56,30 +73,52 @@ async function query(text, params) {
     const p = initPool();
     const result = await p.query(text, params);
     isConnected = true;
+    lastFailureAt = 0;
     return result;
   } catch (err) {
-    isConnected = false;
+    if (isConnectionLevelError(err)) {
+      isConnected = false;
+      lastFailureAt = Date.now();
+    }
     // Transparently forward or delegate
     throw err;
   }
 }
 
-async function checkConnection() {
+async function checkConnection(options = {}) {
+  const { force = false } = options;
+  if (!force && !canAttemptDb()) {
+    return false;
+  }
   try {
     const p = initPool();
     await p.query('SELECT 1');
     isConnected = true;
+    lastFailureAt = 0;
     return true;
   } catch (err) {
     isConnected = false;
+    lastFailureAt = Date.now();
     return false;
+  }
+}
+
+async function closePool() {
+  if (pool) {
+    const activePool = pool;
+    pool = null;
+    isConnected = false;
+    await activePool.end();
   }
 }
 
 module.exports = {
   query,
   checkConnection,
+  canAttemptDb,
+  isConnectionLevelError,
   initPool,
+  closePool,
   inMemoryStore,
   getIsConnected: () => isConnected,
 };

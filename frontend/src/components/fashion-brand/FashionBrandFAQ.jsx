@@ -136,9 +136,9 @@ export default function FashionBrandFAQ() {
               <MessageCircle className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-white font-sans font-bold text-base">
+              <h3 className="text-white font-sans font-bold text-base">
                 Have an ambitious fashion label idea or luxury capsule concept?
-              </h4>
+              </h3>
               <p className="text-neutral-400 font-sans text-xs sm:text-sm">
                 Discuss your brand aesthetic and production feasibility directly with our executive creative directors.
               </p>

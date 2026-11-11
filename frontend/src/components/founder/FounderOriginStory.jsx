@@ -243,6 +243,8 @@ export default function FounderOriginStory() {
               <img
                 src={current.image}
                 alt={current.title}
+                width={800}
+                height={533}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => {
                   e.currentTarget.src = '/images/ecosystem/hero-creative.jpg';

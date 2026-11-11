@@ -65,7 +65,7 @@ export default function ServiceHero() {
       aria-label="Services Hero Carousel"
     >
       {/* Full-bleed text-related background image with cinematic slow zoom & crossfade */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={active.id}
           initial={{ opacity: 0, scale: 1.05 }}

@@ -23,12 +23,12 @@ export default function FeaturedClientSpotlight() {
 
   // Autoplay timer
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || featuredClients.length === 0) return;
     const timer = setInterval(() => {
-      handleNext();
+      setCurrentIndex((prev) => (prev + 1) % featuredClients.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, [isPaused, currentIndex]);
+  }, [isPaused, featuredClients.length]);
 
   return (
     <section 

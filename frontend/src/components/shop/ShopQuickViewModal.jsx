@@ -1,10 +1,19 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { X, ArrowRight } from 'lucide-react';
 
 export default function ShopQuickViewModal({ product, onClose }) {
+  useEffect(() => {
+    if (!product) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [product, onClose]);
+
   if (!product) return null;
 
   const contactUrl = `/contact?product=${encodeURIComponent(
@@ -17,6 +26,9 @@ export default function ShopQuickViewModal({ product, onClose }) {
       onClick={onClose}
     >
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={product.name}
         className="relative w-full max-w-4xl bg-[#111111] border border-white/15 rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col md:flex-row"
         onClick={(e) => e.stopPropagation()}
       >
@@ -34,6 +46,8 @@ export default function ShopQuickViewModal({ product, onClose }) {
           <img
             src={product.image}
             alt={product.name}
+            width={800}
+            height={1000}
             className="w-full h-full object-cover object-center max-h-[460px]"
           />
         </div>

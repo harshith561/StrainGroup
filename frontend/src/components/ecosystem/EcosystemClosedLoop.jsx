@@ -149,9 +149,9 @@ export default function EcosystemClosedLoop() {
                   </span>
                   <PhaseIcon size={16} className={isCurrent ? 'text-[#00a859]' : 'text-neutral-500'} />
                 </div>
-                <h4 className="font-sans text-xs sm:text-sm font-bold text-white line-clamp-1">
+                <h3 className="font-sans text-xs sm:text-sm font-bold text-white line-clamp-1">
                   {phase.title}
-                </h4>
+                </h3>
                 <span className="font-mono text-[10px] text-[#777] block mt-1">
                   {phase.timeline}
                 </span>
@@ -251,6 +251,8 @@ export default function EcosystemClosedLoop() {
                   <img
                     src={activePhase.image}
                     alt={activePhase.title}
+                    width={800}
+                    height={600}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

@@ -136,9 +136,9 @@ export default function StartBrandFAQ() {
               <MessageCircle className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-white font-sans font-bold text-base">
+              <h3 className="text-white font-sans font-bold text-base">
                 Have a brand concept ready to bring to market?
-              </h4>
+              </h3>
               <p className="text-neutral-400 font-sans text-xs sm:text-sm">
                 Pitch your concept directly to Naga Praharsha and explore incubator feasibility within 48 hours.
               </p>

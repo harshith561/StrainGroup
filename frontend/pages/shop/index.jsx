@@ -62,7 +62,7 @@ export default function ShopPage() {
     <MainLayout>
       <SEO
         title="Sustainable Apparel Catalog & Shop | Strains Group"
-        description="Explore Strains sustainable apparel catalog: GOTS organic cotton tees, European hemp shirts, zero-discharge track pants, and custom Tirupur manufacturing prototypes."
+        description="Explore Strains sustainable apparel catalog: GOTS organic cotton tees, hemp shirts, zero-discharge track pants, and Tirupur manufacturing prototypes."
         keywords={[
           'sustainable apparel shop',
           'organic cotton t-shirts wholesale',

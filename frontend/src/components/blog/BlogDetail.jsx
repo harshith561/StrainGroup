@@ -97,9 +97,9 @@ export default function BlogDetail({ post }) {
                     &ldquo;{block.quote}&rdquo;
                   </p>
                   {block.author && (
-                    <footer className="text-xs font-mono uppercase tracking-wider text-[#00a859] font-semibold">
+                    <cite className="block not-italic text-xs font-mono uppercase tracking-wider text-[#00a859] font-semibold">
                       — {block.author}
-                    </footer>
+                    </cite>
                   )}
                 </blockquote>
               );
@@ -148,6 +148,8 @@ export default function BlogDetail({ post }) {
           <img
             src={post.authorImage}
             alt={post.author}
+            width={64}
+            height={64}
             className="w-16 h-16 rounded-full object-cover border-2 border-[#00a859]"
             loading="lazy"
           />

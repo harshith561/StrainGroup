@@ -63,7 +63,6 @@ export default function HomePage() {
       sameAs: [
         'https://instagram.com/strainsassociates',
         'https://youtube.com/@strainsassociates',
-        'https://linkedin.com',
       ],
     },
     {
@@ -71,19 +70,14 @@ export default function HomePage() {
       '@type': 'WebSite',
       name: 'Strains Group',
       url: 'https://strains.in',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://strains.in/portfolio?query={search_term_string}',
-        'query-input': 'required name=search_term_string',
-      },
     },
   ];
 
   return (
     <MainLayout>
       <SEO
-        title="Strains Group | Creative Agency & Sustainable Garment Manufacturing"
-        description="Award-winning creative agency, cinematic video production, performance digital marketing, and zero-discharge sustainable apparel manufacturing in Hyderabad & Tirupur."
+        title="Strains Group | Creative Agency & Apparel Manufacturing"
+        description="Award-winning creative agency, 4K video production, performance marketing, and zero-discharge sustainable apparel manufacturing in Hyderabad & Tirupur."
         keywords={[
           'Strains Associates',
           'Strains Group',

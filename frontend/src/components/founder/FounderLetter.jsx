@@ -116,9 +116,9 @@ export default function FounderLetter() {
                 With Warmth &amp; Conviction,
               </span>
 
-              <h4 className="text-white font-bold text-xl sm:text-2xl font-sans tracking-tight">
+              <h3 className="text-white font-bold text-xl sm:text-2xl font-sans tracking-tight">
                 Naga Praharsha Govindu
-              </h4>
+              </h3>
               <p className="text-xs text-[#00a859] font-mono mt-1">
                 Founder, Strategy Maker &amp; Line Producer
               </p>

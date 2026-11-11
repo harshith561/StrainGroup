@@ -93,9 +93,9 @@ export default function SustainabilityFAQ() {
               <MessageSquare className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-base sm:text-lg font-sans font-bold text-white mb-1">
+              <h3 className="text-base sm:text-lg font-sans font-bold text-white mb-1">
                 Have specific technical or chemical certification questions?
-              </h4>
+              </h3>
               <p className="text-xs sm:text-sm text-neutral-400 font-sans">
                 Our Tirupur textile engineers and compliance directors are available for video consultations.
               </p>

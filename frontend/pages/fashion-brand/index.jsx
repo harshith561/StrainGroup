@@ -14,7 +14,7 @@ export default function FashionBrandPage() {
   return (
     <MainLayout>
       <SEO
-        title="Fashion Brand Architecture & Luxury D2C | Strains Associates"
+        title="Fashion Brand Architecture & Luxury D2C"
         description="Build iconic luxury and direct-to-consumer fashion brands: haute couture positioning, editorial lookbooks, 4K runway films, and sustainable manufacturing."
         keywords={[
           'fashion brand design agency',
@@ -26,7 +26,7 @@ export default function FashionBrandPage() {
         canonical="/fashion-brand"
       />
 
-      <main className="video-production-page bg-[#050505] text-white">
+      <div className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Green Subheading, White Main Heading */}
         <FashionBrandHero />
 
@@ -44,7 +44,7 @@ export default function FashionBrandPage() {
 
         {/* Section 6: High-Impact Consultation Call To Action */}
         <FashionBrandCTA />
-      </main>
+      </div>
     </MainLayout>
   );
 }

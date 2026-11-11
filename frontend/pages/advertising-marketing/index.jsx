@@ -14,7 +14,7 @@ export default function AdvertisingMarketingPage() {
   return (
     <MainLayout>
       <SEO
-        title="Advertising & Performance Digital Marketing | Strains Associates"
+        title="Advertising & Performance Digital Marketing"
         description="High-intent Google Ads, Meta SMM campaigns, enterprise B2B PPC, and SEO engines with verified industry-leading conversion metrics and transparent reporting."
         keywords={[
           'performance marketing agency Hyderabad',
@@ -26,7 +26,7 @@ export default function AdvertisingMarketingPage() {
         canonical="/advertising-marketing"
       />
 
-      <main className="video-production-page bg-[#050505] text-white">
+      <div className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Green Subheading, White Main Heading */}
         <AdvertisingHero />
 
@@ -44,7 +44,7 @@ export default function AdvertisingMarketingPage() {
 
         {/* Section 6: High-Impact Consultation Call To Action */}
         <AdvertisingCTA />
-      </main>
+      </div>
     </MainLayout>
   );
 }

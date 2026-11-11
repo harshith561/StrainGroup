@@ -68,14 +68,15 @@ export default function PortfolioSection() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const sectionNode = sectionRef.current;
+    if (sectionNode) {
+      observer.observe(sectionNode);
     }
 
     return () => {
       clearTimeout(timer);
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionNode) {
+        observer.unobserve(sectionNode);
       }
     };
   }, []);
@@ -138,7 +139,7 @@ export default function PortfolioSection() {
         </div>
 
         <div className="work-footer-cta">
-          <Link href="/work" className="browse-all-btn pill-button font-mono">
+          <Link href="/case-studies" className="browse-all-btn pill-button font-mono">
             BROWSE MORE (20) <ArrowRight size={16} style={{ marginLeft: '10px' }} />
           </Link>
         </div>

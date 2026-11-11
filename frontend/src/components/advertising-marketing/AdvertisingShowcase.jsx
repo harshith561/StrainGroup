@@ -86,9 +86,9 @@ export default function AdvertisingShowcase() {
                       0{idx + 1}
                     </span>
                   </div>
-                  <h4 className="text-white font-sans font-bold text-sm sm:text-base mb-1.5 group-hover:text-[#00e676] transition-colors">
+                  <h3 className="text-white font-sans font-bold text-sm sm:text-base mb-1.5 group-hover:text-[#00e676] transition-colors">
                     {srv.title}
-                  </h4>
+                  </h3>
                   <p className="text-neutral-400 text-xs font-sans leading-relaxed">
                     {srv.desc}
                   </p>

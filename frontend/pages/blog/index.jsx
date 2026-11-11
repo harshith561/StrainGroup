@@ -22,8 +22,8 @@ export default function BlogPage() {
   return (
     <MainLayout>
       <SEO
-        title="Blog & Insights | Sustainable Fashion, Video Production & Marketing"
-        description="Explore articles and perspectives from Strains Group on zero-discharge garment manufacturing in Tirupur, cinematic video production, and performance brand marketing."
+        title="Blog & Insights | Fashion, Video & Marketing"
+        description="Read Strains Group insights on zero-discharge garment manufacturing in Tirupur, 4K commercial video production, and full-funnel brand marketing."
         keywords={[
           'Strains Group blog',
           'sustainable apparel manufacturing articles',

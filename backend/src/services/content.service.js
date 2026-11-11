@@ -1,42 +1,51 @@
-const { query, checkConnection, inMemoryStore } = require('../database/connection');
+const { query, canAttemptDb, inMemoryStore } = require('../database/connection');
 
-async function getProjectsList() {
-  const isConnected = await checkConnection();
-  if (isConnected) {
+const CACHE_TTL_MS = 60 * 1000;
+const contentCache = new Map();
+
+async function getCachedTableList(cacheKey, sql, fallback) {
+  const cached = contentCache.get(cacheKey);
+  if (cached && Date.now() - cached.cachedAt < CACHE_TTL_MS) {
+    return cached.rows;
+  }
+
+  if (canAttemptDb()) {
     try {
-      const res = await query('SELECT * FROM projects ORDER BY sort_order ASC');
-      if (res.rows.length > 0) return res.rows;
+      const res = await query(sql);
+      if (res.rows.length > 0) {
+        contentCache.set(cacheKey, { rows: res.rows, cachedAt: Date.now() });
+        return res.rows;
+      }
     } catch (e) {
       // fall back to default
     }
   }
-  return inMemoryStore.projects;
+
+  return fallback;
+}
+
+async function getProjectsList() {
+  return getCachedTableList(
+    'projects',
+    'SELECT * FROM projects ORDER BY sort_order ASC',
+    inMemoryStore.projects
+  );
 }
 
 async function getServicesList() {
-  const isConnected = await checkConnection();
-  if (isConnected) {
-    try {
-      const res = await query('SELECT * FROM services ORDER BY sort_order ASC');
-      if (res.rows.length > 0) return res.rows;
-    } catch (e) {
-      // fall back to default
-    }
-  }
-  return inMemoryStore.services;
+  return getCachedTableList(
+    'services',
+    'SELECT * FROM services ORDER BY sort_order ASC',
+    inMemoryStore.services
+  );
 }
 
 async function getTestimonialsList() {
-  const isConnected = await checkConnection();
-  if (isConnected) {
-    try {
-      const res = await query('SELECT * FROM testimonials ORDER BY sort_order ASC');
-      if (res.rows.length > 0) return res.rows;
-    } catch (e) {
-      // fall back to default
-    }
-  }
-  return inMemoryStore.testimonials;
+  return getCachedTableList(
+    'testimonials',
+    'SELECT * FROM testimonials ORDER BY sort_order ASC',
+    inMemoryStore.testimonials
+  );
 }
 
 async function getProductsList() {

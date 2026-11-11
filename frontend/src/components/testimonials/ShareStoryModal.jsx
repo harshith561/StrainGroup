@@ -1,11 +1,19 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Star, CheckCircle, Send, Sparkles, Building2, User, ArrowUpRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/constant';
 
 export default function ShareStoryModal({ isOpen, onClose }) {
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen, onClose]);
   const googleReviewUrl =
     SITE_CONFIG?.googleReviewUrl ||
     'https://www.google.com/search?q=Strains+Associates+Hyderabad+reviews#lrd=0x0:0x0,3,,,';
@@ -47,6 +55,9 @@ export default function ShareStoryModal({ isOpen, onClose }) {
         onClick={onClose}
       >
         <motion.div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Share Your Experience"
           initial={{ scale: 0.95, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.95, opacity: 0, y: 20 }}

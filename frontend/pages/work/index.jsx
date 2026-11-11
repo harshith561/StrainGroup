@@ -7,8 +7,8 @@ export default function WorkPage() {
   return (
     <MainLayout>
       <SEO
-        title="Case Studies & Work | Creative Marketing & Sustainable Manufacturing"
-        description="Explore authentic case studies from Strains Group: high-impact video production, Google & Meta advertising ROI, zero-discharge Tirupur garment manufacturing."
+        title="Case Studies & Work | Creative & Manufacturing"
+        description="Browse Strains Associates and Strains Stitchery work portfolio covering commercial films, performance marketing, and sustainable apparel manufacturing."
         canonical="/case-studies"
       />
 

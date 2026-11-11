@@ -79,7 +79,7 @@ export default function CaseStudiesListing() {
                 className="h-full"
               >
                 <Link
-                  href={`/work/${study.slug}`}
+                  href={`/case-studies/${study.slug}`}
                   className="group flex flex-col h-full bg-[#121212] hover:bg-[#161616] border border-white/5 hover:border-[#00a859]/40 rounded-2xl overflow-hidden transition-all duration-400 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
                 >
                   {/* Clean Image Container with No Overlay Pills */}

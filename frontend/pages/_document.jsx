@@ -17,7 +17,7 @@ export default function Document() {
         {/* Preload critical local fonts for instant text rendering */}
         <link
           rel="preload"
-          href="/fonts/font-13-NGSyv5HMAFg6IuGlBNMjxLsCwapkRA.woff2"
+          href="/fonts/font-20-NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

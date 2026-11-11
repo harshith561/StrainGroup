@@ -14,8 +14,8 @@ export default function StartYourBrandPage() {
   return (
     <MainLayout>
       <SEO
-        title="Start Your Brand | Turnkey Fashion & Apparel Incubator — Strains Associates"
-        description="Launch your apparel brand with Strains Associates: complete brand strategy, low-MOQ Tirupur sustainable manufacturing, 4K commercial videos, and customer acquisition."
+        title="Start Your Brand | Turnkey Apparel Incubator"
+        description="Launch your apparel brand with Strains Associates: brand strategy, low-MOQ Tirupur sustainable manufacturing, 4K commercial videos, and growth."
         keywords={[
           'start an apparel brand India',
           'clothing line incubator',
@@ -26,7 +26,7 @@ export default function StartYourBrandPage() {
         canonical="/start-your-brand"
       />
 
-      <main className="video-production-page bg-[#050505] text-white">
+      <div className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Green Subheading, White Main Heading */}
         <StartBrandHero />
 
@@ -44,7 +44,7 @@ export default function StartYourBrandPage() {
 
         {/* Section 6: High-Impact Consultation Call To Action */}
         <StartBrandCTA />
-      </main>
+      </div>
     </MainLayout>
   );
 }

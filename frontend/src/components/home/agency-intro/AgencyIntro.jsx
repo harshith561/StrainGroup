@@ -16,13 +16,14 @@ export default function AgencyIntro() {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const sectionNode = sectionRef.current;
+    if (sectionNode) {
+      observer.observe(sectionNode);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionNode) {
+        observer.unobserve(sectionNode);
       }
     };
   }, []);
@@ -70,9 +71,9 @@ export default function AgencyIntro() {
 
         <div className="intro-content-grid">
           <div className="intro-grid-left">
-            <h3 className="intro-main-pitch font-sans">
+            <h2 className="intro-main-pitch font-sans">
               Strains Associates provides creative, branding, digital marketing, video production and sustainable fashion solutions. We help businesses build their brands through creative content, strategic marketing, professional production and sustainable manufacturing.
-            </h3>
+            </h2>
           </div>
 
           <div className="intro-grid-right">

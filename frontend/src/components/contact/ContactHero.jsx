@@ -1,7 +1,11 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useState } from 'react';
+import Head from 'next/head';
 import { useAutoplayVideo } from '@/hooks';
+
+const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 const WORDS = [
   { word: 'WORK', letters: ['W', 'O', 'R', 'K'], startIndex: 0 },
@@ -14,13 +18,14 @@ const WORDS = [
  * Features:
  * - Full-width HD background video with deep black shadows & subtle emerald atmosphere
  * - Smooth fade-in once buffered (no stale poster flash during route transitions)
- * - Tall, condensed typography (Bebas Neue / Oswald) with visible character separation (tracking-[0.02em])
- * - Cinematic letter-by-letter entrance animation (left-to-right stagger)
+ * - Tall, condensed typography (Bebas Neue) with visible character separation (tracking-[0.02em])
+ * - Font-gated entrance animation synchronized before reveal (prevents fallback-font/blur flashes)
  * - Clean border-b border-white/10 divider
  */
 export default function ContactHero() {
   const { videoRef, isVideoLoaded, setIsVideoLoaded } = useAutoplayVideo();
   const [videoExists, setVideoExists] = useState(true);
+  const [isTitleReady, setIsTitleReady] = useState(false);
 
   const applyPlaybackRate = useCallback(() => {
     if (videoRef.current) {
@@ -33,16 +38,64 @@ export default function ContactHero() {
     applyPlaybackRate();
   }, [applyPlaybackRate]);
 
+  useIsomorphicLayoutEffect(() => {
+    let active = true;
+    const markReady = () => {
+      if (active) setIsTitleReady(true);
+    };
+
+    if (typeof document === 'undefined' || !document.fonts) {
+      const frameId = requestAnimationFrame(markReady);
+      return () => {
+        active = false;
+        cancelAnimationFrame(frameId);
+      };
+    }
+
+    if (document.fonts.check('400 1em "Bebas Neue"')) {
+      const frameId = requestAnimationFrame(markReady);
+      return () => {
+        active = false;
+        cancelAnimationFrame(frameId);
+      };
+    }
+
+    const fallbackTimer = setTimeout(markReady, 250);
+    document.fonts
+      .load('400 1em "Bebas Neue"')
+      .then(() => {
+        clearTimeout(fallbackTimer);
+        markReady();
+      })
+      .catch(markReady);
+
+    return () => {
+      active = false;
+      clearTimeout(fallbackTimer);
+    };
+  }, []);
+
   const handleVideoReady = useCallback(() => {
     applyPlaybackRate();
     setIsVideoLoaded(true);
   }, [applyPlaybackRate, setIsVideoLoaded]);
 
   return (
-    <section
-      className="contact-hero-container relative overflow-hidden bg-[#0D0D0D] border-b border-white/10"
-      aria-label="Work With Us Strains Group Hero"
-    >
+    <>
+      <Head>
+        <link
+          key="preload-bebas-neue"
+          rel="preload"
+          href="/fonts/font-4-JTUSjIg69CK48gW7PXoo9Wlhyw.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </Head>
+      <section
+        className="contact-hero-container relative overflow-hidden bg-[#0D0D0D] border-b border-white/10"
+        aria-label="Work With Us Strains Group Hero"
+      >
       {/* 1. Cinematic Background Video (deep monochrome/black shadows, fades in smoothly when ready) */}
       {videoExists && (
         <video
@@ -54,7 +107,7 @@ export default function ContactHero() {
           playsInline
           webkit-playsinline="true"
           x5-playsinline="true"
-          preload="auto"
+          preload="metadata"
           onLoadedMetadata={applyPlaybackRate}
           onLoadedData={handleVideoReady}
           onCanPlay={handleVideoReady}
@@ -69,8 +122,12 @@ export default function ContactHero() {
       {/* 2. Dark Overlay: Ensures white WORK WITH US heading is readable over any footage */}
       <div className="contact-hero-overlay absolute inset-0 bg-black/60 pointer-events-none" />
 
-      {/* 3. Centered Monumental Typography: WORK WITH US with Letter-by-Letter Entrance */}
-      <div className="contact-hero-heading-wrap relative z-10 w-full flex items-center justify-center select-none">
+      {/* 3. Centered Monumental Typography: WORK WITH US (revealed after layout & Bebas Neue readiness) */}
+      <div
+        className={`contact-hero-heading-wrap relative z-10 w-full flex items-center justify-center select-none ${
+          isTitleReady ? 'is-ready' : ''
+        }`}
+      >
         <h1
           className="contact-hero-title font-bold uppercase text-white"
           aria-label="Work With Us"
@@ -84,9 +141,6 @@ export default function ContactHero() {
                     key={`${letter}-${globalIndex}`}
                     className="contact-letter inline-block"
                     aria-hidden="true"
-                    style={{
-                      animationDelay: `${globalIndex * 0.07}s`,
-                    }}
                   >
                     {letter}
                   </span>
@@ -97,5 +151,6 @@ export default function ContactHero() {
         </h1>
       </div>
     </section>
+    </>
   );
 }

@@ -52,13 +52,14 @@ export default function ServicesSection() {
       { threshold: 0.15 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const sectionNode = sectionRef.current;
+    if (sectionNode) {
+      observer.observe(sectionNode);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionNode) {
+        observer.unobserve(sectionNode);
       }
     };
   }, []);
@@ -80,10 +81,19 @@ export default function ServicesSection() {
           {services.map((item, idx) => (
             <div
               key={item.id}
+              role="button"
+              tabIndex={0}
+              aria-expanded={activeItem === idx}
               className={`service-item ${activeItem === idx ? 'active' : ''}`}
               onMouseEnter={() => setActiveItem(idx)}
               onMouseLeave={() => setActiveItem(null)}
               onClick={() => setActiveItem(activeItem === idx ? null : idx)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setActiveItem(activeItem === idx ? null : idx);
+                }
+              }}
               style={{ transitionDelay: `${idx * 0.08}s` }}
             >
               <div className="service-row-header">

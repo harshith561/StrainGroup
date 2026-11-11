@@ -238,7 +238,7 @@ export default function ExtraEcosystem() {
               </div>
 
               <div className="dashboard-summary font-mono">
-                <h4 className="summary-title font-sans">Campaign Insights</h4>
+                <h3 className="summary-title font-sans">Campaign Insights</h3>
                 <p>
                   Achieved outstanding performance over a <strong>3.5-year campaign duration</strong>. Reached high audience engagement and structural CTR metrics at an extremely cost-efficient spend of <strong>₹287,000</strong>.
                 </p>
@@ -276,7 +276,7 @@ export default function ExtraEcosystem() {
               </div>
 
               <div className="dashboard-summary font-mono">
-                <h4 className="summary-title font-sans">Campaign Insights</h4>
+                <h3 className="summary-title font-sans">Campaign Insights</h3>
                 <p>
                   Demonstrated exceptional cost-efficiency and conversion optimization. Reached outstanding ROI with strong industrial sector engagement and structural CPC optimization at a minimal total investment.
                 </p>

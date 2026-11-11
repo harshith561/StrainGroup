@@ -30,13 +30,13 @@ export default function ShopCTA() {
           playsInline
           webkit-playsinline="true"
           x5-playsinline="true"
-          preload={isNearViewport ? 'auto' : 'none'}
+          preload={isNearViewport ? 'metadata' : 'none'}
           onLoadedData={() => setIsVideoLoaded(true)}
           onPlaying={() => setIsVideoLoaded(true)}
           onCanPlay={() => setIsVideoLoaded(true)}
-          className={`w-full h-full object-cover filter brightness-[0.92] contrast-[1.05] saturate-[1.1] transition-opacity duration-1000 ease-out ${
-            isVideoLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+
+          className={`w-full h-full object-cover filter brightness-[0.92] contrast-[1.05] saturate-[1.1] transition-opacity duration-1000 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           poster="/images/case-studies/strains-fashions.jpg"
         >
           {isNearViewport && (

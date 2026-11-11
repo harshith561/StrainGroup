@@ -42,14 +42,15 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <title>Strains Group | Creative Agency & Sustainable Garment Manufacturing</title>
+        <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <title key="title">Strains Group | Creative Agency & Sustainable Garment Manufacturing</title>
         <meta
+          key="description"
           name="description"
           content="Strains Associates - Award winning creative agency, video production, digital marketing, sustainable fashion manufacturing, and creative ecosystems in Hyderabad & Tirupur."
         />
-        <meta name="robots" content="index, follow" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta key="robots" name="robots" content="index, follow" />
+        <link key="icon" rel="icon" type="image/png" href="/favicon.png" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>

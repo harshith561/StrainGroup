@@ -146,8 +146,11 @@ export default function SustainabilityProducts() {
                   <img
                     src={item.image}
                     alt={item.title}
+                    width={1200}
+                    height={896}
                     className="w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition-transform duration-500 ease-out"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/30" />
 

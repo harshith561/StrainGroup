@@ -28,7 +28,7 @@ export default function CaseStudyDetail({ caseStudy }) {
               The case study you are looking for is unavailable or has been relocated.
             </p>
             <Link
-              href="/work"
+              href="/case-studies"
               className="pill-button inline-flex items-center gap-2 bg-[#00a859] text-black font-bold px-6 py-3 rounded-full"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -40,9 +40,18 @@ export default function CaseStudyDetail({ caseStudy }) {
     );
   }
 
-  const pageTitle = `${caseStudy.title} — ${caseStudy.subtitle} | Case Study Strains Group`;
-  const metaDescription = caseStudy.summary;
+  const fullCaseTitle = `${caseStudy.title} | Case Study | Strains Group`;
+  const pageTitle =
+    fullCaseTitle.length <= 65 ? fullCaseTitle : `${caseStudy.title} | Strains Group`;
+  const rawDesc = caseStudy.summary || '';
+  const metaDescription =
+    rawDesc.length > 158 ? `${rawDesc.slice(0, 155).trimEnd()}...` : rawDesc;
   const canonicalUrl = `https://strains.in/case-studies/${caseStudy.slug}`;
+  const resolvedHeroImage = caseStudy.heroImage
+    ? caseStudy.heroImage.startsWith('http')
+      ? caseStudy.heroImage
+      : `https://strains.in${caseStudy.heroImage.startsWith('/') ? '' : '/'}${caseStudy.heroImage}`
+    : undefined;
 
   const caseStudySchema = {
     '@context': 'https://schema.org',
@@ -50,7 +59,7 @@ export default function CaseStudyDetail({ caseStudy }) {
     name: caseStudy.title,
     headline: `${caseStudy.title} — ${caseStudy.subtitle}`,
     description: metaDescription,
-    image: caseStudy.heroImage ? `https://strains.in${caseStudy.heroImage}` : undefined,
+    image: resolvedHeroImage,
     url: canonicalUrl,
     creator: {
       '@type': 'Organization',
@@ -61,20 +70,31 @@ export default function CaseStudyDetail({ caseStudy }) {
   return (
     <MainLayout>
       <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        {caseStudy.heroImage && (
-          <meta property="og:image" content={caseStudy.heroImage.startsWith('http') ? caseStudy.heroImage : `https://strains.in${caseStudy.heroImage}`} />
+        <title key="title">{pageTitle}</title>
+        <meta key="description" name="description" content={metaDescription} />
+        <link key="canonical" rel="canonical" href={canonicalUrl} />
+        <meta
+          key="robots"
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta key="og:title" property="og:title" content={pageTitle} />
+        <meta key="og:description" property="og:description" content={metaDescription} />
+        <meta key="og:url" property="og:url" content={canonicalUrl} />
+        <meta key="og:type" property="og:type" content="article" />
+        <meta key="og:site_name" property="og:site_name" content="Strains Associates" />
+        {resolvedHeroImage && (
+          <meta key="og:image" property="og:image" content={resolvedHeroImage} />
         )}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={metaDescription} />
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
+        <meta key="twitter:url" name="twitter:url" content={canonicalUrl} />
+        <meta key="twitter:title" name="twitter:title" content={pageTitle} />
+        <meta key="twitter:description" name="twitter:description" content={metaDescription} />
+        {resolvedHeroImage && (
+          <meta key="twitter:image" name="twitter:image" content={resolvedHeroImage} />
+        )}
         <script
+          key="schema-case-study"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }}
         />
@@ -86,7 +106,7 @@ export default function CaseStudyDetail({ caseStudy }) {
           {/* Breadcrumb / Back Link & Share Buttons */}
           <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <Link
-              href="/work"
+              href="/case-studies"
               className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-wider uppercase text-neutral-400 hover:text-[#00a859] transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -121,9 +141,9 @@ export default function CaseStudyDetail({ caseStudy }) {
 
                 {/* Executive Overview */}
                 <div>
-                  <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-white/50 mb-2">
+                  <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-white/50 mb-2">
                     Executive Overview
-                  </h3>
+                  </h2>
                   <p className="team-profile-p">
                     {caseStudy.overview}
                   </p>
@@ -131,9 +151,9 @@ export default function CaseStudyDetail({ caseStudy }) {
 
                 {/* The Challenge */}
                 <div className="bg-[#141414] border-l-2 border-[#00a859] p-5 rounded-r-xl">
-                  <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#00a859] mb-1.5">
+                  <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-[#00a859] mb-1.5">
                     The Challenge
-                  </h3>
+                  </h2>
                   <p className="text-sm text-neutral-300 font-sans leading-relaxed m-0">
                     {caseStudy.challenge}
                   </p>
@@ -141,9 +161,9 @@ export default function CaseStudyDetail({ caseStudy }) {
 
                 {/* The Strategy & Execution */}
                 <div>
-                  <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-white/50 mb-2">
+                  <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-white/50 mb-2">
                     Strategy & Execution
-                  </h3>
+                  </h2>
                   <p className="team-profile-p">
                     {caseStudy.strategy}
                   </p>
@@ -151,9 +171,9 @@ export default function CaseStudyDetail({ caseStudy }) {
 
                 {/* Results & Business Impact */}
                 <div>
-                  <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-white/50 mb-2">
+                  <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-white/50 mb-2">
                     Measurable Results & Value
-                  </h3>
+                  </h2>
                   <p className="team-profile-p">
                     {caseStudy.results}
                   </p>
@@ -163,9 +183,9 @@ export default function CaseStudyDetail({ caseStudy }) {
 
               {/* 4. Key Metrics Grid */}
               <div className="my-8 pt-6 border-t border-white/10">
-                <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#00a859] mb-4">
+                <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-[#00a859] mb-4">
                   Key Performance Metrics
-                </h3>
+                </h2>
                 <div className="grid grid-cols-2 gap-4">
                   {caseStudy.metrics.map((metric, idx) => (
                     <div

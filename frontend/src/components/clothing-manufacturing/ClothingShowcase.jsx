@@ -86,9 +86,9 @@ export default function ClothingShowcase() {
                       0{idx + 1}
                     </span>
                   </div>
-                  <h4 className="text-white font-sans font-bold text-sm sm:text-base mb-1.5 group-hover:text-[#00e676] transition-colors">
+                  <h3 className="text-white font-sans font-bold text-sm sm:text-base mb-1.5 group-hover:text-[#00e676] transition-colors">
                     {srv.title}
-                  </h4>
+                  </h3>
                   <p className="text-neutral-400 text-xs font-sans leading-relaxed">
                     {srv.desc}
                   </p>
@@ -129,9 +129,8 @@ export default function ClothingShowcase() {
                 <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[#00e676]/50 shadow-2xl bg-[#080808]">
                   {/* High-Tech Video Loader Overlay — Visible ONLY until the video is loaded & ready */}
                   <div
-                    className={`absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#0c0c0c] via-[#111111] to-[#080808] transition-opacity duration-700 ease-out ${
-                      isVideoLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
-                    }`}
+                    className={`absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-br from-[#0c0c0c] via-[#111111] to-[#080808] transition-opacity duration-700 ease-out ${isVideoLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                      }`}
                     aria-hidden={isVideoLoaded}
                   >
                     <div className="absolute w-36 h-36 bg-[#00a859]/20 rounded-full blur-2xl pointer-events-none animate-pulse" />
@@ -167,9 +166,8 @@ export default function ClothingShowcase() {
                     onLoadedData={() => setIsVideoLoaded(true)}
                     onPlaying={() => setIsVideoLoaded(true)}
                     onCanPlay={() => setIsVideoLoaded(true)}
-                    className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${
-                      isVideoLoaded ? 'opacity-100' : 'opacity-0'
-                    }`}
+                    className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
+                      }`}
                   >
                     {isNearViewport && (
                       <>

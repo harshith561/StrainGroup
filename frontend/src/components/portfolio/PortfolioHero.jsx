@@ -39,7 +39,7 @@ export default function PortfolioHero() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           onCanPlay={() => setIsVideoLoaded(true)}
           className={`w-full h-full object-cover brightness-[0.75] contrast-[1.1] transition-opacity duration-1000 ease-out ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
             }`}

@@ -168,14 +168,15 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const sectionNode = sectionRef.current;
+    if (sectionNode) {
+      observer.observe(sectionNode);
     }
 
     return () => {
       clearTimeout(timer);
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionNode) {
+        observer.unobserve(sectionNode);
       }
     };
   }, []);
@@ -222,8 +223,8 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
     mobileIndex === 0
       ? totalMembers - 1
       : mobileIndex === totalMembers + 1
-      ? 0
-      : mobileIndex - 1;
+        ? 0
+        : mobileIndex - 1;
   const currentMobileMember = members[activeMobileRealIndex] || members[0];
 
   return (
@@ -436,11 +437,10 @@ export default function AboutTeamCoverflowSection({ members = ABOUT_TEAM_MEMBERS
                 type="button"
                 onClick={() => goToSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}: ${member.name}`}
-                className={`transition-all duration-300 rounded-full cursor-pointer h-2 ${
-                  activeMobileRealIndex === idx
+                className={`transition-all duration-300 rounded-full cursor-pointer h-2 ${activeMobileRealIndex === idx
                     ? 'w-7 bg-[#00a859]'
                     : 'w-2 bg-white/25 hover:bg-white/50'
-                }`}
+                  }`}
               />
             ))}
           </div>

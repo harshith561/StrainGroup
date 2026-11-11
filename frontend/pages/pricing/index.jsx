@@ -35,7 +35,7 @@ export default function PricingPage() {
     <MainLayout>
       <SEO
         title="Pricing & Partnership Packages | Strains Group"
-        description="Explore clear, transparent pricing packages and modular services across video production, digital marketing, and zero-discharge clothing manufacturing at Strains Group."
+        description="Explore transparent pricing packages and modular services across 4K video production, digital marketing, and zero-discharge Tirupur manufacturing."
         keywords={[
           'creative agency pricing',
           'video production packages India',

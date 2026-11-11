@@ -15,8 +15,8 @@ export default function OurEcosystemPage() {
   return (
     <MainLayout>
       <SEO
-        title="Our Ecosystem | Closed-Loop Creative & Manufacturing Engine"
-        description="Explore the Strains Associates ecosystem: a closed-loop matrix linking creative brand strategy, cinematic video production, and performance marketing in Hyderabad with zero-discharge manufacturing in Tirupur."
+        title="Our Ecosystem | Closed-Loop Creative & Apparel"
+        description="Explore Strains Associates' closed-loop ecosystem: brand strategy, 4K video production, and marketing in Hyderabad with Tirupur eco manufacturing."
         keywords={[
           'Strains ecosystem',
           'sustainable fashion manufacturing',
@@ -28,7 +28,7 @@ export default function OurEcosystemPage() {
         canonical="/our-ecosystem"
       />
 
-      <main className="ecosystem-page-wrapper bg-[#080808] min-h-screen">
+      <div className="ecosystem-page-wrapper bg-[#080808] min-h-screen">
         <EcosystemHero />
         <EcosystemClosedLoop />
         <EcosystemSynergyMatrix />
@@ -36,7 +36,7 @@ export default function OurEcosystemPage() {
         <EcosystemDualHub />
         <EcosystemIntegrationTiers />
         <EcosystemBottomCTA />
-      </main>
+      </div>
     </MainLayout>
   );
 }

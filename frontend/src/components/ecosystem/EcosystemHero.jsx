@@ -16,6 +16,8 @@ const PILLARS = [
     lead: 'Praharsha Govindu',
     role: 'Crafting unforgettable identities, typography, and visual systems.',
     image: '/images/ecosystem/hero-creative.jpg',
+    width: 800,
+    height: 534,
     tag: 'IDEATION',
     stat: '250+ Brand Systems',
   },
@@ -26,6 +28,8 @@ const PILLARS = [
     lead: 'Danny & Pavan',
     role: 'Commercial brand films, drone videography, and DaVinci color grading.',
     image: '/images/ecosystem/hero-film.jpg',
+    width: 800,
+    height: 533,
     tag: 'CINEMA',
     stat: '4K Commercial Reels',
   },
@@ -36,6 +40,8 @@ const PILLARS = [
     lead: 'Master Tailors & Cutters',
     role: 'Zero-discharge organic cotton, hemp, and cruelty-free garment manufacturing.',
     image: '/images/ecosystem/hero-factory.jpg',
+    width: 800,
+    height: 600,
     tag: 'CRAFT',
     stat: '100% Zero Effluent',
   },
@@ -46,6 +52,8 @@ const PILLARS = [
     lead: 'Prasad (Head of Growth)',
     role: 'High-ROI Google Ads, Meta campaigns, and funnel conversion optimization.',
     image: '/images/ecosystem/hero-growth.jpg',
+    width: 800,
+    height: 533,
     tag: 'SCALE',
     stat: '90.8% Ads Score',
   },
@@ -66,12 +74,11 @@ export default function EcosystemHero() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 relative z-10">
 
 
-        {/* Hero Title & Pitch with AOS unblur animation */}
+        {/* Hero Title & Pitch with instant LCP paint */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-end mb-16 sm:mb-20">
           <motion.div
-            initial={{ opacity: 0, y: 35, filter: 'blur(8px)' }}
-            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            viewport={{ once: true, margin: '-50px' }}
+            initial={false}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-8"
           >
@@ -84,9 +91,8 @@ export default function EcosystemHero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 35, filter: 'blur(8px)' }}
-            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            viewport={{ once: true, margin: '-50px' }}
+            initial={false}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.85, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-4"
           >
@@ -121,9 +127,8 @@ export default function EcosystemHero() {
               <motion.div
                 key={pillar.id}
                 onMouseEnter={() => setHoveredPillar(idx)}
-                initial={{ opacity: 0, y: 40, filter: 'blur(6px)' }}
-                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                viewport={{ once: true, margin: '-40px' }}
+                initial={false}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 transition={{ duration: 0.7, delay: idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
                 className={`ecosystem-photo-card group cursor-pointer flex flex-col justify-between ${isHovered ? 'ring-2 ring-[#00a859]' : ''
                   }`}
@@ -134,7 +139,10 @@ export default function EcosystemHero() {
                   <img
                     src={pillar.image}
                     alt={pillar.name}
-                    loading="lazy"
+                    width={pillar.width}
+                    height={pillar.height}
+                    loading="eager"
+                    fetchPriority={idx === 0 ? 'high' : undefined}
                     decoding="async"
                     className="w-full h-full object-cover filter brightness-[0.45] group-hover:brightness-[0.7] group-hover:scale-105 transition-all duration-700"
                     onLoad={(e) => {
@@ -159,9 +167,9 @@ export default function EcosystemHero() {
                   <span className="font-mono text-[11px] text-[#00a859] block mb-1">
                     {pillar.location}
                   </span>
-                  <h3 className="font-sans text-xl font-bold text-white mb-2 leading-tight group-hover:text-[#00a859] transition-colors">
+                  <h2 className="font-sans text-xl font-bold text-white mb-2 leading-tight group-hover:text-[#00a859] transition-colors">
                     {pillar.name}
-                  </h3>
+                  </h2>
                   <p className="font-mono text-xs text-[#bbb] line-clamp-2 mb-4 leading-relaxed">
                     {pillar.role}
                   </p>

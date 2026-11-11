@@ -154,6 +154,8 @@ function PortfolioCard({ project }) {
           <img
             src={project.image}
             alt={project.title}
+            width={1200}
+            height={800}
             className="w-full h-full object-cover will-change-transform select-none"
             style={{
               transform: isHovered ? 'scale(1.05)' : 'scale(1.0)',

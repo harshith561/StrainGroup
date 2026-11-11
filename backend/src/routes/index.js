@@ -8,7 +8,8 @@ const { checkConnection } = require('../database/connection');
 
 // Health Check
 router.get('/health', async (req, res) => {
-  const dbConnected = await checkConnection();
+  res.set('Cache-Control', 'no-store');
+  const dbConnected = await checkConnection({ force: true });
   res.json({
     status: 'healthy',
     timestamp: new Date().toISOString(),

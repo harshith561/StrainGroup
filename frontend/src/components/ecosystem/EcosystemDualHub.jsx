@@ -53,6 +53,8 @@ export default function EcosystemDualHub() {
               <img
                 src="/images/ecosystem/hub-hyderabad.jpg"
                 alt="Hyderabad Studio"
+                width={800}
+                height={534}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-[0.7]"
@@ -130,6 +132,8 @@ export default function EcosystemDualHub() {
               <img
                 src="/images/ecosystem/hub-tirupur.jpg"
                 alt="Tirupur Stitchery Hub"
+                width={800}
+                height={600}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-[0.7]"

@@ -16,13 +16,18 @@ export default function ShopFilters({
       {/* Search Field with Dynamic Focus Ring */}
       <div className="relative max-w-md group">
         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-[#00e676] transition-colors">
-          <Search size={16} />
+          <Search size={16} aria-hidden="true" />
         </div>
+        <label htmlFor="shop-catalog-search" className="sr-only">
+          Search sustainable apparel catalog
+        </label>
         <input
+          id="shop-catalog-search"
           type="text"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Search by fabric, garment, GSM, or dye..."
+          aria-label="Search sustainable apparel catalog"
           className="w-full pl-10 pr-9 py-3 rounded-2xl bg-white/[0.04] border border-white/10 text-white placeholder-neutral-500 font-sans text-sm focus:outline-none focus:border-[#00a859] focus:ring-2 focus:ring-[#00a859]/30 transition-all duration-300 backdrop-blur-sm shadow-inner"
         />
         {searchQuery && (

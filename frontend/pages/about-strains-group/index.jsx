@@ -14,7 +14,7 @@ export default function AboutStrainsGroupPage() {
   return (
     <MainLayout>
       <SEO
-        title="About Strains Group | Since 2017 — Creative Studio & Sustainable Manufacturing"
+        title="About Strains Group | Creative Studio & Eco Apparel"
         description="Crafting digital products, commercial films, and sustainable textiles. Learn the story, vision, and team squad behind Strains Group since 2017."
         keywords={[
           'About Strains Group',

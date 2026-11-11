@@ -90,11 +90,10 @@ export default function AdvertisingFAQ() {
                 data-aos="fade-up"
                 data-aos-delay={index * 60}
                 data-aos-duration="600"
-                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
-                  isOpen
-                    ? 'bg-[#121212] border-[#00e676]/40 shadow-[0_4px_25px_rgba(0,168,89,0.12)]'
-                    : 'bg-white/[0.02] border-white/10 hover:border-white/20'
-                }`}
+                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen
+                  ? 'bg-[#121212] border-[#00e676]/40 shadow-[0_4px_25px_rgba(0,168,89,0.12)]'
+                  : 'bg-white/[0.02] border-white/10 hover:border-white/20'
+                  }`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
@@ -105,9 +104,8 @@ export default function AdvertisingFAQ() {
                     {faq.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
-                      isOpen ? 'bg-[#00e676] text-black' : 'bg-white/10 text-white'
-                    }`}
+                    className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${isOpen ? 'bg-[#00e676] text-black' : 'bg-white/10 text-white'
+                      }`}
                   >
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
@@ -139,9 +137,9 @@ export default function AdvertisingFAQ() {
               <MessageCircle className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-white font-sans font-bold text-base">
+              <h3 className="text-white font-sans font-bold text-base">
                 Have a custom growth inquiry or existing account audit?
-              </h4>
+              </h3>
               <p className="text-neutral-400 font-sans text-xs sm:text-sm">
                 Get an unbiased audit of your current ad account and keyword waste from our senior media buyers.
               </p>

@@ -136,9 +136,9 @@ export default function PricingCards({
 
                 {/* Plan Title & Description */}
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-sans font-bold text-white mb-3">
+                  <h2 className="text-2xl sm:text-3xl font-sans font-bold text-white mb-3">
                     {tier.name}
-                  </h3>
+                  </h2>
                   <p className="text-sm text-[#b5b5b5] font-sans leading-relaxed mb-6 min-h-[48px]">
                     {tier.description}
                   </p>

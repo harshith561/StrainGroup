@@ -176,7 +176,7 @@ export default function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} noValidate>
           {errors.form && (
-            <div className="mb-6 p-4 rounded bg-red-950/40 border border-red-800 text-red-200 text-sm flex items-center gap-2">
+            <div role="alert" className="mb-6 p-4 rounded bg-red-950/40 border border-red-800 text-red-200 text-sm flex items-center gap-2">
               <AlertCircle size={16} />
               <span>{errors.form}</span>
             </div>
@@ -227,9 +227,10 @@ export default function ContactForm() {
                 className={`contact-field-input ${errors.name ? 'input-error' : ''}`}
                 aria-required="true"
                 aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? 'field-name-error' : undefined}
               />
               {errors.name && (
-                <span className="field-error-message">
+                <span id="field-name-error" className="field-error-message">
                   <AlertCircle size={12} /> {errors.name}
                 </span>
               )}
@@ -250,9 +251,10 @@ export default function ContactForm() {
                 className={`contact-field-input ${errors.email ? 'input-error' : ''}`}
                 aria-required="true"
                 aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? 'field-email-error' : undefined}
               />
               {errors.email && (
-                <span className="field-error-message">
+                <span id="field-email-error" className="field-error-message">
                   <AlertCircle size={12} /> {errors.email}
                 </span>
               )}
@@ -274,9 +276,10 @@ export default function ContactForm() {
                 className={`contact-field-input ${errors.phone ? 'input-error' : ''}`}
                 aria-required="true"
                 aria-invalid={!!errors.phone}
+                aria-describedby={errors.phone ? 'field-phone-error' : undefined}
               />
               {errors.phone && (
-                <span className="field-error-message">
+                <span id="field-phone-error" className="field-error-message">
                   <AlertCircle size={12} /> {errors.phone}
                 </span>
               )}

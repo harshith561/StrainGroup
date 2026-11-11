@@ -136,9 +136,9 @@ export default function ClothingFAQ() {
               <MessageCircle className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-white font-sans font-bold text-base">
+              <h3 className="text-white font-sans font-bold text-base">
                 Looking to order fabric swatch kits or book a factory inspection?
-              </h4>
+              </h3>
               <p className="text-neutral-400 font-sans text-xs sm:text-sm">
                 Connect directly with our Tirupur textile production engineers to receive physical fabric swatches.
               </p>

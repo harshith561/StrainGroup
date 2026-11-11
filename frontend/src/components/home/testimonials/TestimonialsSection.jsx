@@ -58,13 +58,14 @@ export default function TestimonialsSection() {
       { threshold: 0.15 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const sectionNode = sectionRef.current;
+    if (sectionNode) {
+      observer.observe(sectionNode);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionNode) {
+        observer.unobserve(sectionNode);
       }
     };
   }, []);
@@ -124,7 +125,7 @@ export default function TestimonialsSection() {
                 </div>
                 <p className="testimonial-text font-sans">&quot;{item.text}&quot;</p>
                 <div className="testimonial-author">
-                  <h4 className="author-name font-sans">{item.name}</h4>
+                  <h3 className="author-name font-sans">{item.name}</h3>
                   <span className="author-role font-mono">{item.role}</span>
                 </div>
               </div>

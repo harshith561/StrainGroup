@@ -7,8 +7,8 @@ export default function CaseStudiesPage() {
   return (
     <MainLayout>
       <SEO
-        title="Case Studies | Strains Associates & Strains Stitchery"
-        description="Explore authentic case studies from Strains Group: high-impact video production, Google & Meta advertising ROI, and zero-discharge Tirupur garment manufacturing."
+        title="Case Studies | Strains Associates & Stitchery"
+        description="Explore authentic Strains Group case studies: high-impact video production, Google & Meta advertising ROI, and zero-discharge Tirupur manufacturing."
         keywords={[
           'Strains Group case studies',
           'video production portfolio Hyderabad',

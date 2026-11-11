@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -37,6 +37,8 @@ const slides = [
 export default function KineticHeroSlider() {
   const [current, setCurrent] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const sectionRef = useRef(null);
 
   const nextSlide = useCallback(() => {
     if (isChanging) return;
@@ -50,6 +52,17 @@ export default function KineticHeroSlider() {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   }, [isChanging]);
 
+  useEffect(() => {
+    const sectionNode = sectionRef.current;
+    if (!sectionNode) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.05 }
+    );
+    observer.observe(sectionNode);
+    return () => observer.unobserve(sectionNode);
+  }, []);
+
   // Transition timeout: reset isChanging after 1.2s to match reference
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -58,13 +71,16 @@ export default function KineticHeroSlider() {
     return () => clearTimeout(timeout);
   }, [current]);
 
-  // Auto-play interval
+  // Auto-play interval (pauses when scrolled offscreen or tab hidden)
   useEffect(() => {
+    if (!isVisible) return;
     const timer = setInterval(() => {
-      nextSlide();
+      if (!document.hidden) {
+        nextSlide();
+      }
     }, 5000);
     return () => clearInterval(timer);
-  }, [nextSlide]);
+  }, [isVisible, nextSlide]);
 
   // Preload slide background images in memory so transitions are instant
   useEffect(() => {
@@ -90,7 +106,7 @@ export default function KineticHeroSlider() {
   const activeSlide = slides[current];
 
   return (
-    <section className="hero-slider-container">
+    <section ref={sectionRef} className="hero-slider-container">
       {/* Background Slides with Fade & Zoom */}
       <div className="slider-bg-wrapper">
         {slides.map((slide, index) => (
@@ -132,9 +148,9 @@ export default function KineticHeroSlider() {
         <div className="slider-right-col">
           <div className={`slide-meta-content ${isChanging ? 'exit' : 'enter'}`}>
             <div className="green-divider" />
-            <h3 className="slide-subheading font-sans">
+            <p className="slide-subheading font-sans">
               {activeSlide.subheading}
-            </h3>
+            </p>
             <p className="slide-paragraph font-mono">
               {activeSlide.paragraph}
             </p>

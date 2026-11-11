@@ -82,7 +82,7 @@ export default function ServiceLatestWork() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Link
-              href="/work"
+              href="/case-studies"
               className="text-[#00a859] hover:text-[#00c266] text-sm font-sans font-bold flex items-center gap-1.5 transition-colors group"
             >
               <span>Explore all case studies</span>
@@ -108,6 +108,8 @@ export default function ServiceLatestWork() {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width={1200}
+                    height={800}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     loading="lazy"
                     decoding="async"

@@ -11,12 +11,13 @@ export default function CatchAllRoute() {
   return (
     <>
       <Head>
-        <title>Route In Progress — Strains Associates</title>
+        <title key="title">Route In Progress — Strains Associates</title>
         <meta
+          key="description"
           name="description"
           content="This route is currently undergoing scheduled updates or requires administration clearance."
         />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta key="robots" name="robots" content="noindex, nofollow" />
       </Head>
       <CommonErrorView type="409" routeName={routeName} />
     </>

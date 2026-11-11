@@ -23,7 +23,7 @@ export default function FounderHero() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column: Human narrative intro & founder credentials */}
           <div className="lg:col-span-7 flex flex-col justify-center">
 
@@ -47,8 +47,8 @@ export default function FounderHero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-neutral-300 text-base sm:text-lg md:text-xl font-sans leading-relaxed mb-6"
             >
-              In late 2018, I walked away from corporate sales management with a stubborn conviction: 
-              that world-class creative cinematography and honest, zero-discharge manufacturing 
+              In late 2018, I walked away from corporate sales management with a stubborn conviction:
+              that world-class creative cinematography and honest, zero-discharge manufacturing
               could live under a single roof. No outsourcing. No vanity metrics. Just pure craft.
             </motion.p>
 
@@ -103,12 +103,14 @@ export default function FounderHero() {
               className="w-full max-w-md"
             >
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-b from-[#181818] to-[#101010] p-3 border border-white/10 shadow-2xl group transition-all duration-500 hover:border-[#00a859]/40">
-                
+
                 {/* Photo Container */}
                 <div className="relative rounded-xl overflow-hidden aspect-[4/5] bg-neutral-900 border border-white/5">
                   <img
                     src={founderImage}
                     alt="Naga Praharsha Govindu — Founder & Director, Strains Group"
+                    width={150}
+                    height={188}
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
 
@@ -120,9 +122,9 @@ export default function FounderHero() {
                     <span className="inline-block text-[#00a859] font-mono text-[11px] tracking-wider uppercase font-semibold mb-1">
                       Founder &amp; Strategy Maker
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-sans font-bold text-white tracking-tight">
+                    <h2 className="text-xl sm:text-2xl font-sans font-bold text-white tracking-tight">
                       Naga Praharsha Govindu
-                    </h3>
+                    </h2>
                     <p className="text-xs text-neutral-300 font-mono mt-1">
                       Strains Associates LLP &amp; Strains Fashions Pvt Ltd
                     </p>

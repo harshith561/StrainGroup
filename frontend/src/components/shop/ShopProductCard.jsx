@@ -44,9 +44,9 @@ export default function ShopProductCard({ product, index = 0 }) {
       <div className="p-6 flex-1 flex flex-col justify-between">
         <div>
           {/* Product Name */}
-          <h3 className="text-base sm:text-lg font-sans font-bold text-white group-hover:text-[#00e676] transition-colors leading-snug mb-2">
+          <h2 className="text-base sm:text-lg font-sans font-bold text-white group-hover:text-[#00e676] transition-colors leading-snug mb-2">
             {product.name}
-          </h3>
+          </h2>
 
           {/* Description */}
           <p className="text-xs sm:text-sm text-neutral-400 font-sans line-clamp-3 leading-relaxed mb-6">

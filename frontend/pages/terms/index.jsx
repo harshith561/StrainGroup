@@ -29,14 +29,14 @@ export default function TermsPage() {
     <MainLayout>
       <SEO
         title="Terms of Service | Strains Group"
-        description="Commercial Terms of Service for Strains Group (Strains Associates & Strains Fashions). Governing our creative services and sustainable apparel manufacturing in Tirupur."
+        description="Commercial Terms of Service for Strains Group, governing creative agency campaigns, video production, and zero-discharge Tirupur garment manufacturing."
         canonical="/terms"
         noindex={false}
       />
 
       <div className="bg-[#0c0c0c] text-white min-h-screen w-full pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-16 sm:pb-20 md:pb-28 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
         {/* Top Full-Width Hero */}
-        <header className="w-full border-b border-white/10 pb-8 sm:pb-10 md:pb-14 mb-10 sm:mb-12 md:mb-16">
+        <div className="w-full border-b border-white/10 pb-8 sm:pb-10 md:pb-14 mb-10 sm:mb-12 md:mb-16">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4 sm:mb-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs md:text-sm font-mono tracking-wider uppercase bg-[#00a859]/15 text-[#00a859] border border-[#00a859]/30">
               <Scale className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00a859]" />
@@ -71,10 +71,10 @@ export default function TermsPage() {
               </Link>
             </div>
           </div>
-        </header>
+        </div>
 
         {/* Full-Width Content Container */}
-        <main className="w-full space-y-10 sm:space-y-12 md:space-y-16">
+        <div className="w-full space-y-10 sm:space-y-12 md:space-y-16">
           {/* SECTION 1: AGREEMENT */}
           <section className="space-y-4 sm:space-y-5">
             <div className="flex items-center gap-3 sm:gap-4">
@@ -371,10 +371,10 @@ export default function TermsPage() {
               </div>
             </div>
           </section>
-        </main>
+        </div>
 
         {/* Bottom Full-Width Navigation */}
-        <footer className="w-full mt-12 sm:mt-16 md:mt-20 pt-8 sm:pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm md:text-base font-mono text-[#8a8a8a]">
+        <div className="w-full mt-12 sm:mt-16 md:mt-20 pt-8 sm:pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm md:text-base font-mono text-[#8a8a8a]">
           <Link
             href="/"
             className="inline-flex items-center gap-2 hover:text-white transition-colors"
@@ -390,7 +390,7 @@ export default function TermsPage() {
             <span>Read Privacy Policy</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
-        </footer>
+        </div>
       </div>
     </MainLayout>
   );

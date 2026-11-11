@@ -4,6 +4,7 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /server-issue
+Disallow: /serverissue
 Disallow: /404
 Disallow: /409
 Disallow: /500

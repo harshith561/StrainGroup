@@ -15,7 +15,7 @@ export default function SustainabilityPage() {
     <MainLayout>
       <SEO
         title="Sustainable Fashion & Eco Products | Strains Group"
-        description="100% organic cotton, Himalayan hemp clothing, vegan silk & leather, natural botanical dyeing, plantable basil seed tags, and zero-discharge manufacturing in Tirupur."
+        description="100% organic cotton, Himalayan hemp, vegan silk & leather, natural botanical dyeing, plantable basil seed tags, and zero-discharge Tirupur manufacturing."
         keywords={[
           'organic cotton clothing manufacturer',
           'hemp clothing India',
@@ -27,7 +27,7 @@ export default function SustainabilityPage() {
         canonical="/sustainability"
       />
 
-      <main className="video-production-page bg-[#050505] text-white">
+      <div className="video-production-page bg-[#050505] text-white">
         {/* Section 1: Hero with Video Background, Subheading & Quick Benchmarks */}
         <SustainabilityHero />
 
@@ -45,7 +45,7 @@ export default function SustainabilityPage() {
 
         {/* Section 6: Direct Consultation Call To Action & Factory Contact */}
         <SustainabilityCTA />
-      </main>
+      </div>
     </MainLayout>
   );
 }

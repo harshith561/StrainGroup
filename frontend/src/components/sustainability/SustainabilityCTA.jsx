@@ -22,8 +22,11 @@ export default function SustainabilityCTA({ backgroundImage }) {
         <img
           src={bgImgSrc}
           alt={SUSTAINABILITY_ASSETS.ctaImage?.alt || 'Sustainable Manufacturing Facility'}
+          width={800}
+          height={600}
           className="w-full h-full object-cover filter brightness-[0.72] contrast-[1.08] saturate-[1.1]"
           loading="lazy"
+          decoding="async"
         />
       </div>
 

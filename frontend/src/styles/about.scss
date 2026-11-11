@@ -180,6 +180,11 @@
   opacity: 0.8;
 }
 
+.simple-hero-scroll-btn:focus-visible {
+  outline: 2px solid #00e676;
+  outline-offset: 4px;
+}
+
 .simple-arrow-bounce {
   animation: simpleBounce 2s infinite ease-in-out;
 }
@@ -413,6 +418,11 @@
     transform: scale(0.96);
   }
 
+  &:focus-visible {
+    outline: 2px solid #00e676;
+    outline-offset: 3px;
+  }
+
   &:disabled {
     opacity: 0.25;
     cursor: not-allowed;
@@ -521,6 +531,11 @@
   background-color: #e5e5e5;
   color: #000000;
   transform: translateY(-3px) scale(1.05);
+}
+
+.scroll-to-top-circle-btn:focus-visible {
+  outline: 2px solid #00e676;
+  outline-offset: 3px;
 }
 
 /* ================= 3. Responsive Breakpoints ================= */

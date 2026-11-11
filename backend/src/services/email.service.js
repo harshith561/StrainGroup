@@ -33,12 +33,30 @@ function getTransporter() {
     pool: true,                           // reuse TCP connections
     maxConnections: 3,
     maxMessages: 50,
+    connectionTimeout: 5000,
+    greetingTimeout: 5000,
+    socketTimeout: 10000,
     tls: {
       rejectUnauthorized: config.nodeEnv === 'production',
     },
   });
 
   return transporter;
+}
+
+function shouldSkipEmailSend() {
+  const currentEnv = process.env.NODE_ENV || config.nodeEnv;
+  if (currentEnv === 'test' && process.env.FORCE_SMTP_IN_TEST !== 'true') {
+    return true;
+  }
+  return !config.smtp.user || !config.smtp.pass;
+}
+
+function closeTransporter() {
+  if (transporter) {
+    transporter.close();
+    transporter = null;
+  }
 }
 
 /**
@@ -512,6 +530,9 @@ function buildVisitorConfirmationHtml({ name }) {
  * Send the admin notification email to the business inbox.
  */
 async function sendAdminNotification(formData) {
+  if (shouldSkipEmailSend()) {
+    return { skipped: true };
+  }
   const html = buildAdminNotificationHtml(formData);
 
   const info = await getTransporter().sendMail({
@@ -532,6 +553,9 @@ async function sendAdminNotification(formData) {
  * Send a confirmation email to the visitor.
  */
 async function sendVisitorConfirmation(formData) {
+  if (shouldSkipEmailSend()) {
+    return { skipped: true };
+  }
   const html = buildVisitorConfirmationHtml(formData);
 
   const info = await getTransporter().sendMail({
@@ -551,4 +575,5 @@ module.exports = {
   verifySmtp,
   sendAdminNotification,
   sendVisitorConfirmation,
+  closeTransporter,
 };

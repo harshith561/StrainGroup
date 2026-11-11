@@ -133,9 +133,9 @@ export default function ServiceExpertise() {
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-white/20 group-hover:text-[#00a859] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
-              <h3 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
+              <h2 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
                 {EXPERTISE_CARDS[0].title}
-              </h3>
+              </h2>
             </Link>
           </motion.div>
 
@@ -157,9 +157,9 @@ export default function ServiceExpertise() {
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-white/20 group-hover:text-[#00a859] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
-              <h3 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
+              <h2 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
                 {EXPERTISE_CARDS[1].title}
-              </h3>
+              </h2>
             </Link>
           </motion.div>
 
@@ -204,9 +204,9 @@ export default function ServiceExpertise() {
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-white/20 group-hover:text-[#00a859] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
-              <h3 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
+              <h2 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
                 {EXPERTISE_CARDS[2].title}
-              </h3>
+              </h2>
             </Link>
           </motion.div>
 
@@ -228,9 +228,9 @@ export default function ServiceExpertise() {
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-white/20 group-hover:text-[#00a859] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
-              <h3 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
+              <h2 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
                 {EXPERTISE_CARDS[3].title}
-              </h3>
+              </h2>
             </Link>
           </motion.div>
 
@@ -252,9 +252,9 @@ export default function ServiceExpertise() {
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-white/20 group-hover:text-[#00a859] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
-              <h3 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
+              <h2 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
                 {EXPERTISE_CARDS[4].title}
-              </h3>
+              </h2>
             </Link>
           </motion.div>
 
@@ -276,9 +276,9 @@ export default function ServiceExpertise() {
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-white/20 group-hover:text-[#00a859] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
-              <h3 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
+              <h2 className="text-white text-lg font-sans font-bold leading-snug group-hover:text-[#00a859] transition-colors mt-6 whitespace-pre-line">
                 {EXPERTISE_CARDS[5].title}
-              </h3>
+              </h2>
             </Link>
           </motion.div>
 

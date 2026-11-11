@@ -5,16 +5,30 @@ const morgan = require('morgan');
 const config = require('./config/env');
 const apiRoutes = require('./routes/index');
 const errorHandler = require('./middleware/errorHandler');
+const { createRateLimiter } = require('./middleware/rateLimit');
 
 const app = express();
+app.set('trust proxy', 1);
+app.disable('x-powered-by');
+
+const allowedOrigins = String(config.corsOrigin || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 
 // Security middleware
 app.use(helmet());
 app.use(
   cors({
-    origin: '*',
+    origin(origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(null, false);
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-admin-api-key'],
   })
 );
 
@@ -24,8 +38,14 @@ if (config.nodeEnv !== 'test') {
 }
 
 // Body parsing
-app.use(express.json({ limit: '1mb' }));
-app.use(express.urlencoded({ extended: true, limit: '1mb' }));
+app.use(express.json({ limit: '100kb' }));
+app.use(express.urlencoded({ extended: true, limit: '100kb' }));
+
+// Global API rate limiter
+const apiRateLimiter = createRateLimiter({
+  windowMs: config.rateLimit.windowMs,
+  max: config.rateLimit.max,
+});
 
 // Root welcome endpoint
 app.get('/', (req, res) => {
@@ -37,7 +57,7 @@ app.get('/', (req, res) => {
 });
 
 // Mount API routes
-app.use('/api', apiRoutes);
+app.use('/api', apiRateLimiter, apiRoutes);
 
 // 404 handler for unknown routes
 app.use((req, res) => {

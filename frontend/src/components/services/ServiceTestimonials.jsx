@@ -99,10 +99,10 @@ export default function ServiceTestimonials() {
   useEffect(() => {
     if (isPaused) return;
     const timer = setInterval(() => {
-      nextSlide();
+      setCurrentIndex((prev) => (prev + 1) % totalSlides);
     }, 4500);
     return () => clearInterval(timer);
-  }, [isPaused, currentIndex]);
+  }, [isPaused, totalSlides]);
 
   // Touch swipe support for mobile
   const handleTouchStart = (e) => {

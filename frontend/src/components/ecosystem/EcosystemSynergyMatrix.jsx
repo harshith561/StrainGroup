@@ -92,6 +92,8 @@ export default function EcosystemSynergyMatrix() {
                 <img
                   src={item.image}
                   alt={item.title}
+                  width={1376}
+                  height={768}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 filter brightness-[0.85] group-hover:brightness-100"
