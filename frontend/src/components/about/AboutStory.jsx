@@ -24,8 +24,8 @@ export default function AboutStory() {
           {/* Left Column: Narrative & Philosophy */}
           <div className="story-left">
             <blockquote className="story-lead-quote font-sans">
-              "Since 2018, our mission has remained uncompromised: to merge the conceptual genius of a
-              top-tier design atelier with the industrial precision of a real manufacturing powerhouse."
+              &quot;Since 2018, our mission has remained uncompromised: to merge the conceptual genius of a
+              top-tier design atelier with the industrial precision of a real manufacturing powerhouse.&quot;
             </blockquote>
 
             <div className="story-paragraphs font-mono">

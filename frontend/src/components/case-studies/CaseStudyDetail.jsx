@@ -190,7 +190,7 @@ export default function CaseStudyDetail({ caseStudy }) {
               {caseStudy.quote && (
                 <div className="my-6 p-6 rounded-2xl bg-gradient-to-br from-white/[0.04] to-transparent border border-white/5">
                   <p className="text-sm sm:text-base italic font-sans text-white leading-relaxed mb-3">
-                    "{caseStudy.quote.text}"
+                    &quot;{caseStudy.quote.text}&quot;
                   </p>
                   <div className="flex items-center gap-2">
                     <span className="text-xs font-sans font-bold text-[#00a859]">

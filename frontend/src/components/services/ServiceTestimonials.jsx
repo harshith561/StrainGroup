@@ -216,7 +216,7 @@ export default function ServiceTestimonials() {
 
                   {/* Testimonial Quote Text */}
                   <blockquote className="text-lg sm:text-2xl lg:text-3xl font-sans font-medium text-white/95 leading-relaxed sm:leading-snug mb-10 max-w-4xl">
-                    "{item.quote}"
+                    &quot;{item.quote}&quot;
                   </blockquote>
 
                   {/* Author Meta */}
@@ -228,7 +228,6 @@ export default function ServiceTestimonials() {
                       height={64}
                       className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-[#00a859] shrink-0 shadow-[0_0_20px_rgba(0,168,89,0.3)] bg-neutral-900"
                       loading="lazy"
-                      decoding="async"
                       decoding="async"
                     />
                     <div>

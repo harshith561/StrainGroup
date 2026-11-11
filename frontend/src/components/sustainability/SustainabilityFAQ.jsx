@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HelpCircle, MessageSquare, ArrowRight } from 'lucide-react';
 import { SUSTAINABILITY_FAQS } from '@/constant';
@@ -101,13 +102,13 @@ export default function SustainabilityFAQ() {
             </div>
           </div>
 
-          <a
+          <Link
             href="/contact"
             className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#00a859] hover:bg-[#00e676] text-black font-sans font-extrabold text-xs uppercase tracking-wider transition-all duration-300 whitespace-nowrap text-center flex items-center justify-center gap-2"
           >
             <span>Talk to Factory Engineers</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

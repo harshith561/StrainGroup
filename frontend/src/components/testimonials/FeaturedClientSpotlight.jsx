@@ -159,7 +159,7 @@ export default function FeaturedClientSpotlight() {
 
                   {/* Main Pull Quote - Fluid text size for mobile */}
                   <blockquote className="text-base sm:text-xl lg:text-2xl xl:text-3xl font-sans font-medium text-white/95 leading-relaxed sm:leading-snug mb-4 sm:mb-6">
-                    "{current.quote}"
+                    &quot;{current.quote}&quot;
                   </blockquote>
 
                   {/* Author & Designation Details Card */}

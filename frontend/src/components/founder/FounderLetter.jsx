@@ -69,15 +69,15 @@ export default function FounderLetter() {
             </div>
 
             <p>
-              In late 2018, I resigned. I didn't raise millions in venture capital. I took my personal savings, 
+              In late 2018, I resigned. I didn&apos;t raise millions in venture capital. I took my personal savings, 
               packed my bags, and went straight to Tirupur. We incorporated <strong className="text-white font-semibold">Strains Fashions Private Limited</strong> with 
               a strict non-negotiable principle: zero chemical effluent discharge. If a garment couldn’t be dyed 
               with natural botanical extracts—pomegranate rinds, turmeric, marigold, and madder root—we simply 
-              wouldn’t make it. If a price tag couldn't be planted in soil to sprout organic basil, we threw it out.
+              wouldn’t make it. If a price tag couldn&apos;t be planted in soil to sprout organic basil, we threw it out.
             </p>
 
             <p>
-              But we learned a hard lesson very quickly: <em>Ethics alone doesn't sell.</em> If your video looks 
+              But we learned a hard lesson very quickly: <em>Ethics alone doesn&apos;t sell.</em> If your video looks 
               cheap, if your digital campaigns are poorly targeted, and if your art direction lacks emotional depth, 
               even the greenest product will gather dust in a warehouse.
             </p>

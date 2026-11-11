@@ -118,7 +118,7 @@ export default function HumanTestimonialsSection({ testimonials = HUMAN_TESTIMON
 
                   {/* Quote */}
                   <blockquote className="text-sm font-sans font-medium text-white/95 leading-relaxed mb-5">
-                    "{item.quote}"
+                    &quot;{item.quote}&quot;
                   </blockquote>
 
                   {/* Human Aspect / Highlight Pill */}

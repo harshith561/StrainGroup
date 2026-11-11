@@ -94,7 +94,7 @@ export default function VideoTestimonialsSection() {
                   {video.title}
                 </h3>
                 <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-4">
-                  "{video.quote}"
+                  &quot;{video.quote}&quot;
                 </p>
 
                 {/* Speaker Meta */}

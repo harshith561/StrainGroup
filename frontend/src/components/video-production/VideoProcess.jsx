@@ -147,7 +147,7 @@ export default function VideoProcess() {
                   <div className="col-span-7">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="px-3 py-1 rounded-md bg-[#00a859]/20 border border-[#00a859]/40 text-[#00e676] font-mono text-xs font-bold tracking-widest">
-                        PHASE {current.step} // {current.subtitle}
+                        PHASE {current.step} {'//'} {current.subtitle}
                       </span>
                     </div>
                     <h3 className="text-3xl font-sans font-extrabold text-white mb-4">

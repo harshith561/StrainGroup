@@ -21,7 +21,7 @@ export default function ContactHeadline() {
 
         {/* Main Editorial Headline */}
         <h2 className="contact-main-headline">
-          Let's drop us a line
+          Let&apos;s drop us a line
           <br />
           <span className="headline-green-accent">and get the project</span>
           <br />

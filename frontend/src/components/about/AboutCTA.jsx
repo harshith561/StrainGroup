@@ -11,10 +11,10 @@ export default function AboutCTA() {
         <div className="about-cta-box">
           <span className="section-kicker font-mono" style={{ justifyContent: 'center' }}>
             <Sparkles size={14} />
-            Let's Collaborate
+            Let&apos;s Collaborate
           </span>
           <h2 className="about-cta-title font-sans">
-            Ready to Build Your Brand's Next Chapter?
+            Ready to Build Your Brand&apos;s Next Chapter?
           </h2>
           <p className="about-cta-desc font-mono">
             Whether you need comprehensive brand positioning, cinematic commercial production,

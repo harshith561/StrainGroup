@@ -122,7 +122,7 @@ export default function TestimonialsSection() {
                 <div className="quote-icon-wrapper">
                   <Quote className="quote-icon" size={48} />
                 </div>
-                <p className="testimonial-text font-sans">"{item.text}"</p>
+                <p className="testimonial-text font-sans">&quot;{item.text}&quot;</p>
                 <div className="testimonial-author">
                   <h4 className="author-name font-sans">{item.name}</h4>
                   <span className="author-role font-mono">{item.role}</span>

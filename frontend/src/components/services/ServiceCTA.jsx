@@ -13,7 +13,7 @@ export default function ServiceCTA() {
       <div className="max-w-5xl mx-auto px-6 sm:px-10 text-center relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00a859]/10 border border-[#00a859]/30 text-[#00a859] font-mono text-xs uppercase tracking-widest font-bold mb-8">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Let's Build Together</span>
+          <span>Let&apos;s Build Together</span>
         </div>
 
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-sans font-black tracking-tight text-white leading-tight mb-6">

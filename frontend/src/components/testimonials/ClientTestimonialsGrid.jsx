@@ -64,7 +64,7 @@ export default function ClientTestimonialsGrid({ testimonials = [] }) {
 
                 {/* Testimonial Quote */}
                 <blockquote className="text-sm sm:text-base font-sans font-medium text-white/90 leading-relaxed mb-4 sm:mb-6">
-                  "{item.quote}"
+                  &quot;{item.quote}&quot;
                 </blockquote>
 
                 {/* Expandable Story Dropdown */}

@@ -119,7 +119,7 @@ export default function DigitalMarketing() {
               Data-Driven Performance Analytics
             </h3>
             <p className="block-paragraph font-mono reveal-item">
-              Under Prasad's leadership, our marketing team implements cost-efficient PPC advertising models. We monitor and optimize conversion rates, average cost-per-click, and click-through rates to deliver stellar ROI.
+              Under Prasad&apos;s leadership, our marketing team implements cost-efficient PPC advertising models. We monitor and optimize conversion rates, average cost-per-click, and click-through rates to deliver stellar ROI.
             </p>
             <div className="dm-stats-row">
               <div className="dm-stat-box reveal-item">
@@ -164,7 +164,7 @@ export default function DigitalMarketing() {
               <Users className="showcase-icon text-green" size={32} />
               <h4 className="showcase-title font-sans">Community-First Growth</h4>
               <p className="showcase-desc font-mono">
-                Turning followers into advocates through authentic engagement, UGC campaigns, and data-backed posting schedules tailored to each platform's algorithm.
+                Turning followers into advocates through authentic engagement, UGC campaigns, and data-backed posting schedules tailored to each platform&apos;s algorithm.
               </p>
             </div>
           </div>

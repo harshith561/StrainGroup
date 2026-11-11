@@ -133,7 +133,7 @@ export default function StitcherySection() {
               Green Collar Jobs & Fair Trade
             </h3>
             <p className="block-paragraph font-mono reveal-item">
-              Strains Stitchery maintains strict ethical workplace standards. We focus on fair living wages, healthy working conditions, local skill development, and fostering stable green collar jobs within India's textile capital.
+              Strains Stitchery maintains strict ethical workplace standards. We focus on fair living wages, healthy working conditions, local skill development, and fostering stable green collar jobs within India&apos;s textile capital.
             </p>
           </div>
           <div className="block-showcase">

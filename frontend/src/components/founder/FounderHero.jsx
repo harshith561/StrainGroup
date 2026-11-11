@@ -79,7 +79,7 @@ export default function FounderHero() {
                 onClick={() => scrollToSection('founder-letter')}
                 className="px-6 py-3.5 rounded-full bg-[#00a859] hover:bg-[#008f4c] text-black font-sans font-bold text-sm tracking-wide transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2 shadow-lg shadow-[#00a859]/20 cursor-pointer"
               >
-                <span>Read Founder's Letter</span>
+                <span>Read Founder&apos;s Letter</span>
                 <ArrowDown className="w-4 h-4" />
               </button>
 

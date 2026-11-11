@@ -38,9 +38,9 @@ export default function AboutLeadership() {
               creative direction, and global eco-fashion initiatives.
             </p>
             <blockquote className="founder-quote font-sans">
-              "We didn't set out to build another advertising firm. We set out to build an ecosystem
+              &quot;We didn&apos;t set out to build another advertising firm. We set out to build an ecosystem
               where an idea born in the studio can be filmed on cinema cameras and sewn in our own
-              zero-discharge factory within weeks."
+              zero-discharge factory within weeks.&quot;
             </blockquote>
 
             <div style={{ marginTop: '28px' }}>

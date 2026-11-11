@@ -116,7 +116,7 @@ export default function Header() {
 
           <div className="header-actions">
             <Link href="/contact" className="pill-button talk-btn">
-              LET'S TALK
+              LET&apos;S TALK
             </Link>
 
             <button
@@ -192,7 +192,7 @@ export default function Header() {
                   className="pill-button mobile-talk-btn"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  LET'S TALK
+                  LET&apos;S TALK
                 </Link>
               </li>
             </ul>
