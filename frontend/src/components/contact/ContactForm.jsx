@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { ArrowRight, CheckCircle2, AlertCircle, Loader2, Sparkles } from 'lucide-react';
+import { submitContact } from '../../services/api';
+import { getApiErrorMessage } from '../../helpers/apiHelper';
 
 
 /**
@@ -123,21 +125,14 @@ export default function ContactForm() {
     setErrors({});
 
     try {
-      // =========================================================================
-      // FUTURE BACKEND / AXIOS INTEGRATION POINT:
-      // When the backend API endpoint is ready, connect via Axios / Fetch here:
-      //
-      // const response = await axios.post('/api/contact', formData);
-      // or:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
-      // =========================================================================
-
-      // Simulate realistic network delay (1.2 seconds)
-      await new Promise((resolve) => setTimeout(resolve, 1200));
+      // Send form data to backend API → triggers SMTP emails
+      await submitContact({
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        company: formData.company.trim(),
+        message: formData.message.trim(),
+      });
 
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -151,7 +146,7 @@ export default function ContactForm() {
       });
     } catch (error) {
       setIsSubmitting(false);
-      setErrors({ form: 'An unexpected issue occurred. Please try again or reach out to hello@strainsassociates.com' });
+      setErrors({ form: getApiErrorMessage(error) || 'An unexpected issue occurred. Please try again or reach out to hello@strainsassociates.com' });
     }
 
   };
@@ -167,7 +162,7 @@ export default function ContactForm() {
             Message Transmitted
           </h3>
           <p className="font-sans text-sm md:text-base text-[#B5B5B5] max-w-md mx-auto mb-8 leading-relaxed">
-            Thank you for reaching out to Strains Group. Our creative directors and production team have received your brief and will connect with you within 24 hours.
+            Thank you for reaching out to Strains Associates. Our creative directors and production team have received your brief and will connect with you within 24 hours.
           </p>
           <button
             type="button"

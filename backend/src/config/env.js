@@ -12,6 +12,14 @@ const config = {
     password: process.env.DB_PASSWORD || 'postgres',
     database: process.env.DB_NAME || 'strains_db',
   },
+  smtp: {
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: parseInt(process.env.SMTP_PORT || '587', 10),
+    secure: process.env.SMTP_SECURE === 'true',          // false for 587/STARTTLS
+    user: process.env.SMTP_USER || '',
+    pass: process.env.SMTP_PASS || '',
+    recipientEmail: process.env.SMTP_RECIPIENT_EMAIL || 'reelcravings@gmail.com',
+  },
 };
 
 module.exports = config;

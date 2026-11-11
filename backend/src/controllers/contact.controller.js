@@ -7,7 +7,7 @@ async function handleCreateContact(req, res, next) {
     return sendSuccess(
       res,
       result,
-      'Your inquiry has been transmitted to Strains Group successfully',
+      'Your inquiry has been transmitted to Strains Associates successfully',
       201
     );
   } catch (err) {
