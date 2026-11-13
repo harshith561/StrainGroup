@@ -88,10 +88,7 @@ export default function EcosystemFashionsSection() {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-10 pb-6 border-b border-white/10">
           <div className="flex items-center gap-3">
             <span className="font-mono text-xs font-bold text-[#00e676] tracking-wider">
-              DIVISION 01 //
-            </span>
-            <span className="font-mono text-xs text-[#888] uppercase tracking-wider">
-              Independent Business Profile
+              DIVISION 01
             </span>
           </div>
 

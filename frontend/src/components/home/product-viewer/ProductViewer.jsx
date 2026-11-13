@@ -122,20 +122,18 @@ export default function ProductViewer() {
               return (
                 <button
                   key={item.colorName}
-                  className={`group inline-flex items-center gap-2 sm:gap-2.5 py-1 px-2.5 sm:px-3 rounded-full font-sans text-xs sm:text-[13px] tracking-wide uppercase transition-all duration-200 cursor-pointer ${
-                    active
+                  className={`group inline-flex items-center gap-2 sm:gap-2.5 py-1 px-2.5 sm:px-3 rounded-full font-sans text-xs sm:text-[13px] tracking-wide uppercase transition-all duration-200 cursor-pointer ${active
                       ? 'text-black font-black scale-105 lg:translate-x-3'
                       : 'text-neutral-700 hover:text-black font-extrabold'
-                  }`}
+                    }`}
                   onClick={() => selectProduct(idx)}
                   aria-label={`Select ${item.colorName} torus`}
                 >
                   <span
-                    className={`w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full shrink-0 transition-transform duration-200 ${colorStyle.dot} ${
-                      active
+                    className={`w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full shrink-0 transition-transform duration-200 ${colorStyle.dot} ${active
                         ? `scale-115 ring-2 ring-offset-2 ring-offset-transparent ${colorStyle.ring} shadow-sm`
                         : 'opacity-85 group-hover:opacity-100 group-hover:scale-110'
-                    }`}
+                      }`}
                   />
                   {item.colorName}
                 </button>
@@ -147,9 +145,8 @@ export default function ProductViewer() {
         {/* Center 3D Torus Product Display */}
         <div className="flex items-center justify-center w-full my-0.5 sm:my-1 lg:my-0">
           <div
-            className={`flex flex-row items-center justify-center gap-3 sm:gap-5 md:gap-7 lg:gap-10 xl:gap-14 w-full transition-all duration-300 ${
-              isSwapping ? 'opacity-40 scale-95' : 'opacity-100 scale-100'
-            }`}
+            className={`flex flex-row items-center justify-center gap-3 sm:gap-5 md:gap-7 lg:gap-10 xl:gap-14 w-full transition-all duration-300 ${isSwapping ? 'opacity-40 scale-95' : 'opacity-100 scale-100'
+              }`}
           >
             <div className="flex items-center justify-center shrink-0 transition-all duration-500 opacity-100">
               <img
@@ -162,43 +159,43 @@ export default function ProductViewer() {
                 className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64 xl:w-72 xl:h-72 object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.18)] select-none pointer-events-none animate-[spin_30s_linear_infinite]"
               />
             </div>
-            <div className="flex items-center justify-center shrink-0 transition-all duration-500 opacity-100">
-              <img
-                src={current.image}
-                alt={current.title}
-                loading="lazy"
-                decoding="async"
-                width={288}
-                height={288}
-                className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64 xl:w-72 xl:h-72 object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.18)] select-none pointer-events-none animate-[spin_30s_linear_infinite]"
-              />
+              <div className="flex items-center justify-center shrink-0 transition-all duration-500 opacity-100" aria-hidden="true">
+                <img
+                  src={current.image}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width={288}
+                  height={288}
+                  className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64 xl:w-72 xl:h-72 object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.18)] select-none pointer-events-none animate-[spin_30s_linear_infinite]"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Arrow Controls */}
+          <div className="flex justify-center lg:justify-end items-center w-full">
+            <div className="flex flex-row lg:flex-col items-center justify-center gap-3 sm:gap-4 font-mono">
+              <button
+                className="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-full border border-black/20 bg-transparent flex items-center justify-center text-neutral-900 transition-all duration-200 hover:bg-black hover:text-white hover:border-black hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
+                onClick={() => selectProduct(currentIndex === 0 ? products.length - 1 : currentIndex - 1)}
+                aria-label="Previous product"
+              >
+                <ChevronUp size={16} />
+              </button>
+              <span className="text-sm sm:text-base font-bold text-neutral-900 min-w-7 text-center select-none">
+                0{currentIndex + 1}
+              </span>
+              <button
+                className="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-full border border-black/20 bg-transparent flex items-center justify-center text-neutral-900 transition-all duration-200 hover:bg-black hover:text-white hover:border-black hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
+                onClick={() => selectProduct(currentIndex === products.length - 1 ? 0 : currentIndex + 1)}
+                aria-label="Next product"
+              >
+                <ChevronDown size={16} />
+              </button>
             </div>
           </div>
         </div>
-
-        {/* Right Arrow Controls */}
-        <div className="flex justify-center lg:justify-end items-center w-full">
-          <div className="flex flex-row lg:flex-col items-center justify-center gap-3 sm:gap-4 font-mono">
-            <button
-              className="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-full border border-black/20 bg-transparent flex items-center justify-center text-neutral-900 transition-all duration-200 hover:bg-black hover:text-white hover:border-black hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
-              onClick={() => selectProduct(currentIndex === 0 ? products.length - 1 : currentIndex - 1)}
-              aria-label="Previous product"
-            >
-              <ChevronUp size={16} />
-            </button>
-            <span className="text-sm sm:text-base font-bold text-neutral-900 min-w-7 text-center select-none">
-              0{currentIndex + 1}
-            </span>
-            <button
-              className="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-full border border-black/20 bg-transparent flex items-center justify-center text-neutral-900 transition-all duration-200 hover:bg-black hover:text-white hover:border-black hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
-              onClick={() => selectProduct(currentIndex === products.length - 1 ? 0 : currentIndex + 1)}
-              aria-label="Next product"
-            >
-              <ChevronDown size={16} />
-            </button>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

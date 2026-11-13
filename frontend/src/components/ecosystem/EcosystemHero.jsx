@@ -140,11 +140,11 @@ export default function EcosystemHero() {
                     height={534}
                     className="w-full h-full object-cover object-center filter brightness-[0.4] group-hover:brightness-[0.65] group-hover:scale-105 transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/70 to-transparent" />
+                  <div className="ecosystem-card-gradient absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/70 to-transparent" />
                 </div>
 
                 {/* Top Clean Meta Line */}
-                <div className="relative z-10 p-6 flex items-center justify-between">
+                <div className="ecosystem-card-meta relative z-10 p-6 flex items-center justify-between">
                   <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#00e676] drop-shadow-md">
                     {pillar.roleTag}
                   </span>
@@ -154,7 +154,7 @@ export default function EcosystemHero() {
                 </div>
 
                 {/* Bottom Card Content */}
-                <div className="relative z-10 p-6 pt-0">
+                <div className="ecosystem-card-content relative z-10 p-6 pt-0">
                   <span className="font-mono text-[11px] text-[#00e676] block mb-1">
                     {pillar.hub}
                   </span>

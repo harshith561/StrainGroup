@@ -13,11 +13,13 @@ const config = {
     submissionMax: parseInt(process.env.SUBMISSION_RATE_LIMIT_MAX || '20', 10),
   },
   database: {
+    connectionString: process.env.DATABASE_URL || '',
     host: process.env.DB_HOST || 'localhost',
     port: parseInt(process.env.DB_PORT || '5432', 10),
     user: process.env.DB_USER || 'postgres',
     password: process.env.DB_PASSWORD || 'postgres',
     database: process.env.DB_NAME || 'strains_db',
+    ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
   },
   smtp: {
     host: process.env.SMTP_HOST || 'smtp.gmail.com',

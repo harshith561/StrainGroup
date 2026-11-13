@@ -42,12 +42,22 @@ const inMemoryStore = {
 
 function initPool() {
   if (!pool) {
+    const poolConfig = config.database.connectionString
+      ? {
+          connectionString: config.database.connectionString,
+          ssl: config.database.ssl,
+        }
+      : {
+          host: config.database.host,
+          port: config.database.port,
+          user: config.database.user,
+          password: config.database.password,
+          database: config.database.database,
+          ssl: config.database.ssl,
+        };
+
     pool = new Pool({
-      host: config.database.host,
-      port: config.database.port,
-      user: config.database.user,
-      password: config.database.password,
-      database: config.database.database,
+      ...poolConfig,
       max: 20,
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 1500,

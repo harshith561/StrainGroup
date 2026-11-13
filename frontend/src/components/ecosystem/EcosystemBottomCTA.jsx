@@ -79,7 +79,7 @@ export default function EcosystemBottomCTA() {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 py-3.5 px-8 rounded-xl font-sans font-extrabold text-xs uppercase tracking-wider bg-[#00a859] hover:bg-[#00e676] text-black transition-all shadow-lg hover:-translate-y-0.5"
+              className="ecosystem-cta-btn-primary inline-flex items-center gap-2 py-3.5 px-8 rounded-xl font-sans font-extrabold text-xs uppercase tracking-wider bg-[#00a859] hover:bg-[#00e676] text-black transition-all shadow-lg hover:-translate-y-0.5"
             >
               <Calendar size={15} />
               <span>BOOK A DIRECT STRATEGY SESSION</span>
@@ -87,7 +87,7 @@ export default function EcosystemBottomCTA() {
 
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-2 py-3.5 px-8 rounded-xl font-sans font-bold text-xs uppercase tracking-wider bg-white/5 hover:bg-white/10 text-white border border-white/15 hover:border-white/30 transition-all hover:-translate-y-0.5"
+              className="ecosystem-cta-btn-secondary inline-flex items-center gap-2 py-3.5 px-8 rounded-xl font-sans font-bold text-xs uppercase tracking-wider bg-white/5 hover:bg-white/10 text-white border border-white/15 hover:border-white/30 transition-all hover:-translate-y-0.5"
             >
               <span>BROWSE CLIENT CASE STUDIES</span>
               <ArrowRight size={15} />

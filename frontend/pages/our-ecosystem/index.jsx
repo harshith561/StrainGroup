@@ -30,7 +30,7 @@ export default function OurEcosystemPage() {
         canonical="/our-ecosystem"
       />
 
-      <div className="ecosystem-page-wrapper bg-[#080808] min-h-screen">
+      <div className="ecosystem-page-wrapper bg-[var(--bg-primary,#080808)] min-h-screen">
         {/* Section 1: Ecosystem Overview Hero */}
         <EcosystemHero />
 

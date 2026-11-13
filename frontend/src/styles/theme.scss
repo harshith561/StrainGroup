@@ -1716,85 +1716,602 @@ body.light-theme {
   }
 
   /* --------------------------------------------------------------------------
-     20. ECOSYSTEM GENERAL & CLOSED LOOP (EXACT FIX FOR IMAGE 2)
+     20. ECOSYSTEM COMPREHENSIVE LIGHT THEME ENGINE (/our-ecosystem)
+     Full coverage for Hero, Company Profiles, Relationship, Dual Hubs & CTA
      -------------------------------------------------------------------------- */
   .ecosystem-page-wrapper,
-  .closed-loop-section,
-  .biocircularity-section,
-  .integration-tiers-section,
-  .dual-hub-section,
-  .synergy-matrix-section,
   .ecosystem-hero-section,
   .ecosystem-company-section,
   #strains-fashions,
   #strains-stitchery,
   #strains-associates,
-  #ecosystem-relationship {
+  .ecosystem-relationship-section,
+  #ecosystem-relationship,
+  .dual-hub-section,
+  #hubs,
+  .closed-loop-section,
+  .biocircularity-section,
+  .integration-tiers-section,
+  .synergy-matrix-section {
     background-color: #f8fafc !important;
     border-color: rgba(0, 0, 0, 0.08) !important;
     color: #0f172a !important;
+
+    /* Base dividers and borders across all ecosystem sections */
+    div[class*="border-white"],
+    div.border-white\/10,
+    div.border-white\/5 {
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
   }
 
-  /* Ecosystem Hero Section */
+  /* --------------------------------------------------------------------------
+     20A. ECOSYSTEM OVERVIEW HERO
+     -------------------------------------------------------------------------- */
   .ecosystem-hero-section {
-    h1 {
-      color: #0f172a !important;
-    }
-
-    p.text-\[\#aaa\] {
-      color: #475569 !important;
-      strong {
-        color: #0f172a !important;
-      }
-    }
-
-    .ecosystem-photo-card {
-      border: 1px solid rgba(0, 0, 0, 0.1) !important;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
-
-      h2,
-      h3,
-      .text-white {
-        color: #ffffff !important;
-      }
-
-      p,
-      .text-\[\#bbb\] {
-        color: #cbd5e1 !important;
-      }
-
-      .text-\[\#888\] {
-        color: #94a3b8 !important;
-      }
-
-      .border-white\/10 {
-        border-color: rgba(255, 255, 255, 0.2) !important;
-      }
-    }
-  }
-
-  /* Ecosystem Company & Relationship Sections */
-  .ecosystem-company-section,
-  .ecosystem-relationship-section {
     background-color: #f8fafc !important;
     border-color: rgba(0, 0, 0, 0.08) !important;
 
-    h2 {
+    h1,
+    h1.text-white {
       color: #0f172a !important;
     }
 
-    p {
+    .text-gradient-shimmer {
+      background: linear-gradient(135deg, #0f172a 0%, #008746 45%, #00a859 65%, #0f172a 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    p.text-\[\#00e676\],
+    span.text-\[\#00e676\] {
+      color: #008746 !important;
+      font-weight: 700 !important;
+    }
+
+    p,
+    p.font-mono,
+    p.text-\[\#a0a0a0\],
+    p.text-\[\#aaa\] {
+      color: #475569 !important;
+
+      strong,
+      strong.text-white {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+      }
+    }
+
+    /* 3 Photo Preview Cards in Hero */
+    .ecosystem-photo-card {
+      background-color: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+
+      /* Photo container background */
+      div.bg-\[\#121212\] {
+        background-color: #f8fafc !important;
+      }
+
+      img {
+        filter: brightness(0.92) contrast(1.05) !important;
+        opacity: 0.95 !important;
+      }
+
+      /* Clean White Gradient Fade in Light Mode (eliminates grey/dark smudge) */
+      .ecosystem-card-gradient,
+      div.bg-gradient-to-t {
+        background: linear-gradient(
+          to top,
+          #ffffff 0%,
+          #ffffff 38%,
+          rgba(255, 255, 255, 0.92) 52%,
+          rgba(255, 255, 255, 0.45) 75%,
+          rgba(255, 255, 255, 0) 100%
+        ) !important;
+      }
+
+      /* Top Meta Badges (Floating frosted pills over photo) */
+      .ecosystem-card-meta,
+      div.flex.items-center.justify-between {
+        span.text-\[\#00e676\] {
+          background-color: rgba(255, 255, 255, 0.95) !important;
+          backdrop-filter: blur(8px) !important;
+          color: #008746 !important;
+          border: 1px solid rgba(0, 0, 0, 0.08) !important;
+          border-radius: 6px !important;
+          padding: 3px 8px !important;
+          font-weight: 700 !important;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+        }
+
+        span.text-white\/80 {
+          background-color: rgba(255, 255, 255, 0.95) !important;
+          backdrop-filter: blur(8px) !important;
+          color: #0f172a !important;
+          border: 1px solid rgba(0, 0, 0, 0.08) !important;
+          border-radius: 6px !important;
+          padding: 3px 8px !important;
+          font-weight: 700 !important;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+        }
+      }
+
+      /* Bottom Card Content on White Gradient */
+      .ecosystem-card-content,
+      div.p-6.pt-0 {
+        span.text-\[\#00e676\] {
+          color: #008746 !important;
+          font-weight: 700 !important;
+        }
+
+        h2,
+        h2.text-white {
+          color: #0f172a !important;
+          font-weight: 800 !important;
+
+          &:hover {
+            color: #008746 !important;
+          }
+        }
+
+        p.text-\[\#d0d0d0\] {
+          color: #1e293b !important;
+          font-weight: 600 !important;
+        }
+
+        p.text-\[\#a8a8a8\] {
+          color: #475569 !important;
+          font-weight: 400 !important;
+        }
+
+        div.border-white\/10 {
+          border-color: rgba(0, 0, 0, 0.08) !important;
+        }
+
+        a.text-white\/80 {
+          color: #0f172a !important;
+          font-weight: 700 !important;
+
+          &:hover {
+            color: #008746 !important;
+          }
+        }
+
+        a.text-\[\#00e676\],
+        span.text-\[\#00e676\] {
+          color: #008746 !important;
+          font-weight: 700 !important;
+
+          &:hover {
+            color: #005c2f !important;
+          }
+        }
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     20B. ECOSYSTEM COMPANY PROFILES (Fashions, Stitchery, Associates)
+     -------------------------------------------------------------------------- */
+  .ecosystem-company-section,
+  #strains-fashions,
+  #strains-stitchery,
+  #strains-associates {
+    background-color: #f8fafc !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+
+    /* Top Division Header Meta */
+    span.text-\[\#888\],
+    span.text-\[\#777\] {
+      color: #64748b !important;
+      font-weight: 600 !important;
+    }
+
+    span.text-\[\#00e676\],
+    span.text-\[\#00a859\] {
+      color: #008746 !important;
+      font-weight: 700 !important;
+    }
+
+    /* Main Company Heading & Taglines */
+    h2,
+    h2.text-white {
+      color: #0f172a !important;
+
+      span.text-\[\#00e676\],
+      span.text-\[\#00a859\] {
+        color: #008746 !important;
+      }
+    }
+
+    p.text-\[\#00e676\],
+    p.text-\[\#00a859\] {
+      color: #008746 !important;
+      font-weight: 700 !important;
+    }
+
+    /* Section Body Paragraphs */
+    p,
+    p.text-\[\#cccccc\],
+    p.text-\[\#999999\],
+    p.text-\[\#999\],
+    p.text-\[\#a0a0a0\],
+    p.text-\[\#b8b8b8\],
+    p.text-\[\#a8a8a8\] {
+      color: #334155 !important;
+    }
+
+    /* Synergy Highlight Box (e.g. Manufactured Directly By Strains Stitchery) */
+    div[class*="bg-[#00e676]"],
+    div[class*="bg-[#00a859]"],
+    div.rounded-2xl.border.border-\[\#00e676\]\/30 {
+      background-color: rgba(0, 168, 89, 0.06) !important;
+      border: 1px solid rgba(0, 168, 89, 0.25) !important;
+
+      span {
+        color: #008746 !important;
+        font-weight: 700 !important;
+      }
+
+      p {
+        color: #334155 !important;
+      }
+
+      strong,
+      strong.text-white {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+      }
+
+      a {
+        color: #008746 !important;
+        font-weight: 700 !important;
+      }
+    }
+
+    /* Hero Showcase Card on Right */
+    .bg-\[\#121212\],
+    div.rounded-3xl.border.border-white\/10 {
+      background-color: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04) !important;
+
+      span.text-\[\#888\] {
+        color: #64748b !important;
+      }
+
+      p.text-\[\#b8b8b8\] {
+        color: #475569 !important;
+      }
+
+      a.text-white,
+      a[class*="text-white"] {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+
+        &:hover {
+          color: #00a859 !important;
+        }
+      }
+    }
+
+    /* 4 Expertise / Technical Pillars Grid */
+    h3,
+    h3.text-white {
+      color: #0f172a !important;
+    }
+
+    div[class*="bg-[#121212]"] {
+      background-color: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+
+      span.text-\[\#00e676\] {
+        color: #008746 !important;
+        font-weight: 700 !important;
+      }
+
+      h4,
+      h4.text-white {
+        color: #0f172a !important;
+      }
+
+      p.text-\[\#a8a8a8\] {
+        color: #475569 !important;
+      }
+    }
+
+    /* Bottom Strengths Big Box */
+    div.rounded-3xl.p-8,
+    div.rounded-3xl.sm\:p-12 {
+      background-color: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.04) !important;
+
+      h3,
+      h3.text-white {
+        color: #0f172a !important;
+      }
+
+      p.text-\[\#999\] {
+        color: #475569 !important;
+      }
+
+      /* 6 Check Chips Grid */
+      div[class*="bg-black/40"],
+      div.p-4.rounded-2xl {
+        background-color: #f8fafc !important;
+        border: 1px solid rgba(0, 0, 0, 0.06) !important;
+
+        svg {
+          color: #008746 !important;
+        }
+
+        span.text-\[\#cccccc\] {
+          color: #1e293b !important;
+          font-weight: 500 !important;
+        }
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     20C. RELATIONSHIP BETWEEN BUSINESSES UNDER STRAINS GROUP
+     -------------------------------------------------------------------------- */
+  .ecosystem-relationship-section,
+  #ecosystem-relationship {
+    background-color: #f8fafc !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+
+    h2,
+    h2.text-white {
+      color: #0f172a !important;
+    }
+
+    .text-gradient-shimmer {
+      background: linear-gradient(135deg, #0f172a 0%, #008746 45%, #00a859 65%, #0f172a 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    p.text-\[\#a0a0a0\],
+    p.text-\[\#999\] {
       color: #475569 !important;
     }
 
-    .bg-\[\#121212\],
-    .bg-\[\#111111\],
-    .bg-\[\#161616\],
-    [class*="bg-[#121212]"],
-    [class*="bg-[#111111]"] {
+    /* 3 Domain Focus Cards */
+    div.rounded-2xl.border.border-white\/10 {
       background-color: #ffffff !important;
-      border-color: rgba(0, 0, 0, 0.08) !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+
+      div.bg-black\/60 {
+        background-color: #f1f5f9 !important;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+        color: #008746 !important;
+      }
+
+      span.text-\[\#00e676\] {
+        color: #008746 !important;
+        font-weight: 700 !important;
+      }
+
+      h3,
+      h3.text-white {
+        color: #0f172a !important;
+      }
+
+      p.text-\[\#00e676\] {
+        color: #008746 !important;
+        font-weight: 700 !important;
+      }
+
+      p.text-\[\#999\] {
+        color: #475569 !important;
+      }
+
+      div.border-white\/10 {
+        border-color: rgba(0, 0, 0, 0.08) !important;
+      }
+
+      span.text-\[\#777\] {
+        color: #64748b !important;
+      }
+
+      a.text-\[\#00e676\] {
+        color: #008746 !important;
+        font-weight: 700 !important;
+      }
+    }
+
+    /* Operational Framework Big Box */
+    div.rounded-3xl.p-6,
+    div.rounded-3xl.sm\:p-10 {
+      background-color: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05) !important;
+
+      h3,
+      h3.text-white {
+        color: #0f172a !important;
+      }
+
+      div.border-white\/10 {
+        border-color: rgba(0, 0, 0, 0.08) !important;
+      }
+
+      /* Switcher pill buttons */
+      div.bg-black\/60 {
+        background-color: #f1f5f9 !important;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+
+        button.text-\[\#888\] {
+          color: #475569 !important;
+
+          &:hover {
+            color: #0f172a !important;
+            background-color: #e2e8f0 !important;
+          }
+        }
+
+        button.bg-\[\#00a859\] {
+          background-color: #00a859 !important;
+          color: #000000 !important;
+          font-weight: 800 !important;
+        }
+      }
+
+      /* Tab 1 & Tab 2 Top Banner */
+      div.bg-black\/40 {
+        background-color: #f8fafc !important;
+        border: 1px solid rgba(0, 0, 0, 0.06) !important;
+
+        h4,
+        h4.text-white {
+          color: #0f172a !important;
+        }
+
+        p.text-\[\#a8a8a8\] {
+          color: #475569 !important;
+        }
+      }
+
+      /* Tab 1 3 Client Base cards */
+      div.bg-black\/30 {
+        background-color: #f8fafc !important;
+        border: 1px solid rgba(0, 0, 0, 0.06) !important;
+
+        span.text-\[\#00e676\] {
+          color: #008746 !important;
+          font-weight: 700 !important;
+        }
+
+        p.text-\[\#999\] {
+          color: #475569 !important;
+        }
+      }
+
+      /* Tab 2 3 Step cards */
+      div[class*="bg-[#00a859]/10"] {
+        background-color: rgba(0, 168, 89, 0.06) !important;
+        border: 1px solid rgba(0, 168, 89, 0.25) !important;
+
+        span.text-\[\#00e676\] {
+          color: #008746 !important;
+          font-weight: 700 !important;
+        }
+
+        span.text-white\/60 {
+          color: #475569 !important;
+          font-weight: 600 !important;
+        }
+
+        p.text-\[\#cccccc\] {
+          color: #334155 !important;
+        }
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     20D. DUAL PHYSICAL INFRASTRUCTURE (HYDERABAD & TIRUPUR HUBS)
+     -------------------------------------------------------------------------- */
+  .dual-hub-section,
+  #hubs {
+    background-color: #f8fafc !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+
+    h2,
+    h2.text-white {
+      color: #0f172a !important;
+    }
+
+    .text-gradient-shimmer {
+      background: linear-gradient(135deg, #0f172a 0%, #008746 45%, #00a859 65%, #0f172a 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    p.text-\[\#888\] {
+      color: #475569 !important;
+    }
+
+    /* 2 Hub Cards */
+    .dual-hub-card {
+      background-color: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04) !important;
+
+      p.text-\[\#777\] {
+        color: #64748b !important;
+      }
+
+      p.text-\[\#aaa\] {
+        color: #334155 !important;
+      }
+
+      /* Team roster tiles */
+      .dual-hub-team-tile,
+      div.bg-black\/40 {
+        background-color: #f8fafc !important;
+        border: 1px solid rgba(0, 0, 0, 0.06) !important;
+        color: #0f172a !important;
+
+        span {
+          color: #1e293b !important;
+        }
+
+        span.text-\[\#00a859\] {
+          color: #008746 !important;
+          font-weight: 700 !important;
+        }
+
+        strong,
+        strong.text-white {
+          color: #0f172a !important;
+          font-weight: 700 !important;
+        }
+
+        svg {
+          color: #008746 !important;
+        }
+      }
+
+      /* Facility specs list & bottom meta */
+      div.border-white\/10,
+      div[class*="border-t"] {
+        border-color: rgba(0, 0, 0, 0.08) !important;
+
+        span {
+          color: #64748b !important;
+        }
+      }
+
+      span.text-white\/80 {
+        color: #64748b !important;
+        font-weight: 500 !important;
+      }
+
+      strong,
+      strong.text-white {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+      }
+
+      /* Direct contact lines */
+      a.text-white\/90 {
+        color: #0f172a !important;
+        font-weight: 600 !important;
+
+        &:hover {
+          color: #00a859 !important;
+        }
+      }
+
+      svg {
+        color: #008746 !important;
+      }
     }
   }
 
