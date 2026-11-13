@@ -16,8 +16,8 @@ const DIVISIONS = [
       'Enterprise Strategy & Positioning',
       'Art Direction & Copywriting',
     ],
-    link: '/services',
-    linkText: 'Explore Agency Services',
+    link: '/strains-associates/digital-marketing',
+    linkText: 'Explore Strains Associates',
   },
   {
     num: '02',
@@ -30,7 +30,7 @@ const DIVISIONS = [
       'Low MOQ & High Volume Capabilities',
       'Global Export Logistics',
     ],
-    link: '/clothing-manufacturing',
+    link: '/strains-stitchery/clothing-manufacturing',
     linkText: 'Discover Stitchery Factory',
   },
   {
@@ -44,7 +44,7 @@ const DIVISIONS = [
       'Biodegradable Packaging',
       'Zero Microplastic Formulations',
     ],
-    link: '/fashion-brand',
+    link: '/strains-fashions/fashion-design',
     linkText: 'View Fashion Brand',
   },
   {
@@ -58,7 +58,7 @@ const DIVISIONS = [
       'Cinema Lighting & Drone Videography',
       'Post-Production & Color Grading',
     ],
-    link: '/video-production',
+    link: '/strains-associates/videography',
     linkText: 'Watch Production Reel',
   },
 ];

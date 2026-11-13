@@ -9,7 +9,7 @@ const EXPERTISE_CARDS = [
   {
     id: '01',
     title: 'Video\nProduction',
-    href: '/video-production',
+    href: '/strains-associates/videography',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <rect x="6" y="14" width="24" height="20" rx="4" />
@@ -20,7 +20,7 @@ const EXPERTISE_CARDS = [
   {
     id: '02',
     title: 'Commercial &\nFashion Photography',
-    href: '/fashion-brand',
+    href: '/strains-fashions/fashion-design',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M42 38H6a2 2 0 0 1-2-2V18a2 2 0 0 1 2-2h7l3-6h12l3 6h7a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2z" />
@@ -31,7 +31,7 @@ const EXPERTISE_CARDS = [
   {
     id: '03',
     title: 'Digital Marketing &\nGoogle Ads',
-    href: '/advertising-marketing',
+    href: '/strains-associates/digital-marketing',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <circle cx="24" cy="24" r="16" />
@@ -47,7 +47,7 @@ const EXPERTISE_CARDS = [
   {
     id: '04',
     title: 'Creative Strategy &\nBrand Development',
-    href: '/start-your-brand',
+    href: '/strains-associates/start-your-brand',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" />
@@ -59,7 +59,7 @@ const EXPERTISE_CARDS = [
   {
     id: '05',
     title: 'SEO & Social\nMedia Marketing',
-    href: '/advertising-marketing',
+    href: '/strains-associates/digital-marketing',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M6 38h36" />
@@ -75,7 +75,7 @@ const EXPERTISE_CARDS = [
   {
     id: '06',
     title: 'Sustainable Fashion &\nManufacturing',
-    href: '/clothing-manufacturing',
+    href: '/strains-stitchery/clothing-manufacturing',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M24 4C14 4 6 12 6 22c0 14 18 22 18 22s18-8 18-22c0-10-8-18-18-18z" />

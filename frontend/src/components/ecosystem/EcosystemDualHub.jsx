@@ -66,7 +66,7 @@ export default function EcosystemDualHub() {
 
               <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
 
-                <span className="font-mono text-xs text-white/80 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-full">
+                <span className="font-mono text-xs text-white/80 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
                   HYDERABAD
                 </span>
               </div>
@@ -144,7 +144,7 @@ export default function EcosystemDualHub() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40" />
 
               <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                <span className="font-mono text-xs text-white/80 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-full">
+                <span className="font-mono text-xs text-white/80 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
                   TIRUPUR
                 </span>
               </div>

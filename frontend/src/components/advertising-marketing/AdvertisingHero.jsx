@@ -78,7 +78,7 @@ export default function AdvertisingHero() {
         {/* Green Subheading */}
         <div className="mb-4" data-aos="fade-down" data-aos-duration="900">
           <span className="inline-block text-[#00e676] font-mono text-sm sm:text-base md:text-lg uppercase tracking-[3px] font-bold drop-shadow-[0_0_15px_rgba(0,230,118,0.4)]">
-            Performance Digital Marketing &amp; Full-Funnel Advertising
+            STRAINS ASSOCIATES · DIGITAL MARKETING &amp; CREATIVE STRATEGY
           </span>
         </div>
 
@@ -89,8 +89,8 @@ export default function AdvertisingHero() {
             High-Converting Campaigns
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-natural-300 font-sans max-w-3xl mx-auto leading-relaxed mb-10 font-light drop-shadow-md">
-            Under the leadership of Prasad (Head of Digital Marketing) and Praharsha (Strategy Maker), we architect high-intent Google Ads, Meta SMM campaigns, enterprise B2B PPC, and SEO engines delivering verified high-ROI revenue.
+          <p className="text-base sm:text-lg md:text-xl text-neutral-300 font-sans max-w-3xl mx-auto leading-relaxed mb-10 font-light drop-shadow-md">
+            Strains Associates is the independent digital marketing and creative strategy powerhouse of Strains Group in Hyderabad. Guided by Prasad (Head of Digital Marketing) and Praharsha (Strategy), we engineer high-intent Google Ads, Meta SMM growth funnels, and data-driven SEO with a verified 90.8% optimization score to turn audience attention into measurable revenue.
           </p>
         </div>
 

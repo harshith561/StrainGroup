@@ -1,5 +1,6 @@
 export { default as HeroSlider } from './hero/HeroSlider';
 export { default as KineticHeroSlider } from './hero/KineticHeroSlider';
+export { default as HeroBusinessDivisions } from './hero/HeroBusinessDivisions';
 export { default as ProductViewer } from './product-viewer/ProductViewer';
 export { default as AgencyIntro } from './agency-intro/AgencyIntro';
 export { default as PortfolioSection } from './portfolio/PortfolioSection';

@@ -32,7 +32,7 @@ export default function AboutCTA() {
               <ArrowRight size={16} style={{ marginLeft: '8px' }} />
             </Link>
 
-            <Link href="/start-your-brand" className="pill-button">
+            <Link href="/strains-associates/start-your-brand" className="pill-button">
               <span>START YOUR BRAND</span>
             </Link>
           </div>

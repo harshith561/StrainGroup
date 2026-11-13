@@ -79,20 +79,18 @@ export default function EcosystemBottomCTA() {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
             <Link
               href="/contact"
-              className="pill-button ecosystem-cta-btn-primary"
-              style={{ backgroundColor: '#00a859', borderColor: '#00a859', color: '#000', fontSize: '13px', padding: '14px 34px', fontWeight: '800' }}
+              className="inline-flex items-center gap-2 py-3.5 px-8 rounded-xl font-sans font-extrabold text-xs uppercase tracking-wider bg-[#00a859] hover:bg-[#00e676] text-black transition-all shadow-lg hover:-translate-y-0.5"
             >
-              <Calendar size={15} style={{ marginRight: '8px' }} />
+              <Calendar size={15} />
               <span>BOOK A DIRECT STRATEGY SESSION</span>
             </Link>
 
             <Link
               href="/case-studies"
-              className="pill-button ecosystem-cta-btn-secondary"
-              style={{ fontSize: '13px', padding: '14px 30px' }}
+              className="inline-flex items-center gap-2 py-3.5 px-8 rounded-xl font-sans font-bold text-xs uppercase tracking-wider bg-white/5 hover:bg-white/10 text-white border border-white/15 hover:border-white/30 transition-all hover:-translate-y-0.5"
             >
               <span>BROWSE CLIENT CASE STUDIES</span>
-              <ArrowRight size={15} style={{ marginLeft: '8px' }} />
+              <ArrowRight size={15} />
             </Link>
           </div>
 

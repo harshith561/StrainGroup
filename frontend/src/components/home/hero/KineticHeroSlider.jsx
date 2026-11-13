@@ -147,6 +147,9 @@ export default function KineticHeroSlider() {
         {/* Right Column: Meta Pitch Block */}
         <div className="slider-right-col">
           <div className={`slide-meta-content ${isChanging ? 'exit' : 'enter'}`}>
+            <p className="font-mono text-xs uppercase tracking-widest text-[#00e676] font-bold mb-2">
+              Strains Group · Three Independent Businesses
+            </p>
             <div className="green-divider" />
             <p className="slide-subheading font-sans">
               {activeSlide.subheading}
@@ -154,8 +157,8 @@ export default function KineticHeroSlider() {
             <p className="slide-paragraph font-mono">
               {activeSlide.paragraph}
             </p>
-            <Link href="/services" className="explore-link font-sans">
-              EXPLORE <ArrowRight className="arrow-icon" size={18} />
+            <Link href="#hero-business-divisions" className="explore-link font-sans">
+              EXPLORE OUR BUSINESSES <ArrowRight className="arrow-icon" size={18} />
             </Link>
           </div>
         </div>

@@ -15,10 +15,10 @@ const REASONS = [
   {
     icon: Sparkles,
     tag: 'UNBROKEN ECOSYSTEM',
-    title: 'From Brand Concept To Consumer Closet',
+    title: 'From Fashion Atelier To Strains Stitchery Production',
     description:
-      'Most creative agencies hand over a logo and abandon you to find manufacturers and ad buyers. We unify luxury branding, Tirupur garment production, editorial video shoots, and performance e-commerce under one roof.',
-    highlight: 'Zero creative dilution, 100% unified vision execution',
+      'Strains Fashions designs and curates conscious luxury collections, with every silhouette engineered, patterned, and stitched directly by our manufacturing division, Strains Stitchery, in Tirupur with zero middleman markup.',
+    highlight: 'Seed-to-stitch traceability powered by our own Tirupur manufacturing unit',
   },
   {
     icon: Camera,
@@ -30,11 +30,11 @@ const REASONS = [
   },
   {
     icon: Shirt,
-    tag: 'CIRCULAR CREDIBILITY',
-    title: 'Backed By Zero-Discharge Sustainable Manufacturing',
+    tag: 'POWERED BY STRAINS STITCHERY',
+    title: 'Manufactured by Strains Stitchery in Tirupur',
     description:
-      'We empower fashion brands with genuine sustainability credentials: 100% organic cotton, Himalayan hemp, chemical-free botanical dyeing, and living plantable seed tags produced in our Tirupur facility.',
-    highlight: 'Authentic eco-storytelling backed by certified factory processes',
+      'Strains Fashions collections are brought to life through our sister company Strains Stitchery: 100% certified organic cotton, Himalayan hemp, chemical-free botanical dyeing, zero-effluent water cycles, and precision stitching in Tirupur.',
+    highlight: 'Direct factory floor execution with certified Zero Liquid Discharge compliance',
   },
   {
     icon: ShoppingBag,

@@ -222,6 +222,7 @@ body.light-theme {
   .bg-\[\#000\],
   .bg-black,
   .bg-\[\#050505\],
+  .bg-\[\#070707\],
   .bg-\[\#080808\],
   .bg-\[\#090909\],
   .bg-\[\#0a0a0a\],
@@ -233,6 +234,7 @@ body.light-theme {
   .bg-\[\#0f0f0f\],
   [class*="bg-[#000000]"],
   [class*="bg-[#050505]"],
+  [class*="bg-[#070707]"],
   [class*="bg-[#080808]"],
   [class*="bg-[#090909]"],
   [class*="bg-[#0a0a0a]"],
@@ -517,6 +519,7 @@ body.light-theme {
   .from-black,
   .from-\[\#000000\],
   .from-\[\#050505\],
+  .from-\[\#070707\],
   .from-\[\#080808\],
   .from-\[\#0c0c0c\],
   .from-\[\#111111\],
@@ -525,21 +528,27 @@ body.light-theme {
   .from-\[\#151515\],
   .from-\[\#161616\],
   .from-\[\#181818\],
-  .from-\[\#1a1a1a\] {
+  .from-\[\#1a1a1a\],
+  [class*="from-[#070707]"],
+  [class*="from-[#111111]"] {
     --tw-gradient-from: #ffffff var(--tw-gradient-from-position) !important;
     --tw-gradient-to: rgba(255, 255, 255, 0) var(--tw-gradient-to-position) !important;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
   }
 
   .to-black,
+  .to-\[\#070707\],
   .to-\[\#0c0c0c\],
-  .to-\[\#000000\] {
+  .to-\[\#000000\],
+  [class*="to-[#070707]"] {
     --tw-gradient-to: #f8fafc var(--tw-gradient-to-position) !important;
   }
 
   .via-black,
+  .via-\[\#070707\],
   .via-\[\#121212\],
-  .via-\[\#0c0c0c\] {
+  .via-\[\#0c0c0c\],
+  [class*="via-[#070707]"] {
     --tw-gradient-to: rgba(248, 250, 252, 0) var(--tw-gradient-to-position) !important;
     --tw-gradient-stops: var(--tw-gradient-from), #f8fafc var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
   }
@@ -792,6 +801,80 @@ body.light-theme {
       background-color: var(--accent-green, #00a859) !important;
       border-color: var(--accent-green, #00a859) !important;
       color: #000000 !important;
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     10b. HERO BUSINESS DIVISIONS (Home Page)
+     Seamless light-mode adaptation matching the hero slider and site theme
+     -------------------------------------------------------------------------- */
+  .hero-business-divisions,
+  #hero-business-divisions {
+    background-color: #f8fafc !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+
+    h2,
+    .division-title {
+      color: #0f172a !important;
+    }
+
+    p,
+    .division-desc {
+      color: #475569 !important;
+    }
+
+    .division-card {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+
+      &:hover {
+        border-color: rgba(0, 168, 89, 0.5) !important;
+        box-shadow: 0 20px 40px rgba(0, 168, 89, 0.1) !important;
+      }
+    }
+
+    .division-card-overlay {
+      background: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.6) 45%, transparent 100%) !important;
+    }
+
+    .division-number {
+      color: #64748b !important;
+    }
+
+    .division-icon-badge {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.1) !important;
+      color: var(--accent-green, #00a859) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    .division-name {
+      color: #0f172a !important;
+    }
+
+    .division-tagline {
+      color: var(--accent-green, #00a859) !important;
+    }
+
+    .division-highlights {
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .division-highlight-text {
+      color: #334155 !important;
+    }
+
+    .division-btn {
+      background-color: #f1f5f9 !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      color: #0f172a !important;
+
+      &:hover {
+        background-color: var(--accent-green, #00a859) !important;
+        border-color: var(--accent-green, #00a859) !important;
+        color: #000000 !important;
+      }
     }
   }
 
@@ -1641,7 +1724,12 @@ body.light-theme {
   .integration-tiers-section,
   .dual-hub-section,
   .synergy-matrix-section,
-  .ecosystem-hero-section {
+  .ecosystem-hero-section,
+  .ecosystem-company-section,
+  #strains-fashions,
+  #strains-stitchery,
+  #strains-associates,
+  #ecosystem-relationship {
     background-color: #f8fafc !important;
     border-color: rgba(0, 0, 0, 0.08) !important;
     color: #0f172a !important;
@@ -1682,6 +1770,31 @@ body.light-theme {
       .border-white\/10 {
         border-color: rgba(255, 255, 255, 0.2) !important;
       }
+    }
+  }
+
+  /* Ecosystem Company & Relationship Sections */
+  .ecosystem-company-section,
+  .ecosystem-relationship-section {
+    background-color: #f8fafc !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+
+    h2 {
+      color: #0f172a !important;
+    }
+
+    p {
+      color: #475569 !important;
+    }
+
+    .bg-\[\#121212\],
+    .bg-\[\#111111\],
+    .bg-\[\#161616\],
+    [class*="bg-[#121212]"],
+    [class*="bg-[#111111]"] {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
     }
   }
 

@@ -14,16 +14,34 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://strains.in/clothing-manufacturing</loc>
-    <lastmod>2026-11-06</lastmod>
+    <loc>https://strains.in/strains-stitchery/clothing-manufacturing</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://strains.in/video-production</loc>
-    <lastmod>2026-11-06</lastmod>
+    <loc>https://strains.in/strains-associates/videography</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://strains.in/strains-associates/digital-marketing</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://strains.in/strains-associates/start-your-brand</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strains.in/strains-fashions/fashion-design</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://strains.in/blog</loc>
@@ -43,24 +61,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://strains.in/advertising-marketing</loc>
-    <lastmod>2026-11-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://strains.in/fashion-brand</loc>
-    <lastmod>2026-11-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://strains.in/start-your-brand</loc>
-    <lastmod>2026-11-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://strains.in/portfolio</loc>
     <lastmod>2026-11-06</lastmod>

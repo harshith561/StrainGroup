@@ -78,7 +78,7 @@ export default function ClothingHero() {
         {/* Green Subheading */}
         <div className="mb-4" data-aos="fade-down" data-aos-duration="900">
           <span className="inline-block text-[#00e676] font-mono text-sm sm:text-base md:text-lg uppercase tracking-[3px] font-bold drop-shadow-[0_0_15px_rgba(0,230,118,0.4)]">
-            Zero-Discharge Sustainable Apparel Manufacturing
+            STRAINS STITCHERY · GARMENT MANUFACTURING &amp; PRODUCT DEVELOPMENT
           </span>
         </div>
 
@@ -90,7 +90,7 @@ export default function ClothingHero() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-white font-sans max-w-3xl mx-auto leading-relaxed mb-10 font-light drop-shadow-md">
-            Operating out of our specialized manufacturing hub in Tirupur, Tamil Nadu, Strains Associates produces 100% certified organic cotton, pure hemp, vegan silk, and natural botanical-dyed apparel with zero effluent discharge and plantable seed tags.
+            Strains Stitchery is the independent apparel manufacturing facility of Strains Group in Tirupur, Tamil Nadu. We engineer 100% certified organic cotton, pure hemp, vegan silk, and natural botanical-dyed garments with Zero Liquid Discharge (ZLD), rapid sampling, CAD tech pack development, and low-to-high MOQ production.
           </p>
         </div>
 

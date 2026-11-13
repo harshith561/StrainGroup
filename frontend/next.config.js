@@ -53,6 +53,61 @@ const nextConfig = {
         destination: '/about-strains-group#about-team-coverflow-section',
         permanent: true,
       },
+      {
+        source: '/fashion-brand',
+        destination: '/strains-fashions/fashion-design',
+        permanent: true,
+      },
+      {
+        source: '/strains-fashions',
+        destination: '/strains-fashions/fashion-design',
+        permanent: true,
+      },
+      {
+        source: '/clothing-manufacturing',
+        destination: '/strains-stitchery/clothing-manufacturing',
+        permanent: true,
+      },
+      {
+        source: '/clothing',
+        destination: '/strains-stitchery/clothing-manufacturing',
+        permanent: true,
+      },
+      {
+        source: '/strains-stitchery',
+        destination: '/strains-stitchery/clothing-manufacturing',
+        permanent: true,
+      },
+      {
+        source: '/strains-stitchery/clothing',
+        destination: '/strains-stitchery/clothing-manufacturing',
+        permanent: true,
+      },
+      {
+        source: '/advertising-marketing',
+        destination: '/strains-associates/digital-marketing',
+        permanent: true,
+      },
+      {
+        source: '/strains-associates',
+        destination: '/strains-associates/digital-marketing',
+        permanent: true,
+      },
+      {
+        source: '/video-production',
+        destination: '/strains-associates/videography',
+        permanent: true,
+      },
+      {
+        source: '/strains-associates/video-production',
+        destination: '/strains-associates/videography',
+        permanent: true,
+      },
+      {
+        source: '/start-your-brand',
+        destination: '/strains-associates/start-your-brand',
+        permanent: true,
+      },
     ];
   },
   async headers() {

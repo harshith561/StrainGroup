@@ -78,19 +78,19 @@ export default function FashionBrandHero() {
         {/* Green Subheading */}
         <div className="mb-4" data-aos="fade-down" data-aos-duration="900">
           <span className="inline-block text-[#00e676] font-mono text-sm sm:text-base md:text-lg uppercase tracking-[3px] font-bold drop-shadow-[0_0_15px_rgba(0,230,118,0.4)]">
-            Haute Couture Brand Architecture &amp; D2C Fashion
+            STRAINS FASHIONS · SUSTAINABLE FASHION DESIGN &amp; RESPONSIBLE CLOTHING
           </span>
         </div>
 
         {/* Main Heading */}
         <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="100" className="max-w-5xl mx-auto">
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[78px] font-sans font-black tracking-tight uppercase leading-[1.05] text-white mb-6">
-            Elevate Your Fashion Brand <br className="hidden sm:inline" />
-            To Category Leadership
+            Sustainable Fashion Design <br className="hidden sm:inline" />
+            &amp; Category Leadership
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-white font-sans max-w-3xl mx-auto leading-relaxed mb-10 font-light drop-shadow-md">
-            From atelier runway concept to luxury consumer closet, we architect iconic fashion identities, editorial lookbook shoots, 4K runway films, sustainable apparel manufacturing, and conversion-optimized digital flagship storefronts.
+            Strains Fashions is the independent sustainable fashion business of Strains Group. From atelier runway concept to luxury consumer closet, we architect conscious apparel crafted from certified Himalayan hemp, organic cotton, vegan silk, and botanical dyes—manufactured with Zero Liquid Discharge precision at Strains Stitchery’s Tirupur facility.
           </p>
         </div>
 

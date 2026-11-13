@@ -79,7 +79,7 @@ export default function StartBrandHero() {
         {/* Green Subheading */}
         <div className="mb-4" data-aos="fade-down" data-aos-duration="900">
           <span className="inline-block text-[#00e676] font-mono text-sm sm:text-base md:text-lg uppercase tracking-[3px] font-bold drop-shadow-[0_0_15px_rgba(0,230,118,0.4)]">
-            The Complete Founder &amp; Creator Brand Launchpad
+            STRAINS ASSOCIATES · TURNKEY BRAND INCUBATION &amp; ARCHITECTURE
           </span>
         </div>
 
@@ -91,7 +91,7 @@ export default function StartBrandHero() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 font-sans max-w-3xl mx-auto leading-relaxed mb-10 font-light drop-shadow-md">
-            The all-in-one incubator powered by Strains Associates: We unite brand strategy, Tirupur sustainable manufacturing, 4K commercial product shoots, and digital customer acquisition into one frictionless founder journey.
+            Strains Associates is the independent creative strategy and growth powerhouse of Strains Group. Through our turnkey brand incubator, we guide visionary founders through luxury identity architecture, 4K editorial cinematography, and digital flagship launches—backed by low-MOQ sustainable garment manufacturing at Strains Stitchery’s Tirupur facility.
           </p>
         </div>
 

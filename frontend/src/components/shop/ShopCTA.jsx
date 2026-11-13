@@ -92,7 +92,7 @@ export default function ShopCTA() {
           </Link>
 
           <Link
-            href="/clothing-manufacturing"
+            href="/strains-stitchery/clothing-manufacturing"
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-black/60 hover:bg-black/80 text-white border border-white/25 hover:border-white/50 font-sans font-bold text-xs sm:text-sm uppercase tracking-wider backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
           >
             <span>Explore Stitchery Hub</span>

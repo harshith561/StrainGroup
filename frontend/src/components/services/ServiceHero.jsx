@@ -15,7 +15,7 @@ const SLIDES = [
     note: 'We script, film, and direct cinematic commercial films in 4K/8K that capture the authentic human craft behind what you build — giving clients real reasons to trust your brand.',
     image: '/images/ecosystem/synergy-camera-cinematography.jpg',
     imageAlt: 'Cinema camera and lighting set on commercial video production stage',
-    href: '/video-production',
+    href: '/strains-associates/videography',
     btnLabel: 'Explore Video Production',
   },
   {
@@ -26,7 +26,7 @@ const SLIDES = [
     note: 'Real trust starts behind the scenes. In our Tirupur facility, we craft custom garments using 100% certified organic cotton, pure hemp, and natural botanical dyes with zero effluent discharge.',
     image: '/images/ecosystem/material-organic-cotton.jpg',
     imageAlt: 'Natural organic cotton and sustainable textile craftsmanship',
-    href: '/clothing-manufacturing',
+    href: '/strains-stitchery/clothing-manufacturing',
     btnLabel: 'Explore Garment Manufacturing',
   },
   {
@@ -37,7 +37,7 @@ const SLIDES = [
     note: 'No vanity metrics or empty promises. We build enduring visual identities and scientific ad campaigns grounded in verified revenue, high search intent, and long-term customer relationships.',
     image: '/images/ecosystem/hero-creative.jpg',
     imageAlt: 'Creative design atelier and strategic brand workspace',
-    href: '/advertising-marketing',
+    href: '/strains-associates/digital-marketing',
     btnLabel: 'Explore Strategy & Marketing',
   },
 ];

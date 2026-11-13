@@ -1,4 +1,8 @@
 export { default as EcosystemHero } from './EcosystemHero';
+export { default as EcosystemFashionsSection } from './EcosystemFashionsSection';
+export { default as EcosystemStitcherySection } from './EcosystemStitcherySection';
+export { default as EcosystemAssociatesSection } from './EcosystemAssociatesSection';
+export { default as EcosystemRelationshipSection } from './EcosystemRelationshipSection';
 export { default as EcosystemClosedLoop } from './EcosystemClosedLoop';
 export { default as EcosystemSynergyMatrix } from './EcosystemSynergyMatrix';
 export { default as EcosystemBioCircularity } from './EcosystemBioCircularity';

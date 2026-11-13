@@ -5,6 +5,7 @@ import SEO from '@/components/common/SEO';
 import { SITE_CONFIG } from '@/constant/siteConfig';
 import {
   HeroSlider,
+  HeroBusinessDivisions,
   ProductViewer,
   AgencyIntro,
   PortfolioSection,
@@ -100,6 +101,7 @@ export default function HomePage() {
         />
       </Head>
       <HeroSlider />
+      <HeroBusinessDivisions />
       <ProductViewer />
       <AgencyIntro />
       <PortfolioSection />

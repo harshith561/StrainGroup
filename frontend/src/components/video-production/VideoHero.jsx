@@ -89,7 +89,7 @@ export default function VideoHero() {
         {/* Green subheading — fades down from top */}
         <div className="mb-4" data-aos="fade-down" data-aos-duration="900">
           <span className="inline-block text-[#00e676] font-mono text-sm sm:text-base md:text-lg uppercase tracking-[3px] font-bold drop-shadow-[0_0_15px_rgba(0,230,118,0.4)]">
-            Commercial Video &amp; High-Impact Brand Film Production
+            STRAINS ASSOCIATES · COMMERCIAL VIDEOGRAPHY &amp; CINEMATIC MEDIA
           </span>
         </div>
 
@@ -101,7 +101,7 @@ export default function VideoHero() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 font-sans max-w-3xl mx-auto leading-relaxed mb-10 font-light drop-shadow-md">
-            We direct, shoot, and finish category-defining brand films, 4K industrial drone aerials, high-converting commercial advertisements, and complete DaVinci color-graded post-production.
+            Strains Associates is the independent creative agency and media production powerhouse of Strains Group. Headquartered in Hyderabad, we script, direct, shoot, and finish broadcast-grade commercial advertisements, 4K industrial documentaries, aerial drone videography, and complete DaVinci color-graded post-production.
           </p>
         </div>
 
